@@ -1,0 +1,20 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+groupbox{
+	margin:4px;
+	border:1px inset threedface}
+.groupbox-body{
+	margin:4px}
+caption{
+	margin:2px 0;
+	font-weight:bold;
+	background-color:-moz-Dialog!important}
+.caption-icon{
+	margin-top:4px;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(12px 44px 23px 38px);
+	min-height:11px;
+	max-height:11px}
+.caption-text{margin:-2px 2px 0 2px}
+caption.rounded{
+	padding-bottom:0;
+	background-color:transparent!important}

@@ -1,0 +1,124 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+.mainBox{
+	position:relative;
+	font:message-box;
+	-moz-user-select:none;
+	text-align:center;
+	box-shadow:1px 1px 6px graytext inset,0 0 1px threedshadow inset;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+
+:-moz-any(
+:-moz-handler-clicktoplay,
+:-moz-handler-vulnerable-updatable,
+:-moz-handler-vulnerable-no-update)>.mainBox{
+	cursor:pointer}
+
+.hoverBox{-moz-box-align:center}
+
+.icon{
+	border-width:0;
+	width:32px;
+	height:32px;
+	background:-moz-image-rect(url(chrome://mozapps/skin/extensions/addons.png),0,128,32,96) center center no-repeat}
+:-moz-any(
+:-moz-type-unsupported,
+:-moz-handler-vulnerable-updatable,
+:-moz-handler-vulnerable-no-update,
+:-moz-type-unsupported-platform) .icon{
+	background-image:-moz-image-rect(url(chrome://mozapps/skin/extensions/addons.png),0,288,32,256)}
+:-moz-any(
+:-moz-handler-disabled,
+:-moz-handler-blocked) .icon{
+	background-image:-moz-image-rect(url(chrome://mozapps/skin/extensions/addons.png),0,320,32,288)}
+:-moz-handler-crashed .icon{
+	background-image:-moz-image-rect(url(chrome://mozapps/skin/extensions/addons.png),0,352,32,320)}
+:-moz-type-unsupported .icon[status="ready"],
+:-moz-type-unsupported .icon[installable]{
+	background-image:-moz-image-rect(url(chrome://mozapps/skin/extensions/addons.png),0,416,32,384)}
+
+.throbber{
+	padding-left:16px;
+	background:url(chrome://global/skin/loading.gif) no-repeat;
+	margin-left:5px}
+
+.msg{
+	cursor:default;
+	opacity:1;
+	padding:2px;
+	margin:2px 8px;
+	font-size:110%;
+	font-weight:600}
+vbox:hover>.msgTapToPlay,
+vbox:hover>.msgClickToPlay{
+	box-shadow:2px 2px threedshadow;
+	background-color:#CCCCFF;
+	color:black}
+vbox:hover:active>.msgTapToPlay,
+vbox:hover:active>.msgClickToPlay{
+	box-shadow:none;
+	background-color:highlight;
+	color:highlighttext}
+
+.msgBottomLinks{
+	margin:0!important;
+	background:none!important;
+	box-shadow:none!important}
+
+.closeIcon,
+.helpIcon{
+	display:block;
+	position:absolute;
+	width:20px;
+	height:20px;
+	border:1px solid transparent;
+	background:-moz-image-rect(url(chrome://global/skin/global.png),32,16,48,0) no-repeat center}
+.helpIcon{
+	bottom:4px;
+	cursor:pointer}
+.closeIcon{
+	top:4px;
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),16,16,32,0)}
+.helpIcon,
+.closeIcon[chromedir="rtl"]{
+	right:auto;
+	left:4px}
+.closeIcon,
+.helpIcon[chromedir="rtl"]{
+	left:auto;
+	right:4px}
+
+.helpIcon:hover,
+.closeIcon:hover{
+	background-color:#CCCCFF;
+	border:1px outset threedface;
+	box-shadow:0 0 2px threeddarkshadow}
+.helpIcon:hover:active,
+.closeIcon:hover:active{
+	background-color:highlight;
+	border:1px inset threedface}
+
+@media not all and (-moz-touch-enabled){
+	:-moz-handler-clicktoplay .msgTapToPlay{display:none}
+}
+@media (-moz-touch-enabled) {
+	:-moz-handler-clicktoplay .msgClickToPlay{display:none}
+}
+
+.submitComment{
+	width:340px;
+	height:70px;
+	padding:5px;
+	border-radius:5px;
+	resize:none;
+	font-family:inherit;
+	font-size:inherit}
+.submitURLOptInBox{
+	text-align:start}
+.submitButtonBox{
+	margin-top:7px}
+.submitButton{
+	float:right}
+.mainBox[chromedir="rtl"] .submitButton{
+	float:left}

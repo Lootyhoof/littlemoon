@@ -1,0 +1,73 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+#editBookmarkPanelContent{min-width:25em}
+#editBookmarkPanelTitle{font-weight:bold;padding:2px;font-size:110%}
+#editBookmarkPanelDescription{margin:2px 0}
+
+.editBookmarkPanelHeaderButton{margin-bottom:6px}
+#editBookmarkPanelBottomButtons{margin-top:6px}
+
+#editBookmarkPanelStarIcon{
+	list-style-image:url(chrome://browser/skin/places/star.png)}
+#editBookmarkPanelStarIcon[unstarred]{
+	opacity:.5;
+	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+
+#editBookmarkPanelRemoveButton{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px 16px 288px 0)}
+#editBookmarkPanelDoneButton{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(0 16px 16px 0)}
+#editBookmarkPanelDeleteButton{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(16px 16px 32px 0)}
+
+#editBookmarkPanelGrid>rows>row{padding:0 1px}
+#editBMPanel_folderTree,
+#editBMPanel_tagsSelector{margin:0 0 6px 0}
+#editBMPanel_tagsSelector[collapsed="true"]{border:0}
+#editBookmarkPanelGrid>rows>row{margin:0}
+
+.folder-icon>.menulist-label-box>.menulist-icon{
+	width:16px;
+	height:16px}
+
+.folder-icon>.menu-iconic-left{display:-moz-box}
+
+.folder-icon{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(160px 16px 176px 0)!important}
+
+.expander-up,
+.expander-down{
+	padding:2px;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	min-width:0}
+.expander-up{-moz-image-region:rect(40px 36px 48px 28px)}
+.expander-down{-moz-image-region:rect(32px 36px 40px 28px)}
+
+.expander-up .button-text,
+.expander-down .button-text,
+menulist[droppable="false"]>.menulist-dropmarker,
+menulist[droppable="false"]>menupopup{display:none}
+
+#editBMPanel_folderMenuList[selectedIndex="1"],
+#editBMPanel_bmRootItem{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(352px,32px,368px,16px)!important}
+
+#editBMPanel_folderMenuList[selectedIndex="2"],
+#editBMPanel_unfiledRootItem{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(336px,32px,352px,16px)!important}
+
+#editBMPanel_folderMenuList[selectedIndex="0"],
+#editBMPanel_toolbarFolderItem{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(368px,32px,384px,16px)!important}
+
+#editBMPanel_chooseFolderMenuItem{
+	list-style-image:url(chrome://global/skin/icons/applications.png)!important;
+	-moz-image-region:rect(0 16px 16px 0)!important}

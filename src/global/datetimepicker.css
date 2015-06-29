@@ -1,0 +1,73 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+.datetimepicker-text-class{width:11em}
+.timepicker-text-class{width:8em}
+
+datepicker,timepicker{
+	background:-moz-Field none;
+	color:-moz-FieldText;
+	border:1px inset threedface}
+
+datepicker[type="grid"]{
+	border:0;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+.datetimepicker-input-subbox{width:1.6em}
+html|*.datetimepicker-input{text-align:center}
+html|*.datetimepicker-input:focus{outline-offset:0}
+.datetimepicker-separator{padding:0}
+.datetimepicker-year{width:3.2em}
+
+.datepicker-weeklabel,
+.datepicker-gridlabel{
+	border:1px solid transparent;
+	text-align:center}
+
+.datepicker-gridlabel[today="true"] {
+	background-color:Highlight!important;
+	color:HighlightText}
+
+.datepicker-monthbox{
+	font-weight:bold;
+	background-image:url(chrome://global/skin/scroll-horz-bg.png)}
+
+.datepicker-button{
+	padding:2px 0 3px 0;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	margin:0;
+	background:none;
+	border:1px solid;
+	-moz-border-top-colors:transparent;
+	-moz-border-left-colors:transparent;
+	-moz-border-right-colors:transparent;
+	-moz-border-bottom-colors:transparent}
+
+.datepicker-weeklabel{color:threedshadow}
+
+.datepicker-button:hover,
+row>.datepicker-gridlabel:hover:not([value=""]),
+.datepicker-button:hover{
+	-moz-border-top-colors:threedhighlight;
+	-moz-border-left-colors:threedhighlight;
+	-moz-border-right-colors:threedshadow;
+	-moz-border-bottom-colors:threedshadow;
+	background-color:#CCCCFF;
+	color:black}
+
+.datepicker-button:hover:active,
+row>.datepicker-gridlabel:hover:active:not([value=""]),
+scrollbarbutton:hover:active,
+.datepicker-gridlabel[selected="true"]{
+	-moz-border-top-colors:threedshadow!important;
+	-moz-border-left-colors:threedshadow!important;
+	-moz-border-right-colors:threedhighlight!important;
+	-moz-border-bottom-colors:threedhighlight!important;
+	background-color:Highlight!important;
+	color:HighlightText}
+
+.datepicker-previous{-moz-image-region:rect(20px,60px,30px,50px)}
+.datepicker-next{-moz-image-region:rect(30px,60px,40px,50px)}
+.datepicker-previous[disabled="true"]{-moz-image-region:rect(20px,70px,30px,60px)}
+.datepicker-next[disabled="true"]{-moz-image-region:rect(30px,70px,40px,60px)}

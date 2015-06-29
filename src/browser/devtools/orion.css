@@ -1,0 +1,110 @@
+.viewContainer{
+	margin:0;
+ 	font:message-box;
+	font-family:Consolas,Lucida Console,monospace}
+
+.view{
+	padding-left:4px;
+	border-top:1px inset threedface!important;
+	background:-moz-Field;
+	color:-moz-FieldText}
+
+.token_singleline_comment,
+.token_multiline_comment,
+.token_doc_comment,
+.punctuation-definition-comment,
+.comment{
+	color:green;font-style:italic}
+
+.token_doc_html_markup,
+.token_doc_tag,
+.token_keyword{
+	color:blueviolet}
+
+.entity-name-tag{color:purple}
+.entity-other-attribute{color:black}
+.string,.token_string{color:blue}
+.entity-name-tag-doctype{color:steelblue;font-style:italic}
+
+.token_task_tag{
+	color:black;
+	background:yellow}
+
+.token_space{background:-moz-image-rect(url(tokens.png),0,9,9,0) no-repeat center center}
+.token_tab{background:-moz-image-rect(url(tokens.png),0,18,9,9) no-repeat left center}
+
+.line_caret,
+.annotationLine.currentLine{
+	background:#dae2ee}
+.readonly .line_caret,
+.readonly .annotationLine.currentLine{
+	background:#cddae5}
+
+.invalid{
+	color:red;
+	font-weight:bold}
+
+.annotationRange.matchingBracket{
+	outline:1px solid threedshadow}
+
+.viewLeftRuler{
+	width:40px;
+	overflow:visible!important}
+.viewLeftRuler>table{
+	width:40px;
+	border-right:1px solid threedshadow;
+.ruler.annotations{
+	width:20px}
+.ruler.annotations>table{
+	border-right:2px solid;
+	-moz-border-right-colors:threedshadow threeddarkshadow}
+.ruler.lines{
+	min-width:2.5em;
+	padding:0 4px;
+	text-align:end;
+	opacity:.6}
+.ruler.linesWithAnnotations{
+	min-width:0;
+	padding-left:0}
+.ruler.overview{
+	border-left:1px solid threedshadow}
+
+.annotationHTML{
+	cursor:pointer;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align:middle;
+	background-repeat:no-repeat;
+	background-position:center left}
+.annotation{
+	background-position:center right;
+	background-repeat:no-repeat}
+.annotation.task{background-image:-moz-image-rect(url(chrome://browser/skin/devtools/debugger.png),0,80,16,64)}
+.annotation.breakpoint{background-image:-moz-image-rect(url(chrome://browser/skin/devtools/debugger.png),0,64,16,48)}
+.annotationHTML.debugLocation{background-image:-moz-image-rect(url(chrome://browser/skin/devtools/debugger.png),0,94,16,80)}
+
+.annotationOverview{
+	cursor:pointer;
+	border-radius:2px;
+	left:2px;
+	width:8px}
+.annotationOverview.task{
+	background-color:lightgreen;
+	border:1px solid green}
+.annotationOverview.breakpoint{
+	background-color:lightblue;
+	border:1px solid blue}
+.annotationOverview.debugLocation{
+	background-color:white;
+	border:1px solid green}
+.annotationOverview.currentBracket,
+.annotationOverview.matchingBracket{
+	background-color:lightgray;
+	border:1px solid red}
+
+.annotationRange{
+	background-repeat:repeat-x;
+	background-position:left bottom}
+.annotationRange.task{
+	outline:1px dashed rgba(0,255,0,.5)}

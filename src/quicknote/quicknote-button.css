@@ -1,0 +1,44 @@
+#quicknote-toolsmenubut,
+#quicknote-button,
+#qnoptions,
+.icon-quicknote16{
+	list-style-image:url(chrome://quicknote/skin/qn16.png)}
+#largelogo{
+	list-style-image:url(chrome://quicknote/skin/quicknote-Large.png)}
+
+#tabbox{border-width:0}
+#qntabs{background-image:none}
+#qntabs>tab{margin-top:0}
+#tabpanels{border-width:0;padding:0}
+.QNtextbox{margin:0}
+
+.save{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(368px,16px,384px,0)}
+#menu-help-saveas,
+.saveas{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(112px,16px,128px,0)}
+
+radio[pane=mainTabPanel] {
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(0 24px 24px 0)}
+radio[pane=userFileTabPanel] {
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(72px 24px 96px 0)}
+radio[pane=advancedPrefTab] {
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(96px 24px 120px 0)}
+radio[pane=advancedtabprefs] {
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(144px 24px 168px 0)}
+
+.qnfont{font-weight:bold}
+.qnfont1{font-weight:bold;font-size:x-large}
+
+.link{
+	color:-moz-nativehyperlinktext;
+	text-decoration:none;
+	cursor:pointer}
+.link:hover{
+	text-decoration:underline}

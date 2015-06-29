@@ -1,0 +1,48 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+notification{
+	text-shadow:none;
+	border-bottom:1px solid threedshadow;
+	background-color:infobackground;
+	color:InfoText}
+notification[type="info"]{
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+notification[type="critical"]{
+	background-color:red;
+	color:white}
+
+.messageImage{
+	list-style-image:url(chrome://global/skin/icons/warning-16.png)!important;
+	margin:0 1px 0 3px}
+.messageText{-moz-margin-start:3px;font-weight:bold}
+.messageButton{margin:1px;padding:0}
+
+.popup-notification-closeitem,
+.messageCloseButton{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(224px 32px 240px 16px)}
+.messageCloseButton>.toolbarbutton-text{display:none}
+
+notification[type="info"] .messageImage{list-style-image:url(chrome://global/skin/icons/information-16.png)!important}
+notification[type="warning"] .messageImage{list-style-image:url(chrome://global/skin/icons/warning-16.png)!important}
+notification[type="critical"] .messageImage{list-style-image:url(chrome://global/skin/icons/error-16.png)!important}
+
+.popup-notification-description{max-width:24em}
+
+#sync-notifications>notification{
+	border:1px inset threedface}
+
+#KeeFox_Menu-Button{list-style-image:url(chrome://keefox/skin/KeeFox16.png)!important}
+#KeeFox_Logins-Button{list-style-image:url(chrome://keefox/skin/KeeLockGrey24.png)!important}
+toolbarbutton#KeeFox_Main-Button{list-style-image:url(chrome://keefox/skin/KeeGrey.png)!important}
+toolbarbutton.highlight,toolbarbutton.login-found{list-style-image:url(chrome://keefox/skin/KeeOrange.png)!important}
+
+image.keeFoxNotificationImage[src]{margin:0!important}
+description.keefoxMessageText[value]{margin:3px!important}
+
+.keeFoxNotificationButtons toolbarbutton.menuitem-iconic[label]{
+	-moz-appearance:none!important;
+	height:auto!important;
+	min-height:1px!important;
+	color:inherit!important}

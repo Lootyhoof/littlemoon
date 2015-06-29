@@ -1,0 +1,5 @@
+#close{
+	position:absolute;
+	top:0;right:0;
+	width:32px;height:32px;
+	background:url(chrome://browser/skin/KUI-close.png) center center no-repeat}

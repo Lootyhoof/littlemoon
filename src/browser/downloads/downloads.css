@@ -1,0 +1,128 @@
+#downloadsPanel>.panel-arrowcontainer>.panel-arrowcontent{
+	padding:0}
+
+#downloadsListBox{
+	width:400px;
+	border-width:0!important;
+	background:-moz-Dialog;
+	color:-moz-DialogText}
+
+#downloadsPanel:not([hasdownloads])>#downloadsListBox{
+	display:none}
+
+richlistitem[type="download"]{
+	border-width:1px 0}
+richlistitem[type="download"][selected="true"]:not(:hover){
+	background:-moz-Dialog!important;
+	color:-moz-DialogText!important}
+richlistitem[type="download"][selected="true"]:hover{
+	background-color:#CCCCFF!important;
+	color:black!important}
+#downloadsListBox:-moz-focusring>richlistitem[type="download"][selected]{
+	outline:1px solid highlight;
+	outline-offset:-1px}
+
+.downloadTypeIcon{
+	height:32px;
+	width:32px}
+
+.blockedIcon{
+	list-style-image:url(chrome://global/skin/icons/Error.png)}
+
+.downloadDetails{
+	opacity:.7;
+	font-size:90%;
+	cursor:inherit}
+
+.downloadButton{
+	border-radius:5px;
+	-moz-outline-radius:7px}
+.downloadButton:not(:hover){
+	-moz-border-top-colors:transparent;
+	-moz-border-left-colors:transparent;
+	-moz-border-right-colors:transparent;
+	-moz-border-bottom-colors:transparent;
+	background:none}
+.downloadCancel{
+	list-style-image:url(chrome://global/skin/playbuttons.png);
+	-moz-image-region:rect(0 32px 16px 16px)}
+.downloadShow{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(57px 53px 73px 38px)}
+.downloadRetry{
+	list-style-image:url(chrome://global/skin/playbuttons.png);
+	-moz-image-region:rect(0 64px 16px 48px)}
+
+#downloads-indicator-icon{
+	width:16px;
+	height:16px;
+	background:-moz-image-rect(url(chrome://global/skin/global.png),112,16,128,0) center no-repeat}
+
+#downloads-indicator[attention]>#downloads-indicator-anchor{
+	background-color:lightgreen}
+#downloads-indicator[attention]:not(:hover)>#downloads-indicator-anchor{
+	box-shadow:1px 1px green inset,-1px -1px 1px white inset}
+
+#downloads-indicator-notification{
+	opacity:0;
+	background:url(chrome://browser/skin/downloads/download-notification.png) center no-repeat;
+	background-size:16px}
+
+@-moz-keyframes downloadsIndicatorNotificationRight{
+	from{opacity:0;-moz-transform:translate(-128px,128px) scale(8)}
+	20%{opacity:1;-moz-animation-timing-function:ease-out}
+	to{opacity:0;-moz-transform:translate(0) scale(1)}
+}
+
+@-moz-keyframes downloadsIndicatorNotificationLeft{
+	from{opacity:0;-moz-transform:translate(128px,128px) scale(8)}
+	20%{opacity:1;-moz-animation-timing-function:ease-out}
+	to{opacity:0;-moz-transform:translate(0) scale(1)}
+}
+
+#downloads-indicator[notification]>#downloads-indicator-anchor>#downloads-indicator-notification{
+	-moz-animation-name:downloadsIndicatorNotificationRight;
+	-moz-animation-duration:1s}
+
+#downloads-indicator[notification]:-moz-locale-dir(rtl)>#downloads-indicator-anchor>#downloads-indicator-notification{
+	-moz-animation-name:downloadsIndicatorNotificationLeft}
+
+#downloads-indicator-counter{
+	margin:-1px -1px 0 -1px;
+	text-shadow:0 1px threedhighlight;
+	font-size:90%;
+	text-align:center}
+
+#downloads-indicator-progress{
+	border:1px inset threedface;
+	border-radius:3px;
+	min-width:16px;
+	min-height:4px}
+
+#downloads-indicator[paused]>#downloads-indicator-anchor>#downloads-indicator-progress-area>#downloads-indicator-counter{
+	background:-moz-image-rect(url(chrome://global/skin/playbuttons.png),0,48,16,32) no-repeat center}
+#downloads-indicator[paused]>#downloads-indicator-anchor>#downloads-indicator-progress-area>#downloads-indicator-progress>.progress-bar{
+	background-color:#a0a000}
+
+#downloads-indicator[open="true"]{
+	background-color:rgba(255,255,255,.5)}
+
+#downloadsFooter{-moz-box-align:center}
+#downloadsHistory,#downloadsSummary{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(112px,16px,128px,0);
+
+#downloadsSummary{
+	width:60ch;
+	border:1px solid transparent}
+#downloadsSummary:hover:not([disabled="true"]){
+	border:1px outset threedface;
+	background-color:#CCCCFF;
+	color:black}
+#downloadsSummary:hover:active:not([disabled="true"]){
+	border:1px inset threedface;
+	background-color:highlight;
+	color:highlighttext}
+#downloadsSummary>vbox{-moz-box-align:stretch;-moz-box-flex:1}
+#downloadsSummary>.downloadTypeIcon{height:auto;width:auto}
+#downloadsSummary>vbox>description[value=""]{display:none}

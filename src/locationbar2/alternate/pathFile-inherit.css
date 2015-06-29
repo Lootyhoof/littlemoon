@@ -1,0 +1,4 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.textbox-presentation-path,
+.textbox-presentation-file{color:inherit}

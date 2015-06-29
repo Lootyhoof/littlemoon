@@ -1,0 +1,25 @@
+.contextmenu{
+	display:none;
+	list-style-type:none;
+	position:absolute;
+	margin:0;
+	padding:0;
+	cursor:default;
+	z-index:1000;
+	border:1px outset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+.contextmenu li{
+	padding:2px 20px;
+	white-space:nowrap}
+
+.contextmenu li:hover{
+	background-color:#CCCCFF;
+	color:black}
+
+.contextmenu .container{
+	background:transparent url(data:image/gif;base64,R0lGODlhBAAHAAAAACH5BAEAAAEALAAAAAAEAAcAoAAAAAAAAAIIRA4WaeyrVCgAOw==) 95% no-repeat}
+
+.contextmenu li[separator]{
+	border:1px inset threedface}

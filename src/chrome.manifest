@@ -1,0 +1,26 @@
+skin	communicator	littlemoon	communicator/
+skin	global		littlemoon	global/
+skin	browser		littlemoon	browser/
+skin	inspector	littlemoon	inspector/
+skin	mozapps		littlemoon	mozapps/
+skin	help		littlemoon	help/
+skin	downbar		littlemoon	downbar/
+skin	reporter	littlemoon	reporter/
+skin	offline		littlemoon	offline/
+skin	quicknote	littlemoon	quicknote/
+skin	tabprefs	littlemoon	tabprefs/
+skin	dataman		littlemoon	dataman/
+skin	dlman		littlemoon	dlman/
+skin	desktop		littlemoon	desktop/
+skin	locationbar2	littlemoon	locationbar2/
+skin	downloadmgr	littlemoon	downloadmgr/
+skin	favres		littlemoon	favres/
+skin	os		littlemoon	os-linux/
+skin	os		littlemoon	os-darwin/	os=Darwin
+skin	os		littlemoon	os-winnt/	os=WINNT
+skin    graphical-timeline littlemoon	gt/
+skin    imagetoolbar	littlemoon	imagetoolbar/
+skin    abouthome	littlemoon	abouthome/
+skin    jsterm		littlemoon	jsterm/
+skin    printedit	littlemoon	printedit/
+skin    speeddial	littlemoon	speeddial/

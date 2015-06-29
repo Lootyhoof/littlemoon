@@ -1,0 +1,131 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#speeddialTabbox-tabs{
+	background:-moz-Dialog url(chrome://global/skin/shade.png)}
+
+.speeddialThumb{
+	-moz-binding:url(chrome://speeddial/content/speeddial.xml#thumb);
+	width:0;
+	height:0;
+	min-width:0;
+	min-height:0;
+	margin:5px;
+	cursor:pointer;
+	-moz-box-flex:1;
+	border:1px outset threedface;
+	background-color:-moz-dialog}
+.speeddialThumb:hover{
+	box-shadow:1px 1px 8px graytext}
+
+.speeddialThumb[assigned="f"]:not(:hover){
+	opacity:.5}
+:-moz-any(tabpanel,.sd-tabpanel)[hideUnused="true"] .speeddialThumb[assigned="f"]:not(:hover){
+	opacity:0}
+
+.speeddial-container{
+	margin:0 4px 5px 4px;
+	border:1px solid threedshadow;
+	min-width:0;
+	min-height:0;
+	overflow:hidden;
+	background-color:-moz-field;
+	background-repeat:no-repeat;
+	background-position:center}
+
+.speeddialThumb[speeddial="1"] .speeddial-container[assigned="f"]{background-image:-moz-image-rect(url(numbers.png),0,48,48,0)}
+.speeddialThumb[speeddial="2"] .speeddial-container[assigned="f"]{background-image:-moz-image-rect(url(numbers.png),0,96,48,48)}
+.speeddialThumb[speeddial="3"] .speeddial-container[assigned="f"]{background-image:-moz-image-rect(url(numbers.png),0,144,48,96)}
+.speeddialThumb[speeddial="4"] .speeddial-container[assigned="f"]{background-image:-moz-image-rect(url(numbers.png),0,192,48,144)}
+.speeddialThumb[speeddial="5"] .speeddial-container[assigned="f"]{background-image:-moz-image-rect(url(numbers.png),0,240,48,192)}
+.speeddialThumb[speeddial="6"] .speeddial-container[assigned="f"]{background-image:-moz-image-rect(url(numbers.png),0,288,48,240)}
+.speeddialThumb[speeddial="7"] .speeddial-container[assigned="f"]{background-image:-moz-image-rect(url(numbers.png),0,336,48,288)}
+.speeddialThumb[speeddial="8"] .speeddial-container[assigned="f"]{background-image:-moz-image-rect(url(numbers.png),0,384,48,336)}
+.speeddialThumb[speeddial="9"] .speeddial-container[assigned="f"]{background-image:-moz-image-rect(url(numbers.png),0,432,48,384)}
+
+.speeddial-top-middle{
+	height:24px;
+	padding:2px}
+
+.bookmark-item{
+	margin:2px;
+	width:16px;
+	height:16px}
+.speeddialThumb[loading="true"] .bookmark-item{
+	list-style-image:url(chrome://global/skin/icons/loading_16.png)!important;
+	-moz-image-region:rect(0,16px,16px,0)!important}
+
+.thumbnail-title{width:1px}
+
+.speeddial-close-button,
+.speeddial-reload-button,
+.speeddial-newwindow-button,
+.speeddial-newtab-button,
+.speeddial-backgroundtab-button,
+.speeddial-open-button,
+.speeddial-edit-button{
+	margin:0;
+	cursor:default;
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(48px,16px,64px,0)}
+.speeddial-close-button{-moz-image-region:rect(224px 32px 240px 16px)}
+.speeddial-reload-button{-moz-image-region:rect(128px 16px 144px 0)}
+.speeddial-newwindow-button{-moz-image-region:rect(80px,32px,96px,16px)}
+.speeddial-open-button{-moz-image-region:rect(80px,32px,96px,16px)}
+.speeddial-edit-button{-moz-image-region:rect(96px 16px 112px 0)}
+
+vbox#speeddialTabbox{
+	-moz-binding:url(chrome://speeddial/content/speeddial.xml#tabbox)!important}
+hbox#speeddialTabbox-tabs{
+	-moz-binding:url(chrome://speeddial/content/speeddial.xml#tabs)!important;
+	border-bottom:2px solid;
+	-moz-border-bottom-colors:threedhighlight threedshadow}
+hbox#speeddialTabbox-panelContainer{
+	-moz-binding:url(chrome://speeddial/content/speeddial.xml#tabpanels)!important;
+	display:-moz-deck}
+
+#speeddialTabbox{
+	overflow:hidden;
+	border:0}
+#speeddialTabbox-tabs>tab{min-width:40px}
+#speeddialTabbox-tabs>tab[selected="true"]{
+	border-bottom-color:transparent;
+	font-weight:bold}
+#speeddialTabbox-panelContainer{padding:0;border-width:0}
+
+.arrowscrollbox-scrollbox{
+	margin-bottom:-2px;
+	padding:0 2px}
+
+.sd-tab{
+	-moz-binding:url(chrome://speeddial/content/speeddial.xml#tab)!important;
+	min-width:40px;
+	margin:3px 2px 2px 2px;
+	padding:1px 4px 2px 4px;
+	border:1px outset threedface;
+	border-bottom:0;
+	opacity:.7;
+	background-color:-moz-dialog;
+	color:-moz-DialogText}
+
+.sd-tab:hover:not([selected="true"]){
+	opacity:1;
+	background-color:#CCCCFF;
+	color:black}
+
+.sd-tab[selected="true"]{
+	opacity:1;
+	margin:3px 2px 0px 2px;
+	padding:1px 4px 4px 4px;
+	font-weight:bold;
+	background-color:-moz-dialog;
+	color:-moz-DialogText}
+
+.sd-tabs[overflowed="true"]>.sd-tab:not([selected="true"]){
+	-moz-box-flex:1;
+	min-width:0!important}
+
+.speeddialThumb[assigned="f"] toolbarbutton,
+#speeddialTabbox[hideThumbIcons="true"] .bookmark-item,
+#speeddialTabbox[hideThumbButtons="true"].thumbnail:not(:hover) toolbarbutton,
+.tabs-left,.tabs-right{
+	display:none}

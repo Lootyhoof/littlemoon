@@ -1,0 +1,32 @@
+
+.portrait-page,
+.landscape-page{
+	margin:1px;
+	padding:0 1px;
+	border-width:2px!important;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threedhighlight threedshadow;
+	-moz-border-bottom-colors:threedhighlight threedshadow;
+	list-style-image:url(chrome://global/skin/widgets.png)}
+
+.portrait-page{
+	-moz-image-region:rect(56px 85px 72px 70px);
+	margin-right:0!important;
+	border-right-width:1px!important;
+	-moz-border-right-colors:threedshadow!important}
+.landscape-page{
+	-moz-image-region:rect(56px 101px 72px 85px);
+	margin-left:0!important;
+	border-left-width:1px!important;
+	-moz-border-left-colors:threedhighlight!important}
+
+.portrait-page[selected="true"],
+.landscape-page[selected="true"]{
+	background-color:rgba(255,255,255,.5);
+	-moz-border-top-colors:threedshadow threedshadow!important;
+	-moz-border-left-colors:threedshadow threedshadow!important;
+	-moz-border-right-colors:threedhighlight threedhighlight!important;
+	-moz-border-bottom-colors:threedhighlight threedhighlight!important}
+
+.radio-check{display:none}

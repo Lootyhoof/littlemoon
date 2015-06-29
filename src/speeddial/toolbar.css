@@ -1,0 +1,5 @@
+#btn_setspeeddial{list-style-image:url(icons.png);-moz-image-region:rect(0 24px 24px 0)}
+#btn_speeddial{list-style-image:url(icons.png);-moz-image-region:rect(0 48px 24px 24px)}
+toolbar[iconsize=small]>#btn_setspeeddial{-moz-image-region:rect(24px 16px 40px 0)}
+toolbar[iconsize=small]>#btn_speeddial{-moz-image-region:rect(24px 32px 40px 16px)}
+#btn_setspeeddial>hbox>.toolbarbutton-menu-dropmarker{display:none}

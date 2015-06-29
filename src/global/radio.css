@@ -1,0 +1,56 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+radiogroup{margin:1px}
+
+radio{
+	outline-color:transparent;
+	border:1px solid transparent;
+	padding:1px;
+	-moz-box-align:center}
+
+.radio-icon{list-style-image:inherit}
+.radio-label{
+	margin:0;
+	-moz-margin-start:2px;
+	padding:1px}
+
+radio[focused="true"]{
+	outline:1px solid highlight}
+radio:hover:not([selected="true"]):not([disabled="true"]){
+	border-style:outset;
+	border-color:threedface;
+	background-color:#CCCCFF;
+	color:black}
+radio:hover:active:not([selected="true"]):not([disabled="true"]){
+	border-style:inset;
+	background-color:Highlight;
+	color:HighlightText}
+
+radio[disabled="true"]{
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+
+.radio-check{
+	-moz-margin-start:1px;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(12px 24px 24px 12px)}
+.radio-check[selected="true"]{-moz-image-region:rect(12px 12px 24px 0)}
+.radio-check[disabled="true"]{-moz-image-region:rect(24px 24px 36px 12px)}
+.radio-check[selected="true"][disabled="true"]{-moz-image-region:rect(24px 12px 36px 0)}
+
+#viewGroup:focus{outline:0!important}
+
+#viewGroup>radio{
+	-moz-box-orient:vertical!important;
+	-moz-box-align:center!important;
+	-moz-box-pack:end;
+	min-width:50px;
+	margin:1px;
+	padding:2px}
+#viewGroup>radio[selected="true"]{
+	border:1px inset threedface!important;
+	background-color:rgba(255,255,255,.5)!important;
+	color:-moz-DialogText!important}
+#viewGroup>radio[selected="true"][focused="true"]{
+	outline-offset:-3px;
+	outline:1px solid #9999CC}

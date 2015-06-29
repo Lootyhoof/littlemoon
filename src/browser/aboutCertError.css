@@ -1,0 +1,38 @@
+@import url(chrome://global/skin/htmlbutton.css);
+
+html{
+	height:100%;
+	font:message-box;
+	margin:0;
+	background:threedshadow url(chrome://global/skin/gecko.png) right 90% no-repeat!important;
+	color:-moz-DialogText}
+
+#errorPageContainer{
+	width:630px;
+	margin:4em auto;
+	padding:17px;
+	border:3px solid #FFBD09;
+	border-radius:2em;
+	background:-moz-Field url(chrome://global/skin/icons/sslWarning.png) no-repeat left 0;
+	-moz-background-origin:content;
+	background-origin:content-box;
+	color:-moz-FieldText}
+body[dir="rtl"] #errorPageContainer{background-position:right 0}
+
+h1{
+	margin:0;
+	font-size:160%}
+
+#errorTitle,
+#errorLongContent,
+#errorTryAgain{-moz-margin-start:80px}
+
+.expander>button{
+	-moz-padding-start:16px;
+	background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),0,25,12,13);
+	background-position:3px center;
+	background-repeat:no-repeat}
+.expander>button:-moz-locale-dir(rtl)>button{
+	background-position:right center}
+.expander[collapsed]>button{
+	background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),0,12,12,0)}

@@ -1,0 +1,70 @@
+@import url(chrome://global/skin/htmlbutton.css);
+
+html{
+	margin:0;
+	font:message-box;
+	background:threedshadow url(chrome://global/skin/gecko.png) right 90% no-repeat fixed}
+
+body{
+	width:auto!important;
+	margin:2em 4em!important;
+	border:2px outset threedface;
+	border-radius:8px;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+h1{
+	margin:0!important;
+	padding:8px 8px 8px 48px!important;
+	background:transparent url(chrome://branding/content/icon32.png) 8px 8px no-repeat;
+	font-size:x-large!important;
+	font-weight:bold!important;
+	text-align:left!important}
+
+.major-section{
+	margin-bottom:4px;
+	font-size:110%;
+	text-align:start;
+	font-weight:bold}
+
+.page-subtitle,
+.page-subtitle+div{
+	margin:0;
+	padding:4px 48px}
+
+#contents{
+	border-top:2px groove threedface;
+	padding:4px}
+
+table{
+	background-color:-moz-Field;
+	color:-moz-FieldText;
+	font:message-box;
+	text-align:start;
+	width:99%;
+	border:1px inset threedface;
+	border-spacing:0}
+
+th,td{padding:0 2px}
+th{text-align:start;background-color:Highlight;color:HighlightText}
+th.column{white-space:nowrap;width:0}
+tr:nth-child(odd){background-color:rgba(160,160,160,0.08)}
+td{text-align:start}
+
+.prefs-table{width:100%;table-layout:fixed}
+.pref-name{width:70%;white-space:nowrap;overflow:hidden}
+.pref-value{width:30%;white-space:nowrap;overflow:hidden}
+
+#contents{clear:both}
+
+#reset-box{
+	float:right;
+	margin:4px;
+	padding:4px;
+	border:1px inset threedface;
+	border-radius:7px;
+	width:30%;
+	text-align:center}
+
+body[dir="rtl"]>#reset-box{float:left}
+#reset-box>h3{margin-top:0}

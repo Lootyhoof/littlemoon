@@ -1,0 +1,51 @@
+.sidebar-placesTreechildren::-moz-tree-cell(leaf),
+.sidebar-placesTreechildren::-moz-tree-image(leaf){cursor:pointer}
+.sidebar-placesTreechildren::-moz-tree-cell-text(leaf,hover){
+	cursor:pointer;
+	text-decoration:underline}
+.sidebar-placesTreechildren::-moz-tree-cell(separator){cursor:default}
+
+#search-box{-moz-margin-end:0!important}
+
+treechildren::-moz-tree-image(title){
+	width:16px;height:16px;
+	-moz-margin-end:1px;
+	list-style-image: url(chrome://global/skin/global.png);
+	-moz-image-region:rect(144px,16px,160px,0)}
+treechildren::-moz-tree-image(title,separator){
+	list-style-image:none;
+	width:0;height:0}
+
+treechildren::-moz-tree-image(title,query,folder),
+treechildren::-moz-tree-image(title,query,dayContainer),
+treechildren::-moz-tree-image(title,query,hostContainer),
+treechildren::-moz-tree-image(title,container){
+	-moz-image-region:rect(160px,16px,176px,0)}
+treechildren::-moz-tree-image(title,query,folder,open),
+treechildren::-moz-tree-image(title,query,hostContainer,open),
+treechildren::-moz-tree-image(title,query,dayContainer,open),
+treechildren::-moz-tree-image(title,container,open){
+	-moz-image-region:rect(176px,16px,192px,0)}
+treechildren::-moz-tree-image(title,livemarkItem),
+treechildren::-moz-tree-image(title,container,livemark){
+	-moz-image-region:rect(416px,32px,432px,16px)}
+treechildren::-moz-tree-image(title,query){
+	-moz-image-region:rect(304px,32px,320px,16px)}
+treechildren::-moz-tree-image(title,tagContainer),
+treechildren::-moz-tree-image(query,OrganizerQuery_Tags){
+	-moz-image-region:rect(320px,32px,336px,16px)}
+treechildren::-moz-tree-image(query,OrganizerQuery_Downloads){
+	-moz-image-region:rect(112px,16px,128px,0)}
+treechildren::-moz-tree-image(title,query,OrganizerQuery_History){
+	-moz-image-region:rect(32px,32px,48px,16px)}
+treechildren::-moz-tree-image(container,OrganizerQuery_AllBookmarks){
+	-moz-image-region:rect(384px,32px,400px,16px)}
+treechildren::-moz-tree-image(container,OrganizerQuery_BookmarksMenu){
+	-moz-image-region:rect(352px,32px,368px,16px)}
+treechildren::-moz-tree-image(container,OrganizerQuery_BookmarksToolbar){
+	-moz-image-region:rect(368px,32px,384px,16px)}
+treechildren::-moz-tree-image(container,OrganizerQuery_UnfiledBookmarks) {
+	-moz-image-region:rect(336px,32px,352px,16px)}
+
+treechildren::-moz-tree-row(session-start){border-top:1px solid ThreeDShadow}
+treechildren::-moz-tree-cell-text(date,session-continue){color:yellow}

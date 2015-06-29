@@ -1,0 +1,34 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#imagetoolbar-toolbar{
+	font:message-box!important;
+	border:1px outset threedface!important;
+	background:-moz-Dialog!important;
+	color:-moz-DialogText!important}
+
+.mozilla-image-toolbar{
+	margin:0!important;
+	padding:1px!important;
+	min-width:1px!important;
+	-moz-box-orient:vertical!important}
+.toolbarbutton-text{
+	font:message-box!important;
+	color:inherit!important;
+	width:auto!important}
+toolbar[mode="icons"]>.mozilla-image-toolbar>.toolbarbutton-text{
+	display:none!important}
+
+#imagetoolbar_save{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(368px,16px,384px,0)}
+#imagetoolbar_copy{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(336px 16px 352px 0)}
+#imagetoolbar_print{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(304px 16px 320px 0)}
+#imagetoolbar_folder{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(57px 53px 73px 37px)}
+#imagetoolbar_info{
+	list-style-image:url(chrome://global/skin/icons/information-16.png)}

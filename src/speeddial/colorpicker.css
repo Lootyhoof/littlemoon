@@ -1,0 +1,11 @@
+.colorpicker-outerbox scale{height:128px}
+.colorpicker-outerbox canvas{
+	height:128px;
+	width:16px;
+	margin-left:0;
+	margin-right:3px;
+	background-color:black}
+.colorpicker-red{color:red}
+.colorpicker-green{color:green}
+.colorpicker-blue{color:blue}
+.colorpicker-white-groupbox{margin-left:20px}

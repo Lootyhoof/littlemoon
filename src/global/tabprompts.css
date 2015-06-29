@@ -1,0 +1,12 @@
+tabmodalprompt{
+	font:message-box;
+	background-color:rgba(0,0,0,.1)}
+
+.mainContainer{
+	padding:8px;
+	border:1px outset threedface;
+	box-shadow:3px 3px threedshadow;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+.buttonContainer{margin-top:4px}
+ 

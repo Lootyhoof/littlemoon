@@ -1,0 +1,174 @@
+.stylesheet-rule-count{display:-moz-box!important}
+
+.stylesheet-editor-input{
+	display:-moz-box;
+	-moz-box-flex:1}
+
+.splitview-nav{
+	border-width:0;
+	border-style:solid;
+	border-top:1px inset threedface;
+	background-color:-moz-dialog}
+
+/* landscape mode */
+@media (min-width: 551px){
+.splitview-details.splitview-active{-moz-box-orient:horizontal}
+.splitview-nav:-moz-locale-dir(ltr){
+	border-right:1px inset threedface}
+.splitview-nav:-moz-locale-dir(rtl){
+	border-left:1px inset threedface}
+}
+/* portrait mode */
+@media (max-width: 550px){
+.splitview-controller{max-height:20em!important}
+.splitview-nav>li,
+.stylesheet-info,
+.stylesheet-info>h1{
+	-moz-box-align:center!important}
+.stylesheet-more{
+	-moz-box-direction:normal!important;
+	-moz-box-align:center!important;
+	-moz-box-pack:end!important}
+}
+
+#splitview-details-toolbar{
+	-moz-box-align:stretch;
+	background:none!important;
+	border-width:0!important}
+.splitview-portrait-resizer,
+.splitview-landscape-resizer{
+	background:none}
+.splitview-portrait-resizer{height:7px}
+.splitview-landscape-resizer{width:7px}
+
+.splitview-nav{
+	padding:0;
+	margin:0}
+.splitview-nav:focus{
+	outline:0}
+
+.splitview-nav>li{
+	-moz-box-pack:start;
+	outline:0;
+	padding:0;
+	border:1px outset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+.splitview-portrait-resizer:hover,
+.splitview-landscape-resizer:hover,
+.splitview-nav>li:hover{
+	background-color:#CCCCFF;
+	color:black}
+li.splitview-active{
+	background-color:highlight!important;
+	color:highlighttext!important}
+li.splitview-active .splitview-name{font-weight:bold}
+
+.placeholder{
+	text-align:center}
+
+.splitview-main .toolbar,
+.splitview-main .toolbar>*{
+	display:-moz-box}
+.splitview-main .toolbar{
+	-moz-box-flex:1;
+	-moz-box-orient:horizontal;
+	-moz-padding-start:3px}
+
+a{
+	color:-moz-hyperlinktext;
+	text-decoration:underline}
+
+.style-editor-newButton{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(41px,54px,57px,38px)}
+.style-editor-importButton{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(57px 53px 73px 38px)}
+
+.stylesheet-info{
+	-moz-box-pack:start!important;
+	-moz-box-align:stretch!important}
+
+.stylesheet-name{
+	outline:0;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	text-decoration:none;
+	color:inherit}
+.splitview-active .stylesheet-name{font-weight:bold}
+.unsaved .stylesheet-name{font-style:italic}
+.unsaved:-moz-locale-dir(ltr) .stylesheet-name:before,
+.unsaved:-moz-locale-dir(rtl) .stylesheet-name:after{
+	font-style:italic;
+	content:"* "}
+
+.stylesheet-enabled{
+	float:left;
+	width:20px;
+	height:20px;
+	max-height:20px;
+	margin:1px;
+	border:1px solid transparent;
+	background:-moz-image-rect(url(chrome://global/skin/checkbox.png),0,14,14,0) 2px 1px no-repeat}
+.stylesheet-enabled:-moz-locale-dir(rtl){float:right}
+.disabled>.stylesheet-enabled{
+	background-image:-moz-image-rect(url(chrome://global/skin/checkbox.png),14,14,28,0)}
+.stylesheet-enabled:hover{
+	border:1px outset threedface;
+	background-color:#CCCCFF}
+.stylesheet-enabled:hover:active{
+	border-style:outset;
+	background-color:highlight}
+
+.stylesheet-error-message{color:darkred}
+
+.stylesheet-title,
+.stylesheet-stats{
+	-moz-margin-end:2px;
+	color:threeddarkshadow}
+
+.stylesheet-actions{
+	-moz-box-flex:1;
+	text-align:end}
+
+a.stylesheet-saveButton{
+	visibility:hidden;
+	outline:0!important;
+	display:-moz-box;
+	min-height:20px;
+	text-decoration:none;
+	margin:0;
+	padding:1px;
+	-moz-padding-start:20px;
+	border:1px outset threedface;
+	background:buttonface -moz-image-rect(url(chrome://global/skin/global.png),368,16,384,0) no-repeat 2px center;
+	color:buttontext}
+li:hover>hgroup>.stylesheet-more>h3>.stylesheet-saveButton,
+.unsaved .stylesheet-saveButton{
+	visibility:visible}
+a.stylesheet-saveButton:focus{
+	outline:0!important;
+	box-shadow:0 0 1px #9999CC!important}
+a.stylesheet-saveButton:hover{
+	background-color:#CCCCFF;
+	color:black}
+a.stylesheet-saveButton:hover:active{
+	border-style:inset;
+	background-color:highlight;
+	color:highlighttext}
+
+h1,h2,h3{
+	font-size:inherit;
+	font-weight:normal;
+	margin:0;
+	padding:0}
+
+.loading>box>box>box>.splitview-nav{
+	background:url(chrome://global/skin/icons/loading_16.png) no-repeat center center}
+
+.splitview-nav-container>spacer{display:none}
+.splitview-nav-container>.devtools-toolbar{-moz-box-ordinal-group:0}
+.profile-name{padding:2px!important;font-size:inherit!important}

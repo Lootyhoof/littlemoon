@@ -1,0 +1,35 @@
+#placesToolbar,
+#placesView>splitter{border:0}
+
+#back-button,#forward-button{list-style-image:url(chrome://global/skin/global.png)}
+#forward-button:-moz-locale-dir(rtl),
+#back-button{-moz-image-region:rect(192px 16px 208px 0)}
+#back-button:-moz-locale-dir(rtl),
+#forward-button{-moz-image-region:rect(208px 16px 224px 0)}
+
+:-moz-any(#back-button,#forward-button)[disabled="true"]>.toolbarbutton-icon{
+	opacity:.4}
+
+#organizeButton{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(160px,32px,176px,16px)}
+#viewMenu{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(96px 16px 112px 0)}
+#maintenanceButton{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(192px,32px,208px,16px)}
+#saveSearch{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(368px,16px,384px,0)}
+
+#scopeBarTitle{
+	font-weight:bold;
+	-moz-padding-end:2px;
+	border:0!important;
+	color:black!important;
+	background:none!important}
+
+#placesList{width:16em}
+#bookmarkproperties{padding:2px 0 0 0}
+#loadInSidebarCheckbox{margin:1px 3px}

@@ -1,0 +1,12 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+thumb{
+	margin:1px!important;
+	min-width:8px!important;
+	min-height:8px!important;
+	border-radius:10px!important;
+	background-color:scrollbar!important}
+slider:hover>thumb,
+thumb:hover{
+	background-color:graytext!important}

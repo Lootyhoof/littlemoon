@@ -1,0 +1,15 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+progressmeter{
+	min-width:140px;
+	min-height:13px;
+	border:1px inset threedface;
+	margin:1px;
+	background-color:rgba(160,160,160,.2)}
+.progressmeter-statusbar{margin-top:2px}
+.progress-bar{
+	min-width:0;
+	background-color:highlight;
+	color:highlighttext}
+progressmeter[mode="undetermined"]{
+	-moz-binding:url(chrome://global/content/bindings/progressmeter.xml#progressmeter-undetermined)}

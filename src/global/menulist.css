@@ -1,0 +1,86 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+menulist{
+	vertical-align:middle;
+	-moz-box-pack:center;
+	margin:1px;
+	padding:0;
+	border:2px solid;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threedhighlight threedshadow;
+	-moz-border-bottom-colors:threedhighlight threedshadow;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+menulist:focus{
+	outline:1px solid #9999CC}
+
+menulist:hover:not([disabled="true"]):not([droppable="false"]){
+	background-color:#CCCCFF;
+	color:black}
+
+menulist[selected="true"]{
+	font-weight:bold!important}
+
+.menulist-label-box{
+	-moz-box-align:center}
+
+.menulist-icon{
+	padding:1px}
+
+.menulist-label{
+	padding:0!important;
+	margin:1px!important}
+
+.menulist-description{
+	font-style:italic;
+	color:GrayText;
+	-moz-padding-start:1ex!important}
+
+.menulist-dropmarker{
+	border:0!important;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(10px 60px 20px 50px);
+	padding:1px;
+	-moz-padding-start:2px;
+	-moz-box-pack:center;
+	-moz-box-align:center}
+.menulist-dropmarker[disabled="true"]{
+	-moz-image-region:rect(10px 70px 20px 60px)}
+menulist[open="true"]>.menulist-dropmarker{
+	-moz-image-region:rect(0 60px 10px 50px)}
+
+.menulist-compact{
+	margin:0;
+	border:1px outset threedface}
+
+menulist[editable="true"]{
+	border:1px inset threedface;
+	background-color:-moz-Field;
+	color:-moz-FieldText}
+menulist[editable="true"]>.menulist-dropmarker{
+	background-color:-moz-Dialog;
+	border:1px solid transparent;
+	-moz-border-left-colors:threedshadow}
+menulist[editable="true"]:not([disabled="true"])>.menulist-dropmarker:hover{
+	background-color:#CCCCFF;
+	border:1px outset threedface}
+
+menulist[disabled="true"]{
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight!important}
+
+html|*.menulist-editable-input{
+	-moz-appearance:none;
+	background-color:transparent;
+	border:0;
+	margin:1px;
+	padding:0;
+	color:inherit;
+	font:inherit;
+	text-shadow:inherit}
+
+html|*.menulist-editable-input:focus{
+	outline:1px solid highlight}

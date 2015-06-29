@@ -1,0 +1,6 @@
+.folder-icon{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(160px 16px 176px 0)!important}
+menulist[droppable="false"]>.menulist-dropmarker,
+menulist[droppable="false"]>menupopup{display:none}
+.expander>hbox>.button-text{display:none}

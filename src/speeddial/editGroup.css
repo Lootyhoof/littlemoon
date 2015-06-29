@@ -1,0 +1,2 @@
+colorpicker:not([type]){-moz-binding:url(chrome://speeddial/content/speeddial.xml#colorpicker)!important}
+colorpicker>tabbox{background:-moz-dialog;color:-moz-dialogtext}

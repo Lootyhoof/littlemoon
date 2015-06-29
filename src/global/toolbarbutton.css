@@ -1,0 +1,107 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+toolbarbutton{
+	min-width:20px;
+	-moz-box-align:center;
+	-moz-box-pack:center;
+	vertical-align:middle;
+	outline-color:transparent;
+	border:1px solid transparent;
+	background:none;
+	color:inherit}
+
+toolbar[mode="full"][iconsize="large"] toolbarbutton:not([type="menu-button"]){
+	-moz-box-orient:vertical}
+toolbar[mode="text"] toolbarbutton:not([type="menu-button"]){
+	padding:1px!important}
+
+.toolbarbutton-icon{margin:1px}
+.toolbarbutton-text{margin:0 1px}
+
+.toolbarbutton-text:not([value]),
+.toolbarbutton-text[value=""],
+toolbar[mode="icons"] .toolbarbutton-text,
+toolbar[mode="text"] .toolbarbutton-icon{
+	display:none}
+
+toolbar[iconsize="small"]>toolbarbutton>dropmarker>.dropmarker-icon,
+toolbar[iconsize="small"]>*>toolbarbutton>dropmarker>.dropmarker-icon{
+	-moz-transform:scaleY(.75)}
+
+toolbarbutton[type="menu-button"]{
+	background:none!important;
+	-moz-box-align:stretch;
+	-moz-box-orient:horizontal!important}
+.toolbarbutton-menubutton-button{
+	border:0;
+	-moz-border-end:1px solid transparent}
+toolbarbutton:hover>.toolbarbutton-menubutton-button,
+toolbarbutton[open="true"]>.toolbarbutton-menubutton-button{
+	-moz-border-end:1px outset threedface}
+.toolbarbutton-menubutton-button:hover:active{
+	-moz-border-end:1px inset threedface}
+
+.toolbarbutton-menubutton-dropmarker{
+	border:0;
+	-moz-border-start:1px solid transparent}
+toolbarbutton:hover:not([open="true"]):not([checked="true"])>.toolbarbutton-menubutton-dropmarker{
+	-moz-border-start:1px outset threedface}
+toolbarbutton[open="true"]>.toolbarbutton-menubutton-dropmarker,
+.toolbarbutton-menubutton-dropmarker:hover:active{
+	-moz-border-start:1px inset threedface}
+
+statusbar toolbarbutton,
+statusbar .toolbarbutton-menubutton-button{
+	padding:0!important}
+
+toolbarbutton:not([disabled="true"]):not([checked="true"]):not([open="true"]):hover{
+	border-color:threedhighlight threedshadow threedshadow threedhighlight}
+
+toolbarbutton:not([disabled="true"]):not([checked="true"]):not([open="true"]):hover:active,
+toolbarbutton[open="true"],
+toolbarbutton[checked="true"]{
+	border-color:threedshadow threedhighlight threedhighlight threedshadow!important}
+
+toolbarbutton[buttonover="true"]:not([open="true"])>.toolbarbutton-menubutton-dropmarker,
+toolbarbutton[buttonover="true"]:hover:not([open="true"])>.toolbarbutton-menubutton-dropmarker,
+toolbarbutton:hover>.toolbarbutton-menubutton-button{
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+toolbarbutton:not([open="true"]):hover,
+toolbarbutton:not([open="true"])[buttonover="true"]>.toolbarbutton-menubutton-button,
+toolbarbutton:not([open="true"]):hover:not([buttonover="true"])>.toolbarbutton-menubutton-dropmarker{
+	background-color:#CCCCFF;
+	color:black}
+
+toolbarbutton:hover:active:not([type="menu"]),
+toolbarbutton[type="menu"][open="true"],
+.button-appmenu[open="true"],
+toolbarbutton[open="true"]>.toolbarbutton-menubutton-dropmarker,
+toolbarbutton[checked="true"]:hover:active,
+.toolbarbutton-menubutton-button:hover:active,
+.toolbarbutton-menubutton-dropmarker:hover:active{
+	background-color:Highlight;
+	color:HighlightText}
+
+toolbarbutton[checked="true"]{
+	background:threedshadow url(chrome://global/skin/highlight.png)}
+
+toolbarbutton[disabled="true"],
+.toolbarbutton-menubutton-button[disabled="true"],
+.toolbarbutton-menubutton-dropmarker[disabled="true"]{
+	opacity:1!important;
+	border-color:transparent!important;
+	background:none!important;
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+
+toolbarbutton[disabled="true"]>.toolbarbutton-icon,
+toolbarbutton[disabled="true"]>stack>hbox>.toolbarbutton-icon,
+toolbarbutton[disabled="true"]>hbox>vbox>.toolbarbutton-icon{
+	opacity:.5;
+	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+
+toolbarbutton.toolbar-text-button:hover:active{color:HighlightText!important}
+
+

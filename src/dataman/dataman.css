@@ -1,0 +1,33 @@
+#data-page>hbox>vbox{
+	border-top:1px outset threedface}
+#data-page>hbox>splitter{
+	border-top:1px outset threedface;
+	border-bottom:1px outset threedface}
+#domainTree{
+	border-bottom-width:0}
+#tabbox{
+	border-width:0;
+	border-bottom:1px outset threedface}
+#tabbox>tabs{
+	border-left:1px inset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+#tabpanels{
+	border-width:0;
+	padding:4px 0 0 0}
+#permList{
+	overflow:auto}
+.hostLabel{
+	width:30em;
+	font-weight:bold;
+	-moz-margin-end:1em}
+.permissionLabel{
+	width:10em}
+#cookieRemove,#prefsRemove,#pwdRemove,#forgetButton,#fdataRemove,
+#domain-context-forget,#cookies-context-remove,#prefs-context-remove,
+#pwd-context-remove,#fdata-context-remove{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px,16px,288px,0)}
+.permission{
+	-moz-box-orient:horizontal!important;
+	-moz-box-align:center!important}

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!-- This Source Code is subject to the terms of the Mozilla Public License
+   - version 2.0 (the "License"). You can obtain a copy of the License at
+   - http://mozilla.org/MPL/2.0/. -->
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{854a7ddc-f008-4263-b98e-98e62085837f}</em:id>
+    <em:version>1.0.0</em:version>
+    <em:name>LittleMoon</em:name>
+    <em:description>LittleMoon, designed for optimal screen usage, leaving lots of room for browsing. Based on icons from art.gnome.org. Fork of "LittleFox" by Alfred Kayser</em:description>
+    <em:creator>Lootyhoof</em:creator>
+    <em:type>4</em:type>
+    <em:internalName>littlemoon</em:internalName>
+
+    <em:contributor>Alfred Kayser</em:contributor>
+    <em:contributor>art.gnome.org</em:contributor>
+
+    <em:targetApplication>
+      <Description>
+        <!-- Pale Moon -->
+        <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
+        <em:minVersion>25.0</em:minVersion>
+        <em:maxVersion>26.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

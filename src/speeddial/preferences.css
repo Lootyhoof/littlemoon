@@ -1,0 +1,11 @@
+#SpeedDialPreferences radio[pane]{list-style-image:url(chrome://speeddial/skin/preferences.png)}
+
+radio[pane=paneGeneral]{-moz-image-region:rect(0,32px,32px,0)}
+radio[pane=paneAdvanced]{-moz-image-region:rect(0,64px,32px,32px)}
+radio[pane=paneControls]{-moz-image-region:rect(0,96px,32px,64px)}
+radio[pane=paneThumbnails]{-moz-image-region:rect(0,128px,32px,96px)}
+radio[pane=paneDefaults]{-moz-image-region:rect(0,160px,32px,128px)}
+
+#enableMultikeyArrow{list-style-image:url(chrome://speeddial/skin/miniarrow.png)}
+
+checkbox.multikeyOption{padding:0;margin:2px}

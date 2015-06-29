@@ -1,0 +1,86 @@
+html{
+	margin:0;
+	font:message-box;
+	background:threedshadow url(chrome://global/skin/gecko.png) right 90% fixed no-repeat!important;
+	color:-moz-DialogText}
+@media print{html{background:none}}
+
+body{
+	width:614px;
+	margin:4em auto;
+	padding:24px;
+	text-align:left;
+	border-radius:18px;
+	border:2px solid;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threeddarkshadow threedshadow;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+body.verbose,
+.aboutPageWideContainer{width:80%}
+@-moz-document domain(mozilla.org),url(about:credits){body{width:80%}}
+
+.entries{
+	max-height:500px;
+	overflow-y:auto}
+body.verbose>.entries{
+	overflow-x:auto}
+
+#aboutLogoContainer{
+	width:300px;min-height:230px;
+	text-align:center;
+	float:left;
+	border:1px inset threedface;
+	background-color:-moz-Field;
+	color:-moz-FieldText}
+img{border:0}
+#version{
+	font-weight:bold;
+	font-size:120%;
+	margin:-32px 0 0 0}
+#aboutPageList{
+	width:265px;min-height:222px;
+	margin:0;-moz-margin-start:320px;
+	padding:4px;-moz-padding-start:25px;
+	border:1px inset threedface;
+	background-color:-moz-Field;
+	color:-moz-FieldText}
+h1:first-child{
+	text-align:start;
+	padding:0 30px;
+	margin-top:0!important;
+	background:url(chrome://global/skin/icons/information-large.png) no-repeat left center}
+ul{list-style:square}
+ul>li{margin-top:8px}
+a:link{color:-moz-nativehyperlinktext}
+a:hover{
+	background-color:#CCCCFF;
+	color:black}
+a:active{
+	background-color:Highlight!important;
+	color:HighlightText!important}
+a:focus{
+	outline:1px solid #9999CC;
+	outline-offset:-1px}
+
+.columns{-moz-column-width:20em;-moz-column-gap:3em}
+
+h2{font-size:120%;margin-bottom:4px}
+h2>a[name]{
+	clear:both;
+	float:left;
+	font-size:170%;
+	margin:-7px 4px -7px 0;
+	padding:0}
+p{margin:4px 0}
+
+.columns{
+	-moz-column-width:15em;
+	-moz-column-gap:2em}
+.columns>li{margin-top:4px}
+
+.sectionHeader{
+	padding-left:0!important;
+	background-color:transparent!important}

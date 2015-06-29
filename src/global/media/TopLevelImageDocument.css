@@ -1,0 +1,11 @@
+@media not print{
+body{background-color:threedshadow}
+img{
+	background:-moz-Field;
+	color:-moz-FieldText}
+img:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEWgoKClpaUrSK7yAAAAAnRSTlNkFG3Yt+YAAAAPSURBVHheY2D4jxXhEgYAfr8P8SM7T18AAAAASUVORK5CYII=)}
+img:not(.decoded){height:0}
+}
+.completeRotation{transition:transform 300ms}
+.overflowing{cursor:-moz-zoom-out}
+.shrinkToFit,.scaleTodevicePixels{cursor:-moz-zoom-in}

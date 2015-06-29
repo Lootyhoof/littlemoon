@@ -1,0 +1,770 @@
+@import url(chrome://global/locale/intl.css);
+@import url(chrome://os/skin/global.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+menulist>menupopup,
+.menulist-menupopup{-moz-binding:url(chrome://global/content/bindings/popup.xml#popup-scrollbars)}
+.menulist-compact{-moz-binding:url(chrome://global/content/bindings/menulist.xml#menulist-compact)}
+menuitem{-moz-binding:url(chrome://global/content/bindings/menu.xml#menuitem-iconic)}
+progressmeter[mode="undetermined"]{-moz-binding:url(chrome://global/content/bindings/progressmeter.xml#progressmeter-undetermined)}
+
+#webdeveloper-toolbar{overflow:hidden}
+
+window,wizard,page,dialog,prefwindow{
+	background-color:-moz-Dialog;
+	color:-moz-DialogText;
+	font:message-box}
+
+#toolbar-menubar,
+window[chromehidden~="menubar"] #nav-bar,
+#nav-bar[inFullscreen="true"]{
+	border-top:0}
+window[chromehidden~="menubar"] #nav-bar #urlbar{
+	margin:1px!important}
+
+#titlebar-min,#titlebar-max,#titlebar-close,
+#minimize-button,#restore-button,#close-button{
+	margin:1px;
+	padding:1px;
+	list-style-image:url(chrome://global/skin/global.png)!important}
+#titlebar-min,#minimize-button{-moz-image-region:rect(128px,32px,144px,16px)!important}
+#titlebar-max{-moz-image-region:rect(16px,32px,32px,16px)!important}
+window[sizemode="maximized"] #titlebar-max,#restore-button{-moz-image-region:rect(96px,32px,112px,16px)!important}
+#titlebar-close,#close-button{-moz-image-region:rect(144px,32px,160px,16px)!important}
+#titlebar-close:-moz-locale-dir(rtl)>.toolbarbutton-icon{-moz-transform:scaleX(-1)}
+
+/* Bindings must be in global to be applied */
+toolbar[mode="full"][iconsize="large"] toolbarbutton[type="menu"]:not(#back-button):not(#forward-button){
+	-moz-binding:url(chrome://global/content/bindings/toolbarbutton.xml#menu-vertical)}
+
+.message-icon,.alert-icon,.error-icon,.question-icon,.security-icon{
+	list-style-image:url(chrome://global/skin/alerts.png);
+	-moz-image-region:rect(0 24px 24px 0)}
+.alert-icon{-moz-image-region:rect(0 48px 24px 24px)}
+.question-icon{-moz-image-region:rect(0 72px 24px 48px)}
+.message-icon{-moz-image-region:rect(0 96px 24px 72px)}
+.security-icon{-moz-image-region:rect(0 120px 24px 96px)}
+
+statusbar{
+	min-width:1px;
+	min-height:10px;
+	border-top:1px solid threedhighlight;
+	font:status-bar}
+
+statusbarpanel{
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	background-color:transparent;
+	margin:0 1px;
+	padding:0 1px;
+	font:status-bar}
+#pdfdownload-statusbarpanel{-moz-box-align:stretch}
+.statusbar-resizerpanel{
+	background-color:transparent;
+	-moz-box-align:end;
+	-moz-box-pack:end;
+	margin:0!important;
+	padding:0!important}
+statusbarpanel[onclick],
+statusbarpanel[onmouseup],
+statusbarpanel[oncommand],
+#pdfdownload-statusbarButton,
+#gm-notifier-statusbar,
+.statusbarpanel-iconic,
+.statusbarpanel-iconic-text,
+.statusbarpanel-menu-iconic{
+	min-width:20px;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	border:1px solid transparent}
+statusbarpanel[onclick]:hover,
+statusbarpanel[onmouseup]:hover,
+statusbarpanel[oncommand]:hover,
+#pdfdownload-statusbarButton:hover,
+#gm-notifier-statusbar:hover,
+.statusbarpanel-iconic:hover,
+.statusbarpanel-iconic-text:hover,
+.statusbarpanel-menu-iconic:hover{
+	border:1px outset threedface!important;
+	background-color:#CCCCFF!important;
+	color:black!important}
+statusbarpanel[onclick]:hover:active,
+statusbarpanel[onmouseup]:hover:active,
+statusbarpanel[oncommand]:hover:active,
+#pdfdownload-statusbarButton:hover:active,
+#gm-notifier-statusbar:hover:active,
+.statusbarpanel-iconic:hover:active,
+.statusbarpanel-iconic-text:hover:active,
+.statusbarpanel-menu-iconic[open="true"],
+.statusbarpanel-menu-iconic[_moz-menuactive="true"]{
+	border:1px inset threedface!important;
+	background-color:Highlight!important;
+	color:HighlightText!important}
+.statusbarpanel-progress{-moz-box-align:center}
+.progressmeter-statusbar{height:16px}
+
+#sidebar-search-container{
+	-moz-padding-start:2px;
+	min-height:24px}
+
+#newfolder,#newseparator,#fileBookmark,#moveBookmark,#newbookmark{
+	list-style-image:url(chrome://global/skin/global.png)}
+#newseparator{-moz-image-region:rect(160px,32px,176px,16px)}
+#fileBookmark,#moveBookmark{-moz-image-region:rect(192px,32px,208px,16px)}
+#newfolder{-moz-image-region:rect(416px,32px,432px,16px)}
+#newbookmark{-moz-image-region:rect(240px,32px,256px,16px)}
+
+#rename[command="cmd_bm_rename"],
+#rename[command="placesCmd_rename"]{display:none}
+
+#properties{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(96px 16px 112px 0)}
+#delete,#clearDownloadsButton{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px 16px 288px 0)}
+
+#remove{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(177px 31px 191px 17px)!important}
+#remove:hover{
+	-moz-image-region:rect(225px 31px 239px 17px)!important}
+#remove:hover:active{
+	-moz-image-region:rect(113px 31px 127px 17px)!important}
+	
+#placesContext_open{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(144px 16px 160px 0)}
+
+#placesContext_new\:folder{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(416px 32px 432px 16px)}
+
+#placesContext_new\:bookmark{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(240px 32px 256px 16px)}
+
+.toolbar-focustarget{-moz-user-focus:ignore!important}
+.monospace{font-family:Consolas,Lucida Console,monospace}
+separator{height:4px}
+separator[orient="vertical"]{width:4px}
+.plain{margin:0!important;padding:0}
+.tooltip-label{margin:0!important}
+label{padding:0 1px}
+description{padding:0 2px}
+label[disabled="true"],text[disabled="true"]{
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+label[value=""],description[value=""]{padding:0!important}
+.header{font-weight:bold}
+.indent{margin-left:20px}
+.text-link{
+	color:-moz-nativehyperlinktext;
+	text-decoration:underline;
+	padding:0 2px!important;
+	cursor:pointer}
+.text-link:hover{
+	background-color:#CCCCFF!important;
+	color:black!important}
+.text-link:active{
+	background-color:Highlight!important;
+	color:HighlightText!important}
+.text-link:focus{
+	outline:1px dotted Highlight}
+
+.spaced{margin:2px}
+#commonDialog{padding:2px;min-height:4em!important}
+.icon-dropmarker{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(10px 60px 20px 50px)}
+
+#navigator-throbber{
+	-moz-user-focus:ignore!important;
+	border:1px solid;
+	-moz-border-top-colors:transparent;
+	-moz-border-left-colors:transparent;
+	-moz-border-right-colors:transparent;
+	-moz-border-bottom-colors:transparent;
+	background:none!important;
+	margin:0!important;
+	padding:0!important;
+	list-style-image:url(chrome://global/skin/icons/notloading_16.png)}
+#navigator-throbber[busy="true"]{
+	list-style-image:url(chrome://global/skin/icons/loading_16.png)}
+
+#checkForUpdates[loading="true"]{list-style-image:url(chrome://global/skin/loading.gif)}
+
+#navigator-throbber[mousethrough="always"],
+#navigator-throbber[disabled="true"],
+#navigator-throbber>.button-box{border:0!important}
+#navigator-throbber>.button-box>.button-text{display:none}
+
+.statusbarpanel-iconic:hover,
+#navigator-throbber:hover{
+	border:1px outset threedface;
+	background-color:#CCCCFF}
+.statusbarpanel-iconic:hover:active,
+#navigator-throbber:hover:active{
+	border-style:inset;
+	background-color:Highlight}
+
+#clientBox{
+	margin:0;
+	border:1px inset threedface!important;
+	background-color:-moz-field!important;
+	color:-moz-fieldtext!important}
+#bottomBox{
+	padding:8px 10px 0!important;
+	background:-moz-dialog!important;
+	color:-moz-DialogText!important}
+#trademark{
+	margin:8px 10px 0!important}
+
+#aboutDialog:-moz-any([title*="Beta"],[title*="Aurora"],[title*="Nightly"])>#aboutDialogContainer{
+	background:none!important}
+#aboutDialog:-moz-any([title*="Beta"],[title*="Aurora"],[title*="Nightly"])>#aboutDialogContainer>#clientBox{
+	box-shadow:none;
+	background:black url(chrome://branding/content/about-background.png) no-repeat!important;
+	color:white!important}
+	
+#aboutDialog[title*="Waterfox"]>#aboutDialogContainer>#clientBox,
+#aboutDialog[title*="Waterfox"]>#aboutDialogContainer>#bottomBox{
+	background:none!important;
+	border:0!important;
+	box-shadow:none!important}
+
+.bottom-link[href],
+.bottom-link[href]:focus,
+.bottom-link[onclick],
+.bottom-link[onclick]:focus{
+	padding:0 4px;
+	color:-moz-DialogText!important}
+.bottom-link:hover{
+	background-color:#CCCCFF;
+	color:black!important}
+.bottom-link:hover:active{
+	background-color:highlight;
+	color:highlighttext!important}
+
+#stumble{height:auto!important}
+
+.su-referral-menuitem,
+.su-referral-popup-topdeck{
+	margin:0!important}
+.su-referral-menuitem label{
+	font:inherit!important}
+checkbox[anonid="checkbox"]{
+	margin:0!important;
+	border-width:1px!important;
+	padding:1px!important}
+vbox[anonid="imagebox"]{
+	width:auto!important}
+.su-iconic-referral>.menu-iconic-left,
+.su-iconic-favicon .checkbox-icon,
+.su-iconic-favicon-alt .checkbox-icon{
+	margin:0!important;
+	width:auto!important;
+	height:auto!important}
+#stumbleglobals_referral_send_button:not(:active){
+	border:1px outset threedface}
+
+#stumbleglobals_searchbox{margin:0 3px!important}
+
+#googlepreview-status{-moz-image-region:rect(2px 15px 17px 0)!important}
+
+/* Fixes for Forecastfox */
+.ff-spacer{border:0!important}
+.ff-progress{margin:2px 0!important}
+.ff-panel,ffpanel{
+	-moz-appearance:none!important;
+	min-width:20px;
+	margin:0!important;
+	padding:0!important;
+	border-radius:5px;
+	border:1px solid transparent!important}
+.ff-panel:hover,ffpanel:hover{
+	border:1px outset threedface!important;
+	background-color:#CCCCFF!important}
+.ff-panel:hover:active,ffpanel:hover:active{
+	border:1px inset threedface!important;
+	background-color:Highlight!important}
+
+/* Skyfox button icon fix */
+#skyfoxButton{list-style-image:url(chrome://global/skin/skyfox16.png)!important}
+
+.dialog-button-box{margin:2px}
+
+#aboutDialog[windowtype="Shell:SetDesktopBackground"]>.dialog-content-box{border:0!important}
+#aboutDialog>.dialog-content-box stack{
+	width:186px;height:170px;
+	background-image:url(chrome://browser/skin/monitor.png)!important}
+#aboutDialog>.dialog-content-box stack>image{display:none}
+
+#autoscroller,.autoscroller{
+	height:28px;
+	width:28px;
+	border:none;
+	margin:-14px;
+	padding:0;
+	background:transparent url(chrome://global/skin/icons/autoscroll.png);
+	-moz-appearance:none;
+	-moz-window-shadow:none}
+#autoscroller[scrolldir="NS"],.autoscroller[scrolldir="NS"]{background-position:left center}
+#autoscroller[scrolldir="EW"],.autoscroller[scrolldir="EW"]{background-position:left bottom}
+
+#autoscroller[translucent],.autoscroller[translucent]{background-position:right top}
+#autoscroller[translucent][scrolldir="NS"],.autoscroller[translucent][scrolldir="NS"]{background-position:right center}
+#autoscroller[translucent][scrolldir="EW"],.autoscroller[translucent][scrolldir="EW"]{background-position:right bottom}
+
+#commonDialog{line-height:13px}
+#commonDialog #infoContainer{max-width:33em!important}
+#commonDialog #info\.title,
+#commonDialog #info\.header,
+#commonDialog #info\.body{
+	font:menu;
+	line-height:16px;
+	margin-bottom:6px}
+
+#certmanagertabs{margin:0!important}
+
+#rssStatusImage{width:auto;height:auto}
+#toolbar_cleanup{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px 16px 288px 0)}
+
+/*Fix the sloppy coding of Weatherbug*/
+.wxBugTooltip{background-color:infobackground!important;color:infotext!important;padding:0!important}
+.wxBugForecastDay{padding:2px!important}
+.wxBugIconPanel{padding:0!important}
+
+/*AllInOneSidebar*/
+
+#aios-sbhtoolbar,#aiostbx-left-toolbox>toolbar,#sidebar,
+#aiostbx-sidebarright-toolbox>toolbar,#aios-toggle-toolbar,#bmHi-toolbar{
+	border-width:0!important}
+#extensionsView[flex],#bookmarks-view[flex],#historyTree[flex]{
+	border:1px outset threedface!important}
+#aios-toggle-toolbar,
+#aios-toolbar[orient="vertical"],
+#sidebar-box,#sidebar-splitter{
+	border-top:1px outset threedface!important;
+	border-bottom:1px outset threedface!important}
+
+#aios-toolbar[orient="vertical"]{
+	border-left-width:0!important;
+	border-right-width:0!important}
+
+#aios-toggle-toolbar{-moz-box-align:stretch}
+
+#sidebar-box>#sidebar{margin-bottom:2px!important}
+
+#addons-button{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(400px,32px,416px,16px)!important}
+#pageinfo-button{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(432px,32px,448px,16px)!important}
+
+#aios-toolbar>.toolbarbutton-1>.toolbarbutton-icon{
+	width:16px!important;
+	height:16px!important}
+
+#paneltab-button[label],
+#sidebar-close-button[label]{
+	padding:1px!important}
+
+window#config,
+#commandBar{border:0!important}
+
+#sbh-paneltab-button,
+toolbar[iconsize="small"] #sbh-autohide-button{padding:0!important}
+sidebarheader #aios-sbhtoolbar[mode="icons"] .tabs-closebutton{padding:2px!important}
+sidebarheader[mode="icons"] #sidebars-titlebutton{padding:1px!important}
+
+#loader-throbber{list-style-image:url(chrome://global/skin/loading.gif)}
+
+#extensionsView[staticHint]>richlistitem[selected="true"][name]{
+	background-color:threedshadow!important;
+	color:threedhighlight!important}
+#sidebars-titlebutton>menupopup>menuitem:hover:active,
+#sidebars-titlebutton menuitem:hover:active,
+#extensionsView[staticHint]:focus>richlistitem[current="true"][name]{
+	background:Highlight none!important;
+	color:HighlightText!important}
+
+.cookie-status-tooltip{opacity:1!important}
+
+#TM_ButtonBox,
+#tabMixTabBox{
+	border-width:0!important;
+	margin:0!important}
+
+#main-window[persona] sidebarheader{
+	background:none}
+
+#main-window[persona] #sidebar-box,
+#main-window[persona] #sidebar-splitter{
+	background:-moz-Dialog}
+
+#main-window[persona] .searchbar-textbox,
+#main-window[persona] #urlbar{opacity:1!important;background:rgba(255,255,255,0.7) none!important}
+#main-window[persona] #searchbar{opacity:1!important}
+
+#main-window[persona] findbar,
+#main-window[persona] .search-go-button,
+#main-window[persona] .search-go-container,
+#main-window[persona] .searchbar-engine-button,
+#main-window[persona] .db_finishedHbox,
+#main-window[persona] .db_notdoneHbox,
+#main-window[persona] toolbarbutton:not([class="tab-close-button"]),
+#main-window[persona] #appcontent,
+#main-window[persona] #slidebar,#_browser{background:none}
+#main-window[persona] #appcontent{border-top:0!important;border-radius:0!important}
+
+#main-window[persona] .tabbrowser-tabs{border-top:0}
+#main-window[persona] .tabbrowser-strip{border-top-color:transparent;border-bottom-width:0}
+#main-window[persona] tabpanels.plain{border-top:1px solid threedshadow}
+#main-window[persona] .tabbrowser-tab{color:inherit!important;background:none!important;text-shadow:1px 1px 1px white;opacity:1;border:1px solid transparent}
+#main-window[persona] .tabbrowser-tab:hover{color:black!important;background-color:#CCCCFF!important;text-shadow:none;border:1px outset threedface}
+#main-window[persona] .tabbrowser-tab[selected="true"]{color:black!important;background:threedhighlight url(chrome://global/skin/menu-bg.png)!important;border:1px inset threedface}
+#browser-bottombox[persona]{border-top:1px solid threedhighlight!important;background-image:inherit!important}
+#browser-bottombox[persona]>*{border-color:transparent!important}
+
+#main-window[persona] toolbarbutton:hover:not([disabled="true"]),
+#main-window[persona] .db_finishedHbox:hover:not([disabled="true"]),
+#main-window[persona] .db_notdoneHbox:hover:not([disabled="true"]){
+	background-color:#CCCCFF;
+	color:black}
+
+#main-window[persona] toolbarbutton:hover:active:not([disabled="true"]),
+#main-window[persona] .db_finishedHbox:hover:active:not([disabled="true"]),
+#main-window[persona] .db_notdoneHbox:hover:active:not([disabled="true"]){
+	background-color:Highlight;
+	color:HighlightText}
+
+#main-window[persona] menubar>menu:hover:not([disabled="true"]){color:black}
+
+#main-window[persona] toolbarbutton[disabled="true"],
+#main-window[persona] .db_finishedHbox[disabled="true"],
+#main-window[persona] .db_notdoneHbox[disabled="true"]{
+	background:none!important;
+	color:threedshadow!important}
+
+#main-window[persona]>#navigator-toolbox>toolbar{
+	border-top-width:1px!important;
+	border-bottom:1px solid transparent!important}
+
+#main-window[persona] .autocomplete-history-dropmarker{
+	background:none;
+	border-left:1px solid transparent}
+
+#extensionsView[flex],
+#bookmarks-view[flex],
+#historyTree[flex],
+#webpanels-window:not([chromehidden]){
+	border:1px inset threedface!important}
+
+#dwhelper-statusbar-button{
+	-moz-box-align:stretch!important;
+	-moz-box-pack:start!important}
+
+#gtbOptionsAutoFillTabbox,
+.gtbTabPanels{border:0!important}
+
+#fbTB-Toolbar{
+	border:0!important;
+	background-color:transparent!important;
+	color:black!important}
+#fbTB-StatusScroll,
+#fbTB-ImageScroll{min-height:33px!important}
+#fbTB-StatusScroll>hbox,
+#fbTB-ImageScroll>hbox{margin:0!important}
+
+/*DownThemAll!*/
+#useTemp+hbox{-moz-box-align:center}
+textbox#temp{padding:0!important}
+
+/*Evony Toolbar*/
+#evony .toolbarbutton-text[style^="font"]{font:inherit!important;color:inherit!important}
+
+/*minimap*/
+#minimap-maps-topbar-toolbar{
+	padding:0!important;
+	height:auto!important}
+#sbminimap>vbox,
+#minimap-maps-topbar-toolbar{
+	background:none!important;
+	color:black!important}
+#maps_instructions{
+	font-size:120%!important;
+	border-width:0!important;
+	opacity:.5;
+	color:inherit!important}
+#maps_instructions+vbox>vbox[style]{
+	-moz-border-end:0!important}
+#maps_instructions+vbox>vbox:first-child{
+	border-top-width:0!important}
+#maps_instructions+vbox>vbox,
+#minimap-maps-minibrowser,
+#minimap-deck>vbox{
+	border-radius:0!important;
+	border:1px inset threedface!important}
+#sbminimap>hbox,
+#minimap-deck>vbox{
+	-moz-border-start:0!important;
+	background:-moz-dialog!important;
+	color:-moz-dialogtext!important}
+#address_list{
+	margin-top:0!important;
+	background-color:-moz-field!important;
+	color:inherit!important}
+.minimapTabs[type]{border-radius:5px!important}
+.minimapTabs[type],
+.geobutb,
+.geobut{
+	box-shadow:none!important;
+	margin:0!important;
+	padding:2px!important;
+	border:1px solid transparent!important}
+.minimapTabs[type]:not(:hover),
+.geobut:not(:hover),
+.geobutb:not(:hover),
+#minimap-deck+hbox>tabs{
+	background:none!important}
+.minimapTabs[type]:hover,
+.geobut:hover,
+.geobutb:hover{
+	border:1px outset threedface!important;
+	background-color:#CCCCFF!important;
+	color:black!important}
+.minimapTabs[type][selected="true"],
+.minimapTabs[type]:hover:active,
+.geobut:hover:active,
+.geobutb:hover:active{
+	border-style:inset!important;
+	background-color:highlight!important;
+	color:highlighttext!important}
+#address_list>treechildren::-moz-tree-row(makeItClear){
+	background-color:transparent!important}
+#address_list>treechildren::-moz-tree-row(selected){
+	background-color:highlight!important;
+	color:highlighttext!important}
+#address_list>treechildren::-moz-tree-cell-text(selected){
+	color:highlighttext!important}
+#address_list>treechildren::-moz-tree-checkbox(checked){
+	list-style-image:url(chrome://global/skin/checkbox.png)!important;
+	-moz-image-region:rect(0,14px,14px,0)!important}
+#kml-list{border:0!important}
+#kml-list+spacer+description[style*="color: #fff"],
+vbox>label[style*="color: #fff"]{color:inherit!important}
+#maps-deck>vbox[style^="padding"]{padding:0!important}
+#minimap-maps-minibrowser{-moz-border-start:0!important;border-bottom-width:0!important}
+
+/*PDF Download*/
+#CompanyPane>spacer{display:none}
+
+:root:-moz-lwtheme-darktext,:root[lwthemetextcolor="dark"]{text-shadow: 1px 1px 2px white}
+:root:-moz-lwtheme-brighttext,:root[lwthemetextcolor="bright"]{text-shadow: 1px 1px 2px black}
+
+toolbox:-moz-lwtheme,
+toolbar:-moz-lwtheme,
+statusbar:-moz-lwtheme,
+sidebarheader:-moz-lwtheme,
+:root[lwtheme="true"] toolbox,
+:root[lwtheme="true"] toolbar,
+:root[lwtheme="true"] statusbar,
+:root[lwtheme="true"] sidebarheader,
+#main-window[persona] #slidebar,:root[lwtheme="true"] #slidebar,
+#main-window[persona] #_browser,:root[lwtheme="true"] #_browser,
+:root[lwtheme="true"] .tabbrowser-tabs{background:none!important;border-style:none!important}
+
+#fbWindowButtons>toolbarbutton{box-shadow:none}
+
+/*Yoono*/
+#yoono-spliiter,
+#yoono-sidebar{
+	background:-moz-Dialog none!important}
+
+
+#asktb-searchbox-border-container{
+	border:0!important}
+#asktb-searchbox{
+	padding:0!important;
+	height:auto!important}
+#asktb-btn-service-provider>.toolbarbutton-icon{
+	margin:2px 3px 2px 0px!important}
+#asktb-searchbtn>.toolbarbutton-icon{
+	margin:0!important}
+
+/*QuickFox Notes*/
+#editor-tabbox-tabpanels,
+#quickfox-notes-browser,
+#editor-tabbox{
+	border-width:0!important}
+.notepad{
+	margin:0!important;
+	border:1px inset threedface!important}
+tabs#editor-tabbox-tabs>tab{
+	text-align:start}
+#quickfox-notes-contentsplitter{
+	border:1px outset threedface}
+#editor-tabbox>hbox:not(:first-child){
+	background-color:-moz-Dialog}
+
+#DownThemAll radio[pane="paneMain"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png)!important;
+	-moz-image-region:rect(0 24px 24px 0)!important}
+
+#DownThemAll radio[pane="paneAdvanced"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png)!important;
+	-moz-image-region:rect(96px 24px 120px 0)!important}
+
+#DownThemAll radio[pane="panePrivacy"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png)!important;
+	-moz-image-region:rect(144px 24px 168px 0)!important}
+
+#DownThemAll radio[pane="paneInterface"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png)!important;
+	-moz-image-region:rect(192px 24px 216px 0)!important}
+#DownThemAll textbox{padding:0!important}
+#browsedir, maskbutton toolbarbutton {
+	min-height:1px!important;
+	min-width:1px!important}
+maskbutton>toolbarbutton>.toolbarbutton-icon,
+#browsedir>.toolbarbutton-icon{
+	-moz-margin-end:1px!important}
+maskbutton toolbarbutton:hover>toolbarbutton>.toolbarbutton-icon,
+#browsedir:hover>.toolbarbutton-icon{
+	opacity:1!important}
+
+#dataSources{-moz-appearance:none!important}
+
+/*BRIEF*/
+#places-tree,
+#feeds-pane>.content-box,
+#shortcuts-pane>.content-box{
+	-moz-box-flex:1!important;
+	height:auto!important}
+browser#shortcuts-browser{
+	height:auto!important;
+	width:auto!important}
+
+/*Facebook*/
+#facebook-toolbar>toolbaritem{-moz-box-align:center}
+#facebook-home,#facebook-photoupload{
+	border:1px solid transparent!important}
+#facebook-home:hover,#facebook-photoupload:hover{
+	border:1px outset threedface!important}
+#facebook-home:hover:active,#facebook-photoupload:hover:active{
+	border:1px inset threedface!important}
+#facebook-toolbar-status{
+	margin:1px!important;
+	border:1px inset threedface!important}
+#facebook-toolbar-status>.textbox-input[type]{margin:0!important}
+#facebook-search{-moz-padding-start:1px;margin:1px!important}
+#facebook-search .textbox-input-box{-moz-box-align:center!important}
+
+#facebook-link-menu,
+#facebook-home,
+.facebook-icon-photoupload,
+.facebook-notification{padding:1px!important}
+.facebook-notification>.toolbarbutton-icon{padding:0!important;margin:0!important}
+
+#facebook-photoupload,
+#editPanel,
+#editImageContainer{
+	padding:0!important}
+	
+#picBox{
+	margin:0!important; 
+	border:1px inset threedface!important}
+
+#facebook-toolbar-status+toolbarseparator,
+#editPanel>spacer{display:none}
+
+.friendBox{
+	background:-moz-Field;
+	color:-moz-FieldText}
+	
+	
+#su_splitter_first,
+#su_splitter_first_flexbox{display:none}
+
+#leftBox{-moz-margin-start:10px!important}
+#rightBox{-moz-margin-end:10px!important}
+
+#shortcutGrid{
+	padding:2px!important;
+	border:1px inset threedface!important;
+	background-color:-moz-Dialog!important;
+	color:-moz-DialogText!important}
+
+#scratchpad-textbox{
+	margin:0;
+	border-width:1px 0}
+
+#palette-box .searchbar-textbox{width:auto!important;min-width:1em!important}
+
+
+/* Pencil */
+#main-window[windowtype="PencilMainWindow"] #toolbar-menubar{background:-moz-Dialog!important}
+#pencilAboutDialog textbox[readonly="true"] hbox,
+#pencilAboutDialog>vbox>hbox,dialog .dialog-button-box,
+#mainBox,#pencil-menu{padding:0!important;margin:0!important}
+#mainBox>spacer[style^="min-width"]{display:none}
+#sideBoxTabPanels,#mainViewPanel,#sideBoxTabs{padding:0;border:0}
+#sideBoxTabPanels,#mainViewHeader{margin-bottom:-1px;-moz-box-flex:1}
+#aboutBox{border:0;border-radius:0}
+#pencil-settings .paneSelector{background:none!important}
+.PanelContent>hbox{border:1px inset threedface}
+#miniToolbar{
+	padding:2px;
+	border:1px outset threedface}
+#pencilAboutDialog textbox[readonly="true"] hbox{
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+#grabanddrag-button{
+	-moz-image-region:rect(1px,17px,17px,1px)!important;
+	list-style-image:url(chrome://grabanddrag/skin/grabanddragtbsmall18.png)!important}
+#grabanddrag-button[gadOn="false"]{-moz-image-region:rect(1px,35px,17px,19px)!important}
+#grabanddrag-button[gadOn="true"]{-moz-image-region:rect(1px,53px,17px,37px)!important}
+#grabanddrag-button[gadOn="QT"]{-moz-image-region:rect(1px,71px,17px,55px)!important}
+#grabanddrag-button[gadOn="BL"]{-moz-image-region:rect(1px,17px,17px,1px)!important}
+.roboformlite-notification-bar{
+	background-color:-moz-dialog!important}
+.roboformlite-notification-bar>iframe{
+	height:28px}
+#roboformlite_autosaveDlg>toolbar{
+	color:-moz-DialogText!important;
+	padding:0 2px!important;
+	border:1px outset threedface!important;
+	font:message-box!important}
+#roboformlite_autosave_objectname{
+	margin:1px!important;
+	-moz-appearance:none!important;
+	border:1px inset threedface!important;
+	font:message-box!important}
+#roboformlite_autosave_folder{
+	padding:1px!important;
+	margin:0!important}
+#roboformlite_autosave_close[command]{
+	padding:1px!important;
+	border:1px solid transparent!important;
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(177px,31px,191px,17px)!important}
+#roboformlite_autosave_close[command]:hover{
+	-moz-image-region:rect(225px,31px,239px,17px)!important;
+	border:1px outset threedface!important}
+#roboformlite_autosave_close[command]:hover:active{
+	border-style:inset!important}
+#roboformlite_autosave_close>.toolbarbutton-icon{
+	-moz-margin-end:0!important}
+#roboformlite_autosave_savebutton{
+	padding:1px!important;
+	font:message-box!important}
+#roboformlite_autosave_protected{
+	margin:0!important}
+
+panel[titlebar]>iframe[type="content"]{
+	border-bottom:1px solid threedshadow}

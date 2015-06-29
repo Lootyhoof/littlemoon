@@ -1,0 +1,96 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+html|input[type="submit"],
+html|button{
+	-moz-appearance:none!important;
+	font:message-box;
+	margin:1px;
+	padding:1px;
+	border:2px solid;
+	-moz-border-top-colors:buttonhighlight buttonface;
+	-moz-border-left-colors:buttonhighlight buttonface;
+	-moz-border-right-colors:buttonshadow buttonface;
+	-moz-border-bottom-colors:buttonshadow buttonface;
+	background-color:buttonface;
+	color:buttontext}
+
+html|input[type="submit"]:hover:not([disabled="true"]),
+html|button:hover:not([disabled="true"]){
+	border:2px solid;
+	-moz-border-top-colors:buttonhighlight #CCCCFF;
+	-moz-border-left-colors:buttonhighlight #CCCCFF;
+	-moz-border-right-colors:buttonshadow #CCCCFF;
+	-moz-border-bottom-colors:buttonshadow #CCCCFF;
+	background-color:#CCCCFF;
+	color:black}
+
+html|input[type="submit"]:focus,
+html|button:focus,
+html|input[type="submit"]:focus:hover:not([disabled="true"]),
+html|button:focus:hover:not([disabled="true"]){
+	-moz-border-top-colors:highlight buttonhighlight;
+	-moz-border-left-colors:highlight buttonhighlight;
+	-moz-border-right-colors:highlight buttonshadow;
+	-moz-border-bottom-colors:highlight buttonshadow}
+
+html|input[type="submit"][default],
+html|input[type="submit"][default]:hover:not([disabled="true"]),
+html|button[default],
+html|button[default]:hover:not([disabled="true"]){
+	-moz-border-top-colors:buttonhighlight white;
+	-moz-border-left-colors:buttonhighlight white;
+	-moz-border-right-colors:threeddarkshadow buttonshadow;
+	-moz-border-bottom-colors:threeddarkshadow buttonshadow;
+	font-weight:bold}
+
+html|input[type="submit"]:hover:active:not([disabled="true"]),
+html|button:hover:active:not([type="menu"]):not([disabled="true"]),
+html|button:focus:hover:active:not([type="menu"]):not([disabled="true"]),
+html|button[default]:hover:active:not([disabled="true"]){
+	-moz-border-top-colors:buttonshadow threeddarkshadow;
+	-moz-border-left-colors:buttonshadow threeddarkshadow;
+	-moz-border-right-colors:buttonhighlight white;
+	-moz-border-bottom-colors:buttonhighlight white;
+	background-color:highlight;
+	color:highlighttext}
+
+html|input[type="submit"][checked="true"],
+html|button[checked="true"]{
+	-moz-border-top-colors:buttonshadow buttonface;
+	-moz-border-left-colors:buttonshadow buttonface;
+	-moz-border-right-colors:buttonhighlight buttonface;
+	-moz-border-bottom-colors:buttonhighlight buttonface;
+	background-color:rgba(255,255,255,.5)}
+
+html|input[type="submit"][disabled="true"],
+html|button[disabled="true"]{
+	-moz-border-top-colors:ButtonHighlight ButtonFace!important;
+	-moz-border-left-colors:ButtonHighlight ButtonFace!important;
+	-moz-border-right-colors:ButtonShadow ButtonFace!important;
+	-moz-border-bottom-colors:ButtonShadow ButtonFace!important;
+	background:-moz-Dialog none!important;
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+
+#closeButton,#btnCloseSidebar,#allow-button,
+html|input[type="submit"][value="OK"],
+html|input[type="submit"][value="Cancel"],#errorCancel,
+#btnTryAgain,#errorTryAgain,#restart-button{
+	-moz-padding-start:18px;
+	background-repeat:no-repeat;
+	background-position:2px center}
+#closeButton:-moz-locale-dir(rtl),#btnCloseSidebar:-moz-locale-dir(rtl),#allow-button:-moz-locale-dir(rtl),
+html|input[type="submit"][value="OK"]:-moz-locale-dir(rtl),
+html|input[type="submit"][value="Cancel"]:-moz-locale-dir(rtl),#errorCancel:-moz-locale-dir(rtl),
+#btnTryAgain:-moz-locale-dir(rtl),#errorTryAgain:-moz-locale-dir(rtl){
+	background-position:right center}
+
+#closeButton,#btnCloseSidebar,#allow-button,
+html|input[type="submit"][value="OK"]{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),0,16,16,0)}
+html|input[type="submit"][value="Cancel"],#errorCancel{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),16,16,32,0)}
+#errorTryAgain{/*needs to be separate*/
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),128,16,144,0)}
+#btnTryAgain,#restart-button{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),128,16,144,0)}

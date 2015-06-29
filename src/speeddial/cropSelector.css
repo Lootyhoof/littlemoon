@@ -1,0 +1,17 @@
+dialog{-moz-binding:url(chrome://speeddial/content/dialog.xml#dialog)!important}
+colorpicker:not([type]){-moz-binding:url(chrome://speeddial/content/speeddial.xml#colorpicker)!important}
+
+#loadingMessage{
+	width:500px;
+	height:300px;
+	min-width:0;
+	min-height:0;
+	-moz-box-align:center;
+	-moz-box-pack:center}
+
+#errorMessage{-moz-box-align:center;-moz-box-pack:center}
+#cropSelectorStack,#colorPickerStack{border:1px inset threedface}
+#selection-box{border:1px dotted threedshadow}
+#cropCanvas,#pickerCanvas{cursor:crosshair}
+#loadingIcon{list-style-image:url(chrome://global/skin/icons/loading_16.png)!important}
+.scalingButton{min-width:18px!important}

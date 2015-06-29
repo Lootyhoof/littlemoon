@@ -1,0 +1,110 @@
+:root{
+	background-color:-moz-dialog}
+
+#newtab-scrollbox{
+	padding-bottom:30px;
+	background:url(chrome://global/skin/logo.png) 30px bottom no-repeat content-box}
+#newtab-scrollbox:not([page-disabled]){
+	overflow:visible!important}
+
+#newtab-margin-top,#newtab-margin-bottom{min-height:1px}
+#newtab-horizontal-margin{-moz-box-flex:8}
+.newtab-side-margin{min-width:1px}
+
+#newtab-grid{
+	min-width:400px!important;
+	min-height:200px!important}
+
+.newtab-row:not(:last-child){margin-bottom:20px}
+
+.newtab-title{
+	font-weight:700;
+	text-align:center;
+	padding:2px 4px;
+	background-color:graytext;
+	color:threedhighlight}
+
+#newtab-toggle,
+.newtab-control{
+	-moz-appearance:none;
+	width:20px;
+	height:20px;
+	padding:0;
+	border:1px solid transparent;
+	background:none center center no-repeat}
+
+.newtab-cell{
+	background-color:-moz-Dialog}
+.newtab-cell:empty{outline:1px dashed threedface;outline-offset:-1px}
+.newtab-cell:not(:last-child){-moz-margin-end:20px}
+
+.newtab-site{
+	box-shadow:0 0 1px graytext;
+	text-decoration:none;
+	-moz-transition:200ms ease-out;
+	-moz-transition-property:top,left,box-shadow,background-color}
+
+.newtab-site:hover:not(:active),
+.newtab-site[dragged]{
+	box-shadow:1px 1px 8px graytext;
+	background-color:-moz-Dialog}
+.newtab-thumbnail{
+	opacity:1;
+	background-color:-moz-dialog;
+	background-origin:padding-box;
+	background-clip:padding-box;
+	background-repeat:no-repeat;
+	background-size:cover}
+.newtab-site:hover:not(:active)>.newtab-link>.newtab-thumbnail,
+.newtab-site[dragged]>.newtab-link>.newtab-thumbnail{
+	box-shadow:none!important}
+.newtab-site:hover:active:not([dragged])>.newtab-link>.newtab-thumbnail{
+	opacity:.9;
+	box-shadow:1px 1px 2px graytext inset}
+.newtab-site:hover:active:not([dragged])>.newtab-control:not(:hover){
+	display:none}
+
+#newtab-toggle{
+	top:4px!important;
+	right:4px!important;
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),16,16,32,0)}
+#newtab-toggle[page-disabled]{background-image:-moz-image-rect(url(chrome://global/skin/global.png),272,32,288,16)}
+.newtab-control-block{background-image:-moz-image-rect(url(chrome://global/skin/global.png),272,16,288,0)}
+.newtab-control-pin{background-image:-moz-image-rect(url(chrome://global/skin/global.png),288,32,304,16)}
+
+.newtab-control-pin[pinned]{transform:scaleX(-1)}
+.newtab-control-pin[pinned]:not(:hover){
+	background-color:rgba(160,160,160,.6);
+	border-color:threedshadow threedshadow threedhighlight threedhighlight;
+	box-shadow:inset -1px 1px 2px threedshadow}
+
+.newtab-control{top:0!important}
+.newtab-control-pin:-moz-locale-dir(ltr),
+.newtab-control-block:-moz-locale-dir(rtl){left:0!important}
+.newtab-control-block:-moz-locale-dir(ltr),
+.newtab-control-pin:-moz-locale-dir(rtl){right:0!important}
+
+#newtab-toggle:hover,
+.newtab-control:hover{
+	border:1px outset threedface;
+	background-color:#CCCCFF}
+#newtab-toggle:hover:active,
+.newtab-control:hover:active{
+	border-style:inset;
+	background-color:highlight}
+
+#newtab-undo-container{
+	border:1px outset threedface;
+	padding:2px}
+#newtab-undo-label{
+	font-weight:600}
+#newtab-undo-button{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(496px,32px,512px,16px)}
+#newtab-undo-close-button{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(177px 31px 191px 17px)}
+#newtab-undo-close-button:hover{
+	-moz-image-region:rect(225px 31px 239px 17px)}
+#newtab-undo-close-button:hover:active{
+	-moz-image-region:rect(113px 31px 127px 17px)}

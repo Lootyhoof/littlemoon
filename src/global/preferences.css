@@ -1,0 +1,23 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.paneSelector{margin:0}
+.paneSelector>radio{
+	-moz-box-pack:end;
+	margin:1px;
+	min-width:50px}
+.paneSelector>radio[selected="true"]{
+	border:1px inset threedface!important;
+	background:-moz-Dialog url(chrome://global/skin/highlight.png)!important;
+	color:-moz-DialogText!important}
+.paneSelector:focus>radio[selected="true"]{
+	outline:1px solid #9999CC}
+
+.paneButtonIcon{width:24px;height:24px}
+.paneButtonLabel{margin:0 2px}
+
+.paneDeckContainer{
+	margin:0 2px}
+
+separator{display:none}
+#LanguagesDialog{min-height:20em}
+#test-pilot-all-studies-window>.paneDeckContainer{display:none}

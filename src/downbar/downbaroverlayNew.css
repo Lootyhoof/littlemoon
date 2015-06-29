@@ -1,0 +1,89 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#downbarHolder{border:1px outset threedface}
+#downbarHolder[empty="true"]{border:0}
+
+.db_progressStack,
+.db_pauseStack,
+.db_notdoneHbox,
+.db_finishedHbox{
+	max-width:125px;
+	border-radius:5px;
+	border:1px outset threedface;
+	background:transparent url(chrome://global/skin/menu-bg.png)!important;
+	margin:0}
+.db_progressStack>hbox:last-child,
+.db_pauseStack>hbox:last-child,
+.db_notdoneHbox>hbox:last-child,
+.db_finishedHbox>hbox:last-child{
+	padding:0 2px}
+
+.db_progress-bar{
+	border-radius:4px;
+	background-color:threedshadow!important}
+
+.db_finishedHbox{color:green;font-weight:bold}
+.db_pauseStack{color:brown;font-weight:bold}
+.db_notdoneHbox{color:red;font-weight:bold}
+
+.db_progressDescription{
+	font-size:10px;
+	max-width:125px;
+	text-align:left;
+	margin-left:2px}
+
+.db_progressIndicator{
+	font-size:5pt;
+	text-align:right;
+	margin:0 3px 0 0;
+	padding:0;
+	font-weight:bold}
+
+.db_finishedIcon{
+	max-height:16px;
+	max-width:16px;
+	margin-top:0;
+	margin-bottom:0;
+	padding-top:0;
+	padding-bottom:0;
+	vertical-align:baseline}
+
+	background-color:#CCCCFF!important;
+	color:black!important}
+
+#downbarMiniImage{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(96px,85px,112px,69px)}
+
+#downbarMainMenuImage{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(96px,85px,112px,69px)}
+
+#downbarMainMenuButton,
+#downbarClearButton,
+#downbarToMiniButton,
+#downbarToFullButton,
+#downbarClearButtonMini{
+	-moz-box-align:center;
+	padding:1px;
+	border-radius:5px;
+	border:1px solid transparent}
+#downbarMainMenuButton:hover,
+#downbarClearButton:hover,
+#downbarToMiniButton:hover,
+#downbarToFullButton:hover,
+#downbarClearButtonMini:hover,
+#downbar>stack:hover{
+	border:1px outset threedface;
+	background:#CCCCFF url(chrome://global/skin/menu-bg.png)!important;
+	color:black!important;
+	box-shadow:0 0 1px threeddarkshadow}
+#downbarMainMenuButton:hover:active,
+#downbarClearButton:hover:active,
+#downbarToMiniButton:hover:active,
+#downbarToFullButton:hover:active,
+#downbarClearButtonMini:hover:active,
+#downbar>stack:hover:active{
+	border-style:inset;
+	background-color:Highlight!important;
+	color:HighlightText!important} 

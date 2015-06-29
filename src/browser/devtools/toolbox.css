@@ -1,0 +1,83 @@
+.options-vertical-pane{
+	margin:10px;
+	width:calc(50% - 20px);
+	min-width:280px}
+
+.options-vertical-pane>label{
+	margin:2px 0;
+	font-weight:bold}
+
+.options-groupbox{padding:4px}
+
+#toolbox-tab-options>image{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),96,16,112,0);
+	width:16px;
+	height:16px}
+	
+.devtools-tabbar {
+  -moz-appearance: none;
+  padding: 0;
+}
+
+#toolbox-tabs {
+  margin: 0;
+}
+
+.devtools-tab {
+  -moz-appearance: none;
+  max-width: 110px;
+  margin: 0;
+  padding: 0;
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+  background-position: left, right;
+}
+
+.devtools-tab > image {
+  -moz-margin-end: 0;
+  -moz-margin-start: 4px;
+  opacity: 0.6;
+}
+
+#toolbox-tab-options > image {
+  margin: 0 8px;
+}
+
+.devtools-tab:hover > image {
+  opacity: 0.8;
+}
+
+.devtools-tab:active > image,
+.devtools-tab[selected=true] > image {
+  opacity: 1;
+}
+
+.devtools-tab:hover {
+  background-size: 1px 100%,
+                   1px 100%,
+                   100%;
+  background-repeat: no-repeat,
+                     no-repeat,
+                     repeat-x;
+  background-position: left, right;
+}
+
+.devtools-tab[selected=true] {
+  background-size: 100% 1px,
+                   100% 5px,
+                   1px 100%,
+                   1px 100%,
+                   100%;
+  background-repeat: no-repeat,
+                     no-repeat,
+                     no-repeat,
+                     no-repeat,
+                     repeat-x;
+  background-position: top right, top left, left, right;
+}
+
+.devtools-tab:not(.highlighted) > .highlighted-icon,
+.devtools-tab[selected=true] > .highlighted-icon,
+.devtools-tab:not([selected=true]).highlighted > .default-icon {
+  visibility: collapse;
+}

@@ -1,0 +1,24 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#speeddial-multikey-panel{
+	max-width:500px;
+	padding:4px;
+	text-align:center}
+
+#speeddial-multikey-background:not([multikey-shown="true"]),
+#speeddial-multikeyMainBox:not([multikey-shown="true"]){display:none}
+#speeddial-multikeyCurrentDialIcon{width:16px;height:16px}
+#speeddial-multikeyCurrentDialURL{font-style:italic;color:-moz-nativehyperlinktext}
+
+.multikeyDigit{height:48px;margin:4px}
+.multikeyDigit[number="1"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,48,48,0)}
+.multikeyDigit[number="2"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,96,48,48)}
+.multikeyDigit[number="3"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,144,48,96)}
+.multikeyDigit[number="4"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,192,48,144)}
+.multikeyDigit[number="5"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,240,48,192)}
+.multikeyDigit[number="6"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,288,48,240)}
+.multikeyDigit[number="7"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,336,48,288)}
+.multikeyDigit[number="8"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,384,48,336)}
+.multikeyDigit[number="9"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,432,48,384)}
+.multikeyDigit[number="."]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,480,48,432)}
+.multikeyDigit[number="0"]{width:48px;background-image:-moz-image-rect(url(numbers.png),0,528,48,480)}

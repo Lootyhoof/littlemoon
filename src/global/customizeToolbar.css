@@ -1,0 +1,21 @@
+#main-box{
+	background:transparent url(chrome://global/skin/gecko.png) no-repeat right bottom}
+
+#instructions{
+	font-weight:bold;
+	font-size:110%;
+	margin:2px}
+
+#palette-box{
+	border:1px inset threedface}
+#palette-box>hbox{min-height:64px!important}
+#palette-box>hbox>toolbarpaletteitem{
+	padding-top:0!important;
+	padding-bottom:0!important}
+
+#main-window[Customize] #hc-titlebox{
+	min-width:6em;
+	min-height:10px;
+	border:1px dotted threedshadow!important}
+
+.groove{display:none}

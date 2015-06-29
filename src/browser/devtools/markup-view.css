@@ -1,0 +1,46 @@
+body{
+	margin:0;
+ 	font:message-box;
+	font-family:Consolas,Lucida Console,monospace;
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+
+pre,ul{
+	margin:0;
+	padding:0}
+
+.tagname{color:purple}
+.attrname{color:black}
+.attrvalue{color:blue}
+.comment{color:green;font-style:italic}
+
+.newattr{cursor:pointer}
+.selected{background-color:rgba(160,160,160,.2)}
+
+span[tabindex]{display:inline-block}
+
+.codebox{padding-left:16px}
+
+.expander{
+	position:absolute;
+	border:1px solid transparent;
+	width:14px;
+	height:14px;
+	background:-moz-image-rect(url(chrome://global/skin/widgets.png),32,36,40,28) center no-repeat}
+.expander[expanded]{
+	background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),40,36,48,28)}
+.expander:hover{
+	border-style:outset;
+	border-color:threedface;
+	background-color:#CCCCFF}
+.expander:active{
+	border-style:outset;
+	background-color:highlight}
+
+.styleinspector-propertyeditor{
+	margin:-1px -6px -1px -1px;
+	outline:none;
+	box-shadow:0 0 1px threeddarkshadow,1px 1px 3px threedshadow;
+	border-width:0}
+	
+.more-nodes{padding-left:16px}

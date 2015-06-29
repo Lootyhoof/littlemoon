@@ -1,0 +1,12 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+dialogheader{
+	margin:0;
+	padding:2px;
+	font-weight:bold;
+	border-bottom:2px groove threedface}
+.dialogheader-title{
+	margin:2px;
+	font-size:120%}
+.dialogheader-description{
+	margin:2px}	

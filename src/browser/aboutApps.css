@@ -1,0 +1,28 @@
+@import url(chrome://global/skin/inContentUI.css);
+
+#main-content{
+	margin:4px;
+	padding:4px;
+	border:1px outset threedface;
+	border-radius:9px;
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+
+.spacer{
+	clear:both}
+
+.app{
+	float:left;
+	cursor:pointer;
+	text-align:center;
+	margin:1em;
+	width:70px;
+	height:85px;
+	font-size:10px}
+
+.app img{
+	width:64px;
+	height:64px}
+
+.hidden{
+	display:none}

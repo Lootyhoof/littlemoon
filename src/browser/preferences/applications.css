@@ -1,0 +1,46 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#BrowserPreferences[animated="true"] #handlersView{height:25em}
+#BrowserPreferences:not([animated="true"]) #handlersView{-moz-box-flex:1}
+
+richlistbox:focus .shortDetails.selected{color:inherit}
+
+richlistitem{
+	padding:0;
+	border-width:0;
+	border-bottom:1px solid threedshadow}
+.typeIcon{margin:1px}
+.actionsMenu{margin:0}
+.actionIcon{margin:1px;-moz-margin-start:3px}
+.actionIcon+label{margin:2px 0}
+.actionsMenu .menulist-icon{margin:1px;padding:0;width:16px;height:16px}
+
+menuitem[oncommand^=gApplic]{
+	list-style-image:url(chrome://global/skin/icons/applications.png);
+	-moz-image-region:rect(0,32px,16px,16px)}
+
+richlistitem[appHandlerIcon=ask],
+menuitem[appHandlerIcon=ask]{
+	list-style-image:url(chrome://global/skin/icons/applications.png);
+	-moz-image-region:rect(0,16px,16px,0)}
+
+richlistitem[appHandlerIcon=save],
+menuitem[appHandlerIcon=save]{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(368px,16px,384px,0)}
+
+richlistitem[appHandlerIcon=plugin],
+menuitem[appHandlerIcon=plugin]{
+	list-style-image:url(chrome://global/skin/icons/applications.png);
+	-moz-image-region:rect(0,48px,16px,32px)}
+
+richlistitem[appHandlerIcon=feed],
+menuitem[appHandlerIcon=feed]{
+	list-style-image:url(chrome://global/skin/icons/applications.png);
+	-moz-image-region:rect(0,64px,16px,48px)}
+
+.shortDetails{text-align:right;color:GrayText}
+
+menuitem[label*="Thunderbird"]{
+	list-style-image:url(chrome://global/skin/icons/applications.png);
+	-moz-image-region:rect(0,80px,16px,64px)}

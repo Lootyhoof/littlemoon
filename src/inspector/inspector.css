@@ -1,0 +1,5 @@
+@import url(chrome://global/skin);
+@import url(chrome://inspector/content/inspector.css);
+
+tree.plain{border:1px inset threedface!important}
+#splTrees{border-width:0}

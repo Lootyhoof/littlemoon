@@ -1,0 +1,19 @@
+.viewContainer{
+ 	font:message-box;
+	font-family:Menlo,Andale Mono,Consolas,monospace}
+.view{
+	padding:0 2px 0 4px;
+	overflow-x:hidden!important}
+
+.annotationLine.object>*{
+	cursor:pointer}
+.annotationLine.object:hover>*{
+	background-color:#CCCCFF!important;
+	color:black!important}
+
+.token_doc_comment,
+.token_singleline_comment,
+.token_multiline_comment{color:darkgreen}
+.token_string{color:blue}
+.token_keyword{color:purple}
+.invalid{color:red}

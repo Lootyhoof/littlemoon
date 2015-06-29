@@ -1,0 +1,12 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+#fav-image{
+	width:16px!important;
+	height:16px!important;
+	margin:2px!important}
+
+:-moz-any(.unknownIdentity,.chromeUI)>#page-proxy-favicon{
+	visibility:collapse!important}
+
+#fav-image[blank="true"]{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(144px,16px,160px,0)!important}

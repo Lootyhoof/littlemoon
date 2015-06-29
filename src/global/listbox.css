@@ -1,0 +1,58 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+listbox{
+	-moz-appearance:none!important;
+	border:1px inset threedface;
+	background-color:-moz-Field;
+	color:-moz-FieldText}
+listbox[disabled="true"]{
+	background-color:-moz-Dialog!important;
+	color:graytext!important}
+
+listitem{
+	border:1px solid transparent;
+	outline-offset:-1px;
+	padding:1px 0}
+listitem:hover{
+	background-color:#CCCCFF;
+	color:black}
+listitem[selected="true"]{
+	background-color:-moz-cellhighlight;
+	color:-moz-cellhighlighttext}
+listbox:focus>listitem[selected="true"]{
+	background-color:Highlight;
+	color:HighlightText}
+
+listheader{
+	-moz-box-align:center;
+	border:1px outset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+listheader[sortable="true"]:hover{
+	background-color:#CCCCFF;
+	color:black}
+listheader[sortable="true"]:hover:active{
+	border:1px inset threedface;
+	background-color:darkblue;
+	color:white}
+
+.listheader-icon[src]{-moz-margin-end:2px}
+.listheader-label{margin:0!important}
+
+.listheader-sortdirection{list-style-image:none}
+
+.listheader-sortdirection[sortdirection="ascending"]{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(0 48px 12px 36px)}
+.listheader-sortdirection[sortdirection="descending"]{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(0 48px 12px 36px)}
+
+.listcell-label{white-space:nowrap}
+
+.listcell-check{
+	list-style-image:url(chrome://global/skin/checkbox.png);
+	-moz-image-region:rect(14px 14px 28px 0)}
+.listcell-check[disabled="true"]{-moz-image-region:rect(14px 28px 28px 14px)}
+.listcell-check[checked="true"]{-moz-image-region:rect(0 14px 14px 0)}
+.listcell-check[checked="true"][disabled="true"]{-moz-image-region:rect(0 28px 14px 14px)}

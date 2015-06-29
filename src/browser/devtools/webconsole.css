@@ -1,0 +1,151 @@
+.hud-box{
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+.hud-outer-wrapper{
+	width:100%;
+	height:100%}
+
+.hud-console-filter-toolbar{
+	margin:0!important;
+	border:0!important}
+
+.hud-console-wrapper{
+	width:100%;
+	overflow:auto}
+
+.hud-clickable{
+	cursor:pointer;
+	color:-moz-nativehyperlinktext}
+
+.hud-msg-node{
+	padding:0;
+	border-width:0}
+
+.hud-output-node,
+.jsterm-input-node,
+.jsterm-complete-node{
+	margin:0;
+	font:1em Consolas,Lucida Console,monospace}
+
+.jsterm-input-node{
+	background:none}
+
+:-moz-any(.jsterm-input-node,.jsterm-complete-node)>.textbox-input-box>.textbox-textarea{
+	overflow-x:hidden;
+	padding:2px}
+
+.webconsole-timestamp{
+	color:GrayText;
+	padding:0 3px}
+	
+.jsterm-complete-node{
+	color:GrayText}
+
+.webconsole-msg-body{
+	white-space:pre-wrap}
+
+.webconsole-msg-body-piece{
+	padding:0}
+
+.webconsole-msg-url{
+	margin:0 6px}
+
+.webconsole-location{
+	max-width:20em;
+	text-align:end;
+	-moz-margin-end:6px;
+	font-style:italic}
+
+.webconsole-msg-repeat{
+	padding:0 4px;
+	color:threedhighlight;
+	background-color:threeddarkshadow;
+	border-radius:40px;
+	font-weight:bold}
+
+.hud-group:first-child>.hud-divider,
+.hud-filtered-by-type,
+.hud-filtered-by-string,
+.webconsole-msg-repeat[value="1"]{
+	display:none}
+
+.webconsole-msg-status{
+	color:purple}
+
+.hud-msg-node[selected="true"]>.webconsole-timestamp,
+.hud-msg-node[selected="true"]>.webconsole-location{
+	color:inherit}
+
+.hud-splitter{
+	border-top:1px outset threedface;
+	background-color:-moz-Dialog}
+.hud-box+.hud-splitter{
+	border-top-width:0;
+	border-bottom:1px outset threedface}
+.hud-splitter:hover{background-color:#CCCCFF}
+.hud-splitter[state="dragging"]{background-color:highlight}
+
+.webconsole-clear-console-button,
+menuitem[buttonType="clear"]{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px,16px,288px,0)}
+
+.devtools-closebutton,
+.webconsole-close-button{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(177px 31px 191px 17px)!important}
+.webconsole-close-button:not(:hover){
+	-moz-border-top-colors:transparent!important;
+	-moz-border-left-colors:transparent!important;
+	-moz-border-right-colors:transparent!important;
+	-moz-border-bottom-colors:transparent!important;
+	background:none!important}
+.devtools-closebutton:hover,
+.webconsole-close-button:hover{
+	-moz-image-region:rect(225px 31px 239px 17px)!important}
+.devtools-closebutton:hover:active,
+.webconsole-close-button:hover:active{
+	-moz-image-region:rect(113px 31px 127px 17px)!important}
+
+.webconsole-filter-button{margin:0 2px}
+.webconsole-filter-button>toolbarbutton>.toolbarbutton-icon{
+	margin:3px;
+	width:10px;height:10px;
+	border:1px solid threedshadow;
+	background-color:black}
+.webconsole-filter-button[category="css"]>toolbarbutton>.toolbarbutton-icon{background-color:#00b6f0}
+.webconsole-filter-button[category="js"]>toolbarbutton>.toolbarbutton-icon{background-color:#fb9500}
+.webconsole-filter-button[category="logging"]>toolbarbutton>.toolbarbutton-icon,
+.webconsole-filter-button[category="webdev"]>toolbarbutton>.toolbarbutton-icon{background-color:#cbcbcb}
+.webconsole-filter-button[category="security"]>toolbarbutton>.toolbarbutton-icon{background-color:darkred}
+
+.webconsole-msg-icon-container{-moz-border-start:6px solid threedshadow}
+.webconsole-msg-network>.webconsole-msg-icon-container{border-color:black}
+.webconsole-msg-cssparser>.webconsole-msg-icon-container{border-color:#00b6f0}
+.webconsole-msg-exception>.webconsole-msg-icon-container{border-color:#fb9500}
+.webconsole-msg-console>.webconsole-msg-icon-container{border-color:#cbcbcb}
+.webconsole-msg-security>.webconsole-msg-icon-container{border-color:darkred}
+
+.webconsole-msg-icon{height:14px;width:14px;margin:1px}
+.webconsole-msg-error{list-style-image:url(chrome://global/skin/icons/error-16.png)!important}
+.webconsole-msg-warn{list-style-image:url(chrome://global/skin/icons/warning-16.png)!important}
+.webconsole-msg-log,
+.webconsole-msg-info{list-style-image:url(chrome://global/skin/icons/information-16.png)!important}
+.webconsole-msg-security{list-style-image:url(chrome://global/skin/icons/blacklist_favicon.png)!important}
+
+#webConsole_autocompletePopup>richlistbox{border-width:0}
+#webConsole_autocompletePopup>richlistbox>richlistitem{border-width:0;padding:1px}
+ 	
+.webconsole-mixed-content{color:darkred}
+.webconsole-mixed-content-link{color:darkblue}
+	
+#webconsole-sidebar{border-width:0}
+#webconsole-sidebar>tabs{display:none}
+#webconsole-sidebar>tabpanels{border-width:0;padding:0}
+
+.hidden-message{
+	display:block;
+	visibility:hidden;
+	height:0;
+	overflow:hidden}

@@ -1,0 +1,25 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+colorpicker[type="button"]{
+	-moz-appearance:none!important;
+	outline-color:transparent;
+	width:24px;
+	height:20px;
+	border:1px outset threedface}
+.colorpicker-button-colorbox{
+	margin:2px;
+	border:1px inset threedface}
+colorpicker[type="button"][open="true"]{
+	border:1px inset threedface;
+	background-color:Highlight}
+colorpicker[type="button"]:focus{
+	outline:1px solid highlight}
+
+.colorpickertile{
+	width:20px;
+	height:20px;
+	border:0}
+.colorpickertile[hover="true"]{
+	border:2px outset threedface}
+.colorpickertile[selected="true"]{
+	border:2px inset threedface}

@@ -1,0 +1,54 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+checkbox{
+	margin:1px;
+	padding:1px;
+	outline-color:transparent;
+	border:1px solid transparent;
+	-moz-box-align:center}
+
+.checkbox-label-box{
+	-moz-box-align:center}
+.checkbox-icon{
+	list-style-image:inherit}
+.checkbox-label{
+	margin:0;
+	-moz-margin-start:2px;
+	padding:1px 0 0 0}
+checkbox:not([label])>.checkbox-label-box>.checkbox-label{
+	display:none}
+
+checkbox:focus{
+	outline:1px solid highlight}
+
+checkbox:hover:not([disabled="true"]){
+	border:1px outset threedface;
+	background-color:#CCCCFF;
+	color:black}
+checkbox:hover:active:not([disabled="true"]){
+	border:1px inset threedface;
+	background-color:Highlight;
+	color:HighlightText}
+
+checkbox[disabled="true"]{
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+
+.checkbox-check{
+	border:1px inset threedface;
+	background-color:-moz-Field;
+	width:11px;
+	height:11px;
+	padding:1px;
+	margin:0 1px 1px 1px;
+	list-style-image:none}
+checkbox:hover:active:not([disabled="true"])>.checkbox-check{
+	border:1px inset blue;
+	background-color:blue}
+.checkbox-check[disabled="true"]{
+	background-color:-moz-Dialog!important}
+.checkbox-check[checked="true"]{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(12px 31px 19px 24px)}
+.checkbox-check[checked="true"][disabled="true"]{
+	-moz-image-region:rect(12px 38px 19px 31px)}

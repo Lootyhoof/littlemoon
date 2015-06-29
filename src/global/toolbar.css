@@ -1,0 +1,63 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+menubar{
+	min-width:1px;
+	min-height:10px;
+	border-bottom:1px outset threedface}
+toolbar{
+	min-width:1px;
+	min-height:18px;
+	-moz-box-align:center;
+	border-top:1px outset threedface;
+	border-bottom:1px outset threedface}
+toolbar:first-child{border-top-width:0}
+toolbar>menubar,
+toolbaritem>menubar{
+	border-width:0}
+
+toolbarspacer{width:13px}
+
+toolbarseparator{
+	width:2px;
+	height:12px;
+	margin:0 1px;
+	border:1px inset threedface}
+toolbar[orient="vertical"] toolbarseparator{
+	width:12px;
+	height:2px;
+	margin:1px 0}
+
+toolbarpaletteitem{cursor:-moz-grab}
+toolbarpaletteitem:hover{background-color:#CCCCFF}
+
+toolbarpaletteitem[place="toolbar"]{
+	margin-left:-2px;
+	margin-right:-2px;
+	border-left:2px solid transparent;
+	border-right:2px solid transparent}
+toolbarpaletteitem[dragover="left"]{border-left-color:-moz-dialogtext}
+toolbarpaletteitem[dragover="right"]{border-right-color:-moz-dialogtext}
+
+.toolbarpaletteitem-box{
+	-moz-box-align:center;
+	-moz-box-pack:center}
+#palette-box>toolbarpaletteitem{
+	height:55px!important;
+	padding:2px;
+	border:1px solid transparent}
+#palette-box>toolbarpaletteitem:hover{
+	border:1px outset threedface}
+
+toolbarpaletteitem>toolbarseparator{
+	box-shadow:0 0 0 2px -moz-Dialog;
+	margin:2px 3px}
+toolbarpaletteitem>toolbarspring,
+toolbarpaletteitem>toolbarspacer{
+	height:20px;
+	min-width:13px;
+	max-width:13px;
+	border:1px dotted graytext}
+toolbarpaletteitem>toolbarspring{
+	min-width:32px;
+	max-width:none;
+	background:url(chrome://global/skin/icons/spring.png) no-repeat center}

@@ -1,0 +1,12 @@
+.handlersMenuPopup>menuitem>.menu-iconic-left{
+	display:-moz-box!important}
+#liveBookmarksMenuItem{
+	list-style-image:url(chrome://browser/skin/page-livemarks.png)}
+#selectedAppMenuItem{
+	list-style-image:url(chrome://global/skin/icons/applications.png);
+	-moz-image-region:rect(0,32px,16px,16px)}
+.chooseApplicationMenuItem{
+	list-style-image:url(chrome://global/skin/icons/applications.png);
+	-moz-image-region:rect(0,16px,16px,0)}
+menupopup:-moz-locale-dir("rtl"){
+	direction:rtl}

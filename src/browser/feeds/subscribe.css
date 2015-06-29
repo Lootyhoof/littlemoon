@@ -1,0 +1,111 @@
+
+*[hidden]{display:none}
+
+html,body{
+	margin:0;
+	padding:0;
+	font:message-box;
+	background:threedshadow url(chrome://global/skin/gecko.png) right bottom no-repeat fixed;
+	color:-moz-DialogText}
+
+#feedHeaderContainer{
+	margin:2em 4em 0 4em;
+	padding:4px;
+	border:2px outset threedface;
+	border-bottom-width:1px;
+	border-radius:8px 8px 0 0;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+#feedHeader{
+	padding:4px;
+	background:-moz-image-rect(url(chrome://browser/skin/feeds/feeds.png),0,32,32,0) top left no-repeat transparent}
+#feedHeader:-moz-locale-dir(rtl){background-position:top right}
+#feedHeader.audioPodcastBackground{-moz-image-rect(url(chrome://browser/skin/feeds/feeds.png),0,64,32,32)}
+#feedHeader.videoPodcastBackground{-moz-image-rect(url(chrome://browser/skin/feeds/feeds.png),0,96,32,64)}
+
+#feedIntroText{
+	-moz-margin-start:40px;
+	margin-bottom:1em}
+#feedHeader:not([firstrun="true"]) #feedIntroText{display:none}
+
+#feedSubscribeLine{
+	-moz-margin-start:40px}
+#feedSubscribeLine>vbox{-moz-box-orient:horizontal}
+
+#feedSubscribeHandler{
+	border:1px solid ThreeDLightShadow;
+	border-radius:0.2em;
+	padding:3px}
+
+#feedSubscribeHandleText,
+#feedSubscribeLink{
+	background:url(chrome://browser/skin/page-livemarks.png) left 0 no-repeat;
+	padding-left:18px}
+
+#feedSubscribeLink{
+	font-weight:bold;
+	-moz-margin-end:.4em}
+
+#handlersMenuPopup>menuitem>.menu-iconic-left{display:-moz-box!important}
+#liveBookmarksMenuItem{
+	list-style-image:url(chrome://browser/skin/page-livemarks.png)}
+#selectedAppMenuItem{
+	list-style-image:url(chrome://global/skin/icons/applications.png);
+	-moz-image-region:rect(0 32px 16px 16px)}
+#chooseApplicationMenuItem{
+	list-style-image:url(chrome://global/skin/icons/applications.png);
+	-moz-image-region:rect(0 16px 16px 0)}
+
+#feedChangeSubscribeOptions{-moz-margin-start:.4em}
+
+#feedSubscribeDoneChangingOptions{font-weight:bold}
+
+#feedBody,#feedError{
+	margin:0 4em 2em 4em;
+	padding:8px;
+	border-radius:0 0 8px 8px;
+	border:2px outset threedface;
+	border-top-width:1px;
+	background-color:-moz-Field;
+	color:-moz-FieldText}
+
+.entry{
+	clear:both;
+	margin-top:4px;
+	border-top:1px solid ThreeDLightShadow}
+
+h1{
+	font-size:160%;
+	margin:0 0 .2em 0}
+
+h2{
+	color:ThreeDDarkShadow;
+	font-size:120%;
+	font-weight:normal;
+	margin:0 0 .6em 0}
+
+h3,
+p{margin:.2em 0!important}
+
+#feedTitleLink{float:right;margin:0 0 0 .6em}
+
+.styleLessBorderLess,
+a[href] img{border:none}
+
+#feedTitleContainer{margin:0 .6em 0 0}
+
+#feedTitleImage{margin:0 0 0 .6em}
+
+.feedEntryContent{font-size:110%}
+
+@media print{#feedHeaderContainer{display:none}}
+																																				 
+.lastUpdated{
+	font-size:85%;
+	font-weight:normal;
+	margin-bottom:.2em}
+
+.type-icon{vertical-align:bottom;height:16px;width:16px}
+.enclosures{margin-bottom:1em}
+.enclosure{vertical-align:middle;margin-left:2px}

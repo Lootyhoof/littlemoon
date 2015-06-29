@@ -1,0 +1,14 @@
+#privacyFrame,#finishExtendedFrame{
+	margin:2px;
+	border:1px inset threedface;
+	background-color:-moz-Field;
+	color:-moz-FieldText}
+.hide{display:none}
+#privacyPolicy{
+	color:#0000FF;
+	text-decoration:underline!important;
+	cursor:pointer;
+	-moz-user-focus:normal}
+#privacyPolicy:focus{outline:1px solid highlight!important}
+.wizard-header-icon{
+	list-style-image:url(chrome://reporter/skin/icon.png)}

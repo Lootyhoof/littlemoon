@@ -1,0 +1,518 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+#appmenu-popup{
+	padding:2px}
+#appmenu-popup menu,
+#appmenu-popup menuitem{
+	border:1px solid transparent}
+#appmenu-popup menupopup{
+	margin-top:-1px}
+
+#appmenuPrimaryPane{-moz-border-end:1px outset threedface}
+#appmenuSecondaryPane{-moz-border-start:1px outset threedface}
+
+.appmenu-edit-button{
+	padding:0;
+	margin:2px}
+
+.menuitem-with-favicon{margin:0 1px!important}
+.menuitem-with-favicon:last-child{margin-bottom:1px!important}
+
+#appmenu-edit-menuitem[disabled="true"]{
+	background:none!important;
+	color:threedshadow!important;
+	text-shadow:1px 1px threedhighlight!important}
+
+.appmenu-edit-button:hover:not([disabled="true"]),
+#appmenu-popup menu:hover:not([disabled="true"]),
+#appmenu-popup menuitem:hover:not([disabled="true"]){
+	border:1px outset threedface}
+#appmenu-popup menu[open="true"],
+#appmenu-popup menuitem:hover:active:not([disabled="true"]){
+	border:1px inset threedface!important}
+
+
+#TabsToolbar{
+	-moz-box-align:stretch;
+	border-bottom:1px outset threedface;
+	background-color:-moz-Dialog}
+#main-window[persona] #TabsToolbar{
+	border-style:none;
+	background:none}
+
+#TabsToolbar[tabsontop="true"][inFullscreen="true"]{
+	border-top-width:0!important;
+	-moz-padding-start:0!important;
+	-moz-padding-end:0!important}
+
+tabpanels.plain,.tabbrowser-tabbox{border-width:0}
+
+.tab-throbber{
+	margin:1px;
+	list-style-image:url(chrome://global/skin/loading.gif)}
+
+
+.tab-icon-image{margin:1px;width:16px;height:16px}
+.tab-icon-image[src]{cursor:-moz-grab}
+
+.tabbrowser-tab:not([image]),
+.alltabs-item{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(144px 16px 160px 0)}
+.tabbrowser-tab[busy],
+.alltabs-item[busy]{
+	list-style-image:url(chrome://global/skin/loading.gif)!important;
+	-moz-image-region:auto!important}
+.tabbrowser-tab[download="true"]{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(368px 16px 384px 0)!important}
+
+toolbarbutton.tabs-newbutton,
+stack>.tabs-alltabs-button,
+#TabsToolbar .tabs-alltabs-button,
+#TabsToolbar #new-tab-button,
+#TabsToolbar .tabs-closebutton,
+.tabbrowser-tabs>.tabs-closebutton,
+.tabs-container .tabs-closebutton,
+.tabs-newtab-button{
+	-moz-box-pack:center!important;
+	-moz-box-align:center!important;
+	padding:0 2px;
+	margin:0 1px;
+	border:1px solid transparent}
+
+/* Special case: when currentyset is empty force display of newtab button */
+#TabsToolbar[currentset=""]:not([customizing="true"])>#tabbrowser-tabs>.tabbrowser-arrowscrollbox>.tabs-newtab-button{
+	visibility:visible!important}
+
+toolbarbutton.tabs-newbutton,
+#TabsToolbar #new-tab-button,
+.tabs-newtab-button{
+	padding:0 4px!important;
+	list-style-image:url(chrome://global/skin/widgets.png)!important;
+	-moz-image-region:rect(32px 36px 40px 28px)!important}
+toolbarbutton.tabs-newbutton:hover:active,
+#TabsToolbar #new-tab-button:hover:active,
+.tabs-newtab-button:hover:active{
+	-moz-image-region:rect(72px 101px 80px 93px)!important}
+
+/* Special case: when currentyset is empty force display of newtab button */
+#TabsToolbar[currentset=""]:not([customizing="true"])>#tabbrowser-tabs>.tabbrowser-arrowscrollbox>.tabs-newtab-button{
+	visibility:visible!important}
+
+#toolbox-close,
+.devtools-closebutton,
+#addonbar-closebutton,
+.tabs-closebutton,
+.tab-close-button{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(177px 31px 191px 17px)!important}
+#toolbox-close:hover,
+.devtools-closebutton:hover,
+#addonbar-closebutton:hover,
+.tabs-closebutton:hover,
+.tab-close-button:hover{
+	-moz-image-region:rect(225px 31px 239px 17px)!important}
+#toolbox-close:hover:active,
+.devtools-closebutton:hover:active,
+#addonbar-closebutton:hover:active,
+.tabs-closebutton:hover:active,
+.tab-close-button:hover:active{
+	-moz-image-region:rect(113px 31px 127px 17px)!important}
+
+#TabsToolbar>.tabs-closebutton,
+#TabsToolbar>.tabs-closebutton:hover,
+#TabsToolbar>.tabs-closebutton:hover:active{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(48px 32px 64px 16px)!important}
+
+.tab-close-button>.toolbarbutton-text,
+.tabs-closebutton>.toolbarbutton-text,
+stack>.tabs-alltabs-button>.toolbarbutton-text,
+.tabs-container>.tabs-newbutton>.toolbarbutton-text,
+.tabs-newtab-button>.toolbarbutton-text{display:none}
+
+.tabs-newbutton>.toolbarbutton-icon,
+.tabs-closebutton>.toolbarbutton-icon{margin:0!important}
+
+.tab-close-button{
+	margin:0!important;
+	border:1px solid transparent;
+	padding:2px}
+
+.tabbrowser-tab .tab-close-button{
+	padding:1px 0!important;
+	margin:0!important}
+
+toolbarbutton.tabs-newbutton:hover,
+.tabs-newtab-button:hover,
+stack>.tabs-alltabs-button:hover:not([open="true"]),
+.tabbrowser-tab:hover:not([selected]),
+.tabs-closebutton:hover,
+.tab-close-button:hover{
+	border-color:threedhighlight threedshadow threedshadow threedhighlight;
+	background-color:#CCCCFF!important;
+	color:black!important}
+
+.tabs-alltabs-button[open="true"],
+toolbarbutton.tabs-newbutton:hover:active,
+.tabs-newtab-button:hover:active,
+.tabs-closebutton:hover:active,
+.tab-close-button:hover:active{
+	background-color:highlight!important;
+	border-color:threedshadow threedhighlight threedhighlight threedshadow!important}
+
+.tabbrowser-tab>.tab-close-button{
+	padding:0!important;
+	margin:0!important}
+
+/*TabMixPlus*/
+.tab-text{border:0!important;-moz-margin-start:0!important}
+.tabs-newtab-topbox,
+.tabs-alltabs-topbox,.tabs-alltabs-stack,
+.tabs-closebutton-topbox,.tabs-closebutton-box{
+	-moz-box-pack:end}
+.tabbrowser-tabs[flowing="multibar"] .tabbrowser-tab{margin:1px!important}
+
+/*Force TabMixPlus in FF2 to use vbox instead of hbox*/
+.tabs-alltabs-stack>hbox{-moz-box-pack:end!important;-moz-box-align:end!important;-moz-box-orient:vertical!important}
+
+/*Make sure tabmixplus buttons are always of the same size...*/
+.tabs-newtab-topbox>.tabs-newtab-button,
+stack>.tabs-alltabs-button,
+.tabbrowser-tabs>.tabs-closebutton,
+.tabs-closebutton-topbox>.tabs-closebutton,
+.tabs-closebutton-box>.tabs-closebutton{
+	width:18px;
+	height:18px}
+
+/*TAB Buttons*/.octopodTabButtons-button-img,.octopodTabButtons-button-text{
+	margin:0 2px!important;
+	padding:1px 2px!important}
+
+.tabs-alltabs-button{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(480px 16px 496px 0)!important}
+
+/* State disabled is really 'checked' or 'selected', as the button is still active and the panel is open */
+.tabs-alltabs-button[disabled="true"]{
+	border:1px inset threedface!important;
+	background:-moz-Dialog url(chrome://global/skin/highlight.png)!important}
+.tabs-alltabs-button[disabled="true"][label]:hover{
+	border:1px inset threedface!important;
+	background:#CCCCFF none!important;
+	color:black!important}
+
+#context_newTab,
+menuitem[oncommand="BrowserOpenTab();"]{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(48px 16px 64px 0px)!important}
+menuitem[oncommand*="reloadTab"]{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(128px 16px 144px 0)!important}
+menuitem[oncommand="BookmarkThisTab();"]{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(240px 32px 256px 16px)!important}
+menuitem[command="Browser:BookmarkAllTabs"]{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(480px 32px 496px 16px)!important}
+menuitem[oncommand*="removeTab"]{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(48px 32px 64px 16px)!important}
+
+
+.tabbrowser-tab[unread]:not([selected="true"]){
+	font-style:italic;
+	font-weight:bold}
+
+ .tabbrowser-tab[pending]:not([selected="true"]) .tab-text{
+	font-style:italic;
+	opacity:.8}
+
+.tabbrowser-tab{
+	margin-top:0!important;
+	padding:0!important;
+	border-radius:0;
+	border-color:transparent}
+.tabbrowser-tab:not(:first-child){
+	-moz-margin-start:2px}
+
+.tabbrowser-tab:hover:not([selected="true"]){
+	border-style:outset;
+	border-color:threedface}
+.tabbrowser-tab:hover:active:not([selected="true"]){
+	border-style:inset;
+	background-color:Highlight;
+	color:HighlightText}
+.tabbrowser-tab[selected="true"]{
+	font-weight:bold;
+	border-style:inset!important;
+	border-color:threedface!important;
+	background-color:highlight!important;
+	color:highlighttext!important}
+
+.tabbrowser-tab:not([pinned]){
+	min-width:40px}
+.tabbrowser-tab[pinned]{
+	-moz-padding-start:2px!important;
+	-moz-padding-end:2px!important}
+
+.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]){
+	opacity:1!important;
+	background:infobackground none!important;
+	color:infotext!important}
+
+.tabbrowser-tabs[tabsontop="true"] .tab-close-button{
+	padding:1px 0!important}
+.tabbrowser-tabs[tabsontop="true"] .tab-throbber,
+.tabbrowser-tabs[tabsontop="true"] .tab-icon-image{
+	margin:2px 1px}
+.tabbrowser-tabs[tabsontop="true"] #tabs-closebutton{
+	padding:2px 3px!important}
+
+#TabsToolbar .tabs-alltabs-button:not([open="true"]),
+#TabsToolbar .tabs-closebutton{
+	border-color:transparent!important;
+	background-color:transparent!important}
+
+toolbarbutton.tabs-newbutton:hover,
+.tabs-newtab-button:hover,
+#TabsToolbar toolbarbutton:not([open="true"]):hover{
+	border-color:threedhighlight threedshadow threedshadow threedhighlight!important;
+	background-color:#CCCCFF!important}
+
+toolbarbutton.tabs-newbutton:hover,
+.tabs-newtab-button:hover:active,
+#TabsToolbar toolbarbutton:not([open="true"]):hover:active,
+#TabsToolbar .tabs-alltabs-button[disabled="true"],/*disabled means alltabs panel is open*/
+.tabs-closebutton:hover:active,
+.tab-close-button:hover:active{
+	box-shadow:none!important;
+	border-color:threedshadow threedhighlight threedhighlight threedshadow!important;
+	background-color:highlight!important}
+
+toolbar[iconsize="large"] #bookmarks-menu-button-container>#bookmarks-menu-button{
+	-moz-binding:url(chrome://global/content/bindings/toolbarbutton.xml#menu-vertical)}
+
+#tabbrowser-tabs:not([overflow="true"]) ~ #alltabs-button{
+	visibility:visible!important}
+
+#TabsToolbar #bookmarks-menu-button{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(160px,16px,176px,0)}
+#TabsToolbar #bookmarks-menu-button>.toolbarbutton-menu-dropmarker{
+	display:none}
+
+.tabbrowser-tabs .scrollbutton-up:-moz-locale-dir(rtl),
+.tabbrowser-tabs .scrollbutton-down:-moz-locale-dir(rtl){
+	-moz-transform:scaleX(-1)}
+
+.tabbrowser-tabs .scrollbutton-up,
+.tabbrowser-tabs .scrollbutton-down{
+	margin:4px 0 3px 0}
+.tabbrowser-tabs[tabsontop="false"] .scrollbutton-up,
+.tabbrowser-tabs[tabsontop="false"] .scrollbutton-down{
+	margin:3px 0 4px 0}
+
+#TabsToolbar #tabview-button{
+	padding:0 2px}
+
+.tab-drop-indicator{
+	height:11px;
+	width:11px;
+	margin-top:-4px!important;
+	background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),84,83,95,72)!important}
+
+listitem.style-selector{
+	font-weight:bold;
+	background-color:DarkGray;
+	color:white}
+listitem.style-section{
+	font-weight:bold;
+	background-color:LightGray;
+	color:black}
+panel[dimmed="true"]{
+	opacity:.5}
+
+#zoom-out-button{
+	-moz-margin-end:0;
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(512px,16px,528px,0)}
+#zoom-in-button{
+	-moz-margin-end:0;
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(512px,32px,528px,16px)}
+#sync-setup-appmenu,
+#sync-syncnowitem-appmenu,
+#sync-syncnowitem,
+#sync-button{
+	list-style-image:url(chrome://global/skin/icons/sync-16.png)}
+
+#sync-button[status="active"]{
+	-moz-border-top-colors:threedshadow;
+	-moz-border-left-colors:threedshadow;
+	-moz-border-right-colors:threedhighlight;
+	-moz-border-bottom-colors:threedhighlight;
+	list-style-image:url(chrome://global/skin/icons/sync-throbber.png);
+	background:highlight url(chrome://global/skin/highlight.png)}
+
+#menu_tabview,
+#context_tabViewMenu,
+#tabview-button{
+	list-style-image:url(chrome://browser/skin/tabview/panorama.png);
+	-moz-image-region:rect(0,80px,16px,64px)}
+#tabview-button[groups="0"]{-moz-image-region:rect(0,16px,16px,0)}
+#tabview-button[groups="1"]{-moz-image-region:rect(0,32px,16px,16px)}
+#tabview-button[groups="2"]{-moz-image-region:rect(0,48px,16px,32px)}
+#tabview-button[groups="3"]{-moz-image-region:rect(0,64px,16px,48px)}
+
+#inspector-tree-iframe{
+	border:1px inset threedface}
+
+toolbarbutton#feed-button{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(41px 70px 57px 54px)}
+
+
+#main-window[privatebrowsingmode=temporary] #appmenu-button{
+	background-color:rgb(129,29,187);
+	color:white}
+
+.tabbrowser-tab[image^="data:image/png;base64,iVBORw0KGgo"] .tab-throbber{
+	display:-moz-box!important;
+	list-style-image:url(chrome://global/skin/dirListing/folder.png)!important}
+.tabbrowser-tab[image^="data:image/png;base64,iVBORw0KGgo"] .tab-icon-image{
+	display:none!important}
+
+#addon-bar{
+	min-height:19px;
+	border-width:1px 0 0 0}
+#addon-bar>#status-bar{
+	min-height:0;
+	border-width:0}
+
+#developer-toolbar-closebutton,
+#addonbar-closebutton,
+#fbStatusBar,
+#addon-bar .toolbarbutton-1{
+	margin:0!important;
+	padding:0!important;
+	min-width:18px!important}
+#addon-bar .toolbarbutton-1>.toolbarbutton-icon{
+	margin:0!important;
+	width:16px;
+	height:16px}
+
+.tab-drag-panel{border-width:0!important}
+.tab-drag-label{
+	margin:0!important;
+	padding:2px;
+	border:1px outset threedface}
+.tab-drag-preview{
+	border:1px solid rgba(0,0,0,.5)}
+
+.tab-background,
+#downbarprefs>separator,
+.titlebar-placeholder,
+#TabsToolbar #bookmarks-menu-button>.toolbarbutton-menu-dropmarker,
+.tab-close-button>.toolbarbutton-text,
+.tabs-closebutton>.toolbarbutton-text,
+stack>.tabs-alltabs-button>.toolbarbutton-text,
+.tabs-container>.tabs-newbutton>.toolbarbutton-text,
+.tabs-newtab-button>.toolbarbutton-text,
+.tab-drag-panel:not([target])>.tab-drag-label{
+	display:none}
+
+.statuspanel-label{
+	min-width:300px;
+	font-size:90%;
+	margin:0 0 -2px 0;
+	padding:1px 2px;
+	background-color:-moz-Dialog;
+	border-top:1px solid threedshadow;
+	color:-moz-DialogText}
+
+.statuspanel-label:-moz-locale-dir(ltr):not([mirror]),
+.statuspanel-label:-moz-locale-dir(rtl)[mirror]{
+	border-right:1px solid threedshadow;
+	margin-right:4px}
+
+.statuspanel-label:-moz-locale-dir(rtl):not([mirror]),
+.statuspanel-label:-moz-locale-dir(ltr)[mirror]{
+	border-left:1px solid threedshadow;
+	margin-left:4px}
+	
+#appmenu-popup splitmenu{margin:1px}
+
+.splitmenu-menu,
+.splitmenu-menuitem{
+	margin:0!important;
+	border:1px solid transparent}
+
+.splitmenu-menu{
+	-moz-margin-start:-1px}
+
+.splitmenu-menuitem:hover:not([disabled="true"]),
+.splitmenu-menuitem:hover:not([disabled="true"])+.splitmenu-menu,
+.splitmenu-menuitem[open="true"],
+.splitmenu-menuitem[_moz-menuactive],
+#appmenu-popup .splitmenu-menu:hover:not([disabled="true"]),
+#appmenu-popup .splitmenu-menu:hover:active:not([disabled="true"]),
+#appmenu-popup .splitmenu-menu[_moz-menuactive],
+#appmenu-popup .splitmenu-menu[open="true"]{
+	border:1px outset threedface!important}
+
+.splitmenu-menuitem:hover:active:not([disabled="true"]){
+	border-style:inset!important}
+
+.splitmenu-menuitem[_moz-menuactive]:not(:hover),
+.splitmenu-menu[_moz-menuactive]:not([open]):not(:hover){
+	background-color:transparent!important}
+
+.splitmenu-menu[open="true"]:not(:hover){
+	background-color:highlight!important}
+
+.alltabs-item[tabIsVisible]{box-shadow:inset -5px 0 ThreeDShadow}
+.alltabs-item[selected="true"]{font-weight:bold}
+
+.bookmark-item[cutting]>.toolbarbutton-icon,
+.bookmark-item[cutting]>.menu-iconic-left>.menu-iconic-icon{opacity:.5}
+.bookmark-item[cutting]>.toolbarbutton-text,
+.bookmark-item[cutting]>.menu-iconic-left>.menu-iconic-text{color:graytext}
+
+#FindToolbar{-moz-box-ordinal-group:3}
+#addon-bar{-moz-box-ordinal-group:4}
+
+.tabs-alltabs-button[showTabCounter="true"]>.toolbarbutton-menu-dropmarker{
+	display:-moz-box!important}
+#TabsToolbar[tabsontop="true"] .tabs-alltabs-button[showTabCounter="true"]{
+	font-weight:700}
+#TabsToolbar[tabsontop="true"] .tabs-alltabs-button[showTabCounter="true"]:not(:hover){
+	color:white}
+
+/* Pale Moon: Feed icon */
+#ub-feed-button,
+#ub-feed-button > .button-box,
+#ub-feed-button:hover:active > .button-box {
+  padding: 0px;
+  margin: 0px;
+  border: 0px; 
+  background-color: transparent !important;
+}
+
+#ub-feed-button {
+  -moz-appearance: none; 
+  min-width: 0px; 
+  list-style-image: url("chrome://browser/skin/feeds/feed-icons-16.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+
+#ub-feed-button:hover {
+  -moz-image-region: rect(0px 32px 16px 16px);
+}
+
+#ub-feed-button[open="true"],
+#ub-feed-button:hover:active {
+  -moz-image-region: rect(0px 48px 16px 32px);
+}

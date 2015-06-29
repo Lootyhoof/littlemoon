@@ -1,0 +1,39 @@
+#xpinstallConfirm{padding:2px;min-height:4em!important}
+
+.listbox{
+	-moz-appearance:none!important;
+	border-top:1px solid threedshadow;
+	border-left:1px solid threedshadow;
+	border-right:1px solid threedhighlight;
+	border-bottom:1px solid threedhighlight;
+	background:-moz-Dialog url(chrome://global/skin/gecko.png) bottom right no-repeat!important;
+	color:black}
+
+.alert-icon,#itemWarningIntro,#itemList{margin:2px}
+
+#itemList{height:10em}
+
+installitem{
+	border:1px outset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText;
+	padding:3px}
+
+.xpinstallItemIcon{
+	margin:2px;
+	width:32px;height:32px;
+	list-style-image:url(chrome://mozapps/skin/extensions/addons.png);
+	-moz-image-region:rect(0 32px 32px 0)}
+installitem[type="theme"] .xpinstallItemIcon{-moz-image-region:rect(0 64px 32px 32px)}
+installitem[type="locale"] .xpinstallItemIcon{-moz-image-region:rect(0 96px 32px 64px)}
+installitem[type="plugin"] .xpinstallItemIcon{-moz-image-region:rect(0 128px 32px 96px)}
+installitem[type="dictionary"] .xpinstallItemIcon{-moz-image-region:rect(0 448px 32px 416px)}
+
+.xpinstallItemName,.warning{font-weight:bold}
+.xpinstallItemSigned{font-style:italic}
+.xpinstallItemSigned[signed="false"]{
+	color:#ED1C24;
+	font-style:normal;
+	font-weight:bold}
+.xpinstallItemNameRow{padding-bottom:3px}
+.xpinstallItemURL{-moz-appearance:none;border:0}

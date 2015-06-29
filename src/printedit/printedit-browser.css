@@ -1,0 +1,73 @@
+toolbar[printpreview="true"]{
+	-moz-binding:url(chrome://printedit/content/printedit-printpreview-bindings-4.0.xml#printedit-printpreviewtoolbar)!important}
+
+button[oncommand="printEdit.enterPrintEdit();"],
+#printedit-buttonmenu{
+	list-style-image:url(chrome://printedit/skin/printedit-button-small.png)}
+
+checkbox[id^="printedit-"]{margin:0}
+
+.printedit-format-box-3>checkbox>.checkbox-check,
+.printedit-format-box-3>checkbox>.checkbox-icon,
+.printedit-format-box-3>hbox>checkbox>.checkbox-check,
+.printedit-format-box-3>hbox>checkbox>.checkbox-icon,
+window[printedit-compact="true"] .printedit-tbbutton>label{
+	display:none}
+
+.printedit-format-box-3>checkbox,
+.printedit-format-box-3>hbox>checkbox{
+	margin:0;
+	-moz-user-focus:ignore;
+	-moz-user-input:none}
+
+#printedit-format-header,#printedit-inspect-header{
+	border-bottom:2px groove threedface;
+	background:-moz-dialog}
+:-moz-any(#printedit-format-header,#printedit-inspect-header)>label{
+	margin:0;
+	font-weight:bold;
+	text-align:center}
+
+#printedit-throbber{list-style-image:url(chrome://global/skin/icons/loading_16.png)}
+
+button[printedit-color="green"]:not(:hover){background-color:rgba(0,255,0,.3)}
+button[printedit-color="amber"]:not(:hover){background-color:rgba(255,160,0,.35)}
+
+#printedit-format-chevron{
+	border-radius:20px;
+	padding:2px;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(40px 36px 48px 28px)}
+#printedit-format-chevron[printedit-showprops="false"]{
+	-moz-image-region:rect(32px 36px 40px 28px)}
+
+.printedit-prevvalue,
+.printedit-nextvalue{
+	padding:2px 0;
+	border:1px solid transparent;
+	list-style-image:url(chrome://global/skin/widgets.png)}
+.printedit-prevvalue:hover,
+.printedit-nextvalue:hover{
+	border:1px outset threedface;
+	background:#CCCCFF url(chrome://global/skin/menu-bg.png)}
+.printedit-prevvalue:hover:active,
+.printedit-nextvalue:hover:active{
+	border-style:inset;
+	background-color:highlight}
+.printedit-prevvalue,
+.printedit-nextvalue:-moz-locale-dir(rtl){
+	-moz-image-region:rect(14px,84px,28px,72px)}
+.printedit-nextvalue,
+.printedit-prevvalue:-moz-locale-dir(rtl){
+	-moz-image-region:rect(28px,84px,42px,72px)}
+
+#printedit-preview{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(304px,16px,320px,0)}
+#printedit-close{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(224px,32px,240px,16px)}
+
+.printedit-format-box-4{
+	border-left-color:threedshadow!important;
+	border-right-color:threedhighlight!important}

@@ -1,0 +1,24 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#tabpanels-contents-box{
+	border:0!important;
+	margin:0!important}
+
+#mainmenu,#input-splitter,#main-splitter,#singleline-hug-box,#multiline-hug-box,
+#user-list-box,#browser-box,#chatzilla-window #status-bar{
+	border:0!important}
+
+.output-container{
+	margin:0!important;
+	border:1px inset threedface!important;
+	border-right:0!important}
+
+.view-button{
+	list-style-image:url(chrome://global/skin/leds.png);
+	-moz-image-region:rect(0,32px,16px,16px)}
+.view-button[state="activity"]{-moz-image-region:rect(0,64px,16px,48px)}
+.view-button[state="attention"]{color:darkred;-moz-image-region:rect(0,16px,16px,0)}
+.view-button[state="superfluous"]{color:darkblue;-moz-image-region:rect(0,48px,16px,32px)}
+
+#input-widgets{margin-top:2px}
+#status-progress-bar{margin:0}

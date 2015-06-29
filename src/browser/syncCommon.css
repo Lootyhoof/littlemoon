@@ -1,0 +1,25 @@
+.status{color:-moz-dialogtext}
+.statusIcon{
+	-moz-margin-start:2px;
+	height:16px;
+	width:16px}
+
+.statusIcon[status=active]{list-style-image:url(chrome://global/skin/icons/loading_16.png)}
+.statusIcon[status=error]{list-style-image:url(chrome://global/skin/icons/error-16.png)}
+.statusIcon[status=success]{list-style-image:url(chrome://global/skin/icons/information-16.png)}
+
+.data{font-size:90%;font-weight:bold}
+#change-dialog{width:40em}
+#syncIcon{
+	margin:4px;
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(216px 24px 240px 0)}
+#syncIcon+spacer{display:none}
+#introText{margin-top:2px}
+
+#feedback,
+#passphraseFeedback{height:4em}
+#passphraseStrength{height:14px}
+#passphraseStrength>.progress-bar{background-color:#cc0000}
+#passphraseStrength.medium>.progress-bar{background-color:#ffcc33}
+#passphraseStrength.strong>.progress-bar{background-color:#00cc00}

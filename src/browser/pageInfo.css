@@ -1,0 +1,165 @@
+@import url(chrome://global/skin/);
+
+.iframe{
+	overflow:auto;
+	margin:2px;
+	background-color:threedshadow;
+	border:1px solid threedshadow}
+
+.fixedsize{height:8.5em}
+
+#topBar,#topStackBar,#tabs{
+	border:0!important;
+	margin:0}
+
+#tabs>.tabs-left,#tabs>.tabs-right{border:0}
+#tabbox{margin:0;border:0;padding:0;background:none}
+#tabpanels{border:0}
+
+#tabs>tab{
+	-moz-box-orient:vertical!important;
+	-moz-box-align:center!important;
+	min-width:50px;
+	margin:1px;
+	padding:2px;
+	border-radius:0;
+	border:1px solid transparent;
+	background:none}
+#tabs>tab:hover{
+	border:1px outset threedface;
+	background-color:#CCCCFF}
+#tabs>tab:active{
+	border:1px inset threedface;
+	color:HighlightText;
+	background-color:Highlight}
+#tabs>tab[selected="true"]{
+	border:1px inset threedface!important;
+	color:-moz-DialogText!important;
+	background:-moz-Dialog url(chrome://global/skin/highlight.png)!important}
+
+#generalTab{
+	list-style-image: url(chrome://browser/skin/pageInfo.png);
+	-moz-image-region: rect(0 24px 24px 0)}
+#mediaTab{
+	list-style-image: url(chrome://browser/skin/pageInfo.png);
+	-moz-image-region: rect(0 48px 24px 24px)}
+#feedTab{
+	list-style-image: url(chrome://browser/skin/pageInfo.png);
+	-moz-image-region: rect(0 72px 24px 48px)}
+#permTab{
+	list-style-image: url(chrome://browser/skin/pageInfo.png);
+	-moz-image-region: rect(0 96px 24px 72px)}
+#securityTab{
+	list-style-image: url(chrome://browser/skin/pageInfo.png);
+	-moz-image-region: rect(0 120px 24px 96px)}
+#linksTab{
+	list-style-image: url(chrome://browser/skin/pageInfo.png);
+	-moz-image-region: rect(0 144px 24px 120px)}
+#formsTab{
+	list-style-image: url(chrome://browser/skin/pageInfo.png);
+	-moz-image-region: rect(0 168px 24px 144px)}
+
+row{-moz-box-align:center}
+row>label{text-align:end}
+row>textbox{margin-top:0;margin-bottom:0}
+
+groupbox.collapsable caption{
+	-moz-margin-start:2px;
+	border:1px solid transparent}
+
+groupbox.collapsable caption:hover{
+	border:1px outset threedface;
+	background-color:#CCCCFF;
+	color:black}
+groupbox.collapsable caption:hover:active{
+	border:1px inset threedface;
+	background-color:Highlight;
+	color:HighlightText}
+
+groupbox.collapsable caption>.caption-icon{
+	margin:2px 0 0 0;
+	min-height:12px;
+	max-height:12px;
+	padding:2px;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(40px 36px 48px 28px)}
+groupbox.collapsable[closed="true"] caption .caption-icon{
+	-moz-image-region:rect(32px 36px 40px 28px)}
+
+separator.thin{height:0}
+
+#securityBox description{-moz-margin-start:4px;font-weight:normal}
+
+#imagetree{min-height:10em}
+treechildren::-moz-tree-cell-text(broken){
+	font-style:italic;
+	color:graytext}
+#feedtree{margin-bottom:0}
+richlistitem[feed]{padding:3px}
+/*FF3*/richlistitem[feed]>vbox>hbox+hbox,
+/*FF3.5*/richlistitem[feed]>vbox>vbox,
+.feed-subscribe{
+	border:1px inset threedface;
+	padding:2px;
+	background-color:-moz-Dialog!important;
+	color:-moz-DialogText!important}
+/*FF3*/richlistitem[feed]>vbox>hbox+hbox,
+/*FF3.5*/richlistitem[feed]>vbox>vbox{
+	border-bottom-width:0!important}
+.feed-subscribe{
+	border-top-width:0!important}
+.feedTitle{
+	background:none!important;
+	color:inherit!important;
+	font-weight:bold;
+	border:0;
+	margin:0}
+button[oncommand^="onSubscribeFeed"]{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(41px 70px 57px 54px)}
+
+#permPanel>hbox>label{
+	margin:2px;
+	font-size:110%;
+	font-weight:bold}
+#permPanel>vbox{
+	overflow:auto;
+	border:1px inset threedface}
+.permissionLabel{
+	width:15em;
+	font-weight:bold}
+.permission>hbox>checkbox{
+	width:8em;
+	-moz-margin-end:2em}
+vbox.permission{
+	padding:1px;
+	border-top:1px solid ThreeDHighLight;
+	border-bottom:1px solid ThreeDShadow}
+	
+#security-view-text{font-style:italic}
+#security-technical-shortform{font-weight:bold;margin:2px}
+#security-technical-longform1,
+#security-technical-longform2{margin:2px}
+
+#mediaGrid{min-height:9em}
+#mediaLabelColumn{min-width:10em}
+#mediaPreviewBox>grid,
+#mediaPreviewBox>hbox{margin:2px}
+#brokenimage{margin:1em}
+#thepreviewimage{
+	margin:1em;
+	box-shadow:2px 2px 15px threeddarkshadow,2px 2px 4px threeddarkshadow;
+	background-color:-moz-Dialog;
+	background-image:-moz-linear-gradient(45deg,rgba(0,0,0,.08) 25%,rgba(0,0,0,.15) 25%,rgba(0,0,0,.15) 75%,rgba(0,0,0,.08) 75%,rgba(0,0,0,.08)),-moz-linear-gradient(-45deg,rgba(0,0,0,.08) 25%,rgba(0,0,0,.15) 25%,rgba(0,0,0,.15) 75%,rgba(0,0,0,.08) 75%,rgba(0,0,0,.08));
+	background-size:20px 20px;
+	color:-moz-DialogText}
+
+#security-privacy-cookies-label{min-width:29em}
+.fieldValue{min-width:3em}
+
+/*AllInOneSidebar*/
+[aiosLayout="true"] #generalPanel #titletext[readonly="true"]{padding:0 0 0 22px!important}
+
+#security-view-details{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(80px,51px,96px,36px)}

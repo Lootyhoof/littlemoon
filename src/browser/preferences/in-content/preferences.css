@@ -1,0 +1,109 @@
+@import url(chrome://global/skin/inContentUI.css);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+#header{
+	padding:2px 0}
+
+.main-content{
+	border-width:1px 0 0 1px;
+	border-radius:0;
+	border-style:inset;
+	border-color:threedface;
+	-moz-margin-start:114px;
+	background:-moz-dialog}
+
+vbox[data-category="landing"]{
+	display:-moz-box;
+	-moz-box-orient:vertical;
+	position:fixed;
+	top:32px;
+	left:0;
+	bottom:0;
+	width:114px;
+	-moz-box-ordinal-group:1000}
+
+.content-box{overflow:auto}
+#preferences-home{-moz-box-orient:vertical}
+
+.landingButton{
+	margin:2px 2px 0 2px;
+	padding:1px}
+.landingButton-icon{margin:2px}
+.landingButton-label{-moz-box-flex:1}
+
+.heading{
+	-moz-box-ordinal-group:0;
+	-moz-box-align:center;
+	padding:4px}
+	
+.indent{-moz-margin-start:10px}
+
+html|h1{margin:0;font-size:150%}
+html|h1.indent-small{display:none}/*remove the ugly title*/
+
+.preference-icon{
+	margin:4px}
+
+.preference-icon[type="general"],
+.landingButton-icon[type="general"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(0 24px 24px 0)}
+.preference-icon[type="tabs"],
+.landingButton-icon[type="tabs"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(120px 24px 144px 0)}
+.preference-icon[type="content"],
+.landingButton-icon[type="content"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(48px 24px 72px 0)}
+.preference-icon[type="applications"],
+.landingButton-icon[type="applications"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(192px 24px 216px 0)}
+.preference-icon[type="privacy"],
+.landingButton-icon[type="privacy"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(144px 24px 168px 0)}
+.preference-icon[type="security"],
+.landingButton-icon[type="security"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(24px 24px 48px 0)}
+.preference-icon[type="advanced"],
+.landingButton-icon[type="advanced"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(96px 24px 120px 0)}
+.preference-icon[type="sync"],
+.landingButton-icon[type="sync"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(216px 24px 240px 0)}
+
+.nav-button{
+	list-style-image:url(chrome://global/skin/global.png)}
+.landingButton:not(:hover),
+.nav-button:not(:hover),
+.nav-button[disabled="true"]{
+	-moz-border-top-colors:transparent!important;
+	-moz-border-left-colors:transparent!important;
+	-moz-border-right-colors:transparent!important;
+	-moz-border-bottom-colors:transparent!important;
+	background:none!important}
+
+#back-btn:-moz-locale-dir(ltr),
+#forward-btn:-moz-locale-dir(rtl){
+	-moz-image-region:rect(192px,16px,208px,0);
+	-moz-padding-end:0!important;
+	-moz-margin-end:0!important}
+#back-btn:-moz-locale-dir(rtl),
+#forward-btn:-moz-locale-dir(ltr){
+	-moz-image-region:rect(208px,16px,224px,0);
+	-moz-padding-start:0!important;
+	-moz-margin-start:0!important}
+:-moz-any(#back-btn,#forward-btn)[disabled="true"]>.toolbarbutton-icon{
+	opacity:0.4}
+
+
+#advancedPrefs{
+	border-width:2px!important;
+	margin:8px}
+#advancedPrefs>tabpanels{
+	background-color:-moz-Dialog}

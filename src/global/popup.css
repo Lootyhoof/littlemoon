@@ -1,0 +1,62 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+popup,panel,menupopup{
+	padding:0;
+	min-width:10px;
+	min-height:16px;
+	border:1px outset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+menupopup{
+	min-width:inherit;
+	max-width:60em;
+	list-style-image:none}
+
+.tooltip,tooltip{
+	max-width:40em;
+	padding:1px;
+	margin-top:21px;
+	font:status-bar;
+	cursor:default;
+	border:1px outset infobackground;
+	background-color:infobackground;
+	color:infotext}
+tooltip[titletip="true"]{max-width:none}
+tooltip>label{margin:0 2px}
+
+menupopup>menu>menupopup,
+popup>menu>menupopup{
+	-moz-margin-start:0;
+	margin-top:-1px}
+
+panel[titlebar]{
+	border-width:0!important}
+
+panel[type="arrow"]{
+	padding:0;
+	background-color:transparent!important;
+	border-width:0!important}
+
+panel[type="arrow"][side="top"],
+panel[type="arrow"][side="bottom"]{
+	margin:0 -14px}
+
+panel[type="arrow"][side="left"],
+panel[type="arrow"][side="right"]{
+	margin:-14px 0}
+
+.panel-arrowcontent{
+	padding:4px;
+	margin:0 3px 3px 0;
+	border:1px outset threedface;
+	box-shadow:3px 3px threedshadow;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+.panel-arrow{
+	margin:3px -3px 0 -3px;
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(208px 16px 224px 0)}
+.panel-arrow[side="top"]{-moz-image-region:rect(384px 16px 400px 0);margin:-3px 0 -3px 3px}
+.panel-arrow[side="bottom"]{-moz-image-region:rect(400px 16px 416px 0);margin:-3px 0 -3px 3px}
+.panel-arrow[side="left"]{-moz-image-region:rect(192px 16px 208px 0);margin:3px -3px 0 -3px}

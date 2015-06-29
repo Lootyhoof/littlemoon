@@ -1,0 +1,31 @@
+#successPageIcon,
+.wizard-header-icon{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(216px 24px 240px 0)}
+.success{
+	padding:2px;
+	background-color:blue!important}
+.error{
+	padding:2px;
+	background-color:red!important;
+	color:white!important}
+.warning{
+	font-weight:bold;
+	color:red}
+.mainDesc{
+	font-weight:bold}
+.inputColumn{
+	-moz-margin-end:2px}
+.pin{
+	font-size:18pt;
+	width:4em;
+	text-align:center}
+
+#add-device-throbber>image,
+#login-throbber>image,
+#connect-throbber,
+#passphrase-throbber{
+	 list-style-image:url(chrome://global/skin/icons/loading_16.png)}
+
+.mergeChoiceButton{margin:2px 0}
+#passphraseHelpSpacer{width:4px}

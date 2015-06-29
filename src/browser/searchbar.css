@@ -1,0 +1,71 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+searchbar{
+	-moz-box-orient:horizontal;
+	-moz-box-align:stretch;
+	padding:0;
+	margin:0 3px}
+
+searchbar .menu-iconic-icon{
+	width:16px;
+	height:16px}
+
+.searchbar-textbox{
+	margin:0;
+	width:10em;
+	min-width:10em}
+
+.search-go-container{
+	-moz-box-align:center}
+.search-go-button{
+	padding:1px;
+	margin:0;
+	border:1px solid transparent;
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(64px 16px 80px 0)}
+.search-go-button[disabled="true"]{
+	-moz-image-region:rect(64px 32px 80px 16px)}
+
+.searchbar-engine-button{
+	margin:0;
+	padding:1px;
+	border:1px solid transparent;
+	-moz-border-top-colors:transparent;
+	-moz-border-left-colors:transparent;
+	-moz-border-right-colors:threedshadow!important;
+	-moz-border-bottom-colors:transparent;
+	background-color:-moz-Dialog}
+.searchbar-engine-button[addengines="true"]{
+	background:#00CC00 none}
+
+.searchbar-engine-image{
+	-moz-margin-end:1px;
+	width:16px;
+	height:16px}
+
+.search-go-button:hover,
+.searchbar-engine-button:hover{
+	-moz-border-top-colors:threedhighlight!important;
+	-moz-border-left-colors:threedhighlight!important;
+	-moz-border-right-colors:threedshadow!important;
+	-moz-border-bottom-colors:threedshadow!important;
+	background-color:#CCCCFF!important}
+
+.search-go-button:hover:active,
+.searchbar-engine-button[open="true"]{
+	-moz-border-top-colors:threedshadow!important;
+	-moz-border-left-colors:threedshadow!important;
+	-moz-border-right-colors:threedhighlight!important;
+	-moz-border-bottom-colors:threedhighlight!important;
+	background-color:highlight!important}
+
+.searchbar-engine-menuitem[selected="true"]>.menu-iconic-text{font-weight:bold}
+
+.searchbar-dropmarker-image{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(10px 60px 20px 50px);
+	margin:0}
+.searchbar-engine-button[open="true"] .searchbar-dropmarker-image{
+	-moz-image-region:rect(0 60px 10px 50px)!important}
+

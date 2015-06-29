@@ -1,0 +1,13 @@
+@import url(chrome://inspector/skin/);
+@import url(chrome://inspector/skin/viewers/dom/dom.css);
+
+#bxBindingAspects,
+#bxBindingAspects tabpanels{
+	border-width:0}
+#bxBindingAspects groupbox,
+#bxBindingAspects .groupbox-body{
+	margin:0}
+#txbMethodCode,#txbPropCode,#txbHandlerCode{
+	margin:0;
+	background-color:-moz-Field;
+	color:-moz-FieldText}

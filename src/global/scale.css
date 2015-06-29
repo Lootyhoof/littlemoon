@@ -1,0 +1,38 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.scale-slider{
+	-moz-appearance:none!important;
+	width:100px;
+	margin:1px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAECAYAAAB4FpoOAAAAHUlEQVR42mNsaGj4zzAKRsEoGAVDAjCOFlmDCwAAjekFAZ2PyM8AAAAASUVORK5CYII=) 0% 50% repeat-x}
+
+.scale-slider[orient="vertical"]{
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAABkCAYAAAChBZEkAAAAI0lEQVR42mNoaGj4zwAFIDYTAxoYFRgVGBUYFRgVGBUYGAEAlOkFxc8m2fcAAAAASUVORK5CYII=) 50% 0% repeat-y;
+	width:auto;
+	height:100px}
+
+.scale-thumb{
+	width:15px;
+	height:15px;
+	outline-color:transparent;
+	border:2px solid;
+	-moz-border-top-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-left-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDShadow;
+	background-color:-moz-Dialog}
+
+scale:focus .scale-thumb,
+.scale-thumb:focus{outline:1px solid #CCCCFF}
+.scale-thumb:hover{background-color:#CCCCFF}
+.scale-thumb:hover:active{background-color:Highlight}
+
+.scale-thumb[disabled="true"]{
+	-moz-border-top-colors:ThreeDShadow ButtonFace!important;
+	-moz-border-left-colors:ThreeDShadow ButtonFace!important;
+	-moz-border-right-colors:ThreeDShadow ThreeDShadow!important;
+	-moz-border-bottom-colors:ThreeDShadow ThreeDShadow!important;
+	background:-moz-Dialog none!important;
+	color:graytext!important}
+
+#pageZoomScale>.scale-slider{background:none!important}

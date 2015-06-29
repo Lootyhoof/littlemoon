@@ -1,0 +1,21 @@
+colorpicker:not([type]){-moz-binding:url(chrome://speeddial/content/speeddial.xml#colorpicker)!important}
+radio#layoutFitHorizontal{list-style-image:url(chrome://speeddial/skin/icons.png);-moz-image-region:rect(40px,16px,56px,0px)}
+radio#layoutFitBoth{list-style-image:url(chrome://speeddial/skin/icons.png);-moz-image-region:rect(56px,16px,72px,0px)}
+radio#layoutFitVertical{list-style-image:url(chrome://speeddial/skin/icons.png);-moz-image-region:rect(40px,32px,56px,16px)}
+radio#layoutNoScale{list-style-image:url(chrome://speeddial/skin/icons.png);-moz-image-region:rect(56px,32px,72px,16px)}
+
+#editdial-setweather{list-style-image:url(chrome://speeddial/skin/weather/mostly_sunny.png)}
+#editdial-setlaunch{list-style-image:url(chrome://global/skin/global.png);-moz-image-region:rect(80px,16px,96px,0)}
+#editdial-setgroup{list-style-image:url(chrome://speeddial/skin/icon16.png)}
+#editdial-setplugin{list-style-image:url(chrome://global/skin/global.png);-moz-image-region:rect(400px,32px,416px,16px)}
+
+@media (-moz-windows-compositor){
+label[control="url"]{
+	text-shadow:0 0 5px white,0 0 10px white,0 0 10px white,0 0 10px white,0 0 10px white;
+	font-weight:bold;
+	font-size:110%}
+}	
+#editGroupDialDialog,#editLaunchDialDialog{padding:4px}
+
+#selectFileButton{list-style-image:url(chrome://global/skin/widgets.png);-moz-image-region:rect(41px 54px 57px 38px)}
+#selectFolderButton,#chooseFileButton{list-style-image:url(chrome://global/skin/widgets.png);-moz-image-region:rect(57px 54px 73px 38px)}

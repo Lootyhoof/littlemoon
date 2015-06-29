@@ -1,0 +1,21 @@
+@import url(chrome://global/skin/htmlbutton.css);
+
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+html|link{display:none}
+
+*|*:root{
+	margin:0;
+	-moz-appearance:none;
+	font:message-box;
+	background:-moz-Dialog url(chrome://global/skin/gecko.png) right 90% fixed no-repeat!important;
+	color:-moz-DialogText}
+
+html|body{margin:0}
+
+*|*.main-content{
+	border-radius:18px;
+	border:2px outset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}

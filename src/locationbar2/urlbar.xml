@@ -1,0 +1,42 @@
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:xbl="http://www.mozilla.org/xbl">
+	<binding id="urlbar" extends="chrome://locationbar2/content/urlbar.xml#urlbar">
+	<content sizetopopup="pref">
+		<xul:hbox class="autocomplete-textbox-container urlbar-textbox-container" flex="1">
+			<xul:hbox class="textbox-icon-box">
+				<children includes="image|deck|stack|box">
+					<xul:image class="autocomplete-icon" allowevents="true"/>
+				</children>
+			</xul:hbox>
+			<xul:stack flex="1" anonid="textbox-input-box" class="textbox-input-box urlbar-input-box">
+				<children includes="progressmeter"/>
+					<xul:hbox anonid="textbox-input-box-inner" xbl:inherits="tooltiptext=inputtooltiptext" flex="1" align="center">
+				<children/>
+				<html:input anonid="input" class="autocomplete-textbox urlbar-input textbox-input uri-element-right-align" flex="1" allowevents="true"
+							xbl:inherits="tooltiptext=inputtooltiptext,onfocus,onblur,value,type,maxlength,disabled,size,readonly,placeholder,userAction"/>
+				</xul:hbox>
+				<xul:hbox anonid="presentation-box" class="textbox-presentation-box" flex="1" align="center">
+					<xul:scrollbox anonid="presentation" class="textbox-presentation" flex="1">
+						<xul:hbox anonid="prePath" class="textbox-presentation-segment textbox-presentation-prePath">
+							<xul:label anonid="protocol" class="textbox-presentation-protocol"/>
+							<xul:label anonid="subdomain" class="textbox-presentation-subdomain"/>
+							<xul:label anonid="domain" class="textbox-presentation-domain"/>
+							<xul:label anonid="port" class="textbox-presentation-port"/>
+						</xul:hbox>
+						<xul:hbox anonid="pathFile" class="textbox-presentation-segment textbox-presentation-pathFile">
+							<xul:label anonid="file" class="textbox-presentation-file"/>
+							<xul:label anonid="query" class="textbox-presentation-query"/>
+							<xul:label anonid="fragment" class="textbox-presentation-fragment"/>
+						</xul:hbox>
+					</xul:scrollbox>
+				<xul:label anonid="overflow-ellipsis" class="textbox-overflow-ellipsis" hidden="true"/>
+				</xul:hbox>
+			</xul:stack>
+			<children includes="hbox"/>
+		</xul:hbox>
+		<xul:dropmarker anonid="historydropmarker" class="autocomplete-history-dropmarker urlbar-history-dropmarker"
+						allowevents="true" xbl:inherits="open,enablehistory,parentfocused=focused"/>
+		<children includes="toolbarbutton"/>
+		<xul:popupset anonid="popupset" class="autocomplete-result-popupset"/>
+	</content>
+	</binding>
+</bindings>

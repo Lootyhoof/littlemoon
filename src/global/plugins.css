@@ -1,0 +1,67 @@
+body{
+	margin:0;
+	padding:0;
+	font:message-box;
+	background:threedshadow url(chrome://global/skin/gecko.png) right bottom no-repeat fixed;
+	color:-moz-DialogText}
+
+div#outside{
+	width:auto!important;
+	margin:2em 4em!important;
+	border:2px outset threedface;
+	border-radius:8px;
+	background:-moz-Dialog}
+
+div#plugs,div#noplugs,h1#plugs{
+	margin:0!important;
+	padding:8px 8px 8px 48px!important;
+	background:threedface url(chrome://branding/content/icon32.png) 8px 8px no-repeat;
+	font-size:large!important;
+	font-weight:bold!important;
+	border-radius:6px 6px 0 0;
+	text-align:left!important}
+
+div#findmore,div#installhelp,div#findpluginupdates{
+	background:threedface;
+	margin:0;
+	padding:2px 8px 6px 48px}
+
+hr{border:1px inset threedface;margin:0 -1px} 
+
+.plugname{
+	margin:0;
+	padding:4px 8px 2px 48px;
+	font-size:130%;
+	font-weight:bold}
+
+dl{margin:0 8px 4px 48px}
+dd{margin:0;padding:0;text-align:start;word-wrap:break-word}
+dd:not(:last-child){-moz-margin-start:7em}
+dd>span{-moz-margin-start:-7em;display:block;float:left;font-weight:600}
+
+table{
+	font:message-box;
+	text-align:left;
+	width:90%;
+	margin:2px 8px 8px 48px;
+	border:1px solid threedshadow;
+	border-spacing:0;
+	border-collapse:collapse;
+	background-color:-moz-Field;
+	color:-moz-FieldText}
+th{
+	text-align:start;
+	padding:2px;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+tr{
+	border-bottom:1px solid threedshadow;
+	border-left:1px solid threedshadow;
+	text-align:left}
+td{
+	padding:0 2px;
+	border-right:1px solid threedshadow}
+th.enabled,
+td:nth-child(4){display:none}
+
+a:link,a:hover{color:Highlight}

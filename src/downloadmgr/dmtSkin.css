@@ -1,0 +1,39 @@
+#downloadManager{-moz-box-orient:vertical}
+
+#dmtTopToolBar{background-color:-moz-dialog}
+#dmtDownloadInfoBar{background:-moz-dialog;padding:2px}
+
+.DMT_icon_small,
+.DMT_icon_big{-moz-user-focus:ignore}
+
+#dmtLaunchButton,#dmtLaunchButton2{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(0,16px,16px,0)}
+#dmtReloadButton,#dmtReloadButton2{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(128px 16px 144px 0)}
+#dmtShowButton,#dmtShowButton2{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(57px 53px 73px 38px)}
+#dmtCleanUpButton,#dmtCleanUpButton2{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(224px 32px 240px 16px)}
+#dmtDeleteFileButton,#dmtDeleteFileButton2{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px 16px 288px 0)}
+#dmtOptionsButton,#dmtOptionsButton2{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(96px 16px 112px 0)!important}
+#dmtDownloadFrom,#dmtDownloadTo,#dmtDownloadDate,
+#dmtDownloadFrom2,#dmtDownloadTo2,#dmtDownloadDate2{
+	border-width:0;
+	padding:0;
+	margin:0}
+
+.commandBarSeparator{margin-left:10px}
+
+@media (-moz-windows-compositor){
+#dmtTopToolBox{
+	border:1px inset threedface;
+	border-bottom-width:0}
+}

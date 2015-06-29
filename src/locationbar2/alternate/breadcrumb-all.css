@@ -1,0 +1,11 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.textbox-presentation-slash{
+	-moz-binding:url(chrome://locationbar2/skin/alternate/breadcrumb.xml#breadcrumb);
+	list-style-image:url(chrome://locationbar2/skin/alternate/breadcrumb.png);
+	-moz-image-region:rect(0,26px,13px,13px)}
+.textbox-presentation-segment:hover>.textbox-presentation-slash{
+	-moz-image-region:rect(0,39px,13px,26px)}
+#urlbar[linkify="true"] .textbox-presentation-slash{cursor:pointer}
+.textbox-presentation-subdomain{-moz-margin-start:0!important}
+.textbox-presentation-port{-moz-margin-end:0!important}

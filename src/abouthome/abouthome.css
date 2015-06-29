@@ -1,0 +1,162 @@
+@import url(chrome://global/skin/inContentUI.css);
+
+html{height:100%}
+body{
+	width:100%;
+	height:100%;
+	display:-moz-box;
+	-moz-box-orient:vertical}
+
+a,a:link{
+	padding:1px 2px;
+	text-decoration:none;
+	color:-moz-nativehyperlinktext}
+a:hover{
+	text-decoration:underline;
+	background-color:#CCCCFF;
+	color:black}
+a:active{
+	background-color:Highlight!important;
+	color:HighlightText!important}
+a:focus{
+	outline:1px solid #9999CC}
+
+.spacer{-moz-box-flex:1}
+#topSection{text-align:center}
+
+#brandLogo{
+	height:154px;
+	width:154px;
+	margin:22px 0 31px}
+
+#searchForm,#snippets{width:470px}
+#searchForm{display:-moz-box}
+
+#searchLogoContainer{
+	display:-moz-box;
+	-moz-box-align:center;
+	padding-top:2px;
+	-moz-padding-end:8px}
+
+#searchEngineLogo{
+	display:inline-block;
+	height:28px;
+	width:70px;
+	min-width:70px}
+
+#searchText{
+	-moz-box-flex:1;
+	padding:3px;
+	font:message-box;
+	font-size:120%;
+	font-weight:600;
+	border:1px inset threedface}
+
+#searchText:focus,
+#searchText[autofocus]{
+	box-shadow:0 0 0 1px #CCCCFF}
+
+#searchSubmit{
+	padding:2px;
+	-moz-padding-start:20px;
+	height:32px;
+	cursor:pointer;
+	font:message-box;
+	font-size:120%;
+	font-weight:bold;
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),64,16,80,0);
+	background-clip:padding-box;
+	background-repeat:no-repeat;
+	background-position:2px center}
+
+#snippets{
+	display:inline-block;
+	text-align:start;
+	margin-top:24px}
+#defaultSnippet1,
+#defaultSnippet2{
+	display:block;
+	min-height:50px;
+	background:url(chrome://browser/content/abouthome/snippet1.png) 30px center no-repeat;
+	-moz-padding-start:79px}
+#defaultSnippet1:-moz-dir(rtl),
+#defaultSnippet2:-moz-dir(rtl){
+	background-position:right 30px center}
+#defaultSnippet2{background-image:url(chrome://browser/content/abouthome/snippet2.png)}
+
+#launcher{
+	display:block;
+	text-align:center;  
+	white-space:nowrap;
+	-moz-box-align:center;
+	-moz-box-pack:center;
+	width:100%}
+
+#launcher:not([session]),
+body[narrow] #launcher[session]{
+	display:block;
+	text-align:center;
+	white-space:nowrap}
+
+.launchButton{
+	display:-moz-box;
+	-moz-box-orient:vertical;
+	margin:4px;
+	font-size:105%;
+	font-weight:600;
+	min-width:88px;
+	max-width:176px;
+	max-height:85px;
+	vertical-align:top;
+	white-space:normal}
+
+.launchButton[hidden],
+#launcher:not([session])>#restorePreviousSessionSeparator,
+#launcher:not([session])>#restorePreviousSession{
+	display:none}
+
+#restorePreviousSession{
+	max-width:none}
+
+.launchButton::before{
+	content:" ";
+	display:block;
+	width:16px;
+	height:16px;
+	margin:2px auto;
+	line-height:0;
+	background-repeat:no-repeat;
+	background-position:center}
+#downloads::before{background-image:-moz-image-rect(url(chrome://global/skin/global.png),112,16,128,0)}
+#bookmarks::before{background-image:-moz-image-rect(url(chrome://global/skin/global.png),160,16,176,0)}
+#history::before{background-image:-moz-image-rect(url(chrome://global/skin/global.png),32,32,48,16)}
+#apps::before{background-image:-moz-image-rect(url(chrome://browser/skin/icons.png),0,96,16,80)}
+#addons::before{background-image:-moz-image-rect(url(chrome://global/skin/global.png),400,32,416,16)}
+#sync::before{background-image:url(chrome://global/skin/icons/sync-16.png)}
+#settings::before{background-image:-moz-image-rect(url(chrome://global/skin/global.png),96,16,112,0)}
+
+#restorePreviousSession::before{
+	content:url(chrome://abouthome/skin/restore.png);
+	height:32px;
+	width:32px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-bottom:0;
+	-moz-margin-end:4px}
+#restorePreviousSession:-moz-dir(rtl)::before{
+	transform:scaleX(-1)}
+
+#aboutMozilla{
+	position:absolute;
+	top:4px;
+	right:4px;
+	-moz-box-ordinal-group:0;
+	opacity:.5;
+	padding:4px 8px;
+	box-shadow:none}
+#aboutMozilla:hover{
+	box-shadow:none;
+	opacity:1}
+#aboutMozilla::before{
+	display:block;
+	content:url(chrome://browser/content/abouthome/mozilla.png)}

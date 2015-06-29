@@ -1,0 +1,22 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.wizard-header{
+	padding:2px;
+	color:black;
+	-moz-box-align:center}
+.wizard-header-box-1{
+	-moz-box-align:center}
+.wizard-header-box-text{
+	-moz-box-pack:center;
+	text-align:center}
+.wizard-header-label{
+	margin:2px;
+	font-weight:bold;
+	font-size:120%}
+.wizard-header-icon{
+	list-style-image:url(chrome://global/skin/icons/wizard.png)}
+.wizard-header-description{margin:1px 2px}
+.wizard-header-description[value=""]{display:none}
+.wizard-page-box{
+	padding:2px;
+	border:1px inset threedface}

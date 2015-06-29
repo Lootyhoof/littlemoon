@@ -1,0 +1,37 @@
+.downloadTypeIcon{height:32px;width:32px}
+
+.blockedIcon{list-style-image:url(chrome://global/skin/icons/Error.png)}
+
+.downloadDetails{
+	color:graytext;
+	font-size:90%;
+	cursor:inherit}
+
+/* required to get list populated */
+#downloadsRichListBox>richlistitem.download{height:38px}
+
+.downloadButton{
+	border-radius:5px;
+	-moz-outline-radius:7px}
+.downloadButton[disabled="true"],
+.downloadButton:not(:hover){
+	-moz-border-top-colors:transparent!important;
+	-moz-border-left-colors:transparent!important;
+	-moz-border-right-colors:transparent!important;
+	-moz-border-bottom-colors:transparent!important;
+	background:none!important}
+.downloadCancel{
+	list-style-image:url(chrome://global/skin/playbuttons.png);
+	-moz-image-region:rect(0 32px 16px 16px)}
+.downloadShow{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(57px 53px 73px 38px)}
+.downloadRetry{
+	list-style-image:url(chrome://global/skin/playbuttons.png);
+	-moz-image-region:rect(0 64px 16px 48px)}
+
+#downloadsEmptyDescription,
+#downloadsListEmptyDescription{
+	text-align:center;
+	margin:12px;
+	color:GrayText}

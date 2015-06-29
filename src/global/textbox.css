@@ -1,0 +1,80 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+textbox{
+	border:1px inset threedface;
+	margin:1px;
+	padding:0;
+	cursor:text;
+	background:-moz-Field none;
+	color:-moz-FieldText}
+textbox[disabled="true"]{
+	cursor:default;
+	background:none!important;
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+.textbox-inline-edit{
+	border:1px solid threeddarkshadow!important;
+	margin:0!important}
+textbox[readonly="true"]{
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+textbox.plain{
+	border-width:0!important;
+	background:none;
+	color:inherit}
+textbox[empty="true"],
+textbox[isempty="true"]{
+	color:GrayText!important}
+
+.textbox-input-box{
+	margin:0}
+
+html|*.textbox-input,
+html|*.textbox-textarea{
+	-moz-appearance:none;
+	border-radius:inherit;
+	background:none;
+	color:inherit;
+	border:0;
+	margin:0;
+	padding:1px;
+	font:inherit;
+	text-shadow:inherit}
+html|*.textbox-input:focus,
+html|*.textbox-textarea:focus{
+	box-shadow:0 0 0 1px highlight inset}
+
+
+.textbox-search-icons{
+	padding:1px;
+	border:1px solid transparent;
+	list-style-image:url(chrome://global/skin/global.png)}
+.textbox-search-icons:hover{
+	border:1px outset threedface;
+	background-color:#CCCCFF}
+.textbox-search-icons:hover:active{
+	border:1px inset threedface;
+	background-color:Highlight}
+.textbox-search-icon{-moz-image-region:rect(64px 16px 80px 0)}
+.textbox-search-icon[disabled="true"]{
+	opacity:.5;
+	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+.textbox-search-clear{-moz-image-region:rect(224px 32px 240px 16px)}
+
+.textbox-search-icon[searchbutton]:not([disabled="true"]){cursor:pointer}
+.textbox-search-clear:not([disabled="true"]){cursor:default}
+
+.tree-input{margin:0!important}
+.tree-input html|*.textbox-input{margin:0!important}
+
+.textbox-contextmenu{cursor:default}
+
+html|*.textbox-input:-moz-placeholder,
+html|*.textbox-textarea:-moz-placeholder{
+	font-style:italic;
+	opacity:.6!important}
+html|*.textbox-input::-moz-placeholder,
+html|*.textbox-textarea::-moz-placeholder{
+	font-style:italic;
+	opacity:.6!important}

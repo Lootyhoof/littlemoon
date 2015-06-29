@@ -1,0 +1,59 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+scrollbar{
+	-moz-binding:url(chrome://global/content/bindings/scrollbar.xml#scrollbar);
+	background-color:-moz-Dialog;
+	cursor:default}
+scrollbar[orient="horizontal"]{
+	min-height:14px;
+	border-top:1px inset threedface}
+scrollbar[orient="vertical"]{
+	min-width:14px;
+	border-left:1px inset threedface}
+scrollbar[orient="vertical"]:-moz-locale-dir(rtl){
+	border-right:0;
+	border-right:1px inset threedface}
+
+slider{background-color:rgba(255,255,255,.5)}
+
+thumb{
+	min-width:12px;
+	min-height:12px;
+	background:-moz-Dialog url(chrome://global/skin/shade.png);
+	border:1px outset threedface}
+
+scrollbarbutton{
+	width:14px;
+	height:14px;
+	background:-moz-Dialog url(chrome://global/skin/scrollbuttons.png) no-repeat;
+	border:1px outset threedface}
+
+thumb:hover,
+scrollbarbutton:hover{
+	background-color:#CCCCFF}
+thumb:active,
+scrollbarbutton:hover:active,
+scrollbarbutton[active="true"]{
+	background-color:highlight;
+	border-color:threedshadow threedface threedface threedshadow}
+thumb[disabled="true"],
+scrollbarbutton[disabled="true"]{
+	background-color:-moz-Dialog!important}
+thumb:focus,
+scrollbarbutton:focus{
+	border:1px solid highlight!important}
+
+scrollbarbutton[type="decrement"]{background-position:0 0}
+scrollbarbutton[type="increment"]{background-position:0 -12px}
+scrollbarbutton[type="decrement"][sborient="vertical"]{background-position:-12px 0}
+scrollbarbutton[type="increment"][sborient="vertical"]{background-position:-12px -12px}
+
+scrollbarbutton[disabled="true"]{
+	opacity:.5;
+	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+
+scrollcorner{
+	background-color:-moz-Dialog;
+	-moz-binding:url(chrome://global/content/bindings/scrollbar.xml#scrollbar-base);
+	cursor:default}

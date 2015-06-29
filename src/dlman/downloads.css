@@ -1,0 +1,94 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#dlProgressWindow{padding:2px}
+#dlProgressWindow>vbox{-moz-box-orient:horizontal}
+
+#fileName,#fileSource{border-radius:5px;-moz-outline-radius:7px}
+#fileName{font-weight:bold}
+
+#dlSize,#timeElapsed,#dlStatus{margin:0 4px}
+
+#progressBox{-moz-box-align:center}
+#progressMeter{min-height:16px}
+
+#downloadTree{border-bottom-width:0;border-right-width:0;border-left-width:0}
+
+#dlContext-pause,
+#dlMenu_pause,
+#pauseButton,
+treechildren::-moz-tree-image(ActionPlay,downloading,resumable){
+	list-style-image:url(chrome://global/skin/playbuttons.png);
+	-moz-image-region:rect(0 48px 16px 32px)}
+#dlContext-resume,
+#dlMenu_resume,
+#resumeButton,
+#ActionPlay,
+treechildren::-moz-tree-image(ActionPlay,paused,resumable){
+	list-style-image:url(chrome://global/skin/playbuttons.png);
+	-moz-image-region:rect(0 16px 16px 0)}
+#dlContext-retry,
+#dlMenu_retry,
+#retryButton,
+treechildren::-moz-tree-image(ActionPlay,failed),
+treechildren::-moz-tree-image(ActionPlay,canceled){
+	list-style-image:url(chrome://global/skin/playbuttons.png);
+	-moz-image-region:rect(0 64px 16px 48px)}
+#dlContext-cancel,
+#dlMenu_cancel,
+#cancelButton,
+#ActionStop,
+treechildren::-moz-tree-image(ActionStop,active){
+	list-style-image:url(chrome://global/skin/playbuttons.png);
+	-moz-image-region:rect(0 32px 16px 16px)}
+treechildren::-moz-tree-image(ActionStop,inactive){
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(224px 32px 240px 16px)}
+reechildren::-moz-tree-image(ActionStop,blocked){
+	list-style-image:url(chrome://global/skin/alerts.png);
+	-moz-image-region:rect(0 24px 24px 0)}
+#dlMenu_clearList{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px 16px 288px 0)}
+#openButton,
+#dlContext-open,
+#dlMenu_open{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(0,16px,16px,0)}
+#morebtn-show,
+#dlContext-show,
+#dlMenu_show{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(57px 53px 73px 38px)}
+#morebtn-openReferrer,
+#dlContext-openReferrer,
+#dlMenu_openReferrer{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(144px 16px 160px 0)}
+#dlContext-copyLocation,
+#morebtn-copyLocation,
+#dlMenu_copyLocation{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(336px 16px 352px 0)}
+#dlContext-properties,
+#dlMenu_properties{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(96px,16px,112px,0)}
+#dlContext-remove,
+#dlMenu_remove{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(224px 32px 240px 16px)}
+#moreButton{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(96px 16px 112px 0)!important}
+
+.icon-button{
+	border-radius:3px;
+	-moz-outline-radius:5px;
+	margin:1px;
+	padding:1px}
+.icon-button:not(:hover){
+	-moz-border-top-colors:transparent;
+	-moz-border-left-colors:transparent;
+	-moz-border-right-colors:transparent;
+	-moz-border-bottom-colors:transparent;
+	background:none}

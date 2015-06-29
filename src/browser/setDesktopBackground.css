@@ -1,0 +1,9 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+#monitorImage,#monitor{list-style-image:url(chrome://browser/skin/monitor_16-10.png)}
+#monitor:not([aspectratio="16:10"]){width:175px}
+
+html|canvas#screen{margin:12px 11px 36px}
+
+caption{display:none}

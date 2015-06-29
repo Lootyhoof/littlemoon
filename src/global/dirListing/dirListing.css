@@ -1,0 +1,98 @@
+@import url(chrome://global/skin/htmlbutton.css);
+
+html{
+	margin:0;
+	padding:0;
+	height:100%;
+	background:threedshadow url(chrome://global/skin/gecko.png) right 90% no-repeat fixed}
+
+body{
+	-moz-user-select:-moz-none;
+	min-width:1px;
+	margin:0;
+	text-align:left;
+	font:message-box;
+	background:-moz-Dialog;
+	color:-moz-DialogText}
+
+h1{
+	-moz-user-select:text;
+	float:left;
+	margin:1px 0 0 0;
+	padding:2px 4px;
+	font-size:110%;
+	font-weight:bold}
+
+a{
+	text-decoration:none}
+a:focus{outline:1px solid highlight!important}
+
+#clear-reports{margin:4px;-moz-appearance:none}
+
+#UI_goUp,
+#UI_showHidden{
+	float:right;
+	margin:0}
+
+.up,#UI_showHidden>label{
+	display:-moz-box;
+	padding:1px;
+	-moz-padding-end:2px;
+	border:1px solid transparent;
+	color:-moz-DialogText}
+
+.up{
+	-moz-padding-start:20px;
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),208,32,224,16)!important;
+	background-repeat:no-repeat!important;
+	background-position:2px center!important}
+
+#UI_showHidden>label>input{
+	-moz-appearance:none;
+	margin:2px}
+
+table{
+	clear:both;
+	width:100%;
+	border-spacing:0;
+	border-top:1px solid threedshadow;
+	background-color:-moz-Field;
+	color:-moz-FieldText}
+
+th{
+	font-weight:normal;
+	border:1px outset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+a:hover,th:hover{
+	text-decoration:none;
+	background-color:#CCCCFF;
+	color:black}
+a:hover:active,th:hover:active{
+	background-color:highlight;
+	color:highlighttext!important}
+
+th:not(:first-child){text-align:center}
+td:not(:first-child){width:0;text-align:right;padding:1px 3px!important}
+td{vertical-align:top;padding:0}
+
+th:first-child{-moz-padding-end:2em}
+th:first-child+th{-moz-padding-end:1em}
+td:first-child+td{text-align:right;-moz-padding-end:1em;white-space:nowrap}
+td:first-child+td+td{-moz-padding-start:1em;-moz-padding-end:.5em;white-space:nowrap}
+td:last-child{-moz-padding-start:.5em;white-space:nowrap}
+
+td>a{color:-moz-FieldText!important}
+.dir,.symlink,.file{padding:0 2px;-moz-margin-start:0!important}
+.file>img,
+.dir::before{padding:0!important;margin:0 2px!important;-moz-margin-end:2px!important;vertical-align:top!important}
+tr:nth-child(even){background-color:rgba(160,160,160,0.1)}
+.file>img{margin:2px!important}
+
+#clear-reports{
+	-moz-padding-start:20px;
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),272,16,288,0);
+	background-repeat:no-repeat;
+	background-position:3px center}
+
+#reportList{display:block!important}

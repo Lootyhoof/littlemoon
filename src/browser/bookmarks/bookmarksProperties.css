@@ -1,0 +1,3 @@
+/*FF2*/
+menulist[droppable="false"]>.menulist-dropmarker,
+menulist[droppable="false"]>menupopup{display:none}

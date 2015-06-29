@@ -1,0 +1,29 @@
+
+.spinbuttons-button{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	margin:0;
+	padding:1px;
+	border:1px solid;
+	-moz-border-top-colors:threedhighlight;
+	-moz-border-left-colors:threedhighlight;
+	-moz-border-right-colors:threedshadow;
+	-moz-border-bottom-colors:threedshadow}
+.spinbuttons-button:hover{
+	border:1px solid;
+	-moz-border-top-colors:threedhighlight;
+	-moz-border-left-colors:threedhighlight;
+	-moz-border-right-colors:threedshadow;
+	-moz-border-bottom-colors:threedshadow}
+.spinbuttons-button:hover:active{
+	border:1px solid;
+	-moz-border-top-colors:threedshadow;
+	-moz-border-left-colors:threedshadow;
+	-moz-border-right-colors:threedhighlight;
+	-moz-border-bottom-colors:threedhighlight}
+
+.spinbuttons-button>.button-box>.button-text{display:none}
+
+.spinbuttons-up{-moz-image-region:rect(73px,46px,77px,39px)}
+.spinbuttons-up[disabled=true]{-moz-image-region:rect(73px,62px,77px,55px)}
+.spinbuttons-down{-moz-image-region:rect(73px,54px,77px,47px)}
+.spinbuttons-down[disabled=true]{-moz-image-region:rect(73px,70px,77px,63px)}

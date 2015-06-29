@@ -1,0 +1,54 @@
+@import url(chrome://global/content/aboutMemory.css);
+@import url(chrome://global/skin/about.css);
+@import url(chrome://global/skin/htmlbutton.css);
+
+body{width:80%}
+
+div.section,div.footer{
+	margin:0!important;
+	padding:0!important;
+	border-width:0!important;
+	background:none!important}
+
+h2{background:none}
+
+.memOverview table{
+	font-size:100%}
+.memOtherRows abbr[title]{
+	border-bottom:0!important}
+
+h2.tree{
+	margin-bottom:0!important;
+	padding:2px 5px!important;
+	border:1px inset threedface;
+	border-bottom-width:0;
+	font-weight:bold;
+	background:-moz-dialog url(chrome://global/skin/menu-bg.png);
+	color:-moz-DialogText}
+
+h2.tree:hover{
+	border-style:outset;
+	background-color:#CCCCFF;
+	color:black}
+
+h2.tree:hover:active{
+	border-style:inset;
+	background-color:highlight;
+	color:highlighttext}
+	
+pre.tree,
+h2+pre,
+.memBox{
+	margin-top:0!important;
+	padding:4px;
+	border:1px inset threedface;
+	background-color:-moz-Field;
+	color:-moz-FieldText}
+
+.option,.legend{font-size:100%!important}
+.legend{clear:both}
+hr{display:none}
+hr+div+div{float:left;-moz-margin-end:4px}
+
+div.opsRow{padding:0;margin-top:0;border-width:0;background:none}
+div.ancillary:first-child{margin-top:0;margin-bottom:10px}

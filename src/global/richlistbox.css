@@ -1,0 +1,39 @@
+richlistbox{
+	-moz-appearance:none!important;
+	border:1px inset threedface!important;
+	background:-moz-Dialog url(chrome://global/skin/gecko.png) bottom right no-repeat!important;
+	color:-moz-DialogText!important}
+richlistbox[disabled="true"]{
+	color:graytext!important}
+
+richlistitem{
+	padding:1px;
+	border:1px outset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+richlistitem:hover{
+	background-color:#CCCCFF;
+	color:black}
+richlistitem[selected="true"]{
+	background-color:graytext!important;
+	color:threedhighlight!important}
+richlistbox:focus>richlistitem[current="true"]{
+	background-color:Highlight!important;
+	color:HighlightText!important}
+richlistitem[disabled="true"]{
+	background-color:-moz-Dialog;
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+
+richlistitem>hbox,
+richlistitem>vbox{
+	background:none!important;
+	color:inherit!important}
+
+richlistbox[state="themes"]{width:30em!important}
+
+richlistitem:hover .text-link,
+richlistitem[selected="true"] .text-link{color:inherit!important}
+
+/*BRIEF extension*/
+richlistitem.view-list-item{box-shadow:none}

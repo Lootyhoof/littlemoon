@@ -1,0 +1,152 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+radio[pane="paneMain"],radio[pane="paneGeneral"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(0 24px 24px 0)}
+radio[pane="paneSecurity"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(24px 24px 48px 0)}
+radio[pane="paneContent"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(48px 24px 72px 0)}
+radio[pane="paneAdvanced"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(96px 24px 120px 0)}
+radio[pane="paneTabs"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(120px 24px 144px 0)}
+radio[pane="panePrivacy"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(144px 24px 168px 0)}
+radio[pane="paneApplications"],
+radio[pane="paneFeeds"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(192px 24px 216px 0)}
+radio[pane="paneSync"]{
+	list-style-image:url(chrome://browser/skin/preferences/preferences.png);
+	-moz-image-region:rect(216px 24px 240px 0)}
+radio[label="Weave"]>.paneButtonIcon{margin:-4px 0!important}
+
+#cookiesChildren::-moz-tree-image(domainCol){
+	width:16px;height:16px;margin:0 2px;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(41px 54px 57px 38px)}
+#cookiesChildren::-moz-tree-image(domainCol,container){
+	-moz-image-region:rect(57px 54px 73px 38px)}
+#cookiesChildren::-moz-tree-image(domainCol,container,open){
+	-moz-image-region:rect(57px 70px 73px 54px)}
+#cookieInfoBox{
+	margin:2px 0;
+	border:1px inset threedface}
+
+#removeCookie,#removeCookies{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px 16px 288px 0)}
+
+filefield{
+	margin:1px;
+	border:1px inset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+.fileFieldIcon{
+	width:16px;
+	height:16px;
+	margin:1px;
+	-moz-margin-end:3px}
+filefield[disabled="true"] .fileFieldIcon{
+	opacity:.5;
+	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+
+.fileFieldLabel{
+	background:none;
+	border:0;
+	margin:0}
+
+#saveToRow{-moz-box-align:center}
+#downloadFolder,#chooseFolder{margin:0}
+
+#fileExtension{width:5em}
+#extensionChildren::-moz-tree-image(fileExtension){margin:0 5px 0 0}
+#typeField{font-weight:bold}
+#typeIcon{width:32px;height:32px;-moz-margin-end:3px}
+
+#typeField{
+	font-weight:bold;
+	background-color:transparent;
+	margin:1px!important;
+	-moz-margin-start:3px!important;
+	-moz-margin-end:2px!important}
+
+#extensionField{
+	color:GrayText;
+	font-weight:bold}
+#ChangeActionDialog{padding:0}
+
+#changeActionHeader{
+	border-bottom:2px groove ThreeDFace;
+	margin:0;
+	padding:4px;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+#defaultAppIcon{width:16px;height:16px;-moz-margin-start:2px}
+#defaultAppName{-moz-margin-start:4px!important;font-weight:bold}
+#chooseClientAppCell{-moz-padding-end:12px}
+
+#sync-settings-group,
+#sync-clients-group,
+#sync-addons-group{
+	margin:0!important;
+	border-width:0!important}
+
+#linksOpenInBox,#tabPrefsBox{
+	margin:4px;
+	border:1px inset threedface;
+	padding:3px}
+
+#currentUser image{list-style-image:url(chrome://mozapps/skin/profile/profileicon.png)}
+
+#connectThrobber{
+	list-style-image:url(chrome://global/skin/icons/loading_16.png)}
+
+.expander-up,
+.expander-down{
+	padding:0 3px;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(40px 36px 48px 28px)}
+.expander-up .button-icon,.expander-down .button-icon{margin-top:4px}
+.expander-down{-moz-image-region:rect(32px 36px 40px 28px)}
+
+#currentAccount,#connectButton{
+	margin:0 2px}
+
+#manageAccountControls>.indent{
+	margin:0 2px;
+	border:1px inset threedface}
+	
+.indent>.text-link{
+	text-decoration:none}
+.indent>.text-link:not(:hover):not(:active){
+	color:-moz-DialogText}
+	
+#syncEnginesList{
+	background-image:none}
+#syncEnginesList>richlistitem{
+	padding:0!important;
+	border-width:0!important;
+	background:none!important;
+	color:inherit!important}
+#syncEnginesList>richlistitem>checkbox{
+	-moz-box-flex:1;
+	margin:0}
+
+setting{-moz-box-align:start}
+.preferences-alignment{
+	min-height:30px;
+	-moz-box-align:center}
+.preferences-description:empty{
+	display:none}
+	
+#dmtPrefs{margin:0!important}
+
+#defaultFont>menupopup{max-width:20em}
