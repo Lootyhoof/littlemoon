@@ -24,8 +24,8 @@ window[chromehidden~="menubar"] #nav-bar #urlbar{
 
 #titlebar-min,#titlebar-max,#titlebar-close,
 #minimize-button,#restore-button,#close-button{
-	margin:1px;
-	padding:1px;
+	margin:2px 1px;
+	padding:0 1px;
 	list-style-image:url(chrome://global/skin/global.png)!important}
 #titlebar-min,#minimize-button{-moz-image-region:rect(128px,32px,144px,16px)!important}
 #titlebar-max{-moz-image-region:rect(16px,32px,32px,16px)!important}
