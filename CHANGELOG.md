@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.1
+- (Win10) use non-compositor style for window styling on Pale Moon 26 builds later than b2
+- Windows non-compositor style improvements
+
 ### 1.1.0
 - Pale Moon v26 compatibility
 - fix window borders on Windows 10
