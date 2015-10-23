@@ -250,20 +250,19 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 		-moz-border-end:1px inset threedface}
 	:root[chromemargin][sizemode="normal"] #sidebar-box{
 		-moz-border-start:1px inset threedface}
+		
+	:root[chromemargin]:not([inFullscreen="true"]) #tabbrowser-tabs[tabsontop="true"]>.tabbrowser-tab:not(:hover){
+		background-color:rgba(255,255,255,.7)!important}
+	:root[chromemargin]:not([inFullscreen="true"]) #tabbrowser-tabs[tabsontop="true"]>.tabbrowser-tab[selected="true"]{
+		border-style:outset!important;
+		background-color:-moz-dialog!important;
+		color:-moz-dialogtext!important}
 }
 
 #printedit-toolbar,#print-preview-toolbar,
 #navigator-toolbox[tabsontop="false"],
 #browser{
 	background-color:-moz-Dialog}
-
-
-:root[chromemargin]:not([inFullscreen="true"]) #tabbrowser-tabs[tabsontop="true"]>.tabbrowser-tab:not(:hover){
-	background-color:rgba(255,255,255,.7)!important}
-:root[chromemargin]:not([inFullscreen="true"]) #tabbrowser-tabs[tabsontop="true"]>.tabbrowser-tab[selected="true"]{
-	border-style:outset!important;
-	background-color:-moz-dialog!important;
-	color:-moz-dialogtext!important}
 
 toolbarbutton:hover:not([disabled="true"]),
 #menubar-items>menubar>menu:hover:not([disabled="true"]){
