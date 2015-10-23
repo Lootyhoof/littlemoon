@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.2
+- update tab styling for Windows 10
+- use theme-native feed icon
+
 ### 1.1.1
 - (Win10) use non-compositor style for window styling on Pale Moon 26 builds later than b2
 - Windows non-compositor style improvements
