@@ -186,11 +186,12 @@ toolbarbutton.bookmark-item[container]>.toolbarbutton-icon:-moz-locale-dir(rtl){
 
 #window-controls{-moz-box-align:stretch}
 
-#history-button,#downloads-button,#mail-button,#new-window-button,
-#minimize-button,#restore-button,#close-button,#fullscreen-button{
+#history-button,#history-menu-button,#downloads-button,
+#mail-button,#new-window-button,#minimize-button,
+#restore-button,#close-button,#fullscreen-button{
 	list-style-image:url(chrome://global/skin/global.png)}
 
-#history-button{-moz-image-region:rect(32px,32px,48px,16px)}
+#history-button,#history-menu-button{-moz-image-region:rect(32px,32px,48px,16px)}
 #downloads-button{-moz-image-region:rect(112px,16px,128px,0)}
 #mail-button{-moz-image-region:rect(64px,32px,80px,16px)}
 #new-window-button{-moz-image-region:rect(80px,32px,96px,16px)}
