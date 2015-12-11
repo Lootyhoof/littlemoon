@@ -29,9 +29,9 @@ button:not(:hover){
 	position:relative}
 
 .playButton>.button-box{
-	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,16,16,0)}
-.playButton[paused="true"]>.button-box{
 	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,32,16,16)}
+.playButton[paused="true"]>.button-box{
+	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,16,16,0)}
 .muteButton>.button-box{
 	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),16,16,32,0)}
 .muteButton[muted="true"]>.button-box{
@@ -114,7 +114,7 @@ button:not(:hover){
 	height:22px;
 	background:url(chrome://global/skin/media/scrubberThumb.png) no-repeat center}
 .timeThumb[showhours="true"]{
-	background-position:-45 0}
+	background-image: url(chrome://global/skin/media/scrubberThumbWide.png)}
  
 .timeLabel{
 	padding-top:2px;
