@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.2.0
+- (PM26) add history menu button
+- fix media controls
+- use correct icons for media controls
+
 ### 1.1.2
 - update tab styling for Windows 10
 - use theme-native feed icon
