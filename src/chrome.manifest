@@ -24,5 +24,3 @@ skin    abouthome	littlemoon	abouthome/
 skin    jsterm		littlemoon	jsterm/
 skin    printedit	littlemoon	printedit/
 skin    speeddial	littlemoon	speeddial/
-skin	appver		littlemoon	appver/25/ appversion<=26.0.0b2
-skin	appver		littlemoon	appver/26/ appversion>26.0.0b2
