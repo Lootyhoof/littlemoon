@@ -3,7 +3,7 @@
 
 .controlBar{
 	height:20px;
-	background-color:-moz-Dialog;
+	background:-moz-Dialog url(chrome://global/skin/menu-bg.png);
 	color:-moz-DialogText}
 
 button{
@@ -19,7 +19,7 @@ button:not(:hover){
 	-moz-border-left-colors:transparent;
 	-moz-border-right-colors:transparent;
 	-moz-border-bottom-colors:transparent;
-	background:none}
+	background:none!important}
 .button-box{
 	background-position:center!important;
 	background-repeat:no-repeat!important}
@@ -28,42 +28,47 @@ button:not(:hover){
 	margin-right:-20px!important;
 	position:relative}
 
-.playButton>.button-box{
-	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,32,16,16)}
-.playButton[paused="true"]>.button-box{
-	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,16,16,0)}
-.muteButton>.button-box{
-	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),16,16,32,0)}
-.muteButton[muted="true"]>.button-box{
-	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),16,32,32,16)}
-.muteButton[noAudio="true"]>.button-box{
-	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,64,16,48)}
-.fullscreenButton>.button-box{
-	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,48,16,32)}
-.fullscreenButton[fullscreened]>.button-box{
-	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),16,48,32,32)}
+.playButton>.button-box{background-image:-moz-image-rect(url(video.png),0,32,16,16)}
+.playButton[paused="true"]>.button-box{background-image:-moz-image-rect(url(video.png),0,16,16,0)}
+.muteButton>.button-box{background-image:-moz-image-rect(url(video.png),16,16,32,0)}
+.muteButton[muted="true"]>.button-box{background-image:-moz-image-rect(url(video.png),16,32,32,16)}
+.muteButton[noAudio="true"]>.button-box{background-image:-moz-image-rect(url(video.png),0,64,16,48)}
+.fullscreenButton>.button-box{background-image:-moz-image-rect(url(video.png),0,48,16,32)}
+.fullscreenButton[fullscreened]>.button-box{background-image:-moz-image-rect(url(video.png),16,48,32,32)}
 
-.volumeStack{
-	width:16px;
-	height:68px;
-	border:1px outset threedface;
-	border-bottom:0;
-	background-color:-moz-Dialog;
-	margin:-68px 2px 19px -18px;
-	overflow:hidden;
-	position:relative;
-	padding-top:3px}
-.volumeControl{min-height:64px}
-.volumeControl .scale-thumb{
-	width:10px;
-	min-height:10px;
-	max-height:10px}
+.volumeStack[hidden="true"]{display:-moz-stack!important}
+.muteButton[noAudio]+.volumeStack{display:none!important}
+.volumeStack[fadeout]{opacity:1!important}
+
+.scale-thumb[orient="vertical"]{
+	width:12px;
+	border-radius:2px;
+	min-height:4px;
+	max-height:4px}
 
 .volumeBackgroundBar{
 	margin:0 4px;
-	border-radius:5px;
-	border:1px inset threedface;
-	background:Highlight}
+	-moz-border-start:1px inset threedface;
+	-moz-border-end:1px inset threedface;
+	background:highlight}
+
+.volumeBackground,
+.volumeForeground{
+	width:32px;
+	background-position:center center;
+	background-repeat:no-repeat}
+.volumeBackground{
+	background-image:-moz-image-rect(url(video.png),32,32,48,0)}
+.volumeForeground{
+	background-image:-moz-image-rect(url(video.png),32,64,48,32);
+	background-clip:content-box}
+.volumeControl:not([orient="vertical"]){
+	width:32px}
+.volumeControl:not([orient="vertical"]) .scale-thumb{
+	min-width:0;
+	border-width:0;
+	background:none;
+	opacity:0}
 
 .durationBox{
 	margin-left:-20px!important;
@@ -71,9 +76,9 @@ button:not(:hover){
 	-moz-box-pack:center}
 
 .durationLabel{
-	padding-left:8px;
+	padding:0 2px;
 	color:-moz-DialogText;
-	text-shadow:-moz-Field 0 1px;
+	text-shadow:0 1px rgba(250,250,250,.4);
 	font:11px sans-serif}
 
 .bufferBar,
@@ -84,44 +89,37 @@ button:not(:hover){
 
 .bufferBar{
 	border:0!important}
-.bufferBar .progress-bar{
-	background-color:threedshadow}
+.bufferBar>.progress-bar{
+	border-radius:5px;
+	background:threedshadow}
 
-.progressBar .progress-bar{
-	background-color:Highlight}
-
-.scale-slider{
-	margin:0;
-	background:none}
-
-.scale-thumb{
-	background-image:none}
+.scale-slider{margin:0;background:none}
 .scrubber>.scale-slider{
-	margin-top:-10px;
-	margin-bottom:8px}
+	margin-top:-13px;
+	margin-bottom:11px;
+	background:none}
 
 .scrubber>.scale-slider>.scale-thumb{
 	width:45px;
 	height:22px;
-	background-color:transparent;
+	background:none;
+	box-shadow:none;
 	border-width:0;
 	border-radius:0!important}
-
 .timeThumb{
 	-moz-box-align:start;
 	-moz-box-pack:center;
-	width:45px;
-	height:22px;
-	background:url(chrome://global/skin/media/scrubberThumb.png) no-repeat center}
+	-moz-box-flex:1;
+	background:-moz-image-rect(url(scrubberThumb.png),0,33,22,0) no-repeat center}
 .timeThumb[showhours="true"]{
-	background-image: url(chrome://global/skin/media/scrubberThumbWide.png)}
+	background:-moz-image-rect(url(scrubberThumb.png),0,78,22,33) no-repeat center}
  
 .timeLabel{
-	padding-top:2px;
+	padding-top:1px;
 	color:white;
 	font-size:10px;
 	font-family:Tahoma,Arial,sans-serif;
-	text-shadow: 0 1px rgba(0,0,0,.5)}
+	text-shadow:0 1px rgba(0,0,0,.5)}
 
 .statusOverlay{
 	-moz-box-align:center;
@@ -137,21 +135,19 @@ button:not(:hover){
 .statusIcon[type="throbber"]{
 	background-image:url(chrome://global/skin/icons/loading_16.png)}
 .statusIcon[type="error"]{
-	background-image:url(chrome://global/skin/icons/warning-large.png)}
+	background-image:url(chrome://global/skin/icons/warning-24.png)}
 
 .controlBar:not([immediate]){-moz-transition:opacity 300ms}
-.volumeStack:not([immediate]){-moz-transition:opacity 200ms,margin-top 200ms}
 .statusOverlay:not([immediate]){-moz-transition:opacity 300ms 750ms}
 .controlBar[fadeout],
 .statusOverlay[fadeout]{opacity:0}
-.volumeStack[fadeout]{opacity:0;margin-top:0}
 
 .positionLabel{display:none}
 
 html|*.statsDiv{position:relative}
 html|tr[style^="height"]{display:none}
 html|td{
-	text-align:left;
+	text-align:start;
 	padding:0 2px}
 html|table{
 	table-layout:fixed;
@@ -171,14 +167,11 @@ html|table{
 	text-align:center}
 
 .clickToPlay{
-	opacity:.8;
-	background:url(chrome://global/skin/media/play.png) no-repeat center -moz-calc(50% + 1px);
-	background-size:64px 64px;
+	opacity:.7;
+	background:url(play.png) no-repeat center calc(50% + 1px);
+	background-size:64px 64px}
+.clickToPlay:not([immediate]){
 	-moz-transition-property:opacity,background-size;
 	-moz-transition-duration:400ms,400ms}
 .clickToPlay:hover{opacity:1}
 .clickToPlay[fadeout]{background-size:192px 192px;opacity:0}
-.clickToPlay[fadeout][immediate] {
-	-moz-transition-property:opacity,background-size;
-	-moz-transition-duration:0s,0s}
-	

@@ -1,6 +1,6 @@
 @media not print{
 body{background-color:threedshadow}
 video{
-	background-color:-moz-Dialog;
+	background-color:threedshadow;
 	color:-moz-DialogText}
 }
