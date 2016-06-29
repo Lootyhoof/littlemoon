@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.3.0
+- refactor media controls for Pale Moon 26.3
+- fix window title on Windows 10
+- various cleanups
+
 ### 1.2.0
 - (PM26) add history menu button
 - fix media controls
