@@ -17,7 +17,8 @@ body{
 	-moz-box-flex:1;
 	-moz-box-align:stretch;
 	-moz-box-orient:vertical;
-	overflow-y:auto}
+	overflow-y:auto;
+	-moz-padding-start:16px}
 
 .property-view-hidden,
 .property-content-hidden{
@@ -26,50 +27,36 @@ body{
 .property-name,
 .property-value,
 .expander{
+	outline:0;
 	display:-moz-box;
 	vertical-align:middle}
 
 .property-name{
-	width:calc(50% - 18px);
+	width:200px;
 	overflow-x:hidden;
 	text-overflow:ellipsis;
 	white-space:nowrap}
-.property-name::after{
-	content:":"}
+.property-name::after{content:":";padding:0 2px}
 
 .property-value{
-	padding-left:2px;
-	width:50%;
-	max-width:50%;
+	width:auto;
 	overflow-x:hidden;
 	text-overflow:ellipsis;
 	white-space:nowrap}
 
-.other-property-value{
-	display:block;
-	padding:2px}
-
 .matchedselectors:not(:empty){
-	margin:4px;
-	margin-left:18px;
+	margin:2px;
+	border-radius:3px;
 	border:1px solid threedshadow;
-	background-color:-moz-field;
-	color:-moz-fieldtext}
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
 
-.matchedselectors>p{margin:2px}
+.other-property-value{display:block}
+.matchedselectors>p{margin:0;padding:0 2px}
 .matchedselectors>p:not(:first-of-type){border-top:1px solid threedshadow}
-
 .rule-text{direction:ltr}
-
 .onlyuserstyles{cursor:pointer}
-
-#root{
-	-moz-box-ordinal-group:0;
-	font:message-box}
-
+#root{-moz-box-ordinal-group:0;font:message-box}
 .devtools-toolbar{width:100%}
-
 .rule-link>.link{float:right}
-
-.match,
-.expander:not(.expandable){visibility:hidden}
+.match,.expander:not(.expandable){visibility:hidden}

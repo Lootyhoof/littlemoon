@@ -1,9 +1,11 @@
 body{
 	margin:0;
  	font:message-box;
-	font-family:Consolas,Lucida Console,monospace;
+	font-family:Menlo,Consolas,Lucida Console,monospace;
 	background-color:-moz-field;
 	color:-moz-fieldtext}
+
+.child{-moz-padding-start:calc(1000em + 16px)}
 
 pre,ul{
 	margin:0;
@@ -12,7 +14,6 @@ pre,ul{
 .tagname{color:purple}
 .attrname{color:black}
 .attrvalue{color:blue}
-.comment{color:green;font-style:italic}
 
 .newattr{cursor:pointer}
 .selected{background-color:rgba(160,160,160,.2)}
@@ -38,9 +39,14 @@ span[tabindex]{display:inline-block}
 	background-color:highlight}
 
 .styleinspector-propertyeditor{
-	margin:-1px -6px -1px -1px;
-	outline:none;
-	box-shadow:0 0 1px threeddarkshadow,1px 1px 3px threedshadow;
-	border-width:0}
+	margin:-1px -6px -1px -1px!important;
+	outline:none!important;
+	box-shadow:0 0 1px graytext,1px 1px 3px threedshadow!important;
+	border-width:0!important}
 	
 .more-nodes{padding-left:16px}
+
+.highlighter.flash-out{transition:background 500ms}
+
+.not-displayed .open,
+.not-displayed .close{opacity:.7}

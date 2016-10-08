@@ -1,83 +1,34 @@
-.options-vertical-pane{
-	margin:10px;
-	width:calc(50% - 20px);
-	min-width:280px}
+.options-groupbox>hbox,.hidden-labels-box{-moz-box-align:center}
+.hidden-labels-box:not(.visible)>label,
+.hidden-labels-box.visible~.hidden-labels-box>label:last-child{display:none}
 
-.options-vertical-pane>label{
-	margin:2px 0;
-	font-weight:bold}
-
-.options-groupbox{padding:4px}
-
-#toolbox-tab-options>image{
-	background-image:-moz-image-rect(url(chrome://global/skin/global.png),96,16,112,0);
-	width:16px;
-	height:16px}
-	
-.devtools-tabbar {
-  -moz-appearance: none;
-  padding: 0;
-}
-
-#toolbox-tabs {
-  margin: 0;
-}
-
-.devtools-tab {
-  -moz-appearance: none;
-  max-width: 110px;
-  margin: 0;
-  padding: 0;
-  background-size: 1px 100%;
-  background-repeat: no-repeat;
-  background-position: left, right;
-}
-
-.devtools-tab > image {
-  -moz-margin-end: 0;
-  -moz-margin-start: 4px;
-  opacity: 0.6;
-}
-
-#toolbox-tab-options > image {
-  margin: 0 8px;
-}
-
-.devtools-tab:hover > image {
-  opacity: 0.8;
-}
-
-.devtools-tab:active > image,
-.devtools-tab[selected=true] > image {
-  opacity: 1;
-}
-
-.devtools-tab:hover {
-  background-size: 1px 100%,
-                   1px 100%,
-                   100%;
-  background-repeat: no-repeat,
-                     no-repeat,
-                     repeat-x;
-  background-position: left, right;
-}
-
-.devtools-tab[selected=true] {
-  background-size: 100% 1px,
-                   100% 5px,
-                   1px 100%,
-                   1px 100%,
-                   100%;
-  background-repeat: no-repeat,
-                     no-repeat,
-                     no-repeat,
-                     no-repeat,
-                     repeat-x;
-  background-position: top right, top left, left, right;
-}
-
-.devtools-tab:not(.highlighted) > .highlighted-icon,
-.devtools-tab[selected=true] > .highlighted-icon,
-.devtools-tab:not([selected=true]).highlighted > .default-icon {
-  visibility: collapse;
-}
+.text-link[onclick]{
+	text-decoration:none;
+	border-radius:5px;
+	padding:1px!important;
+	margin:2px!important;
+	border:2px solid;
+	-moz-border-top-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-left-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDShadow;
+	background:ButtonFace url(chrome://global/skin/menu-bg.png);
+	color:ButtonText}
+.text-link[onclick="restart()"]::before{
+	content:" ";
+	display:block;
+	width:20px;
+	height:16px;
+	background:-moz-image-rect(url(chrome://mozapps/skin/extensions/extensions.png),0,16,16,0) center no-repeat}
+.text-link[onclick]:hover{
+	background-color:#CCCCFF;
+	color:black}
+.text-link[onclick]:hover:active{
+	-moz-border-bottom-colors:threedshadow transparent;
+	-moz-border-right-colors:threedshadow transparent;
+	-moz-border-left-colors:threeddarkshadow threedshadow;
+	-moz-border-top-colors:threeddarkshadow threedshadow;
+	background-color:Highlight;
+	color:HighlightText}
+.text-link[onclick]:focus:not(:active){
+	box-shadow:0 0 0 2px #CCCCFF}

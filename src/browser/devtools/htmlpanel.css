@@ -1,7 +1,7 @@
 body{
 	margin:0;
 	overflow:auto;
-	font:message-box;
+	font-family:Menlo,Consolas,Lucida Console,monospace;
 	background-color:-moz-Field;
 	color:-moz-fieldtext}
 
@@ -9,37 +9,17 @@ h1{font-size:110%;border-bottom:1px solid threedlightshadow}
 a{color:-moz-nativehyperlinktext}
 pre{margin:0;font:inherit}
 code{display:block;white-space:pre}
-
-.objectLink-element,
-.objectLink-textNode,
-.objectLink-function,
-.objectBox-stackTrace,
-.objectLink-profile{
-	font-family:Menlo,Andale Mono,Consolas,monospace}
-
-.objectLink-textNode{
-	white-space:pre-wrap}
-
-.objectLink-styleRule,
-.objectLink-element,
-.objectLink-textNode{
-	color:darkblue}
-
-.selectorTag,
-.selectorId,
-.selectorClass{
-	font-family:Menlo,Andale Mono,Consolas,monospace;
-	font-weight:normal}
-
-.selectorTag{color:DarkGreen}
-.selectorId{color:DarkBlue}
+.objectLink-textNode{white-space:pre-wrap}
+.objectLink-styleRule,.objectLink-element,.objectLink-textNode,.selectorId{color:darkblue}
+.selectorTag,.selectorId,.selectorClass{font-weight:normal}
+.nodeComment,.selectorTag{color:DarkGreen}
 .selectorClass{color:darkred}
+.nodeText,.selectorHidden>.selectorId{color:graytext}
 .selectorHidden>.selectorTag{color:green}
-.selectorHidden>.selectorId{color:graytext}
 .selectorHidden>.selectorClass{color:red}
+.search-selection{-moz-user-select:text}
 
 .selectorValue{
-	font-family:Menlo,Andale Mono,Consolas,monospace;
 	font-style:italic;
 	color:dimgray}
 
@@ -49,19 +29,18 @@ code{display:block;white-space:pre}
 
 .nodeBox{
 	position:relative;
-	font-family:Menlo,Andale Mono,Consolas,monospace;
 	padding-left:13px;
 	-moz-user-select:-moz-none}
-
-.nodeBox.search-selection{
-	-moz-user-select:text}
 
 .twisty{
 	position:absolute;
 	left:0;
 	top:0;
 	width:14px;
-	height:14px}
+	height:14px;
+	background:-moz-image-rect(url(chrome://global/skin/widgets.png),32,36,40,28) no-repeat center!important}
+:-moz-any(.highlightOpen,.open)>.nodeLabel>.twisty{
+	background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),40,36,48,28)!important}
 
 .nodeChildBox{
 	margin-left:12px;
@@ -84,12 +63,9 @@ code{display:block;white-space:pre}
 	margin:0 2px;
 	vertical-align:top}
 
-.nodeText{color:threedshadow}
-
 .docType{
 	position:absolute;
 	top:-16px;
-	font-family:Menlo,Andale Mono,Consolas,monospace;
 	padding-left:8px;
 	color:#999;
 	white-space:nowrap;
@@ -103,65 +79,61 @@ code{display:block;white-space:pre}
 	margin-left:1px;
 	color:gray}
 
-.nodeWhiteSpace_Space{
-	border:1px solid #ddd}
+.nodeWhiteSpace_Space{border:1px solid graytext}
 
 .nodeTextEntity{
 	border:1px solid gray;
 	white-space:pre;
 	margin-left:1px}
 
-.nodeComment{color:DarkGreen}
+.nodeBox.highlightOpen>.nodeLabel{background-color:-moz-dialog}
 
-.nodeBox.highlightOpen>.nodeLabel{
-	background-color:gainsboro}
-
-.nodeBox.highlightOpen>.nodeCloseLabel,
-.nodeBox.highlightOpen>.nodeChildBox,
-.nodeBox.open>.nodeCloseLabel,
-.nodeBox.open>.nodeChildBox{
+.highlightOpen>.nodeCloseLabel,
+.highlightOpen>.nodeChildBox,
+.open>.nodeCloseLabel,
+.open>.nodeChildBox{
 	display:block}
 
-.nodeBox.selected>.nodeLabel>.nodeLabelBox,
-.nodeBox.selected>.nodeLabel{
+.selected>.nodeLabel>.nodeLabelBox,
+.selected>.nodeLabel{
 	border-color:Highlight;
 	background-color:Highlight;
 	color:HighlightText!important}
 
-.nodeBox.selected>.nodeLabel>.nodeLabelBox,
-.nodeBox.selected>.nodeLabel>.nodeLabelBox>.nodeTag,
-.nodeBox.selected>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue,
-.nodeBox.selected>.nodeLabel>.nodeLabelBox>.nodeText{
+.selected>.nodeLabel>.nodeLabelBox,
+.selected>.nodeLabel>.nodeLabelBox>.nodeTag,
+.selected>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue,
+.selected>.nodeLabel>.nodeLabelBox>.nodeText{
 	color:inherit!important}
 
-.nodeBox.highlighted>.nodeLabel{
+.highlighted>.nodeLabel{
 	border-color:Highlight!important;
 	background-color:cyan!important;
 	color:black!important}
 
-.nodeBox.highlighted>.nodeLabel>.nodeLabelBox,
-.nodeBox.highlighted>.nodeLabel>.nodeLabelBox>.nodeTag,
-.nodeBox.highlighted>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue,
-.nodeBox.highlighted>.nodeLabel>.nodeLabelBox>.nodeText{
+.highlighted>.nodeLabel>.nodeLabelBox,
+.highlighted>.nodeLabel>.nodeLabelBox>.nodeTag,
+.highlighted>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue,
+.highlighted>.nodeLabel>.nodeLabelBox>.nodeText{
 	color:black!important}
 
-.nodeBox.nodeHidden .nodeLabel>.nodeLabelBox,
-.nodeBox.nodeHidden .nodeCloseLabel,
-.nodeBox.nodeHidden .nodeLabel>.nodeLabelBox>.nodeText,
-.nodeBox.nodeHidden .nodeText{
+.nodeHidden .nodeLabel>.nodeLabelBox,
+.nodeHidden .nodeCloseLabel,
+.nodeHidden .nodeLabel>.nodeLabelBox>.nodeText,
+.nodeHidden .nodeText{
 	color:graytext}
 
-.nodeBox.nodeHidden .nodeLabel>.nodeLabelBox>.nodeTag,
-.nodeBox.nodeHidden .nodeCloseLabel>.nodeCloseLabelBox>.nodeTag{
+.nodeHidden .nodeLabel>.nodeLabelBox>.nodeTag,
+.nodeHidden .nodeCloseLabel>.nodeCloseLabelBox>.nodeTag{
 	color:darkslateblue}
 
-.nodeBox.nodeHidden .nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue{
+.nodeHidden .nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue{
 	color:crimson}
 
-.nodeBox.nodeHidden.selected>.nodeLabel>.nodeLabelBox,
-.nodeBox.nodeHidden.selected>.nodeLabel>.nodeLabelBox>.nodeTag,
-.nodeBox.nodeHidden.selected>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue,
-.nodeBox.nodeHidden.selected>.nodeLabel>.nodeLabelBox>.nodeText{
+.nodeHidden.selected>.nodeLabel>.nodeLabelBox,
+.nodeHidden.selected>.nodeLabel>.nodeLabelBox>.nodeTag,
+.nodeHidden.selected>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue,
+.nodeHidden.selected>.nodeLabel>.nodeLabelBox>.nodeText{
 	color:steelblue!important}
 
 .nodeBox.mutated>.nodeLabel,
@@ -172,11 +144,11 @@ code{display:block;white-space:pre}
 	background-color:lavender;
 	color:red!important}
 
-.nodeBox.selected.mutated>.nodeLabel,
-.nodeBox.selected.mutated>.nodeLabel>.nodeLabelBox,
-.nodeBox.selected>.nodeLabel>.nodeLabelBox>.nodeAttr.mutated>.nodeValue,
-.nodeBox.selected>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue.mutated,
-.nodeBox.selected>.nodeLabel>.nodeLabelBox>.nodeText.mutated{
+.selected.mutated>.nodeLabel,
+.selected.mutated>.nodeLabel>.nodeLabelBox,
+.selected>.nodeLabel>.nodeLabelBox>.nodeAttr.mutated>.nodeValue,
+.selected>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue.mutated,
+.selected>.nodeLabel>.nodeLabelBox>.nodeText.mutated{
 	background-color:lavender;
 	border-color:lavender;
 	color:red!important}
@@ -184,21 +156,14 @@ code{display:block;white-space:pre}
 .logRow-dirxml{padding-left:0}
 .soloElement>.nodeBox{padding-left:0}
 
-.nodeBox.selected>.nodeLabel>.nodeLabelBox,
-.nodeBox.selected>.nodeLabel{
+.selected>.nodeLabel>.nodeLabelBox,
+.selected>.nodeLabel{
 	border-color:royalblue;
 	background-color:royalblue;
 	color:white!important}
 
-.nodeBox.highlighted>.nodeLabel{
+.highlighted>.nodeLabel{
 	border-color:royalblue!important}
-
-.twisty{
-	background:-moz-image-rect(url(chrome://global/skin/widgets.png),0,12,12,0) no-repeat center center!important}
-
-.nodeBox.highlightOpen>.nodeLabel>.twisty,
-.nodeBox.open>.nodeLabel>.twisty{
-	background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),0,25,12,13)!important}
 
 .editingAttributeValue{
 	background-color:#492}
@@ -215,6 +180,4 @@ code{display:block;white-space:pre}
 
 #attribute-editor-input{
 	border:none;
-	padding:2px 5px;
-	font-family:Menlo, Andale Mono, monospace;
-	font-size:11px}
+	padding:2px 5px}

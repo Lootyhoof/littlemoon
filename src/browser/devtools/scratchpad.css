@@ -1,0 +1,12 @@
+#scratchpad-editor{
+	border-top:2px solid;
+	-moz-border-top-colors:threedshadow threeddarkshadow}
+#sp-toolbar-run,#sp-text-run{
+	list-style-image:url(chrome://global/skin/media/video.png);
+	-moz-image-region:rect(0,16px,16px,0)}
+#sp-toolbar-inspect,#sp-text-inspect{
+	list-style-image:url(chrome://browser/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,64px,32px,48px)}
+#sp-toolbar-pprint{
+	list-style-image:url(chrome://browser/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,200px,32px,184px)}

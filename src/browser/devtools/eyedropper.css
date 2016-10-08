@@ -1,0 +1,24 @@
+window{font:message-box}
+#canvas-overflow{
+	overflow:hidden;
+	width:96px;
+	height:96px}
+#canvas{
+	image-rendering:-moz-crisp-edges;
+	cursor:none;
+	border:3px solid -moz-dialog;
+	box-shadow:1px 1px 1px 1px threedshadow,1px 1px 1px threeddarkshadow;
+	border-radius:50%}
+
+#color-value-box{
+	width:120px;
+	border-radius:3px;
+	border:1px outset threedface;
+	box-shadow:1px 1px 2px threedshadow;
+	background-color:-moz-dialog}
+#color-preview{
+	margin:2px;
+	width:16px;
+	height:16px;
+	border:1px inset threedface}
+#color-value{padding:2px}

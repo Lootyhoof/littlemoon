@@ -19,7 +19,7 @@ h1{
 	margin:0;
 	padding:1px 3px;
 	border-bottom:1px solid threedshadow;
-	background-color:-moz-Dialog}
+	background:-moz-Dialog url(chrome://global/skin/menu-bg.png)}
 
 h1>.info{
 	position:absolute;
@@ -38,8 +38,12 @@ h1>.info{
 	border-top:1px solid threedshadow}
 
 .group>div{
-	margin:4px;
-	border:1px solid threedshadow}
+	margin:8px;
+	border-radius:5px;
+	border:1px solid threedshadow;
+	box-shadow:1px 1px 2px threedshadow}
+.group>div>h1{
+	border-radius:5px 5px 0 0}
 
 .property-table{
 	width:100%;
@@ -47,7 +51,7 @@ h1>.info{
 	overflow:auto;
 	display:block}
 .property-name{
-	text-align:right;
+	text-align:end;
 	white-space:nowrap;
 	vertical-align:top;
 	font-weight:bold;
@@ -73,6 +77,6 @@ h1>.info{
 #responseImageNode{
 	max-width:100%;
 	background-color:-moz-field;
-	box-shadow:4px 4px threeddarkshadow,0 0 0 1px threedshadow}
+	box-shadow:2px 2px 15px threeddarkshadow,2px 2px 4px threeddarkshadow}
 #responseImageNode:hover{
 	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEWgoKClpaUrSK7yAAAAAnRSTlNkFG3Yt+YAAAAPSURBVHheY2D4jxXhEgYAfr8P8SM7T18AAAAASUVORK5CYII=)}

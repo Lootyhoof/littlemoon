@@ -7,7 +7,11 @@
 #gcli-output-root,
 #gcli-tooltip-root{
 	border-radius:5px;
-	border:1px outset threedface;
+	border:2px solid;
+	-moz-border-top-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-left-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDShadow;
 	background-color:-moz-Dialog;
 	color:-moz-DialogText}
 
@@ -75,20 +79,21 @@
 .gcli-menu-option:hover,
 .gcli-menu-highlight,
 .gcli-menu-highlight.gcli-menu-option:hover{
-	background-color:#CCCCFF}
+	background:#CCCCFF url(chrome://global/skin/menu-bg.png)}
 
-.gcli-menu-more {
+.gcli-menu-more{
 	font-style:italic;
-	text-align:right;
+	text-align:end;
 	-moz-padding-end:8px}
-	
+
 .gcli-addon-disabled{
 	opacity:.6;
 	text-decoration:line-through}
 
+.gcli-row-out td{white-space:nowrap}
 .gcli-help-arrow{color:highlight}
 .gcli-help-header{margin:10px 0 6px}
 .gcli-menu-name{-moz-padding-start:8px}
 .gcli-menu-typed{color:darkgreen}
 .gcli-breakpoint-label{font-weight:bold}
-.gcli-breakpoint-lineText{font-family:Consolas,Lucida Console,monospace}
+.gcli-breakpoint-lineText{font-family:Menlo,Consolas,Lucida Console,monospace}

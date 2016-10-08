@@ -42,7 +42,7 @@ html,.ruleview{height:100%;min-height:100%}
 	vertical-align:text-top;
 	width:100%}
 
-.resizerbox{background-color:-moz-Dialog}
+.resizerbox{background-color:-moz-dialog}
 
 .userStyles{
 	position:relative;
@@ -51,7 +51,13 @@ html,.ruleview{height:100%;min-height:100%}
 .ruleview-rule-source{
 	float:right;
 	-moz-user-select:none}
+.ruleview-rule-source:not([unselectable]),
+.ruleview-rule-source:not([unselectable])>label{
+	cursor:pointer}
+.ruleview-rule-source:not([unselectable]):hover{
+	background-color:#CCCCFF}
 
+.ruleview-header,
 .ruleview-rule-inheritance{
 	-moz-user-select:-moz-none;
 	font:message-box;
@@ -59,7 +65,7 @@ html,.ruleview{height:100%;min-height:100%}
 	text-align:center;
 	padding:0 1px;
 	border:1px outset threedface;
-	background-color:-moz-dialog;
+	background:-moz-dialog url(chrome://global/skin/menu-bg.png);
 	color:-moz-dialogtext}
 
 .ruleview-code,
@@ -85,8 +91,8 @@ html,.ruleview{height:100%;min-height:100%}
 	padding:0;
 	margin:0}
 
-.ruleview-property{border-left:2px solid transparent}
-.ruleview-property[dirty]{border-left-color:green}
+.ruleview-property{border-left:3px solid transparent;opacity:.99999}
+.ruleview-property[dirty]{border-left-color:#2cbb0f}
 
 .ruleview-newproperty{-moz-margin-start:27px}
 
@@ -95,7 +101,7 @@ html,.ruleview{height:100%;min-height:100%}
 	border:1px solid transparent;
 	cursor:text}
 
-.ruleview-propertyname{color:purple}
+.ruleview-propertyname{color:#5b5fff} /*purple*/
 
 .ruleview-namecontainer,
 .ruleview-propertycontainer,
@@ -104,6 +110,7 @@ html,.ruleview{height:100%;min-height:100%}
 	text-decoration:inherit}
 
 .ruleview-namecontainer:hover>.ruleview-propertyname,
+.ruleview-propertyvaluecontainer:hover>.ruleview-propertyvalue,
 .ruleview-propertycontainer:hover>.ruleview-propertyvalue{
 	border-bottom-style:dashed;
 	border-bottom-color:threedshadow}
@@ -117,8 +124,8 @@ html,.ruleview{height:100%;min-height:100%}
 
 .styleinspector-propertyeditor{
 	padding:0;
-	border:1px solid threedshadow;
-	box-shadow:inset 1px 1px 1px threedshadow}
+	border-width:0;
+	box-shadow:0 0 1px graytext,1px 1px 3px threedshadow}
 
 .ruleview-ruleopen,
 .ruleview-ruleclose{
@@ -135,12 +142,13 @@ html,.ruleview{height:100%;min-height:100%}
 	color:highlighttext}
 
 .ruleview-warning{
+	display:inline-block;
 	background:url(chrome://global/skin/icons/warning-16.png);
 	-moz-margin-start:5px;
-	vertical-align:middle;
+	vertical-align:top;
 	width:16px;
 	height:16px}
 
 .ruleview-selector-separator,
 .ruleview-selector-unmatched{
-	opacity:.7}
+	color:graytext}

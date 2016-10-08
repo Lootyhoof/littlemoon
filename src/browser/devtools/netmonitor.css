@@ -1,19 +1,11 @@
 #network-table[waterfall-overflows] .requests-menu-waterfall{display:-moz-box!important}
-  
+
 #requests-menu-empty-notice{
 	font-size:110%;
 	text-align:center;
 	padding-top:20px}
 
-.side-menu-widget-container{
-	border-top:2px solid;
-	border-bottom:2px solid;
-	-moz-border-top-colors:threedshadow threeddarkshadow;
-	-moz-border-bottom-colors:threedhighlight threedshadow;
-	background:-moz-field;
-	color:-moz-fieldtext}
-.side-menu-widget-item:nth-child(even):not(.selected){
-	background-color:rgba(160,160,160,.08)}
+#requests-menu-toolbar{-moz-padding-start:2px}
 
 .requests-menu-header-button{
 	margin:0;
@@ -22,31 +14,38 @@
 	box-shadow:none}
 .requests-menu-header-button:not(:hover){
 	background:none}
-.requests-menu-header-button>hbox{
+.requests-menu-header-button>.button-box{
 	background-repeat:no-repeat;
-	background-position:left center}
-#requests-menu-size-button>hbox{
 	background-position:right center}
-.requests-menu-header-button[sorted]>hbox{
-	-moz-padding-start:12px}
-#requests-menu-size-button[sorted]>hbox{
-	-moz-padding-start:0;
+.requests-menu-header-button[sorted]>.button-box{
 	-moz-padding-end:12px}
-.requests-menu-header-button[sorted=ascending]>hbox{background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),0,49,12,37)}
-.requests-menu-header-button[sorted=descending]>hbox{background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),0,37,12,25)}
+.requests-menu-header-button[sorted=ascending]>.button-box{background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),0,49,12,37)}
+.requests-menu-header-button[sorted=descending]>.button-box{background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),0,37,12,25)}
 
+.requests-menu-header-button>hbox>.button-text{-moz-box-flex:1}
 #details-pane>tabpanels,
 .requests-menu-header,
 .requests-menu-subitem{padding:0}
 .requests-menu-status-and-method{width:6em}
-.requests-menu-file{width:16em}
+.requests-menu-security-and-domain,
 .requests-menu-domain{width:12em}
-.requests-menu-type{width:4em}
+.requests-menu-type{text-align:center;width:4em}
 .requests-menu-size{text-align:end;width:5em}
 
 .requests-menu-header:not(:last-of-type),
 .requests-menu-subitem:not(:last-child){
 	-moz-border-end:1px solid threedshadow}
+
+.requests-menu-icon-and-file,
+.requests-menu-file{width:20em}
+.requests-menu-icon-and-file>.requests-menu-file{width:auto}
+.requests-menu-icon{
+	width:calc(1em + 4px);
+	height:calc(1em + 4px);
+	margin:-4px 0;
+	-moz-margin-end:4px;
+	outline:1px solid threedshadow;
+	background:-moz-field}
 
 .requests-menu-status{
 	width:10px;
@@ -54,28 +53,22 @@
 box.requests-menu-status{
 	margin:0 2px;
 	border-radius:20px;
-	box-shadow:0 -6px 4px graytext inset}
-box.requests-menu-status[code^="1"]{box-shadow:0 -6px 4px rgb(0,0,128) inset}
-box.requests-menu-status[code^="2"]{box-shadow:0 -6px 4px rgb(0,128,0) inset}
-box.requests-menu-status[code^="3"]{box-shadow:0 -6px 4px rgb(128,64,0) inset}
-box.requests-menu-status[code^="4"]{box-shadow:0 -6px 4px rgb(128,0,0) inset}
-box.requests-menu-status[code^="5"]{box-shadow:0 -6px 4px rgb(128,0,128) inset}
+	background-color:threedface}
+.connect,box.requests-menu-status[code^="1"]{background-color:#0088cc; /*blue*/}
+.send,box.requests-menu-status[code^="2"]{background-color:#2cbb0f; /*green*/}
+box.requests-menu-status[code^="3"]{background-color:#5f88b0; /*blue-grey*/}
+.blocked,box.requests-menu-status[code^="4"]{background-color:#ed2655; /*red*/}
+.receive,box.requests-menu-status[code^="5"]{background-color:#b82ee5; /*pink*/}
+.dns{background-color:#5b5fff}/*purple*/
+.wait{background-color:#8fa1b2}/*grey*/
 
-.requests-menu-method{
-	text-align:center;
-	font-weight:600}
+box.requests-menu-status[code="cached"]{
+	border:2px solid graytext;
+	background-color:transparent}
 
-.blocked{background-color:red}
-.dns{background-color:purple}
-.connect{background-color:blue}
-.send{background-color:#AAAA00}
-.wait{background-color:grey}
-.receive{background-color:green}
-
-#details-pane{
-	max-width:500px;
-	border-bottom-width:0}
-
+#event-details-pane>tabpanels{
+	padding:0;
+	border-width:0}
 #details-pane-toggle{
 	margin:0;
 	list-style-image:url(chrome://global/skin/global.png);
@@ -89,13 +82,15 @@ box.requests-menu-status[code^="5"]{box-shadow:0 -6px 4px rgb(128,0,128) inset}
 .tabpanel-summary-container{
 	padding:0 2px}
 
+.requests-menu-method,
 .tabpanel-summary-label{
 	padding:0 2px;
 	font-weight:600}
 
+.requests-menu-status-code,
 .tabpanel-summary-value{
 	padding:0 2px;
-	font-family:Consolas,Lucida Console,monospace}
+	font-family:Menlo,Consolas,Lucida Console,monospace}
 
 #headers-summary-status,
 #headers-summary-version{padding-bottom:2px}
@@ -109,56 +104,39 @@ box.requests-menu-status[code^="5"]{box-shadow:0 -6px 4px rgb(128,0,128) inset}
 #response-content-image:hover{
 	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEWgoKClpaUrSK7yAAAAAnRSTlNkFG3Yt+YAAAAPSURBVHheY2D4jxXhEgYAfr8P8SM7T18AAAAASUVORK5CYII=)}
 
-#timings-tabpanel>vbox>hbox>.tabpanel-summary-label{width:10em}
+.tabpanel-summary-container>.tabpanel-summary-label{
+	width:8em;
+	text-align:end;
+	-moz-padding-end:4px}
 
 .requests-menu-timings-box,
 .requests-menu-timings-total{
 	min-width:1px}
 
-.requests-menu-footer-button{
-	font-size:90%;
-	margin:1px;
-	padding:0;
-	box-shadow:none;
-	border-radius:3px}
-.requests-menu-footer-button:not(:hover){
-	-moz-border-top-colors:transparent;
-	-moz-border-left-colors:transparent;
-	-moz-border-right-colors:transparent;
-	-moz-border-bottom-colors:transparent;
-	background:none}
-.requests-menu-footer-button[checked]{
-	-moz-border-top-colors:threedshadow;
-	-moz-border-left-colors:threedshadow;
-	-moz-border-right-colors:threedhighlight threedshadow;
-	-moz-border-bottom-colors:threedhighlight threedshadow;
-	background-color:rgba(255,255,255,.5)}
-
 #request-menu-network-summary{
 	text-align:end;
 	color:graytext}
 
-.requests-menu-footer-spacer,
 .requests-menu-empty-notice:not([hidden="true"])+#requests-menu-contents,
 #details-pane-toggle[pane-collapsed]{
 	display:none}
 
 .requests-menu-timings-division{
 	width:100px;
-	padding-top:1px;
-	-moz-padding-start:4px;
+	min-height:17px;
+	-moz-padding-start:2px;
 	-moz-border-start:1px solid threedshadow;
-	font-size:90%;
+	font-size:85%;
+	font-weight:600;
 	pointer-events:none}
 .requests-menu-timings-division:not(:first-child){
 	-moz-margin-start:-100px!important}
 
 .requests-menu-subitem.requests-menu-waterfall{
-	-moz-padding-start:4px;
+	-moz-padding-start:0;
 	-moz-padding-end:4px;
-	background-repeat:repeat-y;
-	margin-top:-1px;
-	margin-bottom:-1px}
+	background-image:-moz-element(#waterfall-background);
+	background-repeat:repeat-y}
 .requests-menu-subitem.requests-menu-waterfall:-moz-locale-dir(rtl){
 	background-position:right center}
 
@@ -172,32 +150,92 @@ box.requests-menu-status[code^="5"]{box-shadow:0 -6px 4px rgb(128,0,128) inset}
 	transform-origin:right center}
 
 .requests-menu-timings-total{
-	-moz-padding-start:4px;
+	-moz-padding-start:2px;
 	font-size:85%;
 	font-weight:600}
 
-.requests-menu-timings-cap{
-	width:4px;
-	height:10px}
-
-.requests-menu-timings-cap.start:-moz-locale-dir(ltr),
-.requests-menu-timings-cap.end:-moz-locale-dir(rtl){
-	border-radius:4px 0 0 4px;
-	transform-origin:right center}
-
-.requests-menu-timings-cap.start:-moz-locale-dir(rtl),
-.requests-menu-timings-cap.end:-moz-locale-dir(ltr){
-	border-radius:0 4px 4px 0;
-	transform-origin:left center}
-
-.requests-menu-timings-box{
-	height:10px}
-
+.requests-menu-timings-box{height:9px}
+.requests-menu-timings-box.blocked{background-color:red}
+.requests-menu-timings-box.dns{background-color:rgba(223,128,255,.8)}
+ 
+#headers-summary-resend{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(128px,16px,144px,0)}
+	
 #response-content-info-header{
-	background:darkred url(chrome://global/skin/toolbar-bg.png);
-	color:white}
+	-moz-box-align:center;
+	padding:2px 4px;
+	font-weight:bold;
+	background:infobackground url(chrome://mozapps/skin/extensions/warning-stripes.png) repeat-x;
+	color:darkred}
 
-#all-headers,#all-cookies,#request-params{
-	border-left-width:0;
-	border-right-width:0;
-	border-bottom-width:0}	
+.token-string{color:#0088cc!important}
+
+#requests-menu-network-summary-label{margin:1px!important;padding:1px 2px!important}
+
+#requests-menu-network-summary-button,
+#requests-menu-perf-notice-button{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(80px,16px,96px,0)}
+
+#network-statistics-toolbar{background:none}
+#network-statistics-charts{min-height:1px}
+
+#network-statistics-charts .pie-chart-container,
+#network-statistics-charts .table-chart-container{
+	-moz-margin-start:1vw}
+
+.chart-colored-blob[name=html]{fill:#5f88b0;background:#5b5fff}/*Blue-Grey*/
+.chart-colored-blob[name=css]{fill:#0088cc;background:#0088cc}/*Blue*/
+.chart-colored-blob[name=js]{fill:#d97e00;background:#d97e00}/*Light Orange*/
+.chart-colored-blob[name=xhr]{fill:#f13c00;background:#f13c00}/*Orange*/
+.chart-colored-blob[name=fonts]{fill:#5b5fff;background:#5b5fff}/*Purple*/
+.chart-colored-blob[name=images]{fill:#b82ee5;background:#b82ee5}/*Pink*/
+.chart-colored-blob[name=media]{fill:#2cbb0f;background:#2cbb0f}/*Green*/
+.chart-colored-blob[name=flash]{fill:#ed2655;background:#ed2655}/*Red*/
+
+#network-statistics-view-splitter,
+.table-chart-row-label[name=cached]{
+	display:none}
+
+.table-chart-row-label[name=count]{
+	width:2em;
+	text-align:end}
+
+.table-chart-row-label[name=label],
+.table-chart-row-label[name=size]{
+	width:6em}
+.table-chart-row-label[name=time]{
+	width:4em}
+
+.requests-menu-transferred{
+	text-align:center;
+	width:8em}
+	
+.requests-security-state-icon{transform:scale(.8);image-rendering:-moz-crisp-edges}
+.security-state-insecure{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(80px 20px 96px 0)}
+.security-state-secure{
+	cursor:pointer;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(80px 50px 96px 35px)}
+.security-warning-icon,
+.security-state-weak,
+.security-state-broken{
+	cursor:pointer;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(80px 68px 96px 50px)}
+
+.security-info-section{-moz-padding-start:1em}
+#security-tabpanel{overflow:auto}
+description#security-error-message{white-space:pre-wrap}
+.cropped-textbox .textbox-input{text-overflow:ellipsis}
+
+#requests-menu-filter-freetext-text{
+	-moz-box-flex:100;
+	transition-property:max-width;
+	transition-duration:250ms;
+	transition-timing-function:ease}
+#requests-menu-filter-freetext-text:not([focused]):not([filled]){
+	max-width:10em!important}	

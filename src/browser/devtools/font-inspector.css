@@ -21,9 +21,11 @@ body,#root{
 	overflow:auto;
 	margin:0;
 	padding:0;
-	border:1px inset threedface;
-	background-color:-moz-dialog;
-	color:-moz-dialogtext}
+	border:2px solid;
+	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-right-colors:ThreeDHighLight ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow}
 
 .font{
 	padding:4px;
@@ -32,15 +34,15 @@ body,#root{
 .font-preview,
 .font-css-code,
 .font-url{
-	font-family:Consolas,Lucida Console,monospace;
+	font-family:Menlo,Consolas,Lucida Console,monospace;
 	font-size:90%;
 	border:1px inset threedface;
 	background:-moz-field}
 
 .font-preview{
 	height:62px;
-	width:calc(100% - 4px);
 	border-radius:9px}
+iframe.font-preview{width:calc(100% - 4px)}
 
 .font-name{
 	font-size:120%;
