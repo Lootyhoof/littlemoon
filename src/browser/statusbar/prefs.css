@@ -1,0 +1,51 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#status4evar-prefs > prefpane > vbox.content-box
+{
+	min-height: 18em !important;
+}
+
+radio[pane="status4evar-pane-status"]
+{
+	list-style-image: url("chrome://global/skin/icons/information-large.png");
+}
+
+radio[pane="status4evar-pane-progress"]
+{
+	list-style-image: url("chrome://browser/skin/statusbar/throbberStatic.png");
+}
+
+radio[pane="status4evar-pane-download"]
+{
+	list-style-image: url("chrome://mozapps/skin/downloads/downloadIcon.png");
+}
+
+radio[pane="status4evar-pane-addonbar"]
+{
+	list-style-image: url("chrome://mozapps/skin/xpinstall/xpinstallItemGeneric.png");
+}
+
+radio[pane="status4evar-pane-advanced"]
+{
+	list-style-image: url("chrome://browser/skin/preferences/preferences.png");
+	-moz-image-region: rect(96px, 24px, 120px, 0);
+}
+
+#status4evar-advanced-urlbar-forceBinding-desc
+{
+	-moz-appearance: none;
+	pointer-events: none;
+	background-color: transparent;
+	border: none;
+	padding: 0px;
+}
+
+#warningInnerBox
+{
+	max-width: 25em;
+}
+
