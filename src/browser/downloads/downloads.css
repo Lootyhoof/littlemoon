@@ -7,7 +7,8 @@
 	background:-moz-Dialog;
 	color:-moz-DialogText}
 
-#downloadsPanel:not([hasdownloads])>#downloadsListBox{
+#downloadsPanel:not([hasdownloads])>#downloadsListBox,
+#downloadsPanel[hasdownloads]>#emptyDownloads{
 	display:none}
 
 richlistitem[type="download"]{
