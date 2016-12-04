@@ -24,5 +24,3 @@ skin    abouthome	littlemoon	abouthome/
 skin    jsterm		littlemoon	jsterm/
 skin    printedit	littlemoon	printedit/
 skin    speeddial	littlemoon	speeddial/
-
-override chrome://browser/skin/s4ever.xml chrome://browser/skin/s4ever-27.xml appversion>=27.0.0b1
