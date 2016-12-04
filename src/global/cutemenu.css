@@ -244,3 +244,107 @@ menuitem[anonid="context-enable"]{
 
 menuitem[label="Sage"]{
 	list-style-image:url(chrome://sage/skin/sage_leaf_16.png)}
+
+#toggle-breakpoints{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,64px,16px,48px)}
+#menu_scratchpad,
+#appmenu_scratchpad,
+#command-button-scratchpad{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,144px,16px,128px)}
+#menu_tilt,
+#command-button-tilt{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,160px,16px,144px)}
+#menu_responsiveUI,
+#appmenu_responsiveUI,
+#command-button-responsive{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,176px,16px,160px)}
+#toolbox-dock-side{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,192px,16px,176px)}
+#toolbox-dock-bottom,
+#toolbox-dock-bottom-minimize.minimized{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,208px,16px,192px)}
+#black-box{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,224px,16px,208px)}
+#command-button-splitconsole{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,272px,16px,256px)}
+#command-button-frames{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,304px,16px,288px)}
+#command-button-rulers{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,320px,16px,304px)}
+#command-button-noautohide{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,400px,16px,384px)}
+#menuitem_dom{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(0,432px,16px,416px)}
+
+#menuitem_webconsole{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,16px,32px,0)}
+#menuitem_jsdebugger{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,32px,32px,16px)}
+#menuitem_inspector{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,64px,32px,48px)}
+#menuitem_performance{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,96px,32px,80px)}
+#menuitem_netmonitor{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,112px,32px,96px)}
+#pretty-print{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,201px,32px,185px)}
+toolbarbutton[oncommand="openEyedropper();"],
+#menu_eyedropper,
+#command-button-eyedropper{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,220px,32px,204px)}
+#menuitem_storage,
+toolbarbutton[key="key_storage"]{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,304px,32px,288px)}
+#command-button-measure{
+	list-style-image:url(chrome://global/skin/devtools/debugger.png);
+	-moz-image-region:rect(16px,368px,32px,352px)}
+
+menuitem[oncommand="gDevToolsBrowser.openAppManager(gBrowser);"]{
+	list-style-image:url(chrome://browser/skin/icons.png);
+	-moz-image-region:rect(0,96px,16px,80px)}
+menuitem[oncommand="nightly.getScreenshot();"],
+#command-button-screenshot{
+	list-style-image:url(chrome://browser/skin/icons.png);
+	-moz-image-region:rect(0,160px,16px,144px)}
+
+menuitem[key="key_devToolboxMenuItem"],
+toolbarbutton[key="key_devToolboxMenuItem"],
+#developer-toolbar-toolbox-button,
+#menu_devToolbar{
+	list-style-image:url(chrome://browser/skin/icons.png);
+	-moz-image-region:rect(0,192px,16px,176px)}
+
+#toolbox-dock-window{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(96px,32px,112px,16px)}
+#command-button-paintflashing{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(432px,16px,448px,0)}
+#menu_webide,
+#webide-button{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(592px,32px,608px,16px)}
+
+#sanitizeItem,#appMenuClearRecentHistory{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(576px,32px,592px,16px)}

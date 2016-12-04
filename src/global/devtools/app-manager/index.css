@@ -53,7 +53,7 @@
 .panel:not([selected="true"]){display:none}
 
 .projects-button{background-image:url(chrome://global/skin/icons/webapps-64.png),url(chrome://global/skin/toolbar-bg.png)}
-.device-button{background-image:url(chrome://browser/skin/devtools/app-manager/device2.png),url(chrome://global/skin/toolbar-bg.png)}
+.device-button{background-image:url(chrome://global/skin/devtools/app-manager/device2.png),url(chrome://global/skin/toolbar-bg.png)}
 
 .help-button{
 	height:50px;

@@ -44,7 +44,7 @@ body>div#eyedropper-button{
 	display:-moz-box;
 	width:16px;
 	height:16px;
-	background:-moz-image-rect(url(chrome://browser/skin/devtools/debugger.png),16,220,32,204) center no-repeat}
+	background:-moz-image-rect(url(chrome://global/skin/devtools/debugger.png),16,220,32,204) center no-repeat}
 	
 .project-options,
 .requests-menu-footer-button,
@@ -882,7 +882,7 @@ span.eval-text{
 	height:1em;
 	z-index:-1}
 .ruleview-bezierswatch{
-	background:-moz-field -moz-image-rect(url(chrome://browser/skin/devtools/debugger.png),18,268,30,256) center no-repeat}
+	background:-moz-field -moz-image-rect(url(chrome://global/skin/devtools/debugger.png),18,268,30,256) center no-repeat}
 
 .ruleview-bezierswatch,
 .ruleview-colorswatch{cursor:pointer}

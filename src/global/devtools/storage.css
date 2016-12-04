@@ -4,7 +4,7 @@
 	overflow:auto}
 
 #storage-tree .tree-widget-item[type="store"]:after{
-	background-image:-moz-image-rect(url(chrome://browser/skin/devtools/debugger.png),16,304,32,288)}
+	background-image:-moz-image-rect(url(chrome://global/skin/devtools/debugger.png),16,304,32,288)}
 
 #expires,#lastAccessed,#creationTime{
 	min-width:150px}

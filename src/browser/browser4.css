@@ -101,6 +101,7 @@ toolbarbutton.tabs-newbutton:hover:active,
 #TabsToolbar[currentset=""]:not([customizing="true"])>#tabbrowser-tabs>.tabbrowser-arrowscrollbox>.tabs-newtab-button{
 	visibility:visible!important}
 
+.devtools-responsiveui-close,
 #toolbox-close,
 .devtools-closebutton,
 #addonbar-closebutton,
@@ -108,12 +109,14 @@ toolbarbutton.tabs-newbutton:hover:active,
 .tab-close-button{
 	list-style-image:url(chrome://global/skin/global.png)!important;
 	-moz-image-region:rect(177px 31px 191px 17px)!important}
+.devtools-responsiveui-close:hover,
 #toolbox-close:hover,
 .devtools-closebutton:hover,
 #addonbar-closebutton:hover,
 .tabs-closebutton:hover,
 .tab-close-button:hover{
 	-moz-image-region:rect(225px 31px 239px 17px)!important}
+.devtools-responsiveui-close:hover:active,
 #toolbox-close:hover:active,
 .devtools-closebutton:hover:active,
 #addonbar-closebutton:hover:active,
