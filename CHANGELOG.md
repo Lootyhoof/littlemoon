@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.5.1
+- fix about:home branding
+
 ### 1.5.0
 - support PM27's devtools
 - drop PM26 support
