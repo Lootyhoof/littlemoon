@@ -27,7 +27,11 @@ a:focus{
 #brandLogo{
 	height:154px;
 	width:154px;
-	margin:22px 0 31px}
+	margin:22px auto 31px;
+	background-image: url("chrome://branding/content/about-logo.png");
+	background-size: 154px auto;
+	background-position: center center;
+	background-repeat: no-repeat}
 
 #searchForm,#snippets{width:470px}
 #searchForm{display:-moz-box}
