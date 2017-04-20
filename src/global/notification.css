@@ -2,7 +2,7 @@
 
 notification{
 	text-shadow:none;
-	border-bottom:1px solid threedshadow;
+	border:1px outset threedface;
 	background-color:infobackground;
 	color:InfoText}
 notification[type="info"]{
@@ -11,23 +11,37 @@ notification[type="info"]{
 notification[type="critical"]{
 	background-color:red;
 	color:white}
+.notification-inner{
+	-moz-box-align:center}
 
 .messageImage{
-	list-style-image:url(chrome://global/skin/icons/warning-16.png)!important;
-	margin:0 1px 0 3px}
-.messageText{-moz-margin-start:3px;font-weight:bold}
-.messageButton{margin:1px;padding:0}
+	-moz-margin-start:3px;
+	list-style-image:url(chrome://global/skin/icons/warning-16.png)!important}
+.messageText{
+	-moz-margin-start:3px;
+	font-weight:bold}
+.notification-button,
+.messageButton{
+	margin:1px 2px;
+	padding:0 2px}
 
 .popup-notification-closeitem,
 .messageCloseButton{
-	list-style-image:url(chrome://global/skin/global.png);
-	-moz-image-region:rect(224px 32px 240px 16px)}
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(177px 31px 191px 17px)!important}
+.popup-notification-closeitem:hover,
+.messageCloseButton:hover{
+	-moz-image-region:rect(225px 31px 239px 17px)!important}
+.popup-notification-closeitem:hover:active,
+.messageCloseButton:hover:active{
+	-moz-image-region:rect(113px 31px 127px 17px)!important}
 .messageCloseButton>.toolbarbutton-text{display:none}
 
 notification[type="info"] .messageImage{list-style-image:url(chrome://global/skin/icons/information-16.png)!important}
 notification[type="warning"] .messageImage{list-style-image:url(chrome://global/skin/icons/warning-16.png)!important}
 notification[type="critical"] .messageImage{list-style-image:url(chrome://global/skin/icons/error-16.png)!important}
 
+.popup-notification-body,
 .popup-notification-description{max-width:24em}
 
 #sync-notifications>notification{
@@ -46,3 +60,15 @@ description.keefoxMessageText[value]{margin:3px!important}
 	height:auto!important;
 	min-height:1px!important;
 	color:inherit!important}
+
+.popup-notification-learnmore-link{
+	margin-top:4px}
+.popup-notification-originHost {
+	margin-bottom:4px!important}
+.popup-notification-originHost:not([value]),
+.popup-notification-learnmore-link:not([href]){
+	display:none}
+
+.messageText>.text-link{
+	color:inherit!important;
+	text-decoration:underline}
