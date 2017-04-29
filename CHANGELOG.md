@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.5.2
+- fix learn more links in popup notifications
+- add image document favicon for when viewing standalone images
+
 ### 1.5.1
 - fix about:home branding
 
