@@ -19,7 +19,7 @@ toolbox:-moz-window-inactive:-moz-system-metric(windows-compositor){
 :root[chromemargin][lwtheme="true"]{
 	background:none}
 
-:root[chromemargin] toolbar:not([autohide="true"]){
+:root[chromemargin] toolbar:not([autohide="true"]):not([printpreview="true"]){
 	-moz-binding:url(chrome://global/content/bindings/toolbar.xml#toolbar-drag)}
 
 :root[chromemargin][tabsontop="true"]>#titlebar{margin-bottom:-23px!important}
