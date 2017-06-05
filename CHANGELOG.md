@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.6.0
+- sync about:support styling with default
+- sync about:permissions styling with default
+- add image document favicon when viewing standalone images
+- fix "learn more" links in notification popups
+- fix print preview toolbar on Windows
+- add appmenu icon for about:permissions
+
 ### 1.5.2
 - fix learn more links in popup notifications
 - add image document favicon for when viewing standalone images
