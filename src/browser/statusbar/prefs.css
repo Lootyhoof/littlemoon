@@ -34,18 +34,3 @@ radio[pane="status4evar-pane-advanced"]
 	list-style-image: url("chrome://browser/skin/preferences/preferences.png");
 	-moz-image-region: rect(96px, 24px, 120px, 0);
 }
-
-#status4evar-advanced-urlbar-forceBinding-desc
-{
-	-moz-appearance: none;
-	pointer-events: none;
-	background-color: transparent;
-	border: none;
-	padding: 0px;
-}
-
-#warningInnerBox
-{
-	max-width: 25em;
-}
-
