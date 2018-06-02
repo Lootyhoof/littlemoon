@@ -1,0 +1,249 @@
+#sidebar-panel-ruleview{min-width:100px}
+#sidebar-panel-ruleview,
+#sidebar-panel-computedview,
+#sidebar-panel-fontinspector,
+#sidebar-panel-layoutview{
+	display:flex;
+	flex-direction:column;
+	height:100%}
+
+#ruleview-toolbar-container{flex-direction:column}
+
+#ruleview-toolbar,
+tabpanel>.devtools-toolbar:not(#ruleview-toolbar-container),
+#layout-header,
+#layout-position-group{
+	width:100%;
+	display:flex;
+	align-items:center}
+
+#ruleview-container.non-interactive{
+	pointer-events:none;
+	visibility:collapse;
+	transition:visibility 250ms}
+
+#pseudo-class-panel{transition:max-height ease 150ms}
+#pseudo-class-panel[hidden]{max-height:0}
+
+#pseudo-class-panel>label{
+	display:inline-block;
+	padding:1px;
+	margin:2px;
+	border:1px solid transparent;
+	border-radius:5px}
+#pseudo-class-panel>label:hover{
+	box-shadow:.5px .5px 2.5px -.5px graytext;
+	border:1px outset threedface;
+	background:#CCCCFF url(chrome://global/skin/menu-bg.png);
+	color:black}
+#pseudo-class-panel>label:hover:active{
+	border:1px inset threedface;
+	background-color:highlight;
+	color:highlighttext}
+#pseudo-class-panel>label>input{
+	position:relative;
+	opacity:1;
+	margin:0}
+
+.ruleview-code{direction:ltr}
+.ruleview-property:not(:hover)>.ruleview-enableproperty{pointer-events:none}
+.ruleview-namecontainer{cursor:text}
+
+.ruleview-propertyvaluecontainer{
+	cursor:text;
+	padding-right:5px}
+
+.ruleview-propertyvaluecontainer a{
+	cursor:pointer}
+
+.ruleview-rule-source{
+	text-align:end;
+	float:right;
+	-moz-user-select:none;
+	max-width:100%;
+	direction:rtl;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	margin-bottom:2px}
+
+.ruleview-rule-source:not([unselectable]),
+.ruleview-rule-source:not([unselectable])>label,
+.ruleview-rule-source:not([unselectable])>.ruleview-rule-source-label{
+	cursor:pointer}
+.ruleview-rule-source:not([unselectable]):hover{
+	text-decoration:underline}
+
+.ruleview-header,
+.ruleview-rule-inheritance{
+	-moz-user-select:-moz-none;
+	font:message-box;
+	font-size:90%;
+	text-align:center;
+	padding:0 1px;
+	border:1px outset threedface;
+	background:-moz-dialog url(chrome://global/skin/menu-bg.png);
+	color:-moz-dialogtext}
+
+.ruleview-header.ruleview-expandable-header{
+	cursor:pointer}
+
+.ruleview-rule-pseudo-element{
+	padding-left:20px;
+	border-left:solid 10px}
+
+.ruleview-rule{padding:0 2px}
+.ruleview-rule+.ruleview-rule{border-top:1px solid threedface}
+
+.ruleview-rule[uneditable=true] :focus{outline:none}
+.ruleview-rule[uneditable=true] .theme-link{color:darkblue}
+.ruleview-rule[uneditable=true] .ruleview-enableproperty{visibility:hidden}
+.ruleview-rule[uneditable=true] .ruleview-swatch{cursor:default}
+
+.ruleview-rule[uneditable=true] .ruleview-namecontainer>.ruleview-propertyname,
+.ruleview-rule[uneditable=true] .ruleview-propertyvaluecontainer>.ruleview-propertyvalue{
+	border-bottom-color:transparent}
+
+.ruleview-overridden-rule-filter{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),64,16,80,0);
+	background-size:12px 12px;
+	margin-inline-start:5px;
+	display:inline-block;
+	width:12px;
+	height:12px}
+.ruleview-overridden-rule-filter:not(:hover){
+	opacity:.8}
+
+.ruleview-propertylist{
+	list-style:none;
+	padding:0;
+	margin:0}
+
+.ruleview-rule:not(:hover) .ruleview-enableproperty{visibility:hidden}
+
+.ruleview-expander{
+	vertical-align:middle;
+	display:inline-block}
+
+.ruleview-newproperty{
+	margin-inline-start:27px}
+
+.ruleview-namecontainer,
+.ruleview-propertyvaluecontainer,
+.ruleview-propertyname,
+.ruleview-propertyvalue{
+	text-decoration:inherit}
+
+.ruleview-computedlist{
+	list-style:none;
+	padding:0}
+
+.ruleview-computed{
+	margin-inline-start:35px}
+
+.ruleview-filterswatch{
+	display:inline-block;
+	width:12px;
+	height:12px;
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),64,16,80,0);
+	background-size:12px 12px}
+
+.ruleview-overridden{text-decoration:line-through}
+.ruleview-property{border-left:3px solid transparent}
+.ruleview-property[dirty]{border-left-color:#2cbb0f}
+.ruleview-newproperty{margin-inline-start:27px}
+.ruleview-propertycontainer>*{vertical-align:middle}
+.ruleview-highlight{background-color:var(--rule-highlight-background-color)}
+
+.ruleview-namecontainer>.ruleview-propertyname,
+.ruleview-propertyvaluecontainer>.ruleview-propertyvalue{
+	border-bottom:1px dashed transparent}
+
+.ruleview-namecontainer:hover>.ruleview-propertyname,
+.ruleview-propertyvaluecontainer:hover>.ruleview-propertyvalue{
+	border-bottom-color:graytext}
+
+.ruleview-selectorcontainer{
+	word-wrap:break-word;
+	cursor:text}
+
+.ruleview-selector-matched>.ruleview-selector{
+	font-weight:bold}
+.ruleview-selector-matched>.ruleview-selector-attribute,
+.ruleview-selector-matched>.ruleview-selector-pseudo-class,
+.ruleview-selector-matched>.ruleview-selector-pseudo-class-lock{
+	font-weight:bold;
+	color:var(--theme-highlight-orange)}
+
+.ruleview-selectorhighlighter{
+	background:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,64,32,48) no-repeat 0 0;
+	opacity:.5;
+	padding-left:16px;
+	margin-left:5px;
+	cursor:pointer}
+
+.ruleview-selectorhighlighter:hover{
+	opacity:1;
+	background-color:#CCCCFF}
+
+.ruleview-selectorhighlighter:active,
+.ruleview-selectorhighlighter.highlighted{
+	background-color:highlight}
+
+#ruleview-add-rule-button::before{background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),32,36,40,28)}
+#pseudo-class-panel-toggle::before{background-image:-moz-image-rect(url(chrome://devtools/skin/debugger.png),0,336,16,320)}
+
+.ruleview-selector-separator,
+.ruleview-selector-unmatched,
+.ruleview-rule[unmatched=true],
+.ruleview-rule[uneditable=true]{
+	color:GrayText}
+
+.ruleview-rule-source-label{
+	white-space:nowrap;
+	margin:0;
+	cursor:pointer;
+	direction:ltr;
+	unicode-bidi:embed}
+
+.ruleview-overridden-items{
+	margin-inline-start:5px;
+	list-style:none;
+	line-height:1.5em}
+
+.ruleview-overridden-item{
+	position:relative}
+
+.ruleview-overridden-item::before{
+	position:absolute;
+	left:-15px;
+	top:0;
+	content:'';
+	display:block;
+	border-left:1px solid threedshadow;
+	height:0.7em;
+	border-bottom:1px solid threedshadow;
+	width:10px}
+
+.ruleview-overridden-item::after{
+	position:absolute;
+	left:-15px;
+	bottom:-7px;
+	content:'';
+	display:block;
+	border-left:1px solid threedshadow;
+	height:100%}
+
+.ruleview-overridden-item:last-child:after,
+.ruleview-computedlist,
+.ruleview-overridden-items[hidden],
+.ruleview-overridden-rule-filter[hidden],
+.ruleview-warning[hidden],
+.ruleview-expandable-container,
+.ruleview-overridden .ruleview-grid{
+	display:none}
+
+.show-expandable-container+.ruleview-expandable-container,
+.ruleview-computedlist[user-open],
+.ruleview-computedlist[filter-open],
+.ruleview-overridden-items{
+	display:block}

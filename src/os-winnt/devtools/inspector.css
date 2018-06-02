@@ -1,0 +1,108 @@
+.inspector-responsive-container{height:100vh}
+
+#inspector-main-content{
+	display:flex;
+	flex-direction:column;
+	flex:auto;
+	height:100%;
+	min-width:125px}
+
+#inspector-splitter-box{
+	height:100vh;
+	width:100vw;
+	position:fixed}
+
+#inspector-splitter-box .uncontrolled{min-width:50px;min-height:50px;overflow-x:hidden}
+#inspector-splitter-box .controlled{min-width:325px}
+#inspector-splitter-box .controlled.pane-collapsed{visibility:collapse}
+#markup-box>iframe{flex:1}
+.inspector-tabpanel{min-width:200px}
+
+#markup-box{
+	display:flex;
+	flex-direction:column;
+	flex:auto;
+	height:0}
+
+.devtools-inspector-tab-panel,
+.split-box>.controlled,
+#inspector-toolbar,
+#inspector-searchlabel{
+	overflow:hidden!important}
+
+#inspector-sidebar-container,
+#inspector-sidebar-container>#inspector-sidebar{
+	display:flex;
+	flex:1;
+	height:100%}
+#inspector-sidebar-container>#inspector-sidebar>.devtools-sidebar-tabs{flex:1}
+
+
+#inspector-breadcrumbs{
+	display:flex;
+	flex:1;
+	min-width:1px;
+	border:1px inset threedface}
+#inspector-breadcrumbs-toolbar .html-arrowscrollbox-inner{
+	flex:1;
+	display:flex;
+	overflow:hidden}
+
+.breadcrumbs-widget-item{
+	max-width:250px;
+	overflow:hidden;
+	margin:0!important;
+	padding:0!important;
+	border:1px solid transparent!important;
+	border-color:threedhighlight threedshadow threedshadow threedhighlight!important;
+	background:-moz-dialog;
+	color:-moz-dialogtext}
+#inspector-breadcrumbs-toolbar .breadcrumbs-widget-item{
+	white-space:nowrap;
+	flex-shrink:0}
+
+.scrollbutton-up,
+.scrollbutton-down{
+	margin:0;
+	padding:0;
+	box-shadow:none!important;
+	border:1px solid transparent!important}
+
+.scrollbutton-up>div,
+.scrollbutton-down>div{
+	width:14px;
+	height:14px;
+	background:-moz-image-rect(url(chrome://global/skin/widgets.png),20,60,30,50) center no-repeat}
+.scrollbutton-down>div:-moz-locale-dir(ltr),
+.scrollbutton-up>div:-moz-locale-dir(rtl){
+	background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),30,60,40,50)}
+
+.scrollbutton-up[disabled]>div,
+.scrollbutton-down[disabled]>div{
+	filter:grayscale(1) opacity(.5)}
+
+.breadcrumbs-widget-item:hover:not([checked]),
+.scrollbutton-up:hover:not([disabled]),
+.scrollbutton-down:hover:not([disabled]){
+	border-color:threedhighlight threedshadow threedshadow threedhighlight!important;
+	background-color:#CCCCFF!important;
+	color:black!important}
+.breadcrumbs-widget-item:hover:active,
+.breadcrumbs-widget-item[checked],
+.scrollbutton-up:hover:active:not([disabled]),
+.scrollbutton-down:hover:active:not([disabled]){
+	border-color:threedshadow threedhighlight threedhighlight threedshadow!important;
+	background:highlight!important;
+	color:highlighttext!important}
+
+#inspector-breadcrumbs-toolbar .scrollbutton-up,
+#inspector-breadcrumbs-toolbar .scrollbutton-down{
+	flex:0;
+	display:flex;
+	align-items:center}
+
+.breadcrumbs-widget-item-id{color:var(--theme-body-color-alt)}
+.breadcrumbs-widget-item-classes{color:var(--theme-content-color1)}
+.breadcrumbs-widget-item-pseudo-classes{color:var(--theme-highlight-lightorange)}
+.breadcrumbs-widget-item[checked] label,
+.breadcrumbs-widget-item:hover label{color:inherit!important}

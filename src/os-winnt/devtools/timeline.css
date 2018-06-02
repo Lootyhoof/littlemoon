@@ -1,0 +1,2 @@
+﻿@import url(chrome://devtools/skin/performance.css);
+#record-button:not([checked]) ~ #record-label{visibility:hidden}

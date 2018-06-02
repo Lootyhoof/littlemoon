@@ -1,0 +1,112 @@
+﻿:root{
+	font:message-box;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+
+.view-project-detail,
+#sources{overflow:auto}
+.sources-tree>ul>.child{padding-inline-start:calc(1000em - 16px)}
+
+#sources{border-width:0 1px 0 0!important}
+#shells{border-width:0 0 0 1px!important}
+
+.file-label{
+	vertical-align:middle;
+	display:inline-block}
+
+.file-icon{
+	display:inline-block;
+	margin:2px;
+	width:15px;
+	height:15px;
+	vertical-align:middle;
+	background:url(file-icons-sheet.png);
+	background-repeat:no-repeat;
+	background-position:-30px 0}
+.icon-css{background-position:0 0}
+.icon-js{background-position:-15px 0}
+.icon-html{background-position:-30px 0}
+.icon-file{background-position:-45px 0}
+.icon-folder{background-position:-60px 0}
+.icon-img{background-position:-75px 0}
+.icon-manifest{background-position:-90px 0}
+
+.entry{
+	display:flex;
+	align-items:center;
+	border:none;
+	box-shadow:none;
+	outline:none;
+	white-space:nowrap}
+.entry:hover:not(.selected){
+	background-color:#CCCCFF;
+	color:black}
+.entry:hover:active,
+.entry.selected{
+	background-color:highlight;
+	color:highlighttext}
+
+.entry .file-label{
+	display:flex;
+	flex:1;
+	align-items:center}
+
+.entry-group-title{
+	font-weight:bold;
+	border-bottom:1px solid graytext;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+
+#projecteditor-toolbar textbox{margin:0}
+.projecteditor-basic-display{padding:0 3px}
+
+.project-name-label{
+	font-size:120%;
+	font-weight:bold;
+	padding-inline-start:4px}
+
+.project-version-label{
+	color:graytext;
+	padding-inline-start:4px;
+	font-size:90%}
+
+.project-image{
+	max-height:24px;
+	margin:2px;
+	vertical-align:middle}
+
+.editor-image{margin:10px}
+.editor-image:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEWgoKClpaUrSK7yAAAAAnRSTlNkFG3Yt+YAAAAPSURBVHheY2D4jxXhEgYAfr8P8SM7T18AAAAASUVORK5CYII=)}
+
+.projecteditor-file-label{
+	font-weight:bold;
+	padding-inline-start:29px;
+	vertical-align:middle}
+
+.project-flex{flex:1}
+
+.project-image,
+.project-status,
+.project-options{
+	flex-shrink:0}
+
+.project-status{
+	width:11px;
+	height:11px;
+	border-radius:50%;
+	border:1px solid graytext;
+	margin-inline-end:4px;
+	background-color:#70bf53}
+.project-status:not([status]){visibility:hidden}
+.project-status[status=warning]{background-color:#d99b28}
+.project-status[status=error]{background-color:#ed2655}
+
+.plugin-hidden,
+#projecteditor-menubar,
+#projecteditor-toolbar,
+#projecteditor-toolbar-bottom,
+.icon-none,
+.entry-group-title .expander,
+.tree-collapsed .children,
+.project-options{
+	display:none}

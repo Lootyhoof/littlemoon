@@ -1,0 +1,105 @@
+#eyedropper-button{
+	transition:none;
+	padding:0 2px;
+	min-width:20px;
+	min-height:20px}
+#eyedropper-button::before{
+	content:"";
+	display:inline-block;
+	width:16px;
+	height:100%;
+	background:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,220,32,204) no-repeat center}
+
+.spectrum-checker{
+	background-color:-moz-dialog;
+	background-image:linear-gradient(45deg,#ccc 25%,transparent 25%,transparent 75%,#ccc 75%,#ccc),
+		linear-gradient(45deg,#ccc 25%,transparent 25%,transparent 75%,#ccc 75%,#ccc);
+	background-size:12px 12px;
+	background-position:0 0,6px 6px}
+
+.spectrum-slider-control{
+	cursor:pointer;
+	border-radius:10px;
+	box-shadow:0 0 2px rgba(0,0,0,.6);
+	border:1px solid threeddarkshadow;
+	background:rgba(128,128,128,.5)}
+
+.spectrum-box{
+	border:1px inset threedface;
+	border-radius:2px;
+	background-clip:content-box}
+
+.spectrum-container{
+	position:relative;
+	display:none;
+	top:0;
+	left:0;
+	border-radius:0;
+	width:200px;
+	padding:5px}
+
+.spectrum-show{display:inline-block}
+
+.spectrum-top{
+	position:relative;
+	width:100%;
+	display:inline-block}
+
+.spectrum-hue,
+.spectrum-color,
+.spectrum-top-inner{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0}
+.spectrum-color{right:20%}
+.spectrum-hue{left:83%}
+
+.spectrum-fill{margin-top:85%}
+
+.spectrum-sat,.spectrum-val{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0}
+
+.spectrum-dragger,.spectrum-slider{-moz-user-select:none}
+
+.spectrum-alpha{
+	position:relative;
+	height:8px;
+	margin-top:3px}
+
+.spectrum-alpha-inner{height:100%}
+
+.spectrum-alpha-handle{
+	position:absolute;
+	top:-3px;
+	bottom:-3px;
+	width:5px;
+	left:50%}
+
+.spectrum-sat{background-image:linear-gradient(to right,#FFF,rgba(204,154,129,0))}
+.spectrum-val{background-image:linear-gradient(to top,#000000,rgba(204,154,129,0))}
+.spectrum-hue{background:linear-gradient(to bottom,#ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 67%,#ff00ff 83%,#ff0000 100%)}
+
+.spectrum-dragger{
+	position:absolute;
+	top:0px;
+	left:0px;
+	cursor:pointer;
+	border-radius:50%;
+	height:8px;
+	width:8px;
+	border:1px solid white;
+	box-shadow:0 0 2px rgba(0,0,0,.6)}
+
+.spectrum-slider{
+	position:absolute;
+	top:0;
+	height:5px;
+	left:-3px;
+	right:-3px}
+	

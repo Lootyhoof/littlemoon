@@ -1,0 +1,443 @@
+.hud-box{
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+.hud-outer-wrapper{
+	width:100%;
+	height:100%}
+.hud-console-wrapper,
+.webconsole-output-wrapper{width:100%}
+.webconsole-filteringbar-wrapper{
+	border-bottom:1px solid threedshadow!important}
+.hud-console-filter-toolbar{border-width:0!important}
+
+.text-filter{width:20em}
+
+.hud-clickable{
+	cursor:pointer;
+	color:-moz-nativehyperlinktext}
+
+#output-wrapper>div>#output-container,
+#output-wrapper,
+.jsterm-input-container{
+	border:1px inset threedface;
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+
+#output-wrapper{
+	direction:ltr;
+	overflow:auto}
+#devtools-webconsole[chromehidden] #output-wrapper{
+	border-inline-start-width:0}
+
+#output-wrapper>#output-container{
+	-moz-user-select:text;
+	-moz-box-flex:1;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start}
+
+.message{
+	display:flex;
+	width:100%;
+	border-bottom:1px solid threedface}
+.message>.prefix,
+.message>.timestamp{
+	width:5.5em;
+	min-width:5.5em;
+	text-align:center;
+	color:GrayText;
+	padding:0 3px}
+.icon{
+	width:18px;
+	min-width:18px;
+	margin-top:-1px;
+	border-inline-start:6px solid threedshadow;
+	background-image:none;
+	background-size:14px;
+	background-position:2px 2px;
+	background-repeat:no-repeat}
+.body{
+	flex:auto!important;
+	white-space:pre-wrap;
+	word-wrap:break-word}
+.message-body-wrapper{
+	flex:auto;
+	min-width:0}
+.message-flex-body{
+	display:flex;
+	white-space:pre-wrap;
+	word-wrap:break-word}
+.message-flex-body>.message-body{
+	word-break:break-all;
+	display:block;
+	flex:auto}
+.network .message-flex-body>.message-body{
+	display:flex}
+
+.hud-msg-node{
+	padding:0;
+	border-width:0}
+
+.hud-output-node,
+.jsterm-input-node,
+.jsterm-complete-node{
+	border-width:0;
+	margin:0;
+	padding:0;
+	font-family:var(--monospace-font-family)}
+
+.jsterm-input-node{
+	box-sizing:content-box;
+	max-height:50vh;
+	background:none}
+
+:-moz-any(.jsterm-input-node,.jsterm-complete-node)>.textbox-input-box>.textbox-textarea{
+	overflow-x:hidden}
+
+.webconsole-timestamp{color:GrayText;padding:0 2px}
+.jsterm-complete-node{color:GrayText}
+.webconsole-msg-body{white-space:pre-wrap}
+.webconsole-msg-body-piece{padding:0}
+.webconsole-msg-url{margin:0 2px}
+.message-location{max-width:30%;padding:0 2px}
+
+.stack-trace .frame-link-source,
+.message-location .frame-link-source{
+	direction:rtl;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap}
+.stack-trace .frame-link-function-display-name{
+	flex:auto;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis}
+
+.location,
+.webconsole-location{
+	cursor:pointer;
+	color:-moz-nativehyperlinktext;
+	flex:none;
+	max-width:25%;
+	padding:0 1px;
+	margin:0 1px;
+	text-align:end;
+	text-overflow:ellipsis;
+	text-decoration:none;
+	white-space:nowrap;
+	overflow:hidden;
+	font-style:italic}
+.message-location>.filename,
+.location>.filename{
+	text-overflow:ellipsis;
+	text-align:end;
+	overflow:hidden;
+	white-space:nowrap}
+.message-location>.line-number,
+.location>.line-number{
+	flex:0}
+
+.repeats,
+.message-repeats,
+.webconsole-msg-repeat{
+	-moz-user-select:none;
+	height:1.5em;
+	padding:0 2px;
+	margin:0 1px;
+	font-size:90%;
+	font-weight:bold;
+	border-radius:5px;
+	background-color:threeddarkshadow;
+	color:threedhighlight}
+
+.status{padding:0 2px}
+
+.message:not([open="true"]):not(.open)>*>.stacktrace,
+.hideTimestamps>.message>.timestamp,
+.hud-group:first-child>.hud-divider,
+.hud-filtered-by-type,
+.hud-filtered-by-string,
+.filtered-by-type,
+.filtered-by-string,
+.message-repeats[value="1"],
+.repeats[value="1"],
+.webconsole-msg-repeat[value="1"]{
+	display:none}
+
+.message[category=network] .status,
+.webconsole-msg-status{
+	color:purple}
+
+.hud-msg-node[selected="true"]>.webconsole-timestamp,
+.hud-msg-node[selected="true"]>.webconsole-location,
+.message[selected="true"]>.timestamp,
+.message[selected="true"]>.location,
+.message[selected="true"]>.message-location{
+	color:inherit}
+
+.hud-splitter{
+	border-top:1px outset threedface;
+	background-color:-moz-Dialog}
+.hud-box+.hud-splitter{
+	border-top-width:0;
+	border-bottom:1px outset threedface}
+
+.hud-splitter:hover{
+	background-color:#CCCCFF;
+	color:black}
+.hud-splitter[state="dragging"]{
+	background-color:highlight;
+	color:highlighttext}
+
+.webconsole-clear-console-button,
+menuitem[buttonType="clear"]{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px,16px,288px,0)}
+
+.devtools-closebutton,
+.webconsole-close-button{
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(177px 31px 191px 17px)!important}
+.webconsole-close-button:not(:hover){
+	-moz-border-top-colors:transparent!important;
+	-moz-border-left-colors:transparent!important;
+	-moz-border-right-colors:transparent!important;
+	-moz-border-bottom-colors:transparent!important;
+	background:none!important}
+.devtools-closebutton:hover,
+.webconsole-close-button:hover{
+	-moz-image-region:rect(225px 31px 239px 17px)!important}
+.devtools-closebutton:hover:active,
+.webconsole-close-button:hover:active{
+	-moz-image-region:rect(113px 31px 127px 17px)!important}
+
+.webconsole-filter-button{
+	-moz-user-focus:normal;
+	margin:0 2px}
+
+.webconsole-filter-button>toolbarbutton>.toolbarbutton-icon{
+	margin:3px;
+	width:10px;
+	height:10px;
+	border:1px solid threedshadow;
+	background-color:black}
+.webconsole-filter-button[category=css]>toolbarbutton>.toolbarbutton-icon{background-color:#0088cc}
+.webconsole-filter-button[category=js]>toolbarbutton>.toolbarbutton-icon{background-color:#d97e00}
+.webconsole-filter-button[category=logging]>toolbarbutton>.toolbarbutton-icon,
+.webconsole-filter-button[category=webdev]>toolbarbutton>.toolbarbutton-icon{background-color:threedshadow}
+.webconsole-filter-button[category=security]>toolbarbutton>.toolbarbutton-icon{background-color:darkred}
+.webconsole-filter-button[category=server]>toolbarbutton>.toolbarbutton-icon{background-image:linear-gradient(rgb(144,176,144),rgb(99,151,99))}
+
+.webconsole-msg-icon-container{border-inline-start:6px solid threedshadow}
+.webconsole-msg-network>.webconsole-msg-icon-container{border-color:black}
+.webconsole-msg-cssparser>.webconsole-msg-icon-container{border-color:#0088cc}
+.webconsole-msg-exception>.webconsole-msg-icon-container{border-color:#d97e00}
+.webconsole-msg-console>.webconsole-msg-icon-container{border-color:threedshadow}
+.webconsole-msg-security>.webconsole-msg-icon-container{border-color:darkred}
+
+.webconsole-msg-icon{height:14px;width:14px;margin:1px}
+.webconsole-msg-error{list-style-image:url(chrome://global/skin/icons/error-16.png)!important}
+.webconsole-msg-warn{list-style-image:url(chrome://global/skin/icons/warning-16.png)!important}
+.webconsole-msg-log,
+.webconsole-msg-info{list-style-image:url(chrome://global/skin/icons/information-16.png)!important}
+.webconsole-msg-security{list-style-image:url(chrome://global/skin/icons/blacklist_favicon.png)!important}
+
+#webConsole_autocompletePopup>richlistbox{border-width:0}
+#webConsole_autocompletePopup>richlistbox>richlistitem{border-width:0;padding:1px}
+
+.webconsole-mixed-content{color:darkred}
+.webconsole-mixed-content-link{color:darkblue}
+
+#webconsole-sidebar{border-width:0}
+#webconsole-sidebar>tabs{display:none}
+#webconsole-sidebar>tabpanels{border-width:0;padding:0}
+
+.hidden-message{
+	display:block;
+	visibility:hidden;
+	height:0;
+	overflow:hidden}
+
+.message[category=network]>.icon{border-color:black}
+.message[category=cssparser]>.icon{border-color:#0088cc}
+.message[category=exception]>.icon{border-color:#d97e00}
+.message[category=console]>.icon{border-color:#cbcbcb}
+.message[category=security]>.icon{border-color:darkred}
+.message[category=server]>.icon{border-color:#90B090}
+
+.inlined-variables-view .body{
+	display:flex;
+	flex-direction:column}
+.inlined-variables-view iframe{
+	display:block;
+	flex:1}
+.message[category=network]>.body{
+	display:flex;
+	flex-wrap:wrap}
+.message[category=network] .method{
+	flex:none}
+
+.message[category=network]:not(.navigation-marker) .url{
+	flex:auto;
+	width:100px;
+	min-width:5em;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis}
+.message[category=network].mixed-content .url{color:darkred}
+
+.learn-more-link{
+	font-size:90%;
+	margin:0 6px}
+
+.message[category=network] .xhr{
+	background-color:var(--theme-body-color-alt);
+	color:var(--theme-body-background);
+	border-radius:3px;
+	font-weight:bold;
+	font-size:10px;
+	padding:2px;
+	line-height:10px;
+	margin-inline-start:3px;
+	margin-inline-end:1ex}
+
+.navigation-marker{
+	color:graytext;
+	font-size:90%}
+
+.navigation-marker .url{
+	padding-inline-end:9px;
+	text-decoration:none}
+
+@media (max-width:550px){.toolbarbutton-text{display:none}}
+@media (max-width:300px){message>.timestamp{display:none}}
+
+.consoleTrace .body>div{
+	display:flex}
+.consoleTrace .title{
+	display:block;
+	flex:auto}
+.stacktrace{
+	list-style:none;
+	padding:0 2px;
+	margin:2px 0;
+	overflow-y:auto;
+	border:1px solid threedshadow;
+	border-inline-end-width:0}
+.stacktrace li{
+	display:flex;
+	margin:0}
+.stacktrace .function{
+	display:block;
+	flex:auto}
+
+.open-inspector{
+	background:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,64,32,48) no-repeat 0 0;
+	padding-left:16px;
+	margin-left:2px;
+	cursor:pointer}
+
+.message-body-wrapper .table-widget-body{overflow:visible}
+
+.theme-selected .console-string,
+.theme-selected .cm-number,
+.theme-selected .cm-variable,
+.theme-selected .kind-ArrayLike{
+	background-color:highlight!important;
+	color:highlighttext!important}
+
+.consoletable{margin:5px 0 0 0}
+
+.cm-s-mozilla a[class]{
+	cursor:pointer;
+	color:-moz-nativehyperlinktext;
+	text-decoration:none}
+a.location:hover,
+a.message-location:hover,
+a.webconsole-location:hover,
+.cm-s-mozilla a[class]:hover,
+.cm-s-mozilla a[class]:focus{
+	color:-moz-nativehyperlinktext;
+	text-decoration:underline}
+
+a.learn-more-link.webconsole-learn-more-link{
+	font-style:normal}
+
+.message .theme-twisty{
+	display:inline-block;
+	flex-shrink:0}
+
+.consoletable .table-widget-cell>span{
+	overflow:hidden;
+	display:flex;
+	height:1.25em;
+	line-height:1.25em}
+
+.netInfoBody{margin:2px 0!important}
+
+.netInfoBody>.tabs[data-reactid]{
+	border:1px solid threedshadow!important;
+	background:-moz-dialog!important}
+.netInfoBody .tab-panel[data-reactid]{
+	padding:2px!important;
+	background:-moz-dialog!important}
+
+.tabs-menu-item[data-reactid]:hover a,
+.tabs-menu-item[data-reactid].is-active:hover a{
+	border:0!important;
+	background-color:#CCCCFF!important;
+	color:black!important}
+
+.tabs-menu-item[data-reactid].is-active a,
+.tabs-menu-item[data-reactid].is-active a:focus{
+	border:0!important;
+	background-color:inherit!important;
+	color:inherit!important}
+
+/*FF52+*/
+.message.network .method,
+.message.network .xhr{
+	font-weight:bold;
+	font-size:85%;
+	margin-inline-end:3px}
+.message.network .xhr{
+	padding:0 3px;
+	border-radius:4px;
+	background-color:var(--theme-body-color-alt);
+	color:var(--theme-body-background)}
+.message[severity=warn]>.icon,
+.message.warn>.icon{
+	background-image:url(chrome://global/skin/icons/warning-16.png)!important}
+.message[severity=error]>.icon,
+.message.error>.icon{
+	background-image:url(chrome://global/skin/icons/error-16.png)!important}
+.message[severity=info]>.icon,
+.message.info>.icon{
+	background-image:url(chrome://global/skin/icons/information-16.png)!important}
+.message[severity=security]>.icon,
+.message.security>.icon{background-image:url(
+	chrome://global/skin/icons/blacklist_favicon.png)!important}
+
+.menu-filter-button{font-size:90%;padding:0 2px}
+.text-filter{border-radius:5px}
+
+.devtools-toolbar[hidden="true"]+#output-wrapper{
+	direction:ltr;
+	-moz-user-select:text;
+	overflow:initial;
+	border-width:0}
+.devtools-toolbar[hidden="true"]~#webconsole-notificationbox>hbox{border-width:1px 0 0 0}
+#output-wrapper>div>#output-container{border-width:0}
+#output-wrapper>div>#output-container>.webconsole-output-wrapper{
+	display:flex;
+	flex-direction:column;
+	height:calc(100vh - 19px);
+	-moz-user-focus:normal}
+#output-wrapper>div>#output-container>.webconsole-output-wrapper>.webconsole-output{
+	display:flex;
+	flex-direction:column;
+	flex:auto;
+	overflow-y:auto;
+	border-bottom:1px solid threedshadow}
+

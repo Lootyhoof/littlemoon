@@ -1,0 +1,29 @@
+window{
+	box-sizing:border-box;
+	width:110px;
+	height:130px;
+	font:message-box;
+	border:1px solid transparent;
+	background-color:transparent}
+#canvas{
+	image-rendering:-moz-crisp-edges;
+	cursor:none;
+	margin:1px;
+	border:3px solid -moz-dialog;
+	border-radius:50%}
+#canvas-overflow{
+	overflow:hidden;
+	width:96px;
+	height:96px}
+#color-value-box{
+	width:106px;
+	border-radius:3px;
+	border:1px outset threedface;
+	background-color:-moz-dialog}
+#color-preview{
+	margin:2px;
+	width:16px;
+	height:16px;
+	border:1px inset threedface}
+#color-value{direction:ltr;padding:2px}
+#color-value.highlight{font-family:inherit}

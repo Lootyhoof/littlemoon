@@ -1,0 +1,157 @@
+.csscoverage-report{position:relative}
+.csscoverage-toolbar{
+	position:absolute;
+	top:4px;
+	left:4px;
+	margin:0;
+	padding:0;
+	border-width:0;
+	background:none!important}
+	
+.csscoverage-toolbarbutton{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(192px 16px 208px 0)}
+
+.csscoverage-report-container{
+	height:100vh;
+	padding:4px}
+
+.csscoverage-report-content{margin:0 auto;display:flex}
+.csscoverage-report h1{font-size:120%;font-weight:bold}
+.csscoverage-report h2{font-size:110%;font-weight:bold}
+.csscoverage-report h3{margin-top:10px;font-weight:bold}
+.csscoverage-report textarea{width:100%;height:100px}
+.csscoverage-report-chart{margin:10px}
+.csscoverage-report .pie-chart-slice{cursor:default}
+.csscoverage-report-unused,
+.csscoverage-report-optimize{padding:4px}
+.csscoverage-report p{margin:0}
+.csscoverage-list:not(:last-child):after{content:', '}
+.csscoverage-report textarea{width:100%;height:100px}
+.csscoverage-report a{cursor:pointer;text-decoration:underline}
+
+.chart-colored-blob[name="Used Preload"]{fill:var(--theme-highlight-pink);background:var(--theme-highlight-pink)}
+.chart-colored-blob[name=Used]{fill:var(--theme-highlight-green);background:var(--theme-highlight-green)}
+.chart-colored-blob[name=Unused]{fill:var(--theme-highlight-lightorange);background:var(--theme-highlight-lightorange)}
+
+.splitview-root{
+	height:100vh}
+
+.splitview-nav>li,
+.stylesheet-info,
+.stylesheet-more,
+.stylesheet-rule-count{
+	display:-moz-box}
+
+.devtools-toolbar>spacer,
+.stylesheet-details-container,
+.stylesheet-info>h1,
+.stylesheet-more>spacer{
+	-moz-box-flex:1}
+
+.stylesheet-media-container{
+	overflow-y:auto}
+
+.stylesheet-error-message{
+	display:none;
+	color:darkred}
+
+li.error>.stylesheet-info>.stylesheet-more>.stylesheet-error-message{
+	display:block}
+
+.stylesheet-info{
+	-moz-box-pack:start!important;
+	-moz-box-align:stretch!important}
+
+.stylesheet-name{
+	outline:0;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	text-decoration:none;
+	color:inherit}
+.splitview-active .stylesheet-name{font-weight:bold}
+.unsaved .stylesheet-name{font-style:italic}
+.unsaved:-moz-locale-dir(ltr) .stylesheet-name:before,
+.unsaved:-moz-locale-dir(rtl) .stylesheet-name:after{
+	font-style:italic;
+	content:"* "}
+
+.stylesheet-name>label{
+	display:inline;
+	cursor:pointer}
+
+.stylesheet-title,
+.stylesheet-stats{
+	text-decoration:none;
+	margin-inline-end:2px;
+	color:threeddarkshadow}
+
+.stylesheet-enabled{
+	float:left;
+	width:20px;
+	height:20px;
+	max-height:20px;
+	margin:1px;
+	border:1px solid transparent;
+	background:-moz-image-rect(url(chrome://global/skin/checkbox.png),0,14,14,0) 2px 1px no-repeat}
+.stylesheet-enabled:-moz-locale-dir(rtl){float:right}
+.disabled>.stylesheet-enabled{
+	background-image:-moz-image-rect(url(chrome://global/skin/checkbox.png),14,14,28,0)}
+.stylesheet-enabled:hover{
+	box-shadow:1px 1px 2px threedshadow;
+	border:1px outset threedface;
+	background-color:#CCCCFF}
+.stylesheet-enabled:hover:active{
+	border-style:outset;
+	background-color:highlight}
+
+.stylesheet-actions{
+	-moz-box-flex:1;
+	text-align:end}
+
+.splitview-nav>li>hgroup.stylesheet-info{
+	-moz-box-pack:center}
+
+.splitview-nav>li{
+	-moz-box-orient:horizontal}
+
+.splitview-nav>li>hgroup{
+	display:-moz-box;
+	-moz-box-orient:vertical;
+	-moz-box-flex:1}
+
+.stylesheet-sidebar{
+	min-height:100px;
+	min-width:100px}
+	
+.media-rule-condition{flex:1;overflow:hidden;padding:0 2px;cursor:default}
+.media-rule-label{display:flex}
+.media-rule-line{pointer-events:none;color:inherit!important;border-width:0;font-family:var(--monospace-font-family)}
+.media-condition-unmatched{opacity:.5}
+.media-responsive-mode-toggle{cursor:pointer}
+
+.stylesheet-linked-file:not(:empty){
+	margin-inline-end:4px}
+
+.stylesheet-linked-file:not(:empty):before{
+	margin-inline-start:4px;
+	content:" ↳ "}
+
+li.linked-file-error .stylesheet-linked-file{
+	text-decoration:line-through}
+
+li.linked-file-error .stylesheet-linked-file:after{
+	font-size:110%;
+	content:" ✘"}
+
+li.linked-file-error .stylesheet-rule-count{
+	visibility:hidden}
+
+.stylesheet-more>h3{
+	font-size:90%;
+	margin-inline-end:2px}
+
+.devtools-searchinput,
+.devtools-filterinput{
+	max-width:25ex}	

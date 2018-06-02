@@ -1,0 +1,11 @@
+#scratchpad-editor{
+	border-top:1px inset threedface}
+#sp-toolbar-run,#sp-text-run{
+	list-style-image:url(chrome://global/skin/media/video.png);
+	-moz-image-region:rect(0,16px,16px,0)}
+#sp-toolbar-inspect,#sp-text-inspect{
+	list-style-image:url(chrome://devtools/skin/debugger.png);
+	-moz-image-region:rect(16px,64px,32px,48px)}
+#sp-toolbar-pprint{
+	list-style-image:url(chrome://devtools/skin/debugger.png);
+	-moz-image-region:rect(16px,200px,32px,184px)}

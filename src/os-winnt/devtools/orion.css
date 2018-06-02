@@ -1,0 +1,117 @@
+.viewContainer{
+	margin:0;
+ 	font:message-box;
+	font-family:Menlo,Consolas,Lucida Console,monospace;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+
+.view{
+	padding-left:4px;
+	background:-moz-Field;
+	color:-moz-FieldText}
+
+.token_singleline_comment,
+.token_multiline_comment,
+.token_doc_comment,
+.punctuation-definition-comment,
+.comment{
+	color:green;font-style:italic}
+
+.entity-other-attribute-name,
+.token_doc_html_markup,
+.token_doc_tag,
+.token_keyword{
+	color:blueviolet}
+
+.entity-name-tag{color:purple}
+.entity-other-attribute{color:black}
+.string-quoted,.string,.token_string{color:blue}
+.entity-name-tag-doctype{color:steelblue;font-style:italic}
+
+.token_task_tag{
+	color:black;
+	background:yellow}
+
+.token_space{background:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,173,25,164) no-repeat center center}
+.token_tab{background:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,182,25,173) no-repeat left center}
+
+.line_caret,
+.annotationLine.currentLine{
+	background:#dae2ee}
+.readonly .line_caret,
+.readonly .annotationLine.currentLine{
+	background:#cddae5}
+
+.invalid{
+	color:red;
+	font-weight:bold}
+
+.annotationRange.matchingBracket{
+	outline:1px solid threedshadow}
+
+.viewLeftRuler{
+	width:40px;
+	overflow:visible!important}
+.viewLeftRuler>table{
+	width:40px;
+	border-right:1px solid threedshadow;
+	background-color:-moz-dialog}
+.viewRightRuler>table{
+	width:20px;
+	background-color:-moz-dialog}
+
+.ruler.annotations{
+	width:20px}
+.ruler.annotations>table{
+	border-right:1px solid threedshadow}
+.ruler.lines{
+	min-width:2.5em;
+	padding:0 4px;
+	text-align:end;
+	opacity:.6}
+.ruler.linesWithAnnotations{
+	min-width:0;
+	padding-left:0}
+.ruler.overview{
+	width:14px;
+	text-align:start;
+	border-left:1px solid threedshadow}
+
+.annotation{
+	cursor:pointer;
+	width:20px;
+	height:12px;
+	background-repeat:no-repeat}
+.breakpoint{
+	background-position:right center!important;
+	background-image:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,152,28,140)!important}
+.debugLocation{
+	background-position:left center!important;
+	background-image:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,164,28,152)!important}
+.breakpoint.debugLocation{
+	background-position:left center,right center!important;
+	background-image:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,152,28,140),-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,164,28,152)!important}
+.annotationHTML{display:none}
+
+.annotationOverview{
+	cursor:pointer;
+	border-radius:2px;
+	left:2px;
+	width:8px}
+.annotationOverview.task{
+	background-color:lightgreen;
+	border:1px solid green}
+.annotationOverview.breakpoint{
+	background-color:lightblue;
+	border:1px solid blue}
+.annotationOverview.debugLocation{
+	background-color:white;
+	border:1px solid green}
+.annotationOverview.currentBracket,
+.annotationOverview.matchingBracket{
+	background-color:lightgray;
+	border:1px solid red}
+
+.annotationRange{background-repeat:repeat-x;background-position:left bottom}
+.annotationRange.task{outline:1px dashed rgba(0,255,0,.5)}
+.annotationRange.matchingBracket{outline:1px solid grey}

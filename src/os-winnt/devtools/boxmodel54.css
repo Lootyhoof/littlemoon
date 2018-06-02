@@ -1,0 +1,113 @@
+
+.boxmodel-header,
+.boxmodel-info,
+.boxmodel-position-group{
+	display:flex;
+	align-items:center}
+.boxmodel-element-size{flex:1}
+
+.boxmodel-info{padding:0 8px}
+#boxmodel-expander{margin:1px}
+
+.boxmodel-main{
+	position:relative;
+	box-sizing:border-box;
+	margin:0 auto;
+	max-width:400px;
+	min-width:300px;
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+
+.boxmodel-legend{
+	position:absolute;
+	margin:2px 6px;
+	z-index:1;
+	font-weight:600;
+	color:-moz-dialogtext}
+
+.boxmodel-margins{
+	padding:23px 35px;
+	border:1px solid graytext}
+
+.boxmodel-borders{
+	padding:23px 35px;
+	border:1px solid graytext;
+	background:threedshadow}
+
+.boxmodel-border,
+.boxmodel-legend[data-box="border"]{
+	color:threedhighlight}
+
+.boxmodel-padding{
+	padding:23px 35px;
+	border:1px solid graytext;
+	background:-moz-dialog}
+
+.boxmodel-content{
+	height:24px;
+	border:1px solid graytext;
+	background-color:-moz-field}
+
+.boxmodel-main>p{
+	position:absolute;
+	pointer-events:none;
+	margin:0;
+	text-align:center}
+
+.boxmodel-main>p>span,
+.boxmodel-main>p>input{
+	vertical-align:middle;
+	pointer-events:auto}
+
+.boxmodel-size,.boxmodel-top,.boxmodel-bottom{width:100%}
+
+.boxmodel-margin.boxmodel-top{top:2px}
+.boxmodel-margin.boxmodel-bottom{bottom:3px}
+.boxmodel-border.boxmodel-top{top:26px}
+.boxmodel-border.boxmodel-bottom{bottom:28px}
+.boxmodel-padding.boxmodel-top{top:50px}
+.boxmodel-padding.boxmodel-bottom{bottom:52px}
+
+.boxmodel-size,
+.boxmodel-margin.boxmodel-left,
+.boxmodel-margin.boxmodel-right,
+.boxmodel-border.boxmodel-left,
+.boxmodel-border.boxmodel-right,
+.boxmodel-padding.boxmodel-left,
+.boxmodel-padding.boxmodel-right{
+	top:75px;
+	line-height:inherit}
+
+.boxmodel-margin.boxmodel-right,
+.boxmodel-margin.boxmodel-left,
+.boxmodel-border.boxmodel-left,
+.boxmodel-border.boxmodel-right,
+.boxmodel-padding.boxmodel-right,
+.boxmodel-padding.boxmodel-left{width:35px}
+.boxmodel-padding.boxmodel-left{left:73px}
+.boxmodel-padding.boxmodel-right{right:73px}
+.boxmodel-border.boxmodel-left{left:37px}
+.boxmodel-border.boxmodel-right{right:37px}
+.boxmodel-margin.boxmodel-right{right:1px}
+.boxmodel-margin.boxmodel-left{left:1px}
+
+.boxmodel-styleinspector-propertyeditor,
+.boxmodel-editable{
+	padding:0 2px!important;
+	text-align:center}
+.boxmodel-editable:hover{
+	background-color:#CCCCFF;
+	color:black}
+.boxmodel-styleinspector-propertyeditor{
+	border:1px solid graytext;
+	box-shadow:1px 1px 2px graytext}
+.boxmodel-size>span{cursor:default}
+
+#boxmodel-geometry-editor,
+.inactive>#boxmodel-header>#boxmodel-element-position,
+.inactive>#boxmodel-header>#boxmodel-element-size,
+.inactive>.boxmodel-main>p{
+	visibility:hidden}
+	
+#boxmodel-geometry-editor::before{
+	background:-moz-image-rect(url(debugger.png),0,416,16,400) no-repeat center}

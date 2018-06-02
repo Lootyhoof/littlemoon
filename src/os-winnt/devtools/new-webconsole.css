@@ -1,0 +1,345 @@
+@import "chrome://devtools/skin/variable.css";
+
+a{
+	-moz-user-focus:normal;
+	-moz-user-input:enabled;
+	cursor:pointer;
+	text-decoration:underline}
+
+/* Workaround for Bug 575675 - FindChildWithRules aRelevantLinkVisited
+ * assertion when loading HTML page with links in XUL iframe */
+*:visited{ }
+
+.webconsole-filterbar-wrapper{flex-grow:0}
+.webconsole-filterbar-primary{display:flex}
+.devtools-toolbar.webconsole-filterbar-secondary{height:initial}
+.webconsole-filterbar-primary .devtools-plaininput{flex:1 1 100%}
+.hideTimestamps>.message>.timestamp{display:none}
+
+.message.startGroup .message-body>.objectBox-string,
+.message.startGroupCollapsed .message-body>.objectBox-string{
+	color:-moz-dialogtext;
+	font-weight:bold}
+
+.network .message-flex-body>.message-body{display:flex}
+
+.new-consoletable{
+	width:100%;
+	border-collapse:collapse}
+
+.new-consoletable thead,
+.new-consoletable tbody{
+	background-color:-moz-dialog}
+
+.new-consoletable th{
+	background-color:-moz-dialog;
+	color:-moz-dialogtext;
+	margin:0;
+	padding:5px 0 0;
+	font-weight:inherit;
+	border-inline-end:1px solid threedshadow;
+	border-bottom:1px solid threedshadow}
+
+.new-consoletable tr:nth-of-type(even){
+	background-image:rgba(255,255,255,.09)}
+
+.new-consoletable td{
+	padding:3px 4px;
+	min-width:100px;
+	-moz-user-focus:normal;
+	color:-moz-dialogtext;
+	border-inline-end:var(1px solid threedshadow);
+	height:1.25em;
+	line-height:1.25em}
+
+.webconsole-output{
+	flex:1;
+	direction:ltr;
+	overflow:auto;
+	-moz-user-select:text;
+	position:relative}
+
+:root,
+body,
+#app-wrapper{
+	height:100%;
+	margin:0;
+	padding:0}
+
+body{
+	overflow:hidden}
+
+#app-wrapper{
+	display:flex;
+	flex-direction:column}
+
+:root, body{
+	margin:0;
+	padding:0;
+	height:100%}
+
+#app-wrapper{
+	height:100%;
+	display:flex;
+	flex-direction:column}
+#left-wrapper{
+	flex:1;
+	display:flex;
+	flex-direction:column}
+#output-container{
+	flex:1;
+	overflow:hidden}
+.webconsole-output-wrapper{
+	display:flex;
+	flex-direction:column;
+	height:100%}
+
+.message{
+	display:flex;
+	padding:0 7px;
+	width:100%;
+	box-sizing:border-box}
+
+.message>.prefix,
+.message>.timestamp{
+	flex:none;
+	color:graytext;
+	margin:3px 6px 0 0}
+
+.message>.message-body-wrapper{
+	flex:auto;
+	min-width:0}
+
+.message-repeats{
+	-moz-user-select:none;
+	height:1.5em;
+	padding:0 2px;
+	margin:0 1px;
+	font-size:90%;
+	font-weight:bold;
+	border-radius:5px;
+	background-color:threeddarkshadow;
+	color:threedhighlight}
+.message-repeats[value="1"]{display:none}
+
+.message-location{max-width:30%;padding:0 2px}
+
+.stack-trace{white-space:normal}
+
+.stack-trace .frame-link-source,
+.message-location .frame-link-source{
+	direction:rtl;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis}
+.stack-trace .frame-link-source-inner,
+.message-location .frame-link-source-inner{
+	direction:ltr;
+	unicode-bidi:embed}
+
+.stack-trace .frame-link-function-display-name{
+	max-width:50%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis}
+
+.message-flex-body{display:flex}
+
+.message-body>*{
+	white-space:pre-wrap;
+	word-wrap:break-word}
+
+.message-flex-body>.message-body{
+	display:block;
+	flex:auto}
+#output-container.hideTimestamps>.message{
+	padding-inline-start:0;
+	margin-inline-start:7px;
+	width:calc(100% - 7px)}
+
+#output-container.hideTimestamps>.message>.timestamp{display:none}
+
+.message.error{
+	background:rgba(255,150,150,.3)}
+.message:hover{
+	background-color:#CCCCFF!important}
+
+.theme-selected .console-string,
+.theme-selected .cm-number,
+.theme-selected .cm-variable,
+.theme-selected .kind-ArrayLike{
+	background-color:highlight!important;
+	color:highlighttext!important}
+
+.message.network>.message-body{
+	display:flex;
+	flex-wrap:wrap}
+
+.message.network .method,
+.message.network .xhr{
+	font-weight:bold;
+	font-size:85%;
+	margin-inline-end:3px}
+.message.network .xhr{
+	padding:0 3px;
+	border-radius:4px;
+	background-color:var(--theme-body-color-alt);
+	color:var(--theme-body-background)}
+
+.message.network:not(.navigation-marker) .url{
+	flex:1 1 auto;
+	width:100px;
+	min-width:5em;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis}
+.message.network .status{
+	flex:none;
+	margin-inline-start:6px}
+.message.network.mixed-content .url{
+	color:var(--theme-highlight-red)}
+
+.learn-more-link{
+	font-size:90%;
+	margin:0 6px}
+
+#jsterm-wrapper{
+	flex:0}
+.jsterm-input-container{
+	border:1px inset threedface;
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+
+.jsterm-input-node,
+.jsterm-complete-node{
+	border-width:0;
+	margin:0;
+	padding:0;
+	font-family:var(--monospace-font-family)}
+
+.jsterm-input-node[focused="true"]{
+	background-color:#CCCCFF;
+	color:black}
+
+.jsterm-complete-node{
+	color:GrayText}
+
+.jsterm-input-node-html{
+	width:100%}
+
+.jsterm-input-node{
+	box-sizing:content-box;
+	max-height:50vh;
+	background:none}
+
+:-moz-any(.jsterm-input-node,.jsterm-complete-node)>.textbox-input-box>.textbox-textarea{
+	overflow-x:hidden}
+
+#webconsole-notificationbox,
+.jsterm-stack-node{
+	width:100%}
+
+.navigation-marker{
+	color:graytext;
+	font-size:90%}
+
+.navigation-marker .url{
+	padding-inline-end:9px;
+	text-decoration:none}
+
+.stacktrace{
+	list-style:none;
+	padding:0 2px;
+	margin:2px 0;
+	overflow-y:auto;
+	border:1px solid threedshadow;
+	border-inline-end-width:0}
+.stacktrace li{
+	display:flex;
+	margin:0}
+.stacktrace .function{
+	display:block;
+	flex:auto}
+.message:not(.open) .stacktrace{
+	display:block}
+
+.message .theme-twisty{
+	display:inline-block;
+	flex-shrink:0}
+
+.cm-s-mozilla a[class]{
+	font-style:italic;
+	text-decoration:none}
+
+.cm-s-mozilla a[class]:hover,
+.cm-s-mozilla a[class]:focus{
+	text-decoration:underline}
+
+.open-inspector{
+	background:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,64,32,48) no-repeat 0 0;
+	padding-left:16px;
+	margin-left:2px;
+	cursor:pointer}
+
+
+.message .indent{
+	display:inline-block;
+	flex:none;
+	border-inline-end:solid 1px var(--theme-splitter-color)}
+
+.startGroup .indent,
+.startGroupCollapsed .indent{
+	border-inline-end-color:transparent;
+	margin-inline-end:5px}
+
+.hideTimestamps>.message>.indent{
+	background-color:--moz-dialog}
+.cssparser>.indent {
+	border-inline-end:6px solid #00b6f0}
+.exception>.indent{
+	border-inline-end:6px solid #fb9500}
+.console-api>.indent{
+	border-inline-end:6px solid #cbcbcb}
+.server>.indent{
+	border-inline-end:6px solid #90B090}
+.command>.indent,
+.result>.indent{
+	border-inline-end:6px solid #808080}
+.security>.indent{
+	border-inline-end:6px solid red}
+
+.message>.icon{
+	width:18px;
+	min-width:18px;
+	margin-top:-1px;
+	border-inline-start:6px solid threedshadow;
+	background-image:none;
+	background-size:14px;
+	background-position:2px 2px;
+	background-repeat:no-repeat}
+
+.startGroup .icon,
+.startGroupCollapsed .icon{
+	display:none}
+
+.message[severity=warn]>.icon,
+.message.warn>.icon{
+	background-image:url(chrome://global/skin/icons/warning-16.png)!important}
+.message[severity=error]>.icon,
+.message.error>.icon{
+	background-image:url(chrome://global/skin/icons/error-16.png)!important}
+.message[severity=info]>.icon,
+.message.info>.icon{
+	background-image:url(chrome://global/skin/icons/information-16.png)!important}
+.message[severity=security]>.icon,
+.message.security>.icon{background-image:url(
+	chrome://global/skin/icons/blacklist_favicon.png)!important}
+
+.webconsole-output-wrapper .message{width:100vw}
+
+.webconsole-output-wrapper .message-flex-body>.message-body{
+	display:flex;
+	flex-wrap:wrap;
+	max-width:100%}
+
+.webconsole-output-wrapper .message-body>*{flex-shrink:0}

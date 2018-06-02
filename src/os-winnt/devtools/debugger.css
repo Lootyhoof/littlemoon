@@ -1,0 +1,14 @@
+ 
+.dbg-breakpoint-condition-thrown-message{
+	display:none;
+	color:red}
+.dbg-breakpoint.dbg-breakpoint-condition-thrown .dbg-breakpoint-condition-thrown-message{
+	display:block;
+	padding-inline-start:0}
+	
+#toggle-promise-debugger{
+	list-style-image:url(chrome://devtools/skin/debugger.png);
+	-moz-image-region:rect(0,400px,16px,384px)}
+
+#debugger-controls toolbarbutton[disabled]{transition:none}
+#resume[break-on-next]{background: var(--theme-highlight-lightorange)}

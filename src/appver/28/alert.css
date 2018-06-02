@@ -1,0 +1,74 @@
+@import url(chrome://global/skin/);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+#alertNotification{
+	width:350px;
+	padding:2px;
+	border:1px outset threedface;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+#alertBox,#alertTitleBox,#alertTitleLabel,#alertTextBox,#alertTextLabel,#alertSourceLabel{
+	-moz-box-flex:1}
+#alertImage{
+	margin:2px;
+	width:48px;
+	list-style-image:url(chrome://global/skin/icons/notification-large.png)}
+.alertTextBox{
+	padding:2px}
+#alertBox[hasImage]>box>#alertTextBox{
+	width:248px}
+.alertSource{
+	color:graytext}
+#alertTitleBox{
+	-moz-box-pack:center;
+	-moz-box-align:center}
+.alertTitle{
+	font-weight:bold}
+
+#alertIcon{
+	margin-top:6px;
+	margin-inline-start:8px;
+	margin-inline-end:0;
+	margin-bottom:0;
+	width:16px;
+	min-height:16px;
+	max-height:16px}
+
+.alertText[clickable="true"]{
+	cursor:pointer;
+	color:-moz-nativehyperlinktext;
+	text-decoration:underline}
+.alertText[clickable="true"]:hover{
+	background-color:#CCCCFF;
+	color:black}
+.alertText[clickable="true"]:hover:active{
+	background-color:highlight;
+	color:highlighttext}
+
+#pxl-close-button[oncommand],
+.alertCloseButton{
+	margin:0;
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(177px 31px 191px 17px)}
+#pxl-close-button[oncommand]:hover,
+.alertCloseButton:hover{
+	-moz-image-region:rect(225px 31px 239px 17px)}
+#pxl-close-button[oncommand]:hover:active,
+.alertCloseButton:hover:active{
+	-moz-image-region:rect(113px 31px 127px 17px)}
+
+window[pxlalert] .alertBox{background:inherit!important}
+window[pxlalert] label{color:inherit!important}
+window[pxlalert]>#pxl-actions,
+window[pxlalert]>#pxl-values{
+	padding:0!important;
+	background:inherit!important;
+	color:inherit!important}
+html|div#pxl-title[id]{margin:0!important}
+html|div#pxl-text[id]{margin:0!important;line-height:inherit!important;height:auto!important}
+
+#alertBox:not([hasOrigin])>box>#alertTextBox>#alertFooter,
+#alertBox:not([hasIcon])>box>#alertIcon,
+#alertImage:not([src]){
+	display:none}

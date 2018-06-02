@@ -1,0 +1,445 @@
+﻿.theme-toolbar{
+	display:flex;
+	align-items:center;
+	justify-content:flex-end;
+	background-image:url(chrome://global/skin/toolbar-bg.png)}
+
+#error-message{
+	padding-top:4px;
+	text-align:center;
+	flex:1;
+	overflow:auto}
+
+#players{
+	flex:1;
+	overflow-y:auto}
+
+.finished{
+	pointer-events:none;
+	opacity:.5}
+
+.player-widget{
+	padding:1px;
+	border:1px outset threedface;
+	background-color:-moz-dialog}
+
+.animation-target{
+	box-sizing:border-box;
+	overflow:hidden;
+	flex:1;
+	text-overflow:ellipsis;
+	white-space:nowrap}
+
+.animation-target .attribute-name{
+	padding-inline-start:4px}
+
+.animation-target>span{
+	vertical-align:middle;
+	display:inline-block;
+	cursor:pointer;
+	height:16px;
+	max-width:calc(100% - 28px);
+	overflow:hidden;
+	text-overflow:ellipsis}
+.animation-target>.node-highlighter::before{
+	content:"";
+	display:block;
+	width:16px;
+	height:100%;
+	background:-moz-image-rect(url(chrome://inspector/skin/inspector.png),0,16,16,0) no-repeat center}
+
+.animation-title{
+	padding:0 2px;
+	word-wrap:break-word;
+	overflow:auto}
+
+.animation-title .meta-data{float:right}
+.animation-title strong{padding:0 3px}
+
+.timeline{
+	width:100%;
+	display:flex;
+	flex-direction:row}
+
+.playback-controls{
+	display:flex;
+	flex-direction:row}
+
+#rewind-timeline,
+#element-picker,
+#toggle-all,
+#pause-resume-timeline,
+.playback-controls>button{
+	position:relative;
+	box-sizing:content-box;
+	width:16px;
+	height:16px;
+	margin:0}
+.rate{
+	padding:0 3px;
+	text-align:center;
+	margin:0;
+	font-family:inherit}
+.rate:not(:hover),
+#toggle-all:not(:hover),
+#pause-resume-timeline:not(:hover),
+.playback-controls>button:not(:hover){
+	-moz-border-top-colors:transparent!important;
+	-moz-border-left-colors:transparent!important;
+	-moz-border-right-colors:transparent!important;
+	-moz-border-bottom-colors:transparent!important;
+	box-shadow:none!important;
+	background:none!important}
+
+#element-picker::before,
+#toggle-all::before,
+#pause-resume-timeline::before,
+.playback-controls>button::before{
+	content:"";
+	display:block;
+	width:16px;
+	height:100%;
+	background:-moz-image-rect(url(chrome://inspector/skin/inspector.png),0,16,16,0) no-repeat center}
+#toggle-all::before,
+#pause-resume-timeline::before,
+.playback-controls>button::before{
+	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,32,16,16)}
+#toggle-all.paused::before,
+#pause-resume-timeline.paused::before,
+.paused .playback-controls>.toggle::before,
+.finished .playback-controls>.toggle::before{
+	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,16,16,0)!important}
+.playback-controls>.ff::before{
+	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),0,80,16,64)!important}
+#rewind-timeline::before,
+.playback-controls>.rw::before{
+	background-image:-moz-image-rect(url(chrome://global/skin/media/video.png),16,80,32,64)!important}
+
+.sliders-container{
+	flex-grow:1;
+	margin:0 1px;
+	border:1px inset threedface;
+	background:url(chrome://global/skin/menu-bg.png)}
+.current-time{
+	-moz-appearance:none;
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%}
+.current-time::-moz-range-thumb{
+	height:100%;
+	width:4px;
+	border-radius:0;
+	border:none;
+	background-color:highlight}
+.current-time::-moz-range-progress,
+.current-time::-moz-range-track{
+	background-color:transparent}
+
+.time-display{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:0 2px;
+	min-width:50px}
+
+.animation-timeline{
+	height:100%;
+	overflow:hidden;
+	position:relative;
+	display:flex;
+	flex-direction:column}
+
+.scrubber-wrapper{
+	position:absolute;
+	left:var(--timeline-sidebar-width);
+	right:var(--keyframes-marker-size);
+	height:100%}
+
+.scrubber{
+	z-index:5;
+	pointer-events:none;
+	position:absolute;
+	height:100%;
+	width:0;
+	border-right:1px solid red;
+	box-sizing:border-box}
+.scrubber::before{
+	content:"";
+	position:absolute;
+	top:0;
+	right:-6px;
+	width:1px;
+	border-top:5px solid red;
+	border-left:5px solid transparent;
+	border-right:5px solid transparent}
+.animation-timeline>.scrubber{
+	padding-inline-start:var(--timeline-sidebar-width)}
+.scrubber-handle{
+	position:absolute;
+	height:100%;
+	top:0;
+	width:6px;
+	right:-3px;
+	cursor:col-resize;
+	pointer-events:all}
+
+.header-item,
+.time-tick{
+	position:absolute;
+	top:0;
+	bottom:0;
+	padding-top:1px;
+	border-left:.5px solid -moz-dialog;
+	color:graytext}
+
+.animations{
+	width:100%;
+	height:100%;
+	overflow-y:auto;
+	overflow-x:hidden;
+	margin:0;
+	margin-top:var(--toolbar-height);
+	padding:0;
+	list-style-type:none;
+	border-top:1px solid threedshadow}
+
+.animation{
+	--timeline-border-color:graytext;
+	--timeline-background-color:-moz-dialog;
+	height:20px;
+	width:100vw;
+	position:relative}
+.cssanimation{
+	--timeline-border-color:var(--theme-highlight-lightorange);
+	--timeline-background-color:var(--theme-contrast-background)}
+.csstransition{
+	--timeline-border-color:var(--theme-highlight-bluegrey);
+	--timeline-background-color:var(--theme-highlight-blue)}
+.scriptanimation{
+	--timeline-border-color:var(--theme-highlight-green);
+	--timeline-background-color:var(--theme-graphs-green)}
+
+.summary{
+	position:absolute;
+	width:100%;
+	height:100%}
+.summary path{
+	fill:var(--timeline-background-color);
+	stroke:var(--timeline-border-color)}
+.summary .infinity.copied{opacity:.3}
+.summary path.delay-path.negative,
+.summary path.enddelay-path.negative{
+	fill:none;
+	stroke:var(--theme-graphs-grey);
+	stroke-dasharray:2, 2}
+
+.target{
+	width:var(--timeline-sidebar-width);
+	height:100%;
+	overflow:hidden;
+	display:flex;
+	align-items:center}
+
+.track-container{
+	cursor:pointer;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:var(--timeline-sidebar-width);
+	right:calc(var(--keyframes-marker-size) + var(--scrollbar-width))}
+
+.iterations,
+.name{
+	position:absolute;
+	top:0;
+	bottom:0}
+.iterations>.delay{
+	top:-1px;
+	bottom:-1px}
+
+.iterations{
+	z-index:1;
+	border:1px solid var(--timeline-border-color);
+	border-right-width:0;
+	background-color:var(--timeline-background-color);
+	background-image:linear-gradient(to left,var(--timeline-border-color) 0,var(--timeline-border-color) 1px,transparent 1px,transparent 2px)}
+.iterations:hover{background-color:#CCCCFF}
+.iterations:hover:active{background-color:highlight}
+.iterations.infinite::before,
+.iterations.infinite::after{
+	content:"";
+	position:absolute;
+	top:0;
+	right:0;
+	width:0;
+	height:0;
+	border-right:4px solid var(--theme-body-background);
+	border-top:4px solid transparent;
+	border-bottom:4px solid transparent}
+.iterations.infinite::after{
+	bottom:0;
+	top:unset}
+
+.animation-title,
+.name{
+	z-index:1;
+	width:100%;
+	box-sizing:border-box;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	pointer-events:none}
+.track-container>.name{
+	margin:1px}
+.track-container>.name>div{
+	width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap}
+
+.delay,
+.end-delay{
+	position:absolute;
+	bottom:-.5px;
+	border-bottom:3px solid var(--theme-highlight-gray)}
+.delay::after,
+.end-delay::after{
+	content:"";
+	position:absolute;
+	display:block;
+	top:-2px;
+	width:3px;
+	height:3px;
+	border-radius:50%;
+	border:2px solid var(--theme-highlight-gray);
+	background-color:var(--theme-highlight-gray)}
+.delay.negative::after,
+.end-delay.positive::after{
+	right:-3px}
+.delay.positive::after,
+.end-delay.negative::after{
+	left:-3px}
+.delay.fill,
+.end-delay.fill{
+	border-color:var(--timeline-border-color)}
+.fill.delay::after,
+.fill.end-delay::after{
+	border-color:var(--timeline-border-color);
+	background-color:var(--timeline-border-color)}
+
+#timeline-rate{vertical-align:top}
+#timeline-rate>select{
+	-moz-appearance:none;
+	margin:0;
+	padding:0 2px;
+	width:4em;
+	text-align:center}
+#timeline-rate>select:not(:hover):not(:focus):not([open]){
+	border:2px solid transparent;
+	background:none}
+
+#timeline-current-time{
+	min-width:4em;
+	margin:0 2px;
+	padding:1px 3px}
+	
+#animation-details{
+	border-top:1px solid threedshadow;
+	flex:0 1 auto}
+.animation-data{
+	font-weight:bold;
+	padding:4px}
+
+.animated-properties{width:calc(100vw - var(--scrollbar-width))}
+
+.properties-table{
+	width:100%;
+	border-top:1px solid threedshadow}
+.properties-table td{
+	border:1px solid threedshadow;
+	border-width:0 1px 1px 0;
+	padding:4px;
+	width:50%;
+	box-sizing:border-box}
+.properties-table td:last-child{border-right-width:0}
+.properties-table tr:last-child td{border-bottom-width:0}
+
+.animation-title .meta-data{float:right}
+.animation-title strong{margin:0 4px}
+
+.fast-track .name{
+	padding-inline-end:16px;
+	background-image:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,329,28,320);
+	background-repeat:no-repeat;
+	background-position:calc(100% - 5px) center}
+
+.property{
+	height:20px;
+	position:relative}
+.property>.track-container{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:var(--timeline-sidebar-width);
+	right:var(--keyframes-marker-size);
+	z-index:1;
+	height:100%}
+.property>.name{
+	width:var(--timeline-sidebar-width);
+	padding-right:var(--keyframes-marker-size);
+	box-sizing:border-box;
+	height:100%;
+	white-space:nowrap;
+	display:flex;
+	justify-content:flex-end;
+	align-items:center;
+	background:none}
+.property>.name div{
+	overflow:hidden;
+	text-overflow:ellipsis}
+
+.frames{
+	position:absolute;
+	top:0;
+	height:100%;
+	display:flex;
+	align-items:center}
+.keyframes{
+	position:relative;
+	width:100%;
+	height:0}
+.frame{
+	position:absolute;
+	top:0;
+	width:0;
+	height:0;
+	cursor:pointer}
+.frame::before{
+	content:"";
+	display:block;
+	transform:translate(calc(var(--keyframes-marker-size) * -.5),calc(var(--keyframes-marker-size) * -.5));
+	width:var(--keyframes-marker-size);
+	height:var(--keyframes-marker-size);
+	border-radius:100%;
+	box-sizing:border-box;
+	border:1px solid var(--timeline-border-color);
+	background-color:var(--timeline-background-color)}
+.frame>.position{
+	width:25px;
+	font-size:smaller;
+	white-space:pre-line;
+	transform:translateX(-12.5px)}
+
+[empty]>#players,
+[empty]>#timeline-toolbar,
+:not([empty])>#error-message,
+#global-toolbar,
+.properties-table:empty,
+#animation-details.hidden,
+.animated-properties:not(.selected){
+	display:none}
+
+.animation:nth-child(4n + 3),
+.property:nth-child(even){
+	background-color:rgba(160,160,160,.08)}

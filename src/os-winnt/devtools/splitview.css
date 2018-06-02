@@ -1,0 +1,97 @@
+.stylesheet-rule-count{display:-moz-box!important}
+
+.stylesheet-editor-input{
+	display:-moz-box;
+	-moz-box-flex:1}
+
+.stylesheet-media-container,
+.splitview-nav{
+	padding:0;
+	margin:0;
+	border-width:0;
+	border-style:solid;
+	border:1px inset threedface;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+.splitview-nav:focus{outline:0}
+.stylesheet-media-container{border-bottom-width:0}
+
+@media (min-width:551px){
+.splitview-details.splitview-active{-moz-box-orient:horizontal}
+.splitview-nav{border-bottom-width:0}
+}
+@media (max-width:550px){
+.splitview-controller{max-height:20em!important}
+.stylesheet-details-container{-moz-box-orient:vertical}
+.splitview-nav>li,
+.stylesheet-info,
+.stylesheet-info>h1{
+	-moz-box-align:center!important}
+.stylesheet-more{
+	-moz-box-direction:normal!important;
+	-moz-box-align:center!important;
+	-moz-box-pack:end!important}
+.devtools-side-splitter{min-height:6px;cursor:ns-resize}
+.stylesheet-editor-input{border-bottom-width:1px}
+}
+
+#splitview-details-toolbar{
+	-moz-box-align:stretch;
+	background:none!important;
+	border-width:0!important}
+.splitview-portrait-resizer,
+.splitview-landscape-resizer{
+	background:none}
+.splitview-portrait-resizer{height:7px}
+.splitview-landscape-resizer{width:7px}
+
+.media-rule-label,
+.splitview-nav>li{
+	-moz-box-pack:start;
+	outline:0;
+	padding:0;
+	border:1px outset threedface;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+.media-rule-label:hover,
+.splitview-portrait-resizer:hover,
+.splitview-landscape-resizer:hover,
+.splitview-nav>li:hover{
+	background-color:#CCCCFF;
+	color:black}
+li.splitview-active{
+	background-color:highlight!important;
+	color:highlighttext!important}
+li.splitview-active .splitview-name{font-weight:bold}
+
+.placeholder{text-align:center}
+
+.splitview-main .toolbar,
+.splitview-main .toolbar>*{
+	display:-moz-box}
+.splitview-main .toolbar{
+	-moz-box-flex:1;
+	-moz-box-orient:horizontal;
+	padding-inline-start:3px}
+
+a{
+	color:-moz-hyperlinktext;
+	text-decoration:underline}
+
+h1,h2,h3{
+	font-size:inherit;
+	font-weight:normal;
+	margin:0;
+	padding:0}
+
+.splitview-nav-container .devtools-throbber{
+	display:none;
+	text-align:center}
+.loading .splitview-nav-container .devtools-throbber{
+	display:block}
+
+.splitview-nav-container>spacer{display:none}
+.splitview-nav-container>.devtools-toolbar{-moz-box-ordinal-group:0}
+.splitview-main>.devtools-toolbar{min-width:inherit}
+.profile-name{padding:2px!important;font-size:inherit!important}

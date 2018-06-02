@@ -1,0 +1,75 @@
+#layout-wrapper,
+#boxmodel-wrapper{
+	padding:0;
+	background:none!important}
+
+#propertyContainer{
+	-moz-user-select:text;
+	border-width:0!important}
+
+.row-striped{background-color:rgba(160,160,160,.09)}
+
+.property-view-hidden,
+.property-content-hidden{
+	display:none}
+
+.property-view{
+	display:flex;
+	outline:0!important;
+	padding:1px;
+	padding-inline-start:16px}
+
+.property-name-container{
+	width:202px}
+.property-value-container{
+	display:flex;
+	overflow:hidden;
+	flex:1;
+	width:1px}
+
+.property-name-container>*,
+.property-value-container>*{
+	display:inline}
+
+.other-property-value,
+.property-name,
+.property-value{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap}
+
+.other-property-value,
+.property-content{
+	padding-left:17px}
+
+.match,
+.expander:not(.expandable){visibility:hidden}
+
+.matchedselectors:not(:empty){
+	margin:4px;
+	padding:1px;
+	border-radius:3px;
+	border:1px solid threedshadow;
+	box-shadow:1px 1px 2px threedshadow, 1px 1px threedhighlight inset;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+
+.matchedselectors>p{
+	clear:both;
+	margin:0;
+	overflow-x:hidden}
+.matchedselectors>p:not(:first-of-type){border-top:1px solid threedshadow}
+
+.matched{text-decoration:line-through}
+.parentmatch{opacity:.5}
+
+.link{
+	padding:0 2px;
+	cursor:pointer;
+	float:right}
+
+.onlyuserstyles{cursor:pointer}
+.legendKey{margin:0 5px}
+#computedview-toolbar{-moz-user-select:none}
+.fix-get-selection{display:inline}
+.visually-hidden{opacity:0}

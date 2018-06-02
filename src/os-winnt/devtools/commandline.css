@@ -1,0 +1,72 @@
+@import url(chrome://global/skin/htmlbutton.css);
+
+.gcli-body{margin:0;font:message-box;cursor:default;-moz-user-select:none}
+#gcli-tooltip-connector{display:none}
+.gcli-tt-description,.gcli-tt-error{
+	padding:0 2px;
+	border-bottom:1px solid threedshadow;
+	font-weight:bold}
+.gcli-row-out pre{font-size:90%}
+.gcli-row-out td{white-space:nowrap}
+.gcli-help-arrow{color:darkblue}
+.gcli-help-description{margin:0 20px;padding:0}
+.gcli-help-parameter{margin:0 30px;padding:0}
+.gcli-menu-template{width:auto!important}
+.gcli-help-header{margin:10px 0 6px}
+.gcli-menu-name{padding:0 2px}
+.gcli-menu-descs{
+	overflow-x:hidden;
+	display:flex;
+	flex-direction:column}
+.gcli-menu-desc{padding:0 2px;color:threeddarkshadow}
+.gcli-addon-disabled{opacity:.6;text-decoration:line-through}
+.gcli-menu-typed,.gcli-breakpoint-label{font-weight:bold}
+.gcli-breakpoint-lineText{font-family:var(--monospace-font-family)}
+
+.gcli-row-out{
+	padding:0 2px;
+	line-height:1.2em;
+	border-top:none;
+	border-bottom:none;
+	color:-moz-dialogtext}
+
+.gcli-row-out p,
+.gcli-row-out h1,
+.gcli-row-out h2,
+.gcli-row-out h3{
+	margin:5px 0}
+
+.gcli-row-out h1,
+.gcli-row-out h2,
+.gcli-row-out h3,
+.gcli-row-out h4,
+.gcli-row-out h5,
+.gcli-row-out th,
+.gcli-row-out strong,
+.gcli-row-out pre{
+	color:-moz-dialogtext}
+
+.gcli-out-shortcut,
+.gcli-help-synopsis{
+	padding:0 3px;
+	margin:0 4px;
+	font-weight:normal;
+	border-radius:3px;
+	border:1px inset threedface;
+	background-color:-moz-field;
+	color:-moz-FieldText}
+
+.gcli-out-shortcut:before,
+.gcli-help-synopsis:before{
+	color:threeddarkshadow;
+	padding-inline-end:2px}
+
+.gcli-menu-highlight,
+.gcli-menu-option:hover{
+	background-color:#CCCCFF}
+
+.gcli-menu-more{
+	font-size:90%;
+	font-style:italic;
+	text-align:end;
+	padding-inline-end:2px}

@@ -1,0 +1,131 @@
+body{
+	box-sizing:border-box;
+	max-width:400px;
+	margin:0 auto!important;
+	padding:0;
+	position:relative}
+
+#header{
+	display:-moz-box;
+	box-sizing:border-box;
+	width:100%;
+	margin:0!important;
+	padding:0 4px!important;
+	vertical-align:top}
+
+#header>span{display:-moz-box}
+#element-size{-moz-box-flex:1}
+
+/*<FF53*/
+#header:-moz-dir(rtl){-moz-box-direction:reverse}
+#element-size:-moz-dir(rtl){-moz-box-pack:end}
+/*FF53*/
+#header:dir(rtl){-moz-box-direction:reverse}
+#element-size:dir(rtl){-moz-box-pack:end}
+
+#main{
+	position:absolute;
+	box-sizing:border-box;
+	margin:4px!important;
+	width:calc(100% - 2 * 4px)!important;
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+
+.legend{
+	position:absolute;
+	margin:2px 6px!important;
+	z-index:1;
+	font-weight:600!important;
+	color:-moz-dialogtext!important}
+
+#margins{
+	padding:24px!important;
+	border:1px solid graytext!important}
+
+#borders{
+	padding:24px!important;
+	border:1px solid graytext!important;
+	background:threedshadow!important}
+
+.border,
+.legend[data-box="border"]{
+	color:threedhighlight!important}
+
+#padding{
+	border:23px solid -moz-dialog!important}
+
+#content{
+	height:23px!important;
+	border:1px solid graytext!important;
+	background-color:-moz-field!important}
+
+#main>p{
+	position:absolute;
+	pointer-events:none;
+	margin:0;
+	text-align:center}
+
+#main>p>span,
+#main>p>input{
+	vertical-align:middle;
+	pointer-events:auto}
+
+.top,
+.bottom{
+	width:100%;
+	text-align:center}
+
+.margin.top{top:3px!important}
+.margin.bottom{bottom:3px!important}
+.border.top{top:27px!important}
+.border.bottom{bottom:27px!important}
+.padding.top{top:51px!important}
+.padding.bottom{bottom:51px!important}
+
+.margin,
+.size{
+	color:-moz-dialogtext!important}
+
+.size,
+.margin.left,.margin.right,
+.border.left,.border.right,
+.padding.left,.padding.right{
+	top:75px!important;
+	line-height:inherit!important}
+
+.size{width:100%!important}
+
+.margin.right,.margin.left,
+.border.left,.border.right,
+.padding.right,.padding.left{width:25px!important}
+.padding.left{left:52px!important}
+.padding.right{right:51px!important}
+.border.left{left:26px!important}
+.border.right{right:26px!important}
+.margin.right{right:0!important}
+.margin.left{left:0!important}
+
+.rotate.left:not(.editing){transform:rotate(-90deg)}
+.rotate.right:not(.editing){transform:rotate(90deg)}
+
+.editable{
+	padding:0 4px;
+	text-align:center;
+	-moz-user-select:text}
+
+.editable:hover{
+	background-color:#CCCCFF;
+	color:black}
+
+.styleinspector-propertyeditor{
+	min-width:2em;
+	border:1px solid threedshadow!important;
+	padding:0!important;
+	text-align:center}
+
+.size>span{cursor:default}
+
+body.inactive>#header>#element-position,
+body.inactive>#header>#element-size,
+body.inactive>#main>p{
+	 visibility:hidden}

@@ -1,0 +1,49 @@
+@import url(chrome://global/skin/);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#configTreeBody::-moz-tree-cell-text(user){font-weight:bold}
+#configTreeBody::-moz-tree-cell-text(locked){font-style:italic}
+
+#configDeck:not([selectedIndex="1"]){display:-moz-box}
+#configDeck>vbox{
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0}
+
+#warningScreen{
+	z-index:100;
+	font:message-box;
+	background-color:rgba(160,160,160,.5);
+	color:-moz-DialogText}
+
+#warningBox{
+	display:block;
+	width:500px;
+	margin:4em auto;
+	padding:16px;
+	padding-inline-start:70px!important;
+	border-radius:18px;
+	border:2px solid;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threeddarkshadow threedshadow;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow;
+	background:-moz-Dialog url(chrome://global/skin/icons/warning-large.png) no-repeat;
+	background-position:16px 16px;
+	color:-moz-DialogText}
+[title="about:privatebrowsing"]>#warningBox{
+	background-image:url(chrome://global/skin/icons/Privacy-48.png);border-color:rgb(129,29,187)}
+
+#warningTitle{font-size:150%;font-weight:bold}
+#warningText{margin-top:4px;font-size:110%}
+#showWarningNextTime{margin-top:4px}
+#warningButton{
+	margin-top:4px;
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(0 16px 16px 0)}
+#warningScreen>spacer{display:none}
+#filterRow{width:100%}
+#configTree{border-width:2px 0 0 0;width:100%;height:calc(100% - 26px)!important}
+#warningInnerBox{-moz-box-align:start}

@@ -1,0 +1,23 @@
+﻿svg{-moz-box-flex:1;overflow:hidden}
+
+.web-audio-inspector .error{
+	background-image:url(chrome://global/skin/icons/warning-16.png);
+	background-size:12px 12px;
+	-moz-appearance:none;
+	opacity:0;
+	transition:opacity .5s ease-out 0s}
+
+.bypass{
+	list-style-image:url(chrome://devtools/skin/debugger.png);
+	-moz-image-region:rect(0,16px,16px,0)}
+
+#automation-param-toolbar .automation-param-button[selected]{
+	background-color:highlight;
+	color:highlighttext}
+#automation-graph{
+	overflow:hidden;
+	-moz-box-flex:1}
+
+#content>.devtools-horizontal-splitter,
+.variables-view-scope>.title{display:none}
+#web-audio-editor-tabs>tabpanels{border-width:0;padding:0}

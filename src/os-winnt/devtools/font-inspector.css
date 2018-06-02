@@ -1,0 +1,85 @@
+#all-fonts{
+	display:-moz-box;
+	height:100%;
+	-moz-box-flex:1;
+	-moz-box-align:stretch;
+	-moz-box-orient:vertical;
+	overflow:auto;
+	margin:0;
+	padding:0;
+	border:1px inset threedface;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+
+#root{
+	display:flex;
+	flex-direction:column}
+#showall{
+	align-self:center}
+#font-showall{
+	flex-shrink:0}
+
+.font{
+	padding:4px;
+	border:1px outset threedface}
+
+.font-css-code{
+	display:-moz-box;
+	box-sizing:border-box;
+	width:100%;
+	height:9.5em;
+	overflow:auto;
+	padding:1px;
+	margin:0;
+	font-family:var(--monospace-font-family);
+	border:1px inset threedface;
+	background:var(--theme-body-background)}
+
+.font-preview-container{
+	overflow-x:auto;
+	max-width:calc(100vw - 8px);
+	border:1px inset threedface;
+	background:var(--theme-body-background)}
+.font-preview{
+	transition:all 150ms ease-in-out}
+.font-preview:not(:hover){
+	height:60px}
+
+.font-name{
+	font-size:120%;
+	margin:0;
+	display:inline}
+
+.font-url{
+	width:calc(100% - 4em)}
+	
+.font-is-local,
+.font-is-remote{
+	margin:0;
+	font-style:italic}
+
+.font-format-url,
+.font-css,
+.font-preview{
+	margin:0!important}
+
+.font-preview:focus,
+.font-css-code:focus,
+.font-url:focus{
+	box-shadow:0 0 0 2px #CCCCFF}
+
+.devtools-searchbox>.devtools-textinput{
+	margin:0!important;
+	border-width:0!important;
+	border-radius:inherit}
+	
+.dim>#font-container,
+.font:not(.has-code) .font-css-code,
+.font-is-local,.font-is-remote,
+.font.is-local .font-format-url,
+#font-template,#template{
+	display:none}
+
+.font.is-remote .font-is-remote,
+.font.is-local .font-is-local{
+	display:inline}

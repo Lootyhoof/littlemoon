@@ -1,0 +1,70 @@
+html,body{
+	height:100%;
+	max-height:100%;
+	overflow:hidden}
+
+body{
+	font:message-box;
+	display:-moz-box;
+	-moz-box-orient:vertical;
+	-moz-box-flex:1;
+	width:-moz-available;
+	margin:0;
+	padding:0}
+
+#root{
+	-moz-box-ordinal-group:0;
+	height:auto!important;
+	overflow:visible!important}
+
+#browser-style-checkbox{
+	margin:0;
+	padding:0}
+
+#propertyContainer{
+	display:flex;
+	flex:1;
+	flex-direction:column;
+	overflow-y:auto}
+
+.property-view{
+	padding-inline-start:16px}
+
+.property-name,
+.property-value,
+.expander{
+	outline:0;
+	display:-moz-box;
+	vertical-align:middle}
+
+.property-name{
+	width:200px;
+	overflow-x:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap}
+.property-name::after{content:":";padding:0 2px}
+
+.property-value{
+	width:auto;
+	overflow-x:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap}
+
+.matchedselectors:not(:empty){
+	margin:2px;
+	border:1px solid threedshadow;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+
+.other-property-value{display:block}
+.matchedselectors>p{margin:0;padding:0 2px}
+.matchedselectors>p:not(:first-of-type){border-top:1px solid threedshadow}
+.rule-text{direction:ltr}
+.onlyuserstyles{cursor:pointer}
+.rule-link>.link{float:right}
+.match,.expander:not(.expandable){visibility:hidden}
+
+.property-view-hidden,
+.property-content-hidden,
+#noResults[hidden]{
+	display:none}

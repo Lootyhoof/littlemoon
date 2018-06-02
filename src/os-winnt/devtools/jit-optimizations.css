@@ -1,0 +1,51 @@
+#jit-optimizations-view{
+	width:350px;
+	min-width:200px;
+	white-space:nowrap}
+
+#jit-optimizations-view div{display:block}
+#jit-optimizations-view span{display:inline-block}
+
+#jit-optimizations-view>div{
+	display:-moz-box;
+	-moz-box-flex:1;
+	-moz-box-orient:vertical}
+
+#jit-optimizations-view .optimization-header,
+#jit-optimizations-view .tree *{
+	display:flex}
+
+#jit-optimizations-view .optimization-header{
+	padding:0 2px;
+	border-bottom:1px solid threedshadow;
+	background-color:-moz-dialog}
+
+#jit-optimizations-view .header-title{
+	font-weight:bold;
+	padding-inline-end:7px}
+
+#jit-optimizations-view .tree{
+	display:-moz-box;
+	-moz-box-flex:1;
+	-moz-box-orient:vertical;
+	overflow:auto;
+	background-color:-moz-field}
+
+#jit-optimizations-view .tree-node button{
+	display:none}
+
+#jit-optimizations-view .optimization-outcome.success{color:var(--theme-highlight-green)}
+#jit-optimizations-view .optimization-outcome.failure{color:var(--theme-highlight-red)}
+
+.opt-icon::before{
+	display:inline-block;
+	content:"";
+	margin:1px;
+	background-image:url(chrome://global/skin/icons/information-16.png);
+	background-repeat:no-repeat;
+	background-size:12px;
+	width:12px;
+	height:12px}
+
+.opt-icon.warning::before{
+	background-image:url(chrome://global/skin/icons/warning-16.png)}

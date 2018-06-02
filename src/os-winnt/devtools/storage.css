@@ -1,0 +1,8 @@
+﻿#storage-tree{min-width:220px;max-width:500px;overflow:auto}
+#storage-tree .tree-widget-item[type="store"]:after{background-image:-moz-image-rect(url(chrome://devtools/skin/debugger.png),16,304,32,288)}
+#expires,#lastAccessed,#creationTime{min-width:150px}
+#storage-sidebar{max-width:500px;min-width:250px}
+@media (max-width:700px){
+#storage-tree{max-width:100%}
+#storage-table #path{display:none}
+}

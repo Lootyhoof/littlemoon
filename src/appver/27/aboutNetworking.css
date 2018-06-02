@@ -1,0 +1,99 @@
+@import url(chrome://global/skin/in-content/common.css);
+
+#body{
+	display:flex!important;
+	flex:1;
+	height:100%;
+	min-width:1px!important;
+	max-width:none!important;
+	min-height:1px!important;
+	margin:0!important;
+	padding:0!important;
+	box-shadow:none;
+	border-radius:0;
+	border-width:0!important;
+	background-color:threedshadow;
+	background-image:url(chrome://global/skin/gecko.png),url(chrome://global/skin/highlight.png);
+	background-repeat:no-repeat,repeat;
+	background-position:right 90%,left top;
+	background-attachment:fixed,fixed;
+	color:-moz-DialogText}
+
+.warningBackground{
+	z-index:10;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(160,160,160,.5)}
+.warningMessage,
+.warningBackground>.container{
+	position:absolute;
+	top:4em;
+	left:calc(50% - 200px);
+	box-sizing:border-box;
+	width:400px;
+	padding:16px;
+	-moz-padding-start:70px!important;
+	border-radius:18px;
+	border:1px outset threedface!important;
+	background:-moz-Dialog url(chrome://global/skin/icons/warning-large.png) no-repeat 16px 16px;
+	color:-moz-DialogText}
+body:-moz-locale-dir(rtl){
+	background-position:calc(100% - 16px) 16px}
+
+.category-name {
+	width:152px;
+	min-width:152px;
+	opacity:1}
+
+h1{
+	font-size:120%;
+	margin:0}
+
+.tab{
+	overflow:auto;
+	height:100%;
+	margin-top:4px;
+	border:1px inset threedface;
+	-moz-border-start:0}
+#menu ~ .tab{
+	border-inline-start:1px;
+	width:100%;
+	height:auto;
+	margin-top:24px;
+	background:-moz-dialog}
+
+.tab:not(.active),
+.warningBackground:not(.active){
+	display:none}
+
+#menu{
+	display:flex;
+	flex-direction:column;
+	min-width:120px;
+	box-sizing:border-box;
+	background:-moz-dialog;
+	border:1px outset threedface}
+
+table{
+	width:100%;
+	border-collapse:collapse;
+	border-color:threedshadow}
+tr{border-bottom:1px solid threedshadow}
+th,td{padding:0 2px}
+th:not(:last-child),
+td:not(:last-child){border-right:1px solid threedshadow}
+td{
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+#refreshdiv{
+	position:absolute;
+	top:0;
+	right:0;
+	left:120px;
+	border:1px outset threedface;
+	background:-moz-dialog}
+
+#dnslookuptool>hr{margin:0}

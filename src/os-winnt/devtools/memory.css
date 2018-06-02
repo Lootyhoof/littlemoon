@@ -1,0 +1,261 @@
+#app,#memory-tool{
+	height:100%}
+
+#memory-tool{
+	display:flex;
+	flex-direction:column;
+	--sidebar-width:190px}
+
+.devtools-toolbar{
+	display:flex;
+	align-items:center;
+	height:-moz-fit-content}
+.devtools-toolbar>.toolbar-group{
+	display:flex;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis}
+.devtools-toolbar>.toolbar-group:first-child{
+	width:calc(var(--sidebar-width) - 3px)}	
+.spacer,
+.devtools-toolbar>.toolbar-group:last-child{
+	flex:1}
+	
+.devtools-toolbar select{
+	margin:0 2px;
+	padding:0}
+
+.devtools-toolbar>label{
+	display: flex;
+	align-items:center;
+	margin-inline-end:4px}
+
+.snapshot-status,
+.take-snapshot:not(#take-snapshot),
+#heap-view .empty,
+#shortest-paths-select-node-msg{
+	animation:none;
+	margin:auto;
+	font-size:120%}
+
+#filter{
+	align-self:center;
+	flex:1;
+	border-radius:5px}
+
+#memory-tool-container{
+	display:flex;
+	flex:1;
+	overflow:hidden}
+
+.list{
+	display:flex;
+	flex-direction:column;
+	height:100%;
+	box-sizing:border-box;
+	overflow-y:auto;
+	min-width:var(--sidebar-width);
+	width:var(--sidebar-width);
+	margin:0;
+	padding:0;
+	list-style-type:none}
+
+.snapshot-list-item{
+	display:flex;
+	flex-direction:column;
+	padding:0;
+	border:1px outset threedface;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+
+.snapshot-state,
+.snapshot-totals{
+	flex:1;
+	text-align:end;
+	font-size:90%;
+	color:graytext}
+
+.snapshot-list-item.selected :-moz-any(.snapshot-state,.snapshot-totals){
+	color:inherit!important}
+
+.snapshot-info,
+.snapshot-title>span{display:inline-block;padding:2px}
+input[type="checkbox"]+span{margin:0!important;padding:0 2px!important}
+
+.snapshot-list-item>.snapshot-title>input[type=checkbox]{
+	margin:0;
+	margin-inline-end:5px}
+
+.snapshot-info>.save{float:right}
+.snapshot-info>.save:-moz-locale-dir(rtl){float:left}
+
+.vbox{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	padding:0;
+	margin:0}
+.vbox>*{
+	flex:1;
+	min-width:0}
+
+#heap-view{
+	min-width:400px;
+	display:flex;
+	flex:1;
+	background:-moz-dialog}
+
+.heap-view-panel{
+	display:flex;
+	flex-direction:column;
+	flex:1;
+	min-width:0;
+	width:100%}
+
+.tree{
+	display:flex;
+	flex-direction:column;
+	flex:1;
+	height:100%;
+	overflow-y:auto;
+	background:-moz-field}
+.heap-view-panel .tree{
+	border-width:0}
+
+.tree-node{display:flex}
+.tree-node-odd{background-color:rgba(160,160,160,.08)}
+
+.heap-tree-item:hover:not(.more-children){
+	background-color:#CCCCFF;
+	color:black}
+.list>li.selected,
+.heap-tree-item.focused{
+	background-color:highlight;
+	color:highlighttext}
+
+.header{
+	display:flex;
+	flex:0;
+	height:16px;
+	border-bottom:1px solid threedshadow;
+	background:-moz-dialog url(chrome://global/skin/menu-bg.png);
+	color:-moz-dialogtext}
+
+#shortest-paths{
+	background-color:var(--theme-body-background);
+	overflow:hidden;
+	height:100%;
+	width:100%}
+
+.heap-tree-item-field>span,
+.header>span,
+.heap-tree-number,
+.heap-tree-percent{
+	white-space:nowrap;
+	overflow:hidden}
+ 
+.heap-tree-item{
+	display:flex}
+
+#shortest-paths-header,
+.header>.heap-tree-item-name{
+	padding:0 2px}
+
+#shortest-paths-header,
+.header>span{
+	display:inline;
+	text-align:center}
+
+.heap-tree-item-individuals,
+.heap-tree-item-bytes,
+.heap-tree-item-count,
+.heap-tree-item-total-bytes,
+.heap-tree-item-total-count{
+	display:flex;
+	flex-direction:row;
+	text-align:right;
+	width:120px;
+	-moz-border-end:1px solid graytext;
+	padding-inline-end:2px}
+
+.heap-tree-item-individuals{
+	width:24px;
+	min-width:24px;
+	overflow:hidden;
+	margin:0}
+.individuals-button{
+	width:24px;
+	height:10px;
+	margin:0 2px;
+	padding:0}
+#pop-view-button,
+.individuals-button:not(:hover){
+	box-shadow:none!important;
+	border:2px solid transparent!important;
+	background:none!important}
+#pop-view-button{
+	min-height:0!important;
+	border-width:0!important;
+	margin:0!important;
+	padding:0!important}
+button#pop-view-button::before,
+button.individuals-button::before{
+	display:none}
+#pop-view-button-label{
+	padding-inline-end:3px;
+	margin-inline-end:5px}
+
+.heap-tree-item-address{
+	font-family:var(--monospace-font-family)}
+
+.heap-tree-item-name{
+	display:flex;
+	flex:1;
+	align-items:center}
+
+.heap-tree-number{
+	flex:1;
+	color:graytext}
+.heap-tree-item.focused>*>.heap-tree-number{
+	color:inherit}
+
+.heap-tree-percent{
+	width:2.5em;
+	padding-inline-start:3px;
+	padding-inline-end:3px}
+
+#heap-view .heap-view-panel[data-state="snapshot-state-error"] pre{
+	overflow-y:scroll;
+	height:100px;
+	margin:20px;
+	padding:20px;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+	
+div.no-allocation-stacks[data-reactid]{
+	width:auto!important;
+	height:auto!important;
+	padding:2px;
+	border-bottom:1px solid threedshadow;
+	background:-moz-dialog!important}
+div.no-allocation-stacks.error[data-reactid]{
+	padding-inline-start:20px!important;
+	background:-moz-dialog url(chrome://global/skin/icons/warning-16.png) 2px center no-repeat!important}
+
+.children-pointer{padding-inline-end:3px}
+.children-pointer:dir(rtl){transform:scaleX(-1)}
+
+.tree-map-container{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	background:-moz-field}
+
+.devtools-button.delete::before{background-image:-moz-image-rect(url(chrome://global/skin/global.png),272,16,288,0)}
+
+.snapshot-title>input,
+#record-allocation-stacks-checkbox{
+	opacity:1}

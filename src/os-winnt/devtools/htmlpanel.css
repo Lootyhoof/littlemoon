@@ -1,0 +1,183 @@
+body{
+	margin:0;
+	overflow:auto;
+	font-family:Menlo,Consolas,Lucida Console,monospace;
+	background-color:-moz-Field;
+	color:-moz-fieldtext}
+
+h1{font-size:110%;border-bottom:1px solid threedlightshadow}
+a{color:-moz-nativehyperlinktext}
+pre{margin:0;font:inherit}
+code{display:block;white-space:pre}
+.objectLink-textNode{white-space:pre-wrap}
+.objectLink-styleRule,.objectLink-element,.objectLink-textNode,.selectorId{color:darkblue}
+.selectorTag,.selectorId,.selectorClass{font-weight:normal}
+.nodeComment,.selectorTag{color:DarkGreen}
+.selectorClass{color:darkred}
+.nodeText,.selectorHidden>.selectorId{color:graytext}
+.selectorHidden>.selectorTag{color:green}
+.selectorHidden>.selectorClass{color:red}
+.search-selection{-moz-user-select:text}
+
+.selectorValue{
+	font-style:italic;
+	color:dimgray}
+
+.panelNode-html{
+	-moz-box-sizing:border-box;
+	padding:4px 0 0 2px}
+
+.nodeBox{
+	position:relative;
+	padding-left:13px;
+	-moz-user-select:-moz-none}
+
+.twisty{
+	position:absolute;
+	left:0;
+	top:0;
+	width:14px;
+	height:14px;
+	background:-moz-image-rect(url(chrome://global/skin/widgets.png),32,36,40,28) no-repeat center!important}
+:-moz-any(.highlightOpen,.open)>.nodeLabel>.twisty{
+	background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),40,36,48,28)!important}
+
+.nodeChildBox{
+	margin-left:12px;
+	display:none}
+
+.nodeLabel,
+.nodeCloseLabel{
+	margin:-2px 2px 0 2px;
+	border:2px solid transparent;
+	border-radius:3px;
+	padding:0 2px;
+	color:darkblue}
+
+.nodeCloseLabel{display:none}
+.nodeTag{cursor:pointer;color:-moz-nativehyperlinktext}
+.nodeValue{color:red;font-weight:normal}
+
+.nodeText,
+.nodeComment{
+	margin:0 2px;
+	vertical-align:top}
+
+.docType{
+	position:absolute;
+	top:-16px;
+	padding-left:8px;
+	color:#999;
+	white-space:nowrap;
+	font-style:italic}
+
+.htmlNodeBox{top:16px}
+
+.nodeWhiteSpace{
+	border:1px solid threedface;
+	white-space:pre;
+	margin-left:1px;
+	color:gray}
+
+.nodeWhiteSpace_Space{border:1px solid graytext}
+
+.nodeTextEntity{
+	border:1px solid gray;
+	white-space:pre;
+	margin-left:1px}
+
+.nodeBox.highlightOpen>.nodeLabel{background-color:-moz-dialog}
+
+.highlightOpen>.nodeCloseLabel,
+.highlightOpen>.nodeChildBox,
+.open>.nodeCloseLabel,
+.open>.nodeChildBox{
+	display:block}
+
+.selected>.nodeLabel>.nodeLabelBox,
+.selected>.nodeLabel{
+	border-color:Highlight;
+	background-color:Highlight;
+	color:HighlightText!important}
+
+.selected>.nodeLabel>.nodeLabelBox,
+.selected>.nodeLabel>.nodeLabelBox>.nodeTag,
+.selected>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue,
+.selected>.nodeLabel>.nodeLabelBox>.nodeText{
+	color:inherit!important}
+
+.highlighted>.nodeLabel{
+	border-color:Highlight!important;
+	background-color:cyan!important;
+	color:black!important}
+
+.highlighted>.nodeLabel>.nodeLabelBox,
+.highlighted>.nodeLabel>.nodeLabelBox>.nodeTag,
+.highlighted>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue,
+.highlighted>.nodeLabel>.nodeLabelBox>.nodeText{
+	color:black!important}
+
+.nodeHidden .nodeLabel>.nodeLabelBox,
+.nodeHidden .nodeCloseLabel,
+.nodeHidden .nodeLabel>.nodeLabelBox>.nodeText,
+.nodeHidden .nodeText{
+	color:graytext}
+
+.nodeHidden .nodeLabel>.nodeLabelBox>.nodeTag,
+.nodeHidden .nodeCloseLabel>.nodeCloseLabelBox>.nodeTag{
+	color:darkslateblue}
+
+.nodeHidden .nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue{
+	color:crimson}
+
+.nodeHidden.selected>.nodeLabel>.nodeLabelBox,
+.nodeHidden.selected>.nodeLabel>.nodeLabelBox>.nodeTag,
+.nodeHidden.selected>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue,
+.nodeHidden.selected>.nodeLabel>.nodeLabelBox>.nodeText{
+	color:steelblue!important}
+
+.nodeBox.mutated>.nodeLabel,
+.nodeAttr.mutated,
+.nodeValue.mutated,
+.nodeText.mutated,
+.nodeBox.mutated>.nodeText{
+	background-color:lavender;
+	color:red!important}
+
+.selected.mutated>.nodeLabel,
+.selected.mutated>.nodeLabel>.nodeLabelBox,
+.selected>.nodeLabel>.nodeLabelBox>.nodeAttr.mutated>.nodeValue,
+.selected>.nodeLabel>.nodeLabelBox>.nodeAttr>.nodeValue.mutated,
+.selected>.nodeLabel>.nodeLabelBox>.nodeText.mutated{
+	background-color:lavender;
+	border-color:lavender;
+	color:red!important}
+
+.logRow-dirxml{padding-left:0}
+.soloElement>.nodeBox{padding-left:0}
+
+.selected>.nodeLabel>.nodeLabelBox,
+.selected>.nodeLabel{
+	border-color:royalblue;
+	background-color:royalblue;
+	color:white!important}
+
+.highlighted>.nodeLabel{
+	border-color:royalblue!important}
+
+.editingAttributeValue{
+	background-color:#492}
+
+#attribute-editor{
+	visibility:hidden;
+	position:absolute;
+	z-index:5000;
+	background-color:white;
+	border:1px solid black}
+
+#attribute-editor.editing{
+	visibility:visible}
+
+#attribute-editor-input{
+	border:none;
+	padding:2px 5px}

@@ -1,0 +1,10 @@
+@import url(chrome://global/skin/htmlbutton.css);
+
+body{
+	overflow:hidden;
+	max-width:600px;
+	margin:auto;
+	padding:20px 0;
+	font:message-box}
+
+#close-button{float:right}

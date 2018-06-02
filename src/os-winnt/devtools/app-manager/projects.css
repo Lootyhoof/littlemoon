@@ -1,0 +1,246 @@
+@import url(chrome://global/skin/htmlbutton.css);
+
+html,body{height:100%}
+
+body{
+	display:flex;
+	overflow:hidden;
+	margin:0;
+	font:message-box}
+
+template,
+body:not(.connected) button.device-action{
+	display:none}
+
+#sidebar{
+	display:flex;
+	flex-direction:column;
+	flex:0 0 350px;
+	overflow:hidden;
+	z-index:100;
+	margin-bottom:8px;
+	position:relative}
+
+.manifest-editor{
+	display:flex;
+	flex-direction:column;
+	margin:4px;
+	height:40%}
+.manifest-header>h2,
+.manifest-editor>h2{
+	margin:0;
+	display:none}
+[type="packaged"]>.editable,
+[type="hosted"]>.viewable{display:inline-block}
+#project-list{
+	height:100%;
+	overflow:auto;
+	margin:4px}
+	border:1px inset threedface}
+.variables-view{
+	flex:1;
+	border:1px inset threedface}
+.variables-view-container{border:0}
+
+#project-list:not([projects-count="0"])>#no-project{
+	display:none}
+
+#no-project{
+	padding:100px 20px 0;
+	font-weight:bold;
+	color:graytext;
+	font-size:110%}
+
+.project-item{
+	display:flex;
+	position:relative;
+	margin:0;
+	padding:2px;
+	border:1px outset threedface;
+	background:transparent}
+.project-item:hover{
+	background-color:#CCCCFF;
+	color:black}
+.project-item.selected{
+	background-color:highlight;
+	color:highlighttext}
+
+.manifest-button-save{
+	float:right;
+	padding-inline-start:20px;
+	background:-moz-image-rect(url(chrome://global/skin/global.png),368,16,384,0) 2px center no-repeat}
+
+.button-remove{
+	width:22px;
+	height:22px;
+	position:absolute;
+	right:5px;
+	bottom:5px;
+	border:1px solid transparent;
+	background:-moz-image-rect(url(chrome://global/skin/global.png),272,16,288,0) 2px center no-repeat;
+	visibility:hidden}
+.project-item:hover .button-remove{
+	visibility:visible}
+
+.button-remove:hover{
+	border:1px outset threedface;
+	background-color:#CCCCFF}
+.button-remove:hover:active{
+	border-style:inset;
+	background-color:highlight}
+
+.project-item-icon{
+	width:32px;
+	height:32px;
+	margin:2px}
+
+.project-item-meta{
+	flex-grow:1;
+	padding:0 2px}
+
+.project-item-type{
+	float:right;
+	text-transform:uppercase;
+	font-weight:bold;
+	padding:2px 10px;
+	background-color:graytext;
+	color:threedhighlight}
+
+#new-packaged-project,
+#new-hosted-project{
+	display:flex;
+	flex-direction:column;
+	margin:2px;
+	padding:2px;
+	min-height:16px;
+	padding-inline-start:20px;
+	border:1px outset threedface;
+	background:ButtonFace -moz-image-rect(url(chrome://global/skin/global.png),80,16,96,0) no-repeat 2px 2px;
+	color:ButtonText}
+#new-packaged-project:hover,
+#new-hosted-project:hover{
+	background-color:#CCCCFF;
+	color:black}
+#new-packaged-project:hover:active,
+#new-hosted-project:hover:active{
+	background-color:highlight;
+	color:highlighttext}
+
+#new-hosted-project-wrapper{
+	display:flex}
+
+#url-input{
+	flex-grow:1;
+	width:90%;
+	padding:2px;
+	margin-top:4px;
+	border:1px inset threedface;
+	background:-moz-field;
+	color:-moz-fieldtext}
+
+#lense{
+	height:100%;
+	flex-grow:1;
+	display:flex;
+	z-index:1;
+	overflow:hidden}
+
+#lense>div{
+	display:flex;
+	flex-grow:1;
+	flex-direction:column}
+
+#lense>div>.project-details{
+	overflow:auto;
+	margin:10px;
+	padding:10px;
+	border:1px inset threedface;
+	background:-moz-Dialog url(chrome://global/skin/highlight.png)!important;
+	color:-moz-DialogText!important}
+
+.project-details,
+.project-metadata{flex-grow:1}
+.project-status{display:flex}
+
+.project-title{
+	flex-direction:row;
+	display:flex;
+	align-items:flex-start}
+
+.project-title>h1{
+	flex-grow:1;
+	font-size:120%}
+
+.project-location{
+	cursor:pointer;
+	font-family:Menlo,Consolas,Lucida Console,monospace;
+	color:graytext}
+
+.project-location:hover{
+	text-decoration:underline}
+
+.project-header{
+	display:flex}
+
+.project-icon{
+	flex-shrink:0;
+	margin:10px;
+	width:64px;
+	height:64px;
+	margin-right:10px}
+
+.project-item-status{
+	margin:2px;
+	width:8px;
+	background-color:#F2B33F}
+
+.project-status>p{
+	text-transform:uppercase;
+	font-weight:bold;
+	padding:2px 5px;
+	border-radius:5px;
+	margin:4px;
+	background-color:graytext;
+	color:threedhighlight}
+
+.project-buttons{display:flex}
+.project-button-debug,
+.project-button-update{
+	display:flex;
+	padding-inline-start:20px;
+	background:-moz-image-rect(url(chrome://browser/skin/icons.png),0,192,16,176) 2px center no-repeat}
+.project-button-update{background-image:-moz-image-rect(url(chrome://global/skin/global.png),128,16,144,0)}
+
+.project-item-status[status="valid"],
+.project-validation.valid{background-color:darkgreen}
+.project-item-status[status="warning"],
+.project-validation.warning{background-color:#F2B33F}
+.project-item-status[status="error"],
+.project-validation.error{background-color:red}
+
+.project-warnings,
+.project-errors,
+.project-item-warnings,
+.project-item-errors{
+	margin-top:6px;
+	padding-inline-start:20px;
+	background:url(chrome://global/skin/icons/warning-16.png) no-repeat}
+.project-item-errors,
+.project-errors{
+	background-image:url(chrome://global/skin/icons/error-16.png)}
+.project-warnings,
+.project-errors{
+	font-family:Menlo,Consolas,Lucida Console,monospace;
+	margin:10px}
+
+:not([status="valid"])>.project-validation.valid,
+:not([status="warning"])>:-moz-any(.project-validation.warning,.project-item-warnings,.project-warnings),
+:not([status="error"])>:-moz-any(.project-validation.error,.project-item-errors,.project-errors){
+	display:none}
+
+.project-type{
+	display:none;
+	margin-left:10px}
+[type="hosted"]>.project-type.hosted,
+[type="packaged"]>.project-type.packaged{
+	display:inline}

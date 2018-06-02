@@ -268,30 +268,37 @@ window[hc-MaxFull="false"] #restore-button{-moz-image-region:rect(16px,32px,32px
 #treecolAutoCompleteImage{max-width:36px}
 
 .ac-result-type-bookmark,
-.autocomplete-treebody::-moz-tree-image(bookmark,treecolAutoCompleteImage){
+.autocomplete-treebody::-moz-tree-image(bookmark,treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(bookmark,treecolAutoCompleteImage){
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(160px,16px,176px,0)}
 .ac-result-type-tag,
-.autocomplete-treebody::-moz-tree-image(tag,treecolAutoCompleteImage){
+.autocomplete-treebody::-moz-tree-image(tag,treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(tag,treecolAutoCompleteImage){
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(320px,32px,336px,16px)}
 .ac-result-type-keyword,
-.autocomplete-treebody::-moz-tree-image(keyword,treecolAutoCompleteImage){
+.autocomplete-treebody::-moz-tree-image(keyword,treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(keyword,treecolAutoCompleteImage){
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(64px,16px,80px,0)}
 
 .ac-url-text{font-size:90%;color:-moz-nativehyperlinktext;padding:0 3px}
 
-.autocomplete-richlistitem[selected="true"] .ac-url-text{color:HighlightText!important}
+.autocomplete-richlistitem[selected="true"] .ac-url-text,
+.private-autocomplete-richlistitem[selected="true"] .ac-url-text{color:HighlightText!important}
 
 richlistitem[type~="action"][actiontype="switchtab"]>.ac-url-box>.ac-action-icon{
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(480px,32px,496px,16px)}
 
 .ac-extra>.ac-comment{font-size:inherit}
-.autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment){color:GrayText}
+.autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment),
+.private-.autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment){color:GrayText}
 .autocomplete-treebody::-moz-tree-cell-text(suggesthint,treecolAutoCompleteComment),
-.autocomplete-treebody::-moz-tree-cell-text(suggestfirst,treecolAutoCompleteComment){font-size:smaller}
+.autocomplete-treebody::-moz-tree-cell-text(suggestfirst,treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(suggesthint,treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(suggestfirst,treecolAutoCompleteComment){font-size:smaller}
 
 #flagfox-button{min-height:20px}
 
@@ -643,7 +650,8 @@ toolbar[iconsize="small"]>toolbaritem#go-button{-moz-box-orient:horizontal!impor
 .popup-notification-icon[popupid="addon-install-blocked"],
 .popup-notification-icon[popupid="addon-install-origin-blocked"],
 .popup-notification-icon[popupid="addon-install-failed"],
-.popup-notification-icon[popupid="addon-install-complete"]{
+.popup-notification-icon[popupid="addon-install-complete"],
+.popup-notification-icon[popupid="addon-theme-change"]{
 	list-style-image: url(chrome://browser/skin/addon-64.png)}
 .popup-notification-icon[popupid="click-to-play-plugins"]{
 	list-style-image: url(chrome://mozapps/skin/plugins/pluginGeneric.png)}
@@ -1334,127 +1342,17 @@ html|*#highlighter-nodeinfobar-pseudo-classes,
 .full-screen-approval-button[oncommand*="false"]{
 	-moz-image-region:rect(16px 16px 32px 0)}
 
-#social-sidebar-splitter,
-#social-sidebar-box{
-	border:1px outset threedface}
-#social-sidebar-splitter{border-right-width:0}
-#social-sidebar-box{border-left-width:0}
-
-#social-toolbar-button-box,
-#social-toolbar-item{
-	border:1px inset threedface}
-
-#social-provider-image,
-#social-provider-button,
-#social-toolbar-item>.toolbarbutton-1,
-.social-notification-container>.toolbarbutton-1{
-	-moz-image-region:rect(0,16px,16px,0);
-	margin:0!important}
-
-#context-sharelink,
-#social-share-button,
-#social-mark-button,
-#social-provider-button:not([style^="list"]),
-.social-notification-icon-image{
-	list-style-image:url(chrome://browser/skin/icons.png);
-	-moz-image-region:rect(0,112px,16px,96px)}
-
-.social-provider-menuitem[checked="true"]{font-weight:bold}
-.social-notification-icon-hbox{pointer-events:none}
-
 .toolbarbutton-badge-container,
-.social-notification-container{
+.toolbarbutton-badge-stack{
 	position:relative}
 
-.toolbarbutton-badge,
-.social-notification-container>.toolbarbutton-1[badge]::after{
+.toolbarbutton-badge{
 	position:absolute;
 	top:-4px;
 	right:-2px}
-.toolbarbutton-badge:-moz-locale-dir(rtl),
-.social-notification-container>.toolbarbutton-1[badge]:-moz-locale-dir(rtl)::after{
+.toolbarbutton-badge:-moz-locale-dir(rtl){
 	left:-2px;
 	right:auto}
-
-.social-notification-icon-label{
-	margin-top:-6px;
-	-moz-margin-end:-4px}
-.toolbarbutton-badge:not([badge=""]),
-.social-notification-icon-label,
-.social-notification-container>.toolbarbutton-1[badge]:not([badge=""])::after{
-	background-color:rgb(240,61,37);
-	border-radius:3px;
-	box-shadow:1px 1px threeddarkshadow;
-	padding:0 3px;
-	color:white;
-	font-size:9px;
-	font-weight:bold}
-
-#social-toolbar-item>toolbarbutton>.toolbarbutton-text,
-#social-provider-image>.button-menu-dropmarker,
-#social-provider-button>.toolbarbutton-menu-dropmarker,
-.social-notification-icon-label[value=""]{
-	display:none}
-
-#social-provider-image:hover,
-#social-toolbar-item>box.toolbarbutton-1:hover{
-	border:1px outset threedface;
-	background-color:#CCCCFF;
-	color:black}
-#social-provider-image:hover:active,
-#social-toolbar-item>box.toolbarbutton-1:hover:active,
-#social-toolbar-item>.toolbarbutton-1[open="true"],
-.social-notification-container>.toolbarbutton-1[open="true"]{
-	border:1px inset threedface;
-	background-color:highlight;
-	color:highlighttext}
-
-#social-statusarea-popup{
-	margin-top:0;
-	margin-left:-12px;
-	margin-right:-12px}
-
-#social-statusarea-user,
-.social-statusarea-user{
-	color:-moz-nativehyperlinktext;
-	font-weight:bold;
-	cursor:pointer}
-#social-statusarea-user:hover,
-.social-statusarea-user:hover{
-	text-decoration:underline}
-	
-#socialUserPortrait,
-#social-statusarea-user-portrait,
-.social-statusarea-user-portrait{
-	width:52px;
-	height:52px;
-	padding:2px;
-	margin:2px;
-	background-color:-moz-Field}
-.social-statusarea-user-portrait[src="chrome://global/skin/icons/information-32.png"],
-#social-statusarea-user-portrait[src="chrome://global/skin/icons/information-32.png"]{
-	background-image:url(chrome://browser/skin/social_blank_48.png)!important;
-	background-position:center;
-	background-repeat:no-repeat}
-
-#socialUserDisplayName{
-	background:none;
-	border-width:0;
-	min-width:1px}
-
-#social-statusarea-notloggedin>.button-box>.button-icon,
-#social-statusarea-username>.button-box>.button-icon{
-	display:none}
-#social-statusarea-notloggedin:hover,
-#social-statusarea-username:hover,
-#socialUserDisplayName:hover{
-	background-color:#CCCCFF;
-	text-decoration:underline}
-#social-statusarea-notloggedin:hover:active,
-#social-statusarea-username:hover:active,
-#socialUserDisplayName:hover:active{
-	background-color:highlight;
-	color:highlighttext}
 
 #gcli-output,
 #gcli-tooltip{

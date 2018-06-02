@@ -3,55 +3,70 @@
 
 textbox{cursor:default}
 	
-.autocomplete-history-dropmarker{
+.autocomplete-history-dropmarker,
+.private-autocomplete-history-dropmarker{
 	border:1px solid transparent;
 	padding:1px;
 	-moz-box-align:center;
 	-moz-box-pack:center;
 	list-style-image:url(chrome://global/skin/widgets.png);
 	-moz-image-region:rect(10px 60px 20px 50px)}
-.autocomplete-history-dropmarker:hover:not([disabled="true"]){
+.autocomplete-history-dropmarker:hover:not([disabled="true"]),
+.private-autocomplete-history-dropmarker:hover:not([disabled="true"]){
 	border:1px outset threedface;
-	background-color:#CCCCFF}
-.autocomplete-history-dropmarker[open="true"]{
+	background:#CCCCFF url(chrome://global/skin/menu-bg.png)}
+.autocomplete-history-dropmarker[open="true"],
+.private-autocomplete-history-dropmarker[open="true"]{
 	background-color:Highlight!important;
 	-moz-image-region:rect(0 60px 10px 50px)}
-.autocomplete-history-dropmarker[disabled="true"]{
+.autocomplete-history-dropmarker[disabled="true"],
+.private-autocomplete-history-dropmarker[disabled="true"]{
 	-moz-image-region:rect(10px 70px 20px 60px)}
 
 panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"],
-.autocomplete-history-popup{
+.autocomplete-history-popup,
+panel[type="private-autocomplete"],
+panel[type="private-autocomplete-richlistbox"],
+.private-autocomplete-history-popup{
 	max-height:25em}
 
-.autocomplete-treecol{
+.autocomplete-treecol,.private-autocomplete-treecol{
 	margin:0!important;
 	border:0!important;
 	padding:0!important}
 
-.autocomplete-treebody::-moz-tree-cell-text{padding-left:3px}
-.autocomplete-treebody::-moz-tree-row(menuactive){background-color:#CCCCFF}
-.autocomplete-treebody::-moz-tree-row(selected){background-color:Highlight}
-.autocomplete-treebody::-moz-tree-cell-text(selected){color:HighlightText!important}
+.autocomplete-treebody::-moz-tree-cell-text,
+.private-autocomplete-treebody::-moz-tree-cell-text{padding-left:3px}
+.autocomplete-treebody::-moz-tree-row(menuactive),
+.private-autocomplete-treebody::-moz-tree-row(menuactive){background-color:#CCCCFF}
+.autocomplete-treebody::-moz-tree-row(selected),
+.private-autocomplete-treebody::-moz-tree-row(selected){background-color:Highlight}
+.autocomplete-treebody::-moz-tree-cell-text(selected),
+.private-autocomplete-treebody::-moz-tree-cell-text(selected){color:HighlightText!important}
 
-.autocomplete-dropmarker-bkgnd-box{display:none}
+.autocomplete-dropmarker-bkgnd-box,.private-autocomplete-dropmarker-bkgnd-box{display:none}
 
 .autocomplete-tree,
-.autocomplete-richlistbox{
+.autocomplete-richlistbox,,
+.private-autocomplete-tree,
+.private-autocomplete-richlistbox{
 	margin:0;
 	border:0!important;
 	padding:0!important;
 	background:-moz-Dialog none!important;
 	color:MenuText}
 
-.autocomplete-richlistitem{
+.autocomplete-richlistitem,.private-autocomplete-richlistitem{
 	-moz-box-orient:vertical;
 	padding:2px;
 	border:0!important}
-.autocomplete-richlistitem:not(:first-child){
+.autocomplete-richlistitem:not(:first-child),
+.private-autocomplete-richlistitem:not(:first-child){
 	border-top:1px solid graytext!important}
 
-.autocomplete-richlistitem[selected="true"]{
+.autocomplete-richlistitem[selected="true"],
+.private-autocomplete-richlistitem[selected="true"]{
 	background:Highlight none!important;
 	color:HighlightText!important}
 
@@ -66,6 +81,7 @@ panel[type="autocomplete-richlistbox"],
 html|*.ac-emphasize-text{font-weight:bold}
 .ac-title,.ac-url{overflow:hidden}
 
-.autocomplete-treebody::-moz-tree-image(treecolAutoCompleteValue){max-width:16px;height:16px}
+.autocomplete-treebody::-moz-tree-image(treecolAutoCompleteValue),
+.private-autocomplete-treebody::-moz-tree-image(treecolAutoCompleteValue){max-width:16px;height:16px}
 
 textbox[nomatch="true"][highlightnonmatches="true"]{color:red}

@@ -18,9 +18,15 @@ skin	favres		littlemoon	favres/
 skin	os		littlemoon	os-linux/
 skin	os		littlemoon	os-darwin/	os=Darwin
 skin	os		littlemoon	os-winnt/	os=WINNT
-skin    graphical-timeline littlemoon	gt/
-skin    imagetoolbar	littlemoon	imagetoolbar/
-skin    abouthome	littlemoon	abouthome/
-skin    jsterm		littlemoon	jsterm/
-skin    printedit	littlemoon	printedit/
-skin    speeddial	littlemoon	speeddial/
+skin	graphical-timeline littlemoon	gt/
+skin	imagetoolbar	littlemoon	imagetoolbar/
+skin	abouthome	littlemoon	abouthome/
+skin	jsterm		littlemoon	jsterm/
+skin	printedit	littlemoon	printedit/
+skin	speeddial	littlemoon	speeddial/
+skin	appver littlemoon	appver/27/ appversion<28.0.0a1
+skin	appver littlemoon	appver/28/ appversion>=28.0.0a1
+skin	devtools	littlemoon	devtools/
+
+override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
+override chrome://browser/skin/permissions/aboutPermissions.css chrome://browser/skin/preferences/aboutPermissions.css
