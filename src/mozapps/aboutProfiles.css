@@ -1,0 +1,67 @@
+#body{
+	height:calc(100vh - 7em);
+	position:relative;
+	flex:1 1 0%;
+	display:flex!important;
+	flex-direction:column;
+	margin:2em 4em!important;
+	max-width:none!important}
+
+.page-subtitle{margin-bottom:1em;width:calc(100% - 220px)}
+
+#action-box{
+	position:absolute;
+	width:200px;
+	right:16px;
+	top:16px;
+	padding:4px;
+	text-align:center;
+	border-radius:12px;
+	border:1px inset threedshadow;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+#action-box:-moz-dir(rtl){left:16px;right:auto}
+#action-box:dir(rtl){left:16px;right:auto}
+#action-box h3{margin:0}
+#action-box button{width:-moz-available}
+
+hr{display:none}
+
+#profiles{
+	flex:1;
+	overflow:auto;
+	border:1px inset threedface;
+	background:-moz-field;
+	color:-moz-fieldtext}
+#profiles>div{
+	border:1px outset threedface;
+	background:-moz-dialog;
+	color:-moz-dialogtext}
+
+#profiles h2,
+#profiles h3{
+	margin:4px}
+
+table{
+	width:calc(100% - 8px);
+	margin:4px;
+	border:1px solid threedshadow;
+	font:message-box;
+	text-align:start;
+	border:1px solid threedshadow;
+	border-spacing:0;
+	border-collapse:collapse;
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+
+th,td{
+	unicode-bidi:plaintext;
+	text-align:start;
+	border:1px solid threedshadow;
+	padding:0 2px}
+th{
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+th.column{
+	white-space:nowrap;
+	width:0}

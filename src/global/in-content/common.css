@@ -1,0 +1,287 @@
+@import url(chrome://global/skin/htmlbutton.css);
+@namespace url(http://www.w3.org/1999/xhtml);
+
+:root{
+	--in-content-selected-text:-moz-buttontext;
+	--in-content-primary-button-background:-moz-buttonface;
+	--in-content-primary-button-background-hover:#CCCCFF;
+	--in-content-primary-button-background-active:highlight;
+	--in-content-border-focus:highlight}
+
+:root:not(dialog){
+	font:message-box;
+	-moz-user-select:-moz-none;
+	cursor:default;
+	height:100%;
+	margin:0!important;
+	min-width:1px!important;
+	max-width:none!important;
+	background-color:threedshadow;
+	background:linear-gradient(180deg,-moz-dialog,graytext 200%) fixed;
+	color:-moz-DialogText}
+
+*|*#categories{
+	box-sizing:border-box;
+	margin-top:20px;
+	min-width:31px;
+	overflow:hidden;
+	padding:0!important;
+	border-width:0!important;
+	background:none!important}
+*|*#categories::after{
+	transition:all 300ms ease-in-out;
+	position:fixed;
+	display:block;
+	content:"";
+	width:32px;
+	height:31px;
+	bottom:30px;
+	left:60px;
+	background:url(chrome://global/skin/firefox.png) center no-repeat;
+	background-size:32px 31px}
+*|*#categories:hover::after{
+	animation:rotateIt .25s linear 10s,rotateIt .5s linear 10.25s,rotateIt 1s linear 10.75s,rotateIt 4s ease-out 11.75s;
+}
+@keyframes rotateIt{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+#categories>hr{display:none}
+
+*|*.category{
+	overflow:hidden;
+	-moz-box-align:center;
+	padding:1px;
+	outline-width:0;
+	font-size:110%;
+	border:1px solid transparent;
+	background:none}
+*|*.category:not([disabled="true"]):not([selected="true"]):hover{
+	border:1px outset threedface;
+	background-color:#CCCCFF}
+*|*.category.selected,
+*|*.category.selected[id],
+*|*.category[selected],
+*|*.category[selected][id]{
+	pointer-events:none;
+	font-weight:600;
+	border:1px inset threedface!important;
+	background-color:rgba(255,255,255,.5)!important;
+	color:-moz-DialogText!important}
+
+*|*#categories:focus>.selected,
+*|*#categories:focus>[selected]{
+	box-shadow:0 0 1px #9999CC!important}
+
+*|*.category-name{
+	transition:opacity,min-width,width,font-size;
+	transition-duration:300ms;
+	transition-timing-function:ease-in-out;
+	line-height:100%;
+	pointer-events:none;
+	display:-moz-box;
+	box-sizing:border-box;
+	width:120px;
+	min-width:120px;
+	padding-inline-start:2px}
+
+@media (max-width:700px){
+*|*.category-name{
+	opacity:0;
+	width:0;
+	font-size:0;
+	min-width:1px}
+*|*#categories::after{
+	bottom:3px!important;
+	left:3px}
+}
+*|*#categories::after{
+	bottom:30px!important;
+	top:auto!important}
+
+
+*|*.category-icon{
+	width:32px;
+	height:32px}
+
+#sectionTitle{
+	display:inline-flex;
+	flex:1}
+#sectionTitle,
+.header-name{
+	font-size:120%;
+	font-weight:bold;
+	margin-bottom:0}
+
+@-moz-document regexp(".*debugging.*") {
+#body{
+	display:flex!important;
+	border:0;
+	border-radius:0;
+	margin:0!important;
+	padding:0!important;
+	max-width:none!important;
+	border-top:1px solid threedhighlight!important;
+	-moz-border-top-colors:threedhighlight!important;
+	background:url(chrome://global/skin/highlight.png)}
+#body>.main-content,
+#body>.app>.main-content{
+	display:flex;
+	flex-direction:column;
+	flex:1;
+	max-width:800px;
+	box-sizing:border-box}
+
+button{min-width:20px!important;padding:1px!important;margin:1px!important}
+#load-addon-from-file{max-width:35vw}
+
+.panel{
+	display:flex;
+	flex-direction:column;
+	height:100%;
+	margin:0!important}
+
+.category-icon{
+	padding:16px;
+	box-sizing:border-box}
+[value=addons]>.category-icon,
+.category-icon[src*="debugging-addons.svg"],
+.target-icon[src*="extensionGeneric.svg"]{
+	background-image:-moz-image-rect(url(chrome://mozapps/skin/extensions/addons.png),0,32,32,0)}
+[value=workers]>.category-icon,
+.category-icon[src*="debugging-workers.svg"],
+.target-icon[src*="debugging-workers.svg"]{
+	background-image:-moz-image-rect(url(chrome://mozapps/skin/extensions/addons.png),0,480,32,448)}
+.category-icon[src*="debugging-tabs.svg"],
+.target-icon[src*="tabs-icon.svg"],
+.target-icon[src*="debugging-tabs.svg"]{
+	background-image:-moz-image-rect(url(chrome://mozapps/skin/extensions/addons.png),0,544,32,512)}
+
+.addons-debugging-label{display:inline-block!important}
+
+.addons-top{
+	position:fixed;
+	top:2px;
+	left:164px;
+	right:calc(100vw - 964px);
+	transition:left 300ms ease-in-out}
+@media (max-width:964px){
+.addons-top{right:0}
+}
+@media (max-width:700px){
+.addons-top{left:31px}
+}
+
+#addons-panel,
+#tabs-panel,
+#workers-panel{
+	height:100%;
+	overflow-y:auto;
+	margin:0!important;
+	margin-top:20px!important;
+	border:1px inset threedface;
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+
+*|h2{
+	margin:0!important;
+	padding:2px;
+	text-align:center}
+.header{display:none}
+.targets>*|p{
+	text-align:center;
+	color:graytext}
+.target-container{
+	align-items:center!important;
+	margin:0!important;
+	padding:2px;
+	border-top:1px solid threedhighlight;
+	border-bottom:1px solid threedshadow;
+	background-color:-moz-dialog;
+	color:-moz-dialogtext}
+.target-icon{
+	margin:2px!important;
+	width:16px!important;
+	height:16px!important;
+	background-size:16px!important}
+.target-icon[src="chrome://devtools/skin/images/globe.svg"]{
+	background-image:url(chrome://branding/content/icon32.png)}
+
+.target,
+.target-detail{font-size:inherit!important;margin:0!important}
+.target-status{
+	padding:0 2px!important;
+	font-size:90%!important}
+
+.addons-install-error,
+.service-worker-multi-process{
+	padding:2px 4px!important;
+	margin:0 4px 4px!important;
+	line-height:inherit!important;
+	border-radius:9px;
+	border:1px outset threedface;
+	background-color:-moz-dialog!important;
+	color:-moz-dialogtext!important}
+
+.service-worker-multi-process .update-button{
+	margin:2px 0!important}
+
+.warning{
+	background:url(chrome://global/skin/icons/warning-16.png)!important;
+	width:16px!important;
+	height:16px!important;
+	margin-inline-end:2px!important;
+	vertical-align:bottom!important}
+
+.addons-install-error .warning,
+.service-worker-multi-process .warning,
+.inverted-icons .target-icon{
+	filter:none!important}
+
+.addon-target-container{
+	display:flex;
+	background:-moz-dialog!important;
+	box-shadow:none!important;
+	margin:0!important;
+	padding:0!important;
+	border-top:1px solid threedhighlight;
+	border-bottom:1px solid threedshadow;
+	transition:none!important}
+.addon-target-container:hover{
+	box-shadow:none!important}
+
+.addon-target-container .target{padding:0!important}
+.addon-target-container .target-icon{
+	margin:2px!important;
+	width:32px!important;
+	height:32px!important;
+	background-size:32px auto!important}
+
+.addon-target-container .target-name{
+	font-size:110%!important;
+	font-weight:600!important}
+.addon-target-container:hover .target-name{
+	background-color:#CCCCFF;
+	color:black}
+
+.addon-target-actions{border-top:none!important}
+
+.addon-target-button{
+	font-size:inherit!important;
+	border-width:1px!important;
+	border-style:solid!important;
+	border-color:transparent!important;
+	margin:0!important;
+	padding:1px!important;
+	background:none!important;
+	color:-moz-dialogtext!important}
+.addon-target-button:hover{
+	background:#CCCCFF!important;
+	color:black!important;
+	text-decoration:none!important}
+.addon-target-button:enabled:hover:active{
+	background:highlight!important;
+	color:highlighttext!important}
+.addon-target-button:disabled{
+	color:graytext!important}
+.addon-target-button:first-of-type{
+	margin-inline-start:2px!important}
+}

@@ -1,0 +1,17 @@
+﻿.warningBackground{
+	border:1px inset threedface;
+	border-radius:4px;
+	padding:4px;
+	background:infobackground repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(255,160,0,.1)8px,rgba(255,160,0,.1)16px);
+	color:darkred;
+	float:right}
+.warningBackground:-moz-locale-dir(rtl){
+	float:left}
+	
+.warningMessage{
+    background:url(chrome://global/skin/icons/warning-16.png) left center no-repeat;
+    padding-inline-start:20px}
+
+.warningBackground:not(.active),
+.inactive{
+	display:none}
