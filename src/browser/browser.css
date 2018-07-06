@@ -49,6 +49,11 @@ browser{background-color:-moz-Field}
 #sidebar-box:not([collapsed="true"]):not([hidden="true"]) ~ #appcontent{
 	border-left:1px inset threedface}
 
+.browserContainer > findbar{
+  background-color: -moz-dialog;
+  color: -moz-dialogtext;
+  text-shadow: none}
+
 window[aiosOrient="right"][aiosMode="ltr"] #appcontent{
 	border-left-width:0!important}
 window[aiosOrient="right"][aiosMode="ltr"] #aios-toggle-toolbox[hidden="false"] ~ #appcontent,
