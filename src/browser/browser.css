@@ -640,7 +640,8 @@ toolbar[iconsize="small"]>toolbaritem#go-button{-moz-box-orient:horizontal!impor
 .popup-notification-icon[popupid="geolocation"]{
 	list-style-image:url(chrome://browser/skin/geo_64.png)}
 .popup-notification-icon[popupid="password-save"],
-.popup-notification-icon[popupid="password-change"]{
+.popup-notification-icon[popupid="password-change"],
+.popup-notification-icon[popupid="password"]{
 	list-style-image:url(chrome://browser/skin/key-64.png)}
 .popup-notification-icon[popupid="indexedDB-permissions-prompt"],
 .popup-notification-icon[popupid="indexedDB-quota-prompt"],
