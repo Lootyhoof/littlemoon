@@ -16,10 +16,24 @@ windowdragbox,
 .wizard-buttons-btm{
 	-moz-binding:url(chrome://global/content/bindings/general.xml#windowdragbox)}
 
-resizer[type="window"],
-#titlebar,
+resizer[type="window"]{display:none}
+
+#titlebar{height: 22px}
+
+#main-window:not([privatebrowsingmode=temporary]):not(:-moz-lwtheme) > #titlebar > #titlebar-content > #titlebar-buttonbox-container,
+#main-window:not([drawintitlebar=true]):not(:-moz-lwtheme) > #titlebar {
+  display: none}
+
+#titlebar-spacer{
+  display: none}
+
 #titlebar-buttonbox-container{
-	display:none}
+  margin-left: 7px;
+  margin-top: 3px}
+
+#main-window:-moz-lwtheme > #titlebar{
+  -moz-appearance: none !important}
+
 toolbox:-moz-window-inactive{
 	color:inherit!important;
 	opacity:1!important}
