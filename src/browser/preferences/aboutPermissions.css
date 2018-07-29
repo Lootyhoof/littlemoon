@@ -4,7 +4,9 @@
 	font:message-box;
 	background:threedshadow url(chrome://global/skin/highlight.png);
 	color:-moz-DialogText}
-#permissions-content{-moz-box-align:start}
+#permissions-content{
+  -moz-box-align:start;
+  height: 100%}
 #sites-box{
 	width:25em;
 	padding:2px;
