@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.8.0
+- add PM28 newtab styling
+- add tabbrowser findbar styling
+- improve about:permissions sizing
+- fix disappearing titlebar in private mode on macOS
+- fix favicon sizes in password manager
+
 ### 1.7.0
 - add initial Pale Moon 28 support
 - sync statusbar styling with default
