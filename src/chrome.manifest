@@ -24,8 +24,6 @@ skin	abouthome	littlemoon	chrome/abouthome/
 skin	jsterm		littlemoon	chrome/jsterm/
 skin	printedit	littlemoon	chrome/printedit/
 skin	speeddial	littlemoon	chrome/speeddial/
-skin	appver littlemoon	chrome/appver/27/ appversion<28.0.0b1
-skin	appver littlemoon	chrome/appver/28/ appversion>=28.0.0b1
 skin	devtools	littlemoon	chrome/devtools/
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css

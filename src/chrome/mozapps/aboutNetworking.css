@@ -1,1 +1,112 @@
-@import url("chrome://appver/skin/aboutNetworking.css");
+@import url(chrome://global/skin/in-content/common.css);
+
+#body{
+	display:flex!important;
+	flex:1;
+	height:100%;
+	min-width:1px!important;
+	max-width:none!important;
+	min-height:1px!important;
+	margin:0!important;
+	padding:0!important;
+	box-shadow:none;
+	border-radius:0;
+	border-width:0!important;
+	border-top:1px solid threedhighlight!important;
+	-moz-border-top-colors:threedhighlight!important;
+	background:-moz-dialog url(chrome://global/skin/gecko.png) no-repeat right 90%;
+	color:-moz-DialogText}
+
+.warningBackground{
+	z-index:10;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(160,160,160,.5)}
+.warningMessage,
+.warningBackground>.container{
+	position:absolute;
+	top:4em;
+	left:calc(50% - 250px);
+	box-sizing:border-box;
+	width:500px;
+	padding:16px;
+	padding-inline-start:70px!important;
+	border-radius:18px;
+	border:1px outset threedface!important;
+	background:-moz-Dialog url(chrome://global/skin/icons/warning-large.png) no-repeat 16px 16px;
+	color:-moz-DialogText}
+body:-moz-locale-dir(rtl){
+	background-position:calc(100% - 16px) 16px}
+	
+/* don't shrink category name, as there are no icons */
+*|*#categories{min-width:164px!important}
+
+*|*.category-name{
+	font-size:inherit!important;
+	width:152px!important;
+	min-width:152px!important;
+	opacity:1!important}
+*|*#categories[id]::after{
+	top:auto!important;
+	bottom:30px!important;
+	left:60px!important}
+
+.main-content{
+	display:flex;
+	flex-direction:column;
+	flex:1;
+	max-width:800px;
+	box-sizing:border-box}
+
+h1{
+	font-size:120%;
+	margin:0}
+
+.header{height:20px;min-height:20px}
+
+#refreshDiv{
+	display:inline-flex;
+	float:right}
+
+#refreshButton{padding:0}
+#refreshDiv>*{margin:0}
+
+.tab{
+	overflow:auto;
+	height:100%;
+	border:1px inset threedface;
+	background-color:-moz-field;
+	color:-moz-fieldtext}
+#menu ~ .tab{
+	width:100%;
+	height:auto;
+	margin-top:24px;
+	background:-moz-dialog}
+
+#sectionTitle,
+.tab:not(.active),
+.warningBackground:not(.active){
+	display:none}
+
+#menu{
+	display:flex;
+	flex-direction:column;
+	width:120px}
+
+table{
+	width:100%;
+	border-collapse:collapse;
+	border-color:threedshadow;
+	border-style:hidden}
+tr{border-bottom:1px solid threedshadow}
+th,td{padding:0 2px}
+th:not(:last-child),
+td:not(:last-child){border-right:1px solid threedshadow}
+#refreshdiv{
+	position:absolute;
+	top:0;
+	right:0}
+#dnslookuptool>hr{margin:0}
