@@ -1,32 +1,32 @@
-skin	communicator	littlemoon	communicator/
-skin	global		littlemoon	global/
-skin	browser		littlemoon	browser/
-skin	inspector	littlemoon	inspector/
-skin	mozapps		littlemoon	mozapps/
-skin	help		littlemoon	help/
-skin	downbar		littlemoon	downbar/
-skin	reporter	littlemoon	reporter/
-skin	offline		littlemoon	offline/
-skin	quicknote	littlemoon	quicknote/
-skin	tabprefs	littlemoon	tabprefs/
-skin	dataman		littlemoon	dataman/
-skin	dlman		littlemoon	dlman/
-skin	desktop		littlemoon	desktop/
-skin	locationbar2	littlemoon	locationbar2/
-skin	downloadmgr	littlemoon	downloadmgr/
-skin	favres		littlemoon	favres/
-skin	os		littlemoon	os-linux/
-skin	os		littlemoon	os-darwin/	os=Darwin
-skin	os		littlemoon	os-winnt/	os=WINNT
-skin	graphical-timeline littlemoon	gt/
-skin	imagetoolbar	littlemoon	imagetoolbar/
-skin	abouthome	littlemoon	abouthome/
-skin	jsterm		littlemoon	jsterm/
-skin	printedit	littlemoon	printedit/
-skin	speeddial	littlemoon	speeddial/
-skin	appver littlemoon	appver/27/ appversion<28.0.0b1
-skin	appver littlemoon	appver/28/ appversion>=28.0.0b1
-skin	devtools	littlemoon	devtools/
+skin	communicator	littlemoon	chrome/communicator/
+skin	global		littlemoon	chrome/global/
+skin	browser		littlemoon	chrome/browser/
+skin	inspector	littlemoon	chrome/inspector/
+skin	mozapps		littlemoon	chrome/mozapps/
+skin	help		littlemoon	chrome/help/
+skin	downbar		littlemoon	chrome/downbar/
+skin	reporter	littlemoon	chrome/reporter/
+skin	offline		littlemoon	chrome/offline/
+skin	quicknote	littlemoon	chrome/quicknote/
+skin	tabprefs	littlemoon	chrome/tabprefs/
+skin	dataman		littlemoon	chrome/dataman/
+skin	dlman		littlemoon	chrome/dlman/
+skin	desktop		littlemoon	chrome/desktop/
+skin	locationbar2	littlemoon	chrome/locationbar2/
+skin	downloadmgr	littlemoon	chrome/downloadmgr/
+skin	favres		littlemoon	chrome/favres/
+skin	os		littlemoon	chrome/os-linux/
+skin	os		littlemoon	chrome/os-darwin/	os=Darwin
+skin	os		littlemoon	chrome/os-winnt/	os=WINNT
+skin	graphical-timeline littlemoon	chrome/gt/
+skin	imagetoolbar	littlemoon	chrome/imagetoolbar/
+skin	abouthome	littlemoon	chrome/abouthome/
+skin	jsterm		littlemoon	chrome/jsterm/
+skin	printedit	littlemoon	chrome/printedit/
+skin	speeddial	littlemoon	chrome/speeddial/
+skin	appver littlemoon	chrome/appver/27/ appversion<28.0.0b1
+skin	appver littlemoon	chrome/appver/28/ appversion>=28.0.0b1
+skin	devtools	littlemoon	chrome/devtools/
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
 override chrome://browser/skin/permissions/aboutPermissions.css chrome://browser/skin/preferences/aboutPermissions.css
