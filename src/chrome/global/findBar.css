@@ -25,7 +25,7 @@ findbar{
 	-moz-image-region:rect(225px,31px,239px,17px)}
 
 .find-status-icon{
-	-moz-margin-start:8px}
+	margin-inline-start:8px}
 .find-status-icon[status="notfound"]{
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(448px 16px 464px 0)}

@@ -20,7 +20,7 @@
 .hostLabel{
 	width:30em;
 	font-weight:bold;
-	-moz-margin-end:1em}
+	margin-inline-end:1em}
 .permissionLabel{
 	width:10em}
 #cookieRemove,#prefsRemove,#pwdRemove,#forgetButton,#fdataRemove,

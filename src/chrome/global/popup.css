@@ -26,7 +26,7 @@ tooltip>label{margin:0 2px}
 
 menupopup>menu>menupopup,
 popup>menu>menupopup{
-	-moz-margin-start:0;
+	margin-inline-start:0;
 	margin-top:-1px}
 
 panel[titlebar]{

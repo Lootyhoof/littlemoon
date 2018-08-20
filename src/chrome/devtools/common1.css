@@ -221,7 +221,7 @@ toolbarbutton:hover:not(.toolbarbutton-menubutton-button),
 .devtools-sidebar-tabs tabs>tab:hover:not([selected="true"]){
 	border:1px solid graytext!important;
 	border-top-color:threedhighlight!important;
-	-moz-border-start-color:threedhighlight!important;
+	border-inline-start-color:threedhighlight!important;
 	background-color:#CCCCFF!important;
 	color:black!important}
 
@@ -246,7 +246,7 @@ toolbarbutton:hover:active:not(.toolbarbutton-menubutton-button),
 	box-shadow:inset 1px 1px 1px threedshadow!important;
 	border:1px solid threedhighlight!important;
 	border-top-color:graytext!important;
-	-moz-border-start-color:graytext!important;
+	border-inline-start-color:graytext!important;
 	background-color:highlight!important;
 	color:highlighttext!important}
 
@@ -268,7 +268,7 @@ toolbarbutton[checked="true"]:not(.toolbarbutton-menubutton-button),
 .devtools-sidebar-tabs tabs>tab[selected="true"]{
 	border:1px solid threedhighlight!important;
 	border-top-color:graytext!important;
-	-moz-border-start-color:graytext!important;
+	border-inline-start-color:graytext!important;
 	background:rgba(255,255,255,.5)!important;
 	color:-moz-dialogtext!important}
 .tabs .tabs-menu-item:hover:active>a[class],
@@ -347,7 +347,7 @@ vbox>#stackframes,#breakpoints,#expressions,#sources,#tracer-traces,#shells,#pla
 #timings-tabpanel{
 	background:-moz-dialog}
 
-#sources,#tracer-traces{-moz-border-start-width:0}
+#sources,#tracer-traces{border-inline-start-width:0}
 #callstack-list{
 	border-top:1px solid threedshadow;
 	background:-moz-field;
@@ -372,7 +372,7 @@ hbox>#editor,#globalsearch-splitter,#breakpoints,#profiler-report,.stylesheet-ed
 
 @media (-moz-windows-compositor){
 #shells,.stylesheet-editor-input,#expressions,#variables,#profiler-report,#event-listeners,#snapshot-filmstrip,#players,.iframe-layoutview,.accordion{
-	-moz-border-end-width:0}
+	border-inline-end-width:0}
 }
 window>#variables{border-top-width:0}
 
@@ -482,13 +482,13 @@ window>#variables{border-top-width:0}
 .variable-or-property[overridden]>tooltip>label.overridden{
 	margin-inline-start:2px;
 	padding-inline-start:2px;
-	-moz-border-end:2px dotted threeddarkshadow}
+	border-inline-end:2px dotted threeddarkshadow}
 	
 .variable-or-property[safe-getter]>tooltip>label[value=WebIDL],
 .variable-or-property[safe-getter]>tooltip>label.WebIDL{
 	margin-inline-start:2px;
 	padding-inline-start:2px;
-	-moz-border-start:2px groove threedface;
+	border-inline-start:2px groove threedface;
 	color:var(--theme-highlight-green)}
 
 .variables-view-delete{
@@ -575,7 +575,7 @@ vbox:not(:focus)>.title>.token-other{color:graytext}
 .dbg-results-line-number{
 	min-width:35px;
 	padding-inline-end:4px;
-	-moz-border-end:1px solid threedshadow;
+	border-inline-end:1px solid threedshadow;
 	text-align:end;
 	background:-moz-dialog;
 	color:-moz-dialogtext}
@@ -1073,7 +1073,7 @@ span.eval-text{
 .devtools-responsive-container{-moz-box-orient:vertical}
 .devtools-responsive-container>.devtools-side-splitter{cursor:n-resize}
 #shaders-pane{max-height:200px}
-#network-table,#profiles-list,#markup-box>iframe,#players{-moz-border-end-width:0}
+#network-table,#profiles-list,#markup-box>iframe,#players{border-inline-end-width:0}
 .devtools-responsive-container>.devtools-sidebar-tabs:not([pane-collapsed]){
 	min-height:35vh;
 	max-height:75vh}
@@ -1277,8 +1277,8 @@ span.eval-text{
 	border-top:3px solid transparent;
 	border-bottom:3px solid transparent;
 	top:calc(50% - 3px)}
-.line-graph-widget-tooltip[arrow=start][with-arrows=true]::before{-moz-border-end:3px solid -moz-dialog;left:-3px}
-.line-graph-widget-tooltip[arrow=end][with-arrows=true]::before{-moz-border-start:3px solid -moz-dialog;right:-3px}
+.line-graph-widget-tooltip[arrow=start][with-arrows=true]::before{border-inline-end:3px solid -moz-dialog;left:-3px}
+.line-graph-widget-tooltip[arrow=end][with-arrows=true]::before{border-inline-start:3px solid -moz-dialog;right:-3px}
 .line-graph-widget-tooltip[type=maximum],
 .line-graph-widget-tooltip[type=minimum]{left:14px}
 .line-graph-widget-tooltip[type=average]{right:4px}
@@ -2460,7 +2460,7 @@ footer>a:visited:hover:active,
 	border-radius:9px 9px 0 0;
 	background:-moz-dialog url(chrome://global/skin/menu-bg.png);
 	border:1px solid ThreeDHighLight;
-	-moz-border-end-color:graytext;
+	border-inline-end-color:graytext;
 	border-bottom:0;
 	padding:0;
 	margin:2px 0 0 3px}

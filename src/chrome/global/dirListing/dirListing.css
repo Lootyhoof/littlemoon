@@ -37,12 +37,12 @@ a:focus{outline:1px solid highlight!important}
 .up,#UI_showHidden>label{
 	display:-moz-box;
 	padding:1px;
-	-moz-padding-end:2px;
+	padding-inline-end:2px;
 	border:1px solid transparent;
 	color:-moz-DialogText}
 
 .up{
-	-moz-padding-start:20px;
+	padding-inline-start:20px;
 	background-image:-moz-image-rect(url(chrome://global/skin/global.png),208,32,224,16)!important;
 	background-repeat:no-repeat!important;
 	background-position:2px center!important}
@@ -76,21 +76,21 @@ th:not(:first-child){text-align:center}
 td:not(:first-child){width:0;text-align:right;padding:1px 3px!important}
 td{vertical-align:top;padding:0}
 
-th:first-child{-moz-padding-end:2em}
-th:first-child+th{-moz-padding-end:1em}
-td:first-child+td{text-align:right;-moz-padding-end:1em;white-space:nowrap}
-td:first-child+td+td{-moz-padding-start:1em;-moz-padding-end:.5em;white-space:nowrap}
-td:last-child{-moz-padding-start:.5em;white-space:nowrap}
+th:first-child{padding-inline-end:2em}
+th:first-child+th{padding-inline-end:1em}
+td:first-child+td{text-align:right;padding-inline-end:1em;white-space:nowrap}
+td:first-child+td+td{padding-inline-start:1em;padding-inline-end:.5em;white-space:nowrap}
+td:last-child{padding-inline-start:.5em;white-space:nowrap}
 
 td>a{color:-moz-FieldText!important}
-.dir,.symlink,.file{padding:0 2px;-moz-margin-start:0!important}
+.dir,.symlink,.file{padding:0 2px;margin-inline-start:0!important}
 .file>img,
-.dir::before{padding:0!important;margin:0 2px!important;-moz-margin-end:2px!important;vertical-align:top!important}
+.dir::before{padding:0!important;margin:0 2px!important;margin-inline-end:2px!important;vertical-align:top!important}
 tr:nth-child(even){background-color:rgba(160,160,160,0.1)}
 .file>img{margin:2px!important}
 
 #clear-reports{
-	-moz-padding-start:20px;
+	padding-inline-start:20px;
 	background-image:-moz-image-rect(url(chrome://global/skin/global.png),272,16,288,0);
 	background-repeat:no-repeat;
 	background-position:3px center}

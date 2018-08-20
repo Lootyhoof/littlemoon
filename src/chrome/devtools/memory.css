@@ -177,7 +177,7 @@ input[type="checkbox"]+span{margin:0!important;padding:0 2px!important}
 	flex-direction:row;
 	text-align:right;
 	width:120px;
-	-moz-border-end:1px solid graytext;
+	border-inline-end:1px solid graytext;
 	padding-inline-end:2px}
 
 .heap-tree-item-individuals{

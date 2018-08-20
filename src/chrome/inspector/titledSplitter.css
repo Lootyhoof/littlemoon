@@ -1,7 +1,7 @@
 
 .titled-splitter{cursor:default}
 .titledsplitter-dragbar{min-height:6px;cursor:n-resize!important}
-.titledsplitter-text{font-weight:bold;-moz-margin-start:2px}
+.titledsplitter-text{font-weight:bold;margin-inline-start:2px}
 .titledsplitter-closeimage{
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(224px 32px 240px 16px)}

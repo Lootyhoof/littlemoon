@@ -15,7 +15,7 @@
 .mainDesc{
 	font-weight:bold}
 .inputColumn{
-	-moz-margin-end:2px}
+	margin-inline-end:2px}
 .pin{
 	font-size:18pt;
 	width:4em;

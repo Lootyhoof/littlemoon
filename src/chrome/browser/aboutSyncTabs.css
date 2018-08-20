@@ -26,7 +26,7 @@
 #tabsListHeading{
 	font-size:140%;
 	font-weight:bold;
-	-moz-margin-start:28px}
+	margin-inline-start:28px}
 
 richlistitem[type="tab"]{
 	margin:2px 4px;
@@ -63,5 +63,5 @@ richlistitem.desktop[type="client"]{
 	color:inherit}
 
 .tabIcon{
-	-moz-padding-start:2px;
+	padding-inline-start:2px;
 	padding-top:2px}

@@ -1,6 +1,6 @@
 .status{color:-moz-dialogtext}
 .statusIcon{
-	-moz-margin-start:2px;
+	margin-inline-start:2px;
 	height:16px;
 	width:16px}
 

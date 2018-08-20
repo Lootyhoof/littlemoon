@@ -6,7 +6,7 @@ wizardpage{height:360px;width:700px}
 #updates[currentpageid="finished"] .wizard-button[dlgtype="finish"],
 #updates[currentpageid="finishedBackground"] .wizard-button[dlgtype="finish"]{
 	font-weight:bold}
-#licenseContent,#incompatibleListbox{-moz-margin-start:6px;-moz-margin-end:6px}
+#licenseContent,#incompatibleListbox{margin-inline-start:6px;margin-inline-end:6px}
 #incompatibleListBox{margin-bottom:6px}
 
 link{

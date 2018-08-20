@@ -12,7 +12,7 @@
 
 .textbox-overflow-ellipsis,
 .textbox-presentation-box{
-	-moz-margin-start:1px}
+	margin-inline-start:1px}
 
 .textbox-presentation-box,
 .textbox-presentation-segment,

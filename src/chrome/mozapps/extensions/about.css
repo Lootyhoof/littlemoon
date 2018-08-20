@@ -33,7 +33,7 @@
 	border-width:0!important}
 	
 #extensionIcon{
-	-moz-margin-end:4px;
+	margin-inline-end:4px;
 	max-width:32px;
 	max-height:32px;
 	list-style-image:url(chrome://mozapps/skin/extensions/addons.png);

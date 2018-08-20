@@ -91,13 +91,13 @@
 
 .action-list{
 	margin-top:10px;
-	-moz-margin-start:5em}
+	margin-inline-start:5em}
 
 .action-header{
 	margin-bottom:10px}
 
 #confirm .addon{
-	-moz-margin-start:3em;
+	margin-inline-start:3em;
 	-moz-box-align:center}
 
 .addon:not([active]) .addon-icon,

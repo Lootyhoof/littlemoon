@@ -76,7 +76,7 @@ html|button[disabled="true"]{
 html|input[type="submit"][value="OK"],
 html|input[type="submit"][value="Cancel"],#errorCancel,
 #btnTryAgain,#errorTryAgain,#restart-button{
-	-moz-padding-start:18px;
+	padding-inline-start:18px;
 	background-repeat:no-repeat;
 	background-position:2px center}
 #closeButton:-moz-locale-dir(rtl),#btnCloseSidebar:-moz-locale-dir(rtl),#allow-button:-moz-locale-dir(rtl),

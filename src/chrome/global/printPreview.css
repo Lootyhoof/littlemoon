@@ -23,9 +23,9 @@ button[oncommand="PrintUtils.exitPrintPreview();"]:hover:active{
 
 .toolbar-portrait-page{
 	padding:0 1px;
-	-moz-margin-start:2px!important;
+	margin-inline-start:2px!important;
 	-moz-image-region:rect(56px 85px 72px 70px)}
 .toolbar-landscape-page{
 	padding:0 1px;
-	-moz-margin-end:2px!important;
+	margin-inline-end:2px!important;
 	-moz-image-region:rect(56px 101px 72px 85px)}

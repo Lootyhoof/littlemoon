@@ -13,7 +13,7 @@ checkbox{
 	list-style-image:inherit}
 .checkbox-label{
 	margin:0;
-	-moz-margin-start:2px;
+	margin-inline-start:2px;
 	padding:1px 0 0 0}
 checkbox:not([label])>.checkbox-label-box>.checkbox-label{
 	display:none}

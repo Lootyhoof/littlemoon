@@ -52,7 +52,7 @@ filefield{
 	width:16px;
 	height:16px;
 	margin:1px;
-	-moz-margin-end:3px}
+	margin-inline-end:3px}
 filefield[disabled="true"] .fileFieldIcon{
 	opacity:.5;
 	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
@@ -68,14 +68,14 @@ filefield[disabled="true"] .fileFieldIcon{
 #fileExtension{width:5em}
 #extensionChildren::-moz-tree-image(fileExtension){margin:0 5px 0 0}
 #typeField{font-weight:bold}
-#typeIcon{width:32px;height:32px;-moz-margin-end:3px}
+#typeIcon{width:32px;height:32px;margin-inline-end:3px}
 
 #typeField{
 	font-weight:bold;
 	background-color:transparent;
 	margin:1px!important;
-	-moz-margin-start:3px!important;
-	-moz-margin-end:2px!important}
+	margin-inline-start:3px!important;
+	margin-inline-end:2px!important}
 
 #extensionField{
 	color:GrayText;
@@ -89,9 +89,9 @@ filefield[disabled="true"] .fileFieldIcon{
 	background-color:-moz-Dialog;
 	color:-moz-DialogText}
 
-#defaultAppIcon{width:16px;height:16px;-moz-margin-start:2px}
-#defaultAppName{-moz-margin-start:4px!important;font-weight:bold}
-#chooseClientAppCell{-moz-padding-end:12px}
+#defaultAppIcon{width:16px;height:16px;margin-inline-start:2px}
+#defaultAppName{margin-inline-start:4px!important;font-weight:bold}
+#chooseClientAppCell{padding-inline-end:12px}
 
 #sync-settings-group,
 #sync-clients-group,

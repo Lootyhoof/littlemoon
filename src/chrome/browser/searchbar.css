@@ -40,7 +40,7 @@ searchbar .menu-iconic-icon{
 	background:#00CC00 none}
 
 .searchbar-engine-image{
-	-moz-margin-end:1px;
+	margin-inline-end:1px;
 	width:16px;
 	height:16px}
 

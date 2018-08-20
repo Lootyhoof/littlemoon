@@ -48,7 +48,7 @@
 .newtab-cell{
 	background-color:-moz-Dialog}
 .newtab-cell:empty{outline:1px dashed threedface;outline-offset:-1px}
-.newtab-cell:not(:last-child){-moz-margin-end:20px}
+.newtab-cell:not(:last-child){margin-inline-end:20px}
 
 .newtab-site{
 	box-shadow:0 0 1px graytext;

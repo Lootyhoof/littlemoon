@@ -64,7 +64,7 @@ row>label{text-align:end}
 row>textbox{margin-top:0;margin-bottom:0}
 
 groupbox.collapsable caption{
-	-moz-margin-start:2px;
+	margin-inline-start:2px;
 	border:1px solid transparent}
 
 groupbox.collapsable caption:hover{
@@ -88,7 +88,7 @@ groupbox.collapsable[closed="true"] caption .caption-icon{
 
 separator.thin{height:0}
 
-#securityBox description{-moz-margin-start:4px;font-weight:normal}
+#securityBox description{margin-inline-start:4px;font-weight:normal}
 
 #imagetree{min-height:10em}
 treechildren::-moz-tree-cell-text(broken){
@@ -130,7 +130,7 @@ button[oncommand^="onSubscribeFeed"]{
 	font-weight:bold}
 .permission>hbox>checkbox{
 	width:8em;
-	-moz-margin-end:2em}
+	margin-inline-end:2em}
 vbox.permission{
 	padding:1px;
 	border-top:1px solid ThreeDHighLight;

@@ -15,10 +15,10 @@ notification[type="critical"]{
 	-moz-box-align:center}
 
 .messageImage{
-	-moz-margin-start:3px;
+	margin-inline-start:3px;
 	list-style-image:url(chrome://global/skin/icons/warning-16.png)!important}
 .messageText{
-	-moz-margin-start:3px;
+	margin-inline-start:3px;
 	font-weight:bold}
 .notification-button,
 .messageButton{

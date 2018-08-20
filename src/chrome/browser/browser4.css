@@ -9,8 +9,8 @@
 #appmenu-popup menupopup{
 	margin-top:-1px}
 
-#appmenuPrimaryPane{-moz-border-end:1px outset threedface}
-#appmenuSecondaryPane{-moz-border-start:1px outset threedface}
+#appmenuPrimaryPane{border-inline-end:1px outset threedface}
+#appmenuSecondaryPane{border-inline-start:1px outset threedface}
 
 .appmenu-edit-button{
 	padding:0;
@@ -43,8 +43,8 @@
 
 #TabsToolbar[tabsontop="true"][inFullscreen="true"]{
 	border-top-width:0!important;
-	-moz-padding-start:0!important;
-	-moz-padding-end:0!important}
+	padding-inline-start:0!important;
+	padding-inline-end:0!important}
 
 tabpanels.plain,.tabbrowser-tabbox{border-width:0}
 
@@ -171,7 +171,7 @@ toolbarbutton.tabs-newbutton:hover:active,
 	margin:0!important}
 
 /*TabMixPlus*/
-.tab-text{border:0!important;-moz-margin-start:0!important}
+.tab-text{border:0!important;margin-inline-start:0!important}
 .tabs-newtab-topbox,
 .tabs-alltabs-topbox,.tabs-alltabs-stack,
 .tabs-closebutton-topbox,.tabs-closebutton-box{
@@ -239,7 +239,7 @@ menuitem[oncommand*="removeTab"]{
 	border-radius:0;
 	border-color:transparent}
 .tabbrowser-tab:not(:first-child){
-	-moz-margin-start:2px}
+	margin-inline-start:2px}
 
 .tabbrowser-tab:hover:not([selected="true"]){
 	border-style:outset;
@@ -258,8 +258,8 @@ menuitem[oncommand*="removeTab"]{
 .tabbrowser-tab:not([pinned]){
 	min-width:40px}
 .tabbrowser-tab[pinned]{
-	-moz-padding-start:2px!important;
-	-moz-padding-end:2px!important}
+	padding-inline-start:2px!important;
+	padding-inline-end:2px!important}
 
 .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]){
 	opacity:1!important;
@@ -339,11 +339,11 @@ panel[dimmed="true"]{
 	opacity:.5}
 
 #zoom-out-button{
-	-moz-margin-end:0;
+	margin-inline-end:0;
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(512px,16px,528px,0)}
 #zoom-in-button{
-	-moz-margin-end:0;
+	margin-inline-end:0;
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(512px,32px,528px,16px)}
 #sync-setup-appmenu,
@@ -454,7 +454,7 @@ stack>.tabs-alltabs-button>.toolbarbutton-text,
 	border:1px solid transparent}
 
 .splitmenu-menu{
-	-moz-margin-start:-1px}
+	margin-inline-start:-1px}
 
 .splitmenu-menuitem:hover:not([disabled="true"]),
 .splitmenu-menuitem:hover:not([disabled="true"])+.splitmenu-menu,

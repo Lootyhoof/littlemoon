@@ -37,7 +37,7 @@ h1{
 #errorTitle,
 #errorLongContent,
 #errorTryAgain{
-	-moz-margin-start:34px}
+	margin-inline-start:34px}
 
 #errorShortDesc{
 	border-bottom:1px solid red;
@@ -46,7 +46,7 @@ h1{
 
 #errorLongDesc{font-size:110%}
 p,ul{margin:4px 0}
-ul{-moz-padding-start:16px;list-style:square}
+ul{padding-inline-start:16px;list-style:square}
 ul>li,ol>li{margin-bottom:4px}
 
 #errorTryAgain{margin-top:1em}
@@ -59,7 +59,7 @@ ul>li,ol>li{margin-bottom:4px}
 	color:white}
 :root.blacklist #errorTitle,
 :root.blacklist #errorLongContent,
-:root.blacklist #errorTryAgain{-moz-margin-start:70px}
+:root.blacklist #errorTryAgain{margin-inline-start:70px}
 :root.blacklist a{color:white}
 :root.blacklist #errorTryAgain{display:none}
 
@@ -86,7 +86,7 @@ ul>li,ol>li{margin-bottom:4px}
 
 #errorPageContainer.certerror>#errorTitle,
 #errorPageContainer.certerror>#errorLongContent,
-#errorPageContainer.certerror>#errorTryAgain{-moz-margin-start:37px}
+#errorPageContainer.certerror>#errorTryAgain{margin-inline-start:37px}
 
 #url-fixer-section{margin-left:24px!important}
 #url-fixer-section>p:first-of-type{font-size:110%!important}

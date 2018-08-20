@@ -104,7 +104,7 @@ statusbarpanel[oncommand]:hover:active,
 .progressmeter-statusbar{height:16px}
 
 #sidebar-search-container{
-	-moz-padding-start:2px;
+	padding-inline-start:2px;
 	min-height:24px}
 
 #newfolder,#newseparator,#fileBookmark,#moveBookmark,#newbookmark{
@@ -501,7 +501,7 @@ textbox#temp{padding:0!important}
 	opacity:.5;
 	color:inherit!important}
 #maps_instructions+vbox>vbox[style]{
-	-moz-border-end:0!important}
+	border-inline-end:0!important}
 #maps_instructions+vbox>vbox:first-child{
 	border-top-width:0!important}
 #maps_instructions+vbox>vbox,
@@ -511,7 +511,7 @@ textbox#temp{padding:0!important}
 	border:1px inset threedface!important}
 #sbminimap>hbox,
 #minimap-deck>vbox{
-	-moz-border-start:0!important;
+	border-inline-start:0!important;
 	background:-moz-dialog!important;
 	color:-moz-dialogtext!important}
 #address_list{
@@ -558,7 +558,7 @@ textbox#temp{padding:0!important}
 #kml-list+spacer+description[style*="color: #fff"],
 vbox>label[style*="color: #fff"]{color:inherit!important}
 #maps-deck>vbox[style^="padding"]{padding:0!important}
-#minimap-maps-minibrowser{-moz-border-start:0!important;border-bottom-width:0!important}
+#minimap-maps-minibrowser{border-inline-start:0!important;border-bottom-width:0!important}
 
 /*PDF Download*/
 #CompanyPane>spacer{display:none}
@@ -632,7 +632,7 @@ tabs#editor-tabbox-tabs>tab{
 	min-width:1px!important}
 maskbutton>toolbarbutton>.toolbarbutton-icon,
 #browsedir>.toolbarbutton-icon{
-	-moz-margin-end:1px!important}
+	margin-inline-end:1px!important}
 maskbutton toolbarbutton:hover>toolbarbutton>.toolbarbutton-icon,
 #browsedir:hover>.toolbarbutton-icon{
 	opacity:1!important}
@@ -661,7 +661,7 @@ browser#shortcuts-browser{
 	margin:1px!important;
 	border:1px inset threedface!important}
 #facebook-toolbar-status>.textbox-input[type]{margin:0!important}
-#facebook-search{-moz-padding-start:1px;margin:1px!important}
+#facebook-search{padding-inline-start:1px;margin:1px!important}
 #facebook-search .textbox-input-box{-moz-box-align:center!important}
 
 #facebook-link-menu,
@@ -690,8 +690,8 @@ browser#shortcuts-browser{
 #su_splitter_first,
 #su_splitter_first_flexbox{display:none}
 
-#leftBox{-moz-margin-start:10px!important}
-#rightBox{-moz-margin-end:10px!important}
+#leftBox{margin-inline-start:10px!important}
+#rightBox{margin-inline-end:10px!important}
 
 #shortcutGrid{
 	padding:2px!important;
@@ -759,7 +759,7 @@ browser#shortcuts-browser{
 #roboformlite_autosave_close[command]:hover:active{
 	border-style:inset!important}
 #roboformlite_autosave_close>.toolbarbutton-icon{
-	-moz-margin-end:0!important}
+	margin-inline-end:0!important}
 #roboformlite_autosave_savebutton{
 	padding:1px!important;
 	font:message-box!important}

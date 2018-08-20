@@ -5,7 +5,7 @@ body.private>#errorPageContainer{background-image:url(chrome://browser/skin/Priv
 #clearRecentHistoryDesc>p{font-size:110%}
 #moreInfo{
 	font-size:110%;
-	-moz-padding-start:25px;
+	padding-inline-start:25px;
 	background:url(chrome://global/skin/icons/information-16.png) no-repeat top left}
 #moreInfoLink{padding:1px 2px}
 #moreInfoLink:hover{background-color:#CCCCFF}

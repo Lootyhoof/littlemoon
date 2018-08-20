@@ -40,7 +40,7 @@ a:focus{
 	display:-moz-box;
 	-moz-box-align:center;
 	padding-top:2px;
-	-moz-padding-end:8px}
+	padding-inline-end:8px}
 
 #searchEngineLogo{
 	display:inline-block;
@@ -62,7 +62,7 @@ a:focus{
 
 #searchSubmit{
 	padding:2px;
-	-moz-padding-start:20px;
+	padding-inline-start:20px;
 	height:32px;
 	cursor:pointer;
 	font:message-box;
@@ -82,7 +82,7 @@ a:focus{
 	display:block;
 	min-height:50px;
 	background:url(chrome://browser/content/abouthome/snippet1.png) 30px center no-repeat;
-	-moz-padding-start:79px}
+	padding-inline-start:79px}
 #defaultSnippet1:-moz-dir(rtl),
 #defaultSnippet2:-moz-dir(rtl){
 	background-position:right 30px center}
@@ -146,7 +146,7 @@ body[narrow] #launcher[session]{
 	display:inline-block;
 	vertical-align:middle;
 	margin-bottom:0;
-	-moz-margin-end:4px}
+	margin-inline-end:4px}
 #restorePreviousSession:-moz-dir(rtl)::before{
 	transform:scaleX(-1)}
 

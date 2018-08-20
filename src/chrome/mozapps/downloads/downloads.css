@@ -10,7 +10,7 @@ progressmeter{
 .downloadTypeIcon{
 	height:32px;
 	width:32px;
-	-moz-margin-end:2px}
+	margin-inline-end:2px}
 
 .name{font-weight:bold}
 .dateTime,.status{font:status-bar}

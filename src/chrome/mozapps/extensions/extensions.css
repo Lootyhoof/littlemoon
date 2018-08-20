@@ -205,7 +205,7 @@ notification{min-width:1px;margin:2px}
 
 .category-name{
 	min-width:9em;
-	-moz-margin-start:6px}
+	margin-inline-start:6px}
 
 @media (max-width:700px){
 .category-name{display:none}
@@ -259,7 +259,7 @@ page:not([chromehidden^="location"]) #search-list-empty,
 page:not([chromehidden^="location"]) #discover-browser,
 page:not([chromehidden^="location"]) .detail-view-container,
 page:not([chromehidden^="location"]) .list{
-	-moz-border-end-width:0!important;
+	border-inline-end-width:0!important;
 	border-bottom-width:0!important}
 
 .list>scrollbox{
@@ -300,12 +300,12 @@ page:not([chromehidden^="location"]) .list{
 	font-size:110%}
 
 .extra-details{text-align:end;-moz-box-orient:horizontal}
-.homepage{-moz-margin-start:4px}
+.homepage{margin-inline-start:4px}
 
 .name-container{
 	-moz-box-align:center;
 	padding:0 2px;
-	-moz-margin-end:1em;
+	margin-inline-end:1em;
 	font-size:110%}
 .addon[status="installed"][active="false"]:not(:hover):not([selected="true"]) .name-container{
 	color:graytext;
@@ -349,7 +349,7 @@ page:not([chromehidden^="location"]) .list{
 
 .details-container{
 	-moz-box-align:end;
-	-moz-margin-start:2px}
+	margin-inline-start:2px}
 .status-container>hbox,
 .control-container{
 	-moz-box-align:center;
@@ -357,7 +357,7 @@ page:not([chromehidden^="location"]) .list{
 .description-container{
 	-moz-box-align:center;
 	margin:2px 0 0 0;
-	-moz-margin-start:2px}
+	margin-inline-start:2px}
 
 #detail-desc-container{
 	margin-bottom:2em;
@@ -386,7 +386,7 @@ page:not([chromehidden^="location"]) .list{
 	background-image:url(chrome://global/skin/icons/warning-large.png)}
 
 .detail-desc,
-.detail-extra{margin:4px 0;-moz-margin-start:34px}
+.detail-extra{margin:4px 0;margin-inline-start:34px}
 #detail-desc+hbox{margin:4px 0}
 .meta-label{font-weight:bold}
 
@@ -494,13 +494,13 @@ page:not([chromehidden^="location"]) .list{
 #back-btn:-moz-locale-dir(ltr),
 #forward-btn:-moz-locale-dir(rtl){
 	-moz-image-region:rect(192px,16px,208px,0);
-	-moz-padding-end:0!important;
-	-moz-margin-end:0!important}
+	padding-inline-end:0!important;
+	margin-inline-end:0!important}
 #back-btn:-moz-locale-dir(rtl),
 #forward-btn:-moz-locale-dir(ltr){
 	-moz-image-region:rect(208px,16px,224px,0);
-	-moz-padding-start:0!important;
-	-moz-margin-start:0!important}
+	padding-inline-start:0!important;
+	margin-inline-start:0!important}
 :-moz-any(#back-btn,#forward-btn)[disabled="true"]>.toolbarbutton-icon{
 	opacity:.4}
 
@@ -527,7 +527,7 @@ page:not([chromehidden^="location"]) .list{
 	margin-bottom:4px}
 
 #detail-contrib-suggested{
-	-moz-margin-end:2em}
+	margin-inline-end:2em}
 	
 #detail-controls{
 	-moz-box-pack:end;
@@ -611,7 +611,7 @@ page:not([chromehidden^="location"]) .list{
 
 .discover-logo{
 	list-style-image:url(chrome://mozapps/skin/extensions/discover-logo.png);
-	-moz-margin-end:15px}
+	margin-inline-end:15px}
 
 .discover-title{
 	font-weight:bold;
@@ -681,7 +681,7 @@ setting{-moz-box-align:start}
 	color:graytext;
 	margin-top:-3px;
 	margin-bottom:1px;
-	-moz-margin-start:3em;
+	margin-inline-start:3em;
 	white-space:pre-wrap}
 .preferences-description:empty{display:none}
 setting[type="radio"]>radiogroup{-moz-box-orient: horizontal}

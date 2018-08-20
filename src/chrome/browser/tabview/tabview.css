@@ -110,7 +110,7 @@ body{
 
 input.name{
 	margin:3px;
-	-moz-margin-end:26px;
+	margin-inline-end:26px;
 	padding:1px;
 	border:1px solid transparent;
 	background-color:transparent;
@@ -129,7 +129,7 @@ input.name{
 input.name:-moz-placeholder{
 	font-style:italic!important;
 	background:-moz-image-rect(url(chrome://browser/skin/tabview/panorama.png),0,96,16,80) no-repeat;
-	-moz-padding-start:20px}
+	padding-inline-start:20px}
 input.name::-moz-placeholder{
 	opacity:0!important;
 	font-style:italic!important}
@@ -241,7 +241,7 @@ input.name:-moz-locale-dir(rtl){
 .appTabTrayContainer{
 	top:34px;
 	right:1px;
-	-moz-border-start:1px solid threedshadow;
+	border-inline-start:1px solid threedshadow;
 	padding:0 2px;
 	overflow:-moz-hidden-unscrollable;
 	text-align:center;
@@ -318,7 +318,7 @@ input.name:-moz-locale-dir(rtl){
 	cursor:default;
 	line-height:25px;
 	padding:2px;
-	-moz-padding-end:20px;
+	padding-inline-end:20px;
 	text-align:center}
 
 .undo>.close{

@@ -36,7 +36,7 @@ listheader[sortable="true"]:hover:active{
 	background-color:darkblue;
 	color:white}
 
-.listheader-icon[src]{-moz-margin-end:2px}
+.listheader-icon[src]{margin-inline-end:2px}
 .listheader-label{margin:0!important}
 
 .listheader-sortdirection{list-style-image:none}

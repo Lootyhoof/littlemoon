@@ -33,8 +33,8 @@ toolbox:-moz-window-inactive:-moz-system-metric(windows-compositor){
 	background-color:-moz-dialog}
 
 :root[chromemargin][chromehidden~="toolbar"][tabsontop="true"] #navigator-toolbox{
-	-moz-padding-start:90px;
-	-moz-padding-end:72px}
+	padding-inline-start:90px;
+	padding-inline-end:72px}
 :root[chromemargin][chromehidden~="toolbar"][tabsontop="true"] #titlebar-buttonbox{
 	margin-top:0!important}
 
@@ -42,8 +42,8 @@ toolbox:-moz-window-inactive:-moz-system-metric(windows-compositor){
 	visibility:visible}
 	
 :root[chromemargin] #TabsToolbar[tabsontop="true"]:not([inFullscreen="true"]){
-	-moz-padding-start:90px;
-	-moz-padding-end:72px;
+	padding-inline-start:90px;
+	padding-inline-end:72px;
 	border-top-width:0!important;
 	background-color:transparent;
 	-moz-box-ordinal-group:1!important}
@@ -62,8 +62,8 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 /* Try to move menubar in window frame */
 #navigator-toolbox[tabsontop="false"]:not([inFullscreen="true"])>#toolbar-menubar[autohide="true"]:not([inactive="true"]){
 	margin-top:-23px;
-	-moz-padding-start:90px!important;
-	-moz-padding-end:72px!important;
+	padding-inline-start:90px!important;
+	padding-inline-end:72px!important;
 	background-image:none}
 
 /* For classic or Windows 8 */
@@ -74,8 +74,8 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 /* For compositor */
 #navigator-toolbox[tabsontop="false"]:not([inFullscreen="true"])>#toolbar-menubar[autohide="true"]:not([inactive="true"]):-moz-system-metric(windows-compositor){
 	margin-top:-20px;
-	-moz-border-end-width:0!important;
-	-moz-padding-end:120px!important}
+	border-inline-end-width:0!important;
+	padding-inline-end:120px!important}
 }
 
 /* ::::: titlebar ::::: */
@@ -122,7 +122,7 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 
 @media not all and (-moz-windows-classic) {
   #titlebar-min {
-    -moz-margin-end: 2px;
+    margin-inline-end: 2px;
   }
 }
 
@@ -174,7 +174,7 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
   }
     
   #main-window[sizemode="maximized"] #titlebar-buttonbox {
-    -moz-margin-end: 3px;
+    margin-inline-end: 3px;
   }
 }
 
@@ -286,15 +286,15 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
   (-moz-os-version: windows-win8) {
 	:root[chromemargin] #TabsToolbar[tabsontop="true"]:not([inFullscreen="true"]){
 		border-width:0!important;
-		-moz-padding-start:100px!important;
-		-moz-padding-end:120px!important}
+		padding-inline-start:100px!important;
+		padding-inline-end:120px!important}
 
 	:root[chromemargin][sizemode="normal"] #navigator-toolbox>toolbar,
 	:root[chromemargin][sizemode="normal"] #appcontent{
-		-moz-border-start:1px inset threedface;
-		-moz-border-end:1px inset threedface}
+		border-inline-start:1px inset threedface;
+		border-inline-end:1px inset threedface}
 	:root[chromemargin][sizemode="normal"] #sidebar-box{
-		-moz-border-start:1px inset threedface}
+		border-inline-start:1px inset threedface}
 		
 	:root[chromemargin]:not([inFullscreen="true"]) #tabbrowser-tabs[tabsontop="true"]>.tabbrowser-tab:not(:hover){
 		background-color:rgba(255,255,255,.7)!important}
@@ -333,10 +333,10 @@ toolbarbutton:hover:not([disabled="true"]),
 	margin:1px}
 #topBar>#viewGroup>radio:first-child,
 .paneSelector>radio:first-child{
-	-moz-margin-start:0!important}
+	margin-inline-start:0!important}
 #topBar>#viewGroup>radio:last-child,
 .paneSelector>radio:last-child{
-	-moz-margin-end:0!important}
+	margin-inline-end:0!important}
 	
 #placesToolbar>toolbarbutton:not(:hover):not([disabled="true"]),
 #placesMenu>menu:not(:hover):not([selected="true"]),

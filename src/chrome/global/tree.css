@@ -117,7 +117,7 @@ treechildren::-moz-tree-column(insertbefore){border-left:1px solid red}
 treechildren::-moz-tree-column(insertafter){border-right:1px solid red}
 
 .treecol-sortdirection[sortDirection]:not([hidden]){
-	-moz-margin-end:1px;
+	margin-inline-end:1px;
 	-moz-transform:scale(.75);
 	list-style-image:url(chrome://global/skin/widgets.png);
 	-moz-image-region:rect(0,49px,12px,37px)}
@@ -132,7 +132,7 @@ treechildren::-moz-tree-column(insertafter){border-right:1px solid red}
 
 treechildren::-moz-tree-twisty{
 	border-width:0;
-	-moz-margin-end:1px;
+	margin-inline-end:1px;
 	list-style-image:url(chrome://global/skin/widgets.png);
 	-moz-image-region:rect(0,12px,12px,0)}
 treechildren::-moz-tree-twisty(open){-moz-image-region:rect(0,25px,12px,13px)}
@@ -161,7 +161,7 @@ treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty{-moz-transform:scaleX(-1)}
 treechildren::-moz-tree-separator{
 	height:6px;
 	border:1px inset threedface;
-	-moz-margin-end:14px;
+	margin-inline-end:14px;
 	background:threedface}
 
 treechildren::-moz-tree-twisty(separator),

@@ -11,7 +11,7 @@ richlistitem{
 	border-bottom:1px solid threedshadow}
 .typeIcon{margin:1px}
 .actionsMenu{margin:0}
-.actionIcon{margin:1px;-moz-margin-start:3px}
+.actionIcon{margin:1px;margin-inline-start:3px}
 .actionIcon+label{margin:2px 0}
 .actionsMenu .menulist-icon{margin:1px;padding:0;width:16px;height:16px}
 

@@ -5,11 +5,11 @@
 	text-decoration:underline}
 .sidebar-placesTreechildren::-moz-tree-cell(separator){cursor:default}
 
-#search-box{-moz-margin-end:0!important}
+#search-box{margin-inline-end:0!important}
 
 treechildren::-moz-tree-image(title){
 	width:16px;height:16px;
-	-moz-margin-end:1px;
+	margin-inline-end:1px;
 	list-style-image: url(chrome://global/skin/global.png);
 	-moz-image-region:rect(144px,16px,160px,0)}
 treechildren::-moz-tree-image(title,separator){

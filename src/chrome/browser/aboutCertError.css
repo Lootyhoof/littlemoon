@@ -25,10 +25,10 @@ h1{
 
 #errorTitle,
 #errorLongContent,
-#errorTryAgain{-moz-margin-start:80px}
+#errorTryAgain{margin-inline-start:80px}
 
 .expander>button{
-	-moz-padding-start:16px;
+	padding-inline-start:16px;
 	background-image:-moz-image-rect(url(chrome://global/skin/widgets.png),0,25,12,13);
 	background-position:3px center;
 	background-repeat:no-repeat}

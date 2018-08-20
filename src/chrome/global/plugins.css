@@ -36,8 +36,8 @@ hr{border:1px inset threedface;margin:0 -1px}
 
 dl{margin:0 8px 4px 48px}
 dd{margin:0;padding:0;text-align:start;word-wrap:break-word}
-dd:not(:last-child){-moz-margin-start:7em}
-dd>span{-moz-margin-start:-7em;display:block;float:left;font-weight:600}
+dd:not(:last-child){margin-inline-start:7em}
+dd>span{margin-inline-start:-7em;display:block;float:left;font-weight:600}
 
 table{
 	font:message-box;

@@ -54,7 +54,7 @@
 	padding-inline-end:4px;
 	padding-top:2px;
 	padding-bottom:2px;
-	-moz-border-end:1px solid;
+	border-inline-end:1px solid;
 	margin-inline-end:6px}
 
 .selected .call-item-gutter{

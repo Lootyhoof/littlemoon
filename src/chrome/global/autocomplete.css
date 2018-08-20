@@ -75,7 +75,7 @@ panel[type="private-autocomplete-richlistbox"],
 .ac-type-icon,
 .ac-result-type-tag,
 .ac-site-icon{width:16px;height:16px;margin:0 1px}
-.ac-extra>.ac-comment{-moz-padding-end:4px}
+.ac-extra>.ac-comment{padding-inline-end:4px}
 
 .ac-ellipsis-after{min-width:1em;padding:0}
 html|*.ac-emphasize-text{font-weight:bold}
