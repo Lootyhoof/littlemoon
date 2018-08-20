@@ -1,12 +1,23 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @namespace html url(http://www.w3.org/1999/xhtml);
 
+scrollbar,slider{background:none!important;border-width:0!important;z-index:2147483647!important}
+slider{padding:2px!important}
 thumb{
-	margin:1px!important;
-	min-width:8px!important;
-	min-height:8px!important;
+	z-index:2147483647!important;
+	min-width:6px!important;
+	min-height:6px!important;
 	border-radius:10px!important;
 	background-color:scrollbar!important}
 slider:hover>thumb,
 thumb:hover{
 	background-color:graytext!important}
+slider:active>thumb,
+thumb:active{
+	background-color:highlight!important}
+
+@media all and (-moz-overlay-scrollbars){
+scrollbar:not([active="true"]),
+scrollbar[disabled="true"]{
+	visibility:hidden}
+}

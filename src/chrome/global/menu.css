@@ -2,12 +2,13 @@
 
 menu,
 menuitem,
+menucaption,
 .splitmenu-menuitem{
 	font:menu;
 	padding:1px;
 	list-style-image:none;
 	-moz-image-region:auto}
-menuitem{-moz-padding-end:10px}
+menuitem{padding-inline-end:10px}
 
 menu{max-width:32em}
 
@@ -34,13 +35,13 @@ menu[open="true"]{
 menu[disabled="true"],
 menuitem[disabled="true"],
 .splitmenu-menuitem[disabled="true"]{
+	pointer-events:none;
 	-moz-user-focus:none;
 	color:graytext!important;
 	text-shadow:1px 1px 1px threedhighlight}
 
-:-moz-any(menuitem,.splitmenu-menuitem)[disabled="true"]>.menu-iconic-left{
-	opacity:.5;
-	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+:-moz-any(menucaption,menuitem,.splitmenu-menuitem)[disabled="true"]>.menu-iconic-left{
+	filter:opacity(.4) grayscale(1)}
 
 menuitem[selected="true"]{
 	font-weight:bold!important}
@@ -65,7 +66,7 @@ menuitem[default="true"]{font-weight:bold}
 .menu-description{
 	font-style:italic;
 	color:GrayText;
-	-moz-margin-start:1ex!important}
+	margin-inline-start:1ex!important}
 
 .menu-accel,
 .menu-text,
@@ -73,40 +74,51 @@ menuitem[default="true"]{font-weight:bold}
 .menu-iconic-text{
 	margin-top:0!important;
 	margin-bottom:1px!important;
-	-moz-margin-start:2px!important;
-	-moz-margin-end:1px!important;
+	margin-inline-start:2px!important;
+	margin-inline-end:1px!important;
 	color:inherit}
 
 .menu-accel,
 .menu-iconic-accel{
-	-moz-padding-start:5px!important;
+	padding-inline-start:5px!important;
 	color:graytext}	
 
 .menu-text{
-	-moz-margin-start:18px!important;
+	margin-inline-start:18px!important;
 	font-weight:inherit}
 .menubar-text{
-	margin:1px 3px 2px 3px!important}
+	margin:0 3px!important}
+
+menucaption>.menu-text,
+menucaption>.menu-iconic-text{
+	font-weight:bold;
+	margin-inline-start:0!important}
 
 .menu-iconic-left{
 	-moz-box-align:center;
 	-moz-box-pack:center;
 	width:16px;
-	-moz-padding-end:1px!important}
+	padding-inline-end:1px!important}
+
+.menu-iconic-right{
+	-moz-box-align:center;
+	-moz-box-pack:center;
+	padding-inline-start:1px;
+	padding-inline-end:1px}
 
 .menu-right{
 	margin:1px 3px;
 	width:4px;
-	text-align:right;
+	text-align:end;
 	list-style-image:url(chrome://global/skin/widgets.png);
 	-moz-image-region:rect(20px 28px 27px 24px)}
-.menu-right:-moz-locale-dir(rtl){-moz-transform:scaleX(-1)}
-
+.menu-right:-moz-locale-dir(rtl){
+	-moz-transform:scaleX(-1)}
 menuitem:hover:active>.menu-right,
 menu[open="true"]>.menu-right{
-	-moz-image-region:rect(20px 32px 27px 28px)}
+	filter:invert(1)}
 .menu-right[disabled="true"]{
-	-moz-image-region:rect(20px 36px 27px 32px)!important}
+	opacity:.4}
 
 menuseparator{
 	border-top:1px solid threedshadow;
@@ -117,37 +129,32 @@ menuseparator{
 	width:16px;
 	height:16px}
 
-.menulist-menupopup>menuitem>.menu-iconic-left,
-menulist>menupopup>menuitem>.menu-iconic-left,
-.menulist-menupopup>menuitem>.menu-accel-container,
 menulist>menupopup>menuitem>.menu-accel-container,
-.menulist-menupopup>menu>.menu-iconic-left,
-menulist>menupopup>menu>.menu-iconic-left{
+menulist>menupopup>menucaption:not([image])>.menu-iconic-left:not([image]),
+menulist>menupopup>menuitem:not([image])>.menu-iconic-left:not([image]),
+menulist>menupopup>menu:not([image])>.menu-iconic-left:not([image]){
 	display:none}
 
-.menulist-menupopup>menuitem,
+menulist>menupopup>menucaption,
 menulist>menupopup>menuitem,
-.menulist-menupopup>menu,
 menulist>menupopup>menu{
 	border-width:0!important;
 	padding:1px;
 	min-width:3em;
 	max-width:none}
-.menulist-menupopup>menuitem,
+menulist>menupopup>menucaption,
 menulist>menupopup>menuitem{
-	-moz-padding-end:16px}
-
-menulist>menupopup>menu>.menu-text,
-menulist>menupopup>menuitem>.menu-iconic-text{
-	margin:0!important}
+	padding-inline-end:16px}
 
 menuitem[checked="true"]>.menu-iconic-left>.menu-iconic-icon{
 	list-style-image:url(chrome://global/skin/widgets.png)!important;
 	-moz-image-region:rect(12px 31px 20px 24px)!important;
-	padding:4px!important}
+	width:auto!important;
+	height:auto!important}
 menuitem[type="radio"]>.menu-iconic-left>.menu-iconic-icon{
 	list-style-image:url(chrome://global/skin/widgets.png)!important;
 	-moz-image-region:rect(12px 24px 24px 12px)!important;
-	padding:2px!important}
+	width:auto!important;
+	height:auto!important}
 menuitem[type="radio"][checked="true"]>.menu-iconic-left>.menu-iconic-icon{
 	-moz-image-region:rect(12px 12px 24px 0)!important}

@@ -97,11 +97,27 @@ toolbarbutton[disabled="true"],
 	text-shadow:1px 1px 1px threedhighlight}
 
 toolbarbutton[disabled="true"]>.toolbarbutton-icon,
-toolbarbutton[disabled="true"]>stack>hbox>.toolbarbutton-icon,
-toolbarbutton[disabled="true"]>hbox>vbox>.toolbarbutton-icon{
-	opacity:.5;
-	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+toolbarbutton[disabled="true"]>*>.toolbarbutton-icon,
+toolbarbutton[disabled="true"]>*>*>.toolbarbutton-icon{
+	filter:opacity(.4) grayscale(1)}
 
 toolbarbutton.toolbar-text-button:hover:active{color:HighlightText!important}
 
-
+.toolbarbutton-multiline-text,
+toolbarbutton[wrap="true"]>.toolbarbutton-text{
+	display:none}
+toolbarbutton[wrap="true"]>.toolbarbutton-multiline-text{
+	display:-moz-box}
+	
+.toolbarbutton-badge{
+	-moz-stack-sizing:ignore;
+	font-size:10px;
+	font-weight:bold;
+	margin:-3px 0 0!important;
+	margin-inline-end:-4px!important;
+	min-width:14px;
+	max-width:28px;
+	line-height:10px;
+	text-align:center;
+	background-color:darkred;
+	color:white}

@@ -1,3 +1,4 @@
+@import url(chrome://os/skin/scrollbars.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @namespace html url(http://www.w3.org/1999/xhtml);
 
@@ -39,6 +40,7 @@ scrollbarbutton[active="true"]{
 	border-color:threedshadow threedface threedface threedshadow}
 thumb[disabled="true"],
 scrollbarbutton[disabled="true"]{
+	pointer-events:none;
 	background-color:-moz-Dialog!important}
 thumb:focus,
 scrollbarbutton:focus{
@@ -49,9 +51,7 @@ scrollbarbutton[type="increment"]{background-position:0 -12px}
 scrollbarbutton[type="decrement"][sborient="vertical"]{background-position:-12px 0}
 scrollbarbutton[type="increment"][sborient="vertical"]{background-position:-12px -12px}
 
-scrollbarbutton[disabled="true"]{
-	opacity:.5;
-	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+scrollbarbutton[disabled="true"]{opacity:.5}
 
 scrollcorner{
 	background-color:-moz-Dialog;
