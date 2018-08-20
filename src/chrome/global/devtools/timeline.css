@@ -1,2 +1,0 @@
-﻿@import url(performance.css);
-#record-button:not([checked]) ~ #record-label{visibility:hidden}
