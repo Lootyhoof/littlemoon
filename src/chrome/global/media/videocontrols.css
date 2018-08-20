@@ -3,7 +3,7 @@
 
 .controlBar{
 	height:20px;
-	background:-moz-Dialog url(chrome://global/skin/menu-bg.png);
+	background-color:-moz-Dialog;
 	color:-moz-DialogText}
 
 button{
@@ -28,8 +28,8 @@ button:not(:hover){
 	margin-right:-20px!important;
 	position:relative}
 
-.playButton>.button-box{background-image:-moz-image-rect(url(video.png),0,32,16,16)}
-.playButton[paused="true"]>.button-box{background-image:-moz-image-rect(url(video.png),0,16,16,0)}
+.playButton>.button-box{background-image:-moz-image-rect(url(video.png),0,16,16,0)}
+.playButton[paused="true"]>.button-box{background-image:-moz-image-rect(url(video.png),0,32,16,16)}
 .muteButton>.button-box{background-image:-moz-image-rect(url(video.png),16,16,32,0)}
 .muteButton[muted="true"]>.button-box{background-image:-moz-image-rect(url(video.png),16,32,32,16)}
 .muteButton[noAudio="true"]>.button-box{background-image:-moz-image-rect(url(video.png),0,64,16,48)}
@@ -42,14 +42,13 @@ button:not(:hover){
 
 .scale-thumb[orient="vertical"]{
 	width:12px;
-	border-radius:2px;
 	min-height:4px;
 	max-height:4px}
 
 .volumeBackgroundBar{
 	margin:0 4px;
-	border-inline-start:1px inset threedface;
-	border-inline-end:1px inset threedface;
+	-moz-border-start:1px inset threedface;
+	-moz-border-end:1px inset threedface;
 	background:highlight}
 
 .volumeBackground,
@@ -90,7 +89,6 @@ button:not(:hover){
 .bufferBar{
 	border:0!important}
 .bufferBar>.progress-bar{
-	border-radius:5px;
 	background:threedshadow}
 
 .scale-slider{margin:0;background:none}
