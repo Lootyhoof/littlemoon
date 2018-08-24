@@ -28,11 +28,13 @@ button:not(:hover){
 	margin-right:-20px!important;
 	position:relative}
 
-.playButton>.button-box{background-image:-moz-image-rect(url(video.png),0,16,16,0)}
-.playButton[paused="true"]>.button-box{background-image:-moz-image-rect(url(video.png),0,32,16,16)}
+.playButton>.button-box{background-image:-moz-image-rect(url(video.png),0,32,16,16)}
+.playButton[paused="true"]>.button-box{background-image:-moz-image-rect(url(video.png),0,16,16,0)}
 .muteButton>.button-box{background-image:-moz-image-rect(url(video.png),16,16,32,0)}
 .muteButton[muted="true"]>.button-box{background-image:-moz-image-rect(url(video.png),16,32,32,16)}
 .muteButton[noAudio="true"]>.button-box{background-image:-moz-image-rect(url(video.png),0,64,16,48)}
+.closedCaptionButton>.button-box{background-image:-moz-image-rect(url(video.png),16,64,32,48)}
+.closedCaptionButton[hidden]{display:none}
 .fullscreenButton>.button-box{background-image:-moz-image-rect(url(video.png),0,48,16,32)}
 .fullscreenButton[fullscreened]>.button-box{background-image:-moz-image-rect(url(video.png),16,48,32,32)}
 
