@@ -509,3 +509,9 @@ stack>.tabs-alltabs-button>.toolbarbutton-text,
   min-width: 0px; 
   list-style-image: url("chrome://browser/skin/feeds/feedIcon16.png");
 }
+
+/* Stylem */
+#stylem-toolbar-button {
+	list-style-image: url("chrome://stylem/skin/16.svg")!important}
+#stylem-toolbar-button:not([styles-applied~="site"]) {
+	list-style-image: url("chrome://stylem/skin/16w.svg")!important}
