@@ -1,29 +1,30 @@
-skin	communicator	littlemoon	chrome/communicator/
-skin	global		littlemoon	chrome/global/
-skin	browser		littlemoon	chrome/browser/
-skin	inspector	littlemoon	chrome/inspector/
-skin	mozapps		littlemoon	chrome/mozapps/
-skin	help		littlemoon	chrome/help/
-skin	downbar		littlemoon	chrome/downbar/
-skin	reporter	littlemoon	chrome/reporter/
-skin	offline		littlemoon	chrome/offline/
-skin	quicknote	littlemoon	chrome/quicknote/
-skin	tabprefs	littlemoon	chrome/tabprefs/
-skin	dataman		littlemoon	chrome/dataman/
-skin	dlman		littlemoon	chrome/dlman/
-skin	desktop		littlemoon	chrome/desktop/
-skin	locationbar2	littlemoon	chrome/locationbar2/
-skin	downloadmgr	littlemoon	chrome/downloadmgr/
-skin	favres		littlemoon	chrome/favres/
-skin	os		littlemoon	chrome/os-linux/
-skin	os		littlemoon	chrome/os-darwin/	os=Darwin
-skin	os		littlemoon	chrome/os-winnt/	os=WINNT
-skin	graphical-timeline littlemoon	chrome/gt/
-skin	imagetoolbar	littlemoon	chrome/imagetoolbar/
 skin	abouthome	littlemoon	chrome/abouthome/
-skin	jsterm		littlemoon	chrome/jsterm/
-skin	printedit	littlemoon	chrome/printedit/
-skin	speeddial	littlemoon	chrome/speeddial/
+skin	browser		littlemoon	chrome/browser/
+skin	communicator	littlemoon	chrome/communicator/
 skin	devtools	littlemoon	chrome/devtools/
+skin	global		littlemoon	chrome/global/
+skin	mozapps		littlemoon	chrome/mozapps/
+
+skin	os		littlemoon	chrome/os/linux/
+skin	os		littlemoon	chrome/os/darwin/	os=Darwin
+skin	os		littlemoon	chrome/os/winnt/	os=WINNT
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
+
+# Add-on styles
+
+skin	printedit	littlemoon	chrome/addon/printedit/
+skin	speeddial	littlemoon	chrome/addon/speeddial/
+skin	graphical-timeline littlemoon	chrome/addon/gt/
+skin	imagetoolbar	littlemoon	chrome/addon/imagetoolbar/
+skin	downbar		littlemoon	chrome/addon/downbar/
+skin	offline		littlemoon	chrome/addon/offline/
+skin	quicknote	littlemoon	chrome/addon/quicknote/
+skin	tabprefs	littlemoon	chrome/addon/tabprefs/
+skin	dataman		littlemoon	chrome/dataman/
+skin	dlman		littlemoon	chrome/addon/dlman/
+skin	desktop		littlemoon	chrome/addon/desktop/
+skin	locationbar2	littlemoon	chrome/addon/locationbar2/
+skin	downloadmgr	littlemoon	chrome/addon/downloadmgr/
+skin	favres		littlemoon	chrome/addon/favres/
+skin	inspector	littlemoon	chrome/addon/inspector/
