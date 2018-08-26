@@ -26,13 +26,6 @@
 /*Status4ever*/
 #urlbar[pmpack]{-moz-binding:url(chrome://browser/skin/s4ever.xml#urlbar)}
 #urlbar-progress-alt[mode]{margin:0!important}
-radio[pane="status4evar-pane-status"]{
-	list-style-image:url(chrome://global/skin/icons/information-large.png)!important}
-radio[pane="status4evar-pane-addonbar"]{
-	list-style-image:url(chrome://mozapps/skin/xpinstall/xpinstallItemGeneric.png)!important}
-radio[pane="status4evar-pane-advanced"]{
-	list-style-image:url(chrome://browser/skin/preferences/preferences.png)!important;
-	-moz-image-region:rect(96px,24px,120px,0)!important}
 #urlbar-progress-alt>.progress-bar{background-color:-moz-Dialog}
 
 .tbx-toolbar-plain{border:0!important;min-width:0!important}

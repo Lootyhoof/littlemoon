@@ -4,7 +4,7 @@
 		  xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 		  xmlns:xbl="http://www.mozilla.org/xbl">
 
-	<binding id="urlbar" extends="chrome://browser/content/statusbar/urlbarBindings.xml#urlbar">
+	<binding id="urlbar" extends="chrome://browser/content/urlbarBindings.xml#urlbar">
 		<content sizetopopup="pref">
 			<xul:hbox anonid="textbox-container" class="autocomplete-textbox-container urlbar-textbox-container" flex="1" xbl:inherits="focused">
 				<children includes="image|deck|stack|box"> 
