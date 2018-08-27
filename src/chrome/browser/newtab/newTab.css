@@ -120,3 +120,48 @@
 	-moz-image-region:rect(225px 31px 239px 17px)}
 #newtab-undo-close-button:hover:active{
 	-moz-image-region:rect(113px 31px 127px 17px)}
+
+#searchText{
+	-moz-box-flex:1;
+	padding:3px;
+	font:message-box;
+	font-size:120%;
+	font-weight:600;
+	border:1px inset threedface}
+
+#searchLogoContainer:not([hidden]) ~ #searchText{padding-inline-start: 38px}
+
+#searchText:focus,
+#searchText[autofocus]{
+	box-shadow:0 0 0 1px #CCCCFF}
+
+#searchSubmit{
+	padding:1px;
+	border:2px solid;
+	-moz-border-top-colors:buttonhighlight buttonface;
+	-moz-border-left-colors:buttonhighlight buttonface;
+	-moz-border-right-colors:buttonshadow buttonface;
+	-moz-border-bottom-colors:buttonshadow buttonface;
+  box-shadow:none;
+  transition:none;
+	background-color:ButtonFace;
+	color:ButtonText}
+#searchSubmit:hover:not([disabled="true"]){
+	border:2px solid;
+	-moz-border-top-colors:buttonhighlight #CCCCFF;
+	-moz-border-left-colors:buttonhighlight #CCCCFF;
+	-moz-border-right-colors:buttonshadow #CCCCFF;
+	-moz-border-bottom-colors:buttonshadow #CCCCFF;
+  box-shadow:none;
+  transition:none;
+	background-color:#CCCCFF;
+	color:black}
+#searchSubmit:hover:active:not([type="menu"]):not([disabled="true"]){
+	-moz-border-top-colors:buttonshadow threeddarkshadow;
+	-moz-border-left-colors:buttonshadow threeddarkshadow;
+	-moz-border-right-colors:buttonhighlight white;
+	-moz-border-bottom-colors:buttonhighlight white;
+	background-color:highlight;
+	color:highlighttext}
+  
+#searchLogoContainer > *{transform: scale(.75)}
