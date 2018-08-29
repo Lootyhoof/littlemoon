@@ -34,11 +34,15 @@ resizer[type="window"]{display:none}
 #main-window:-moz-lwtheme > #titlebar{
   -moz-appearance: none !important}
 
+#titlebar-close{-moz-box-ordinal-group:1}
+#titlebar-max{-moz-box-ordinal-group:2}
+#titlebar-min{-moz-box-ordinal-group:3}
+
 toolbox:-moz-window-inactive{
 	color:inherit!important;
 	opacity:1!important}
 
-#main-window:not([privatebrowsingmode=temporary])[tabsontop="true"]>#titlebar{
+#main-window:not([privatebrowsingmode=temporary]):not(:-moz-lwtheme)[tabsontop="true"]>#titlebar{
 	-moz-appearance:toolbar;
 	display:-moz-box;
 	height:25px;
