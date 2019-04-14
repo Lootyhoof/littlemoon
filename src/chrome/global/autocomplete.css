@@ -48,7 +48,7 @@ panel[type="private-autocomplete-richlistbox"],
 .autocomplete-dropmarker-bkgnd-box,.private-autocomplete-dropmarker-bkgnd-box{display:none}
 
 .autocomplete-tree,
-.autocomplete-richlistbox,,
+.autocomplete-richlistbox,
 .private-autocomplete-tree,
 .private-autocomplete-richlistbox{
 	margin:0;
