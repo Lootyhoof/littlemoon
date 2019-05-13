@@ -429,3 +429,8 @@ toolbarbutton:hover:not([disabled="true"]),
 #historyTree[flex]:-moz-locale-dir(rtl){
 	border-right-width:0!important}
 } /* Aero End */
+
+/*DownThemAll*/
+#DownThemAll>#titlebar{
+	-moz-appearance:none!important;
+	margin-bottom:0!important}
