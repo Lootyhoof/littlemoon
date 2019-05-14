@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.10.1
+- fix DtA titlebar
+
 ### 1.10.0
 - add tab audio indicators for Pale Moon 28.3.0+
 - update in-browser developer tools
