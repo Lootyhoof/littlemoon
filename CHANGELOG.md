@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.11.0
+- update Reader View styling to reflect changes in Pale Moon 28.6.0+
+
 ### 1.10.1
 - fix DtA titlebar
 
