@@ -1,5 +1,5 @@
 # LittleMoon
-![Preview](http://i63.tinypic.com/avn3me.png)
+![Preview](https://i.imgur.com/Yqwzmb3.png)
 
 Fork of the theme "LittleFox" by Alfred Kayser for Pale Moon.
 
