@@ -49,8 +49,8 @@ button:not(:hover){
 
 .volumeBackgroundBar{
 	margin:0 4px;
-	-moz-border-start:1px inset threedface;
-	-moz-border-end:1px inset threedface;
+	border-inline-start:1px inset threedface;
+	border-inline-end:1px inset threedface;
 	background:highlight}
 
 .volumeBackground,
