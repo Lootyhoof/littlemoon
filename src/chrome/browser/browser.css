@@ -552,6 +552,18 @@ toolbar[iconsize="small"]>toolbaritem#go-button{-moz-box-orient:horizontal!impor
 #identity-box.verifiedIdentity[open="true"],
 #identity-box.verifiedIdentity:hover:active{
 	background-color:#326104!important;
+  color:white!important}
+  
+.mixedContent>#identity-icon-label,
+.mixedContent>#identity-popup-title,
+#identity-box.mixedContent{
+	color:#797900!important}
+#identity-box.mixedContent:hover{
+	background-color:#c1d381!important;
+	color:black!important}
+#identity-box.mixedContent[open="true"],
+#identity-box.mixedContent:hover:active{
+	background-color:#586104!important;
 	color:white!important}
 
 .unknownIdentity>#identity-icon-label,
