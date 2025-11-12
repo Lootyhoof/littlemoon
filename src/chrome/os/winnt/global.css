@@ -127,7 +127,7 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 }
 
 @media (-moz-windows-compositor) {
-  /* Fix borders because of Vista/7 versus 8/10+ */
+  /* Fix borders because of 7 versus 8/10+ */
   #main-window:not([inFullscreen="true"]):not([windowtype="devtools:scratchpad"]) {
     -moz-appearance: -moz-win-glass;
   }
@@ -139,10 +139,9 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
     -moz-appearance: -moz-win-exclude-glass;
   }
   
-  @media (-moz-os-version: windows-vista),
-         (-moz-os-version: windows-win7),
+  @media (-moz-os-version: windows-win7),
          (-moz-os-version: windows-win8) {
-    /* Make sure the native margins are correct on Win Vista/7/8.
+    /* Make sure the native margins are correct on Win 7/8.
      * We can't use -moz-win-glass there because the border sizing would
      * not be correct. */
     #main-window:not([inFullscreen="true"]):not([windowtype="devtools:scratchpad"]) {
@@ -156,7 +155,7 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
     }
   
   /* The borders on the glass frame are ours, and inside #browser, and on
-  * vista and win7 we want to make sure they are "glassy", so we can't use
+  * win7 we want to make sure they are "glassy", so we can't use
   * #browser as the exclude-glass container. We use #appcontent instead. */
     #browser {
       -moz-appearance: none;
@@ -167,7 +166,8 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
     }
   }
   
-  @media (-moz-os-version: windows-win10) {
+  @media (-moz-os-version: windows-win10),
+  		 (-moz-os-version: windows-win11) {
     #main-window:not(:-moz-lwtheme):after {
       color: black !important;
     }
